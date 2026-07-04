@@ -2,31 +2,33 @@
 
 import { useState, useCallback } from 'react';
 import { productCards } from '@/data/products';
-
-const typeTabs = [
-  { filter: 'all', label: 'All' },
-  { filter: 'steering', label: 'Steering Arms' },
-  { filter: 'knuckle', label: 'Steering Knuckles' },
-  { filter: 'vertical', label: 'Vertical Arms' },
-  { filter: 'shaft', label: 'Drive Shafts' },
-  { filter: 'suspension', label: 'Suspension' },
-  { filter: 'agri', label: 'Agricultural' },
-];
-
-const brandTabs = [
-  { filter: 'all', label: 'All' },
-  { filter: 'faw', label: 'FAW' },
-  { filter: 'howo', label: 'HOWO' },
-  { filter: 'auman', label: 'Auman' },
-  { filter: 'dongfeng', label: 'Dongfeng' },
-  { filter: 'shaanxi', label: 'Shaanxi' },
-  { filter: 'sinotruk', label: 'SINOTRUK' },
-  { filter: 'liberation', label: 'Liberation' },
-  { filter: 'john-deere', label: 'John Deere' },
-  { filter: 'others', label: 'Others' },
-];
+import { useLanguage } from './LanguageProvider';
 
 export default function ProductsSection() {
+  const { t } = useLanguage();
+
+  const typeTabs = [
+    { filter: 'all', label: t('products.all') },
+    { filter: 'steering', label: t('products.steeringArms') },
+    { filter: 'knuckle', label: t('products.steeringKnuckles') },
+    { filter: 'vertical', label: t('products.verticalArms') },
+    { filter: 'shaft', label: t('products.driveShafts') },
+    { filter: 'suspension', label: t('products.suspension') },
+    { filter: 'agri', label: t('products.agricultural') },
+  ];
+
+  const brandTabs = [
+    { filter: 'all', label: t('products.all') },
+    { filter: 'faw', label: 'FAW' },
+    { filter: 'howo', label: 'HOWO' },
+    { filter: 'auman', label: 'Auman' },
+    { filter: 'dongfeng', label: 'Dongfeng' },
+    { filter: 'shaanxi', label: 'Shaanxi' },
+    { filter: 'sinotruk', label: 'SINOTRUK' },
+    { filter: 'liberation', label: 'Liberation' },
+    { filter: 'john-deere', label: 'John Deere' },
+    { filter: 'others', label: t('products.others') },
+  ];
   const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');
   const [currentFilter, setCurrentFilter] = useState('all');
 
@@ -65,10 +67,10 @@ export default function ProductsSection() {
     <section id="products">
       <div className="container">
         <div className="products-header">
-          <div className="section-label fade-up" style={{ justifyContent: 'center' }}>Our Products</div>
-          <h2 className="section-title fade-up stagger-1">Comprehensive Product Range</h2>
+          <div className="section-label fade-up" style={{ justifyContent: 'center' }}>{t('products.label')}</div>
+          <h2 className="section-title fade-up stagger-1">{t('products.title')}</h2>
           <p className="fade-up stagger-2">
-            Over 200 models of precision-engineered steering and suspension components for heavy-duty trucks, agricultural machinery, and construction equipment.
+            {t('products.subtitle')}
           </p>
         </div>
         <div className="product-tabs fade-up stagger-3">
@@ -77,13 +79,13 @@ export default function ProductsSection() {
               className={`mode-btn ${filterMode === 'type' ? 'active' : ''}`}
               onClick={() => handleModeSwitch('type')}
             >
-              By Type
+              {t('products.byType')}
             </button>
             <button
               className={`mode-btn ${filterMode === 'brand' ? 'active' : ''}`}
               onClick={() => handleModeSwitch('brand')}
             >
-              By Brand
+              {t('products.byBrand')}
             </button>
           </div>
           <div className="filter-tabs">
@@ -118,7 +120,7 @@ export default function ProductsSection() {
         </div>
         <div className="view-all-btn fade-up">
           <a href="#contact" className="btn btn-outline" onClick={handleScrollToContact}>
-            Request Full Catalog
+            {t('products.requestCatalog')}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>

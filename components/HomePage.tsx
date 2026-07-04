@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { LanguageProvider } from './LanguageProvider';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
@@ -33,7 +34,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+    <LanguageProvider>
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -45,6 +46,6 @@ export default function HomePage() {
       <FloatingButtons />
       <ProductModal />
       <WeChatModal />
-    </>
+    </LanguageProvider>
   );
 }

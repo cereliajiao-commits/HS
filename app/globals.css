@@ -49,6 +49,20 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-toggle span{width:24px;height:2px;background:var(--white);transition:var(--transition)}
 
+/* === LANGUAGE SWITCHER === */
+.lang-switcher{position:relative;margin-left:1rem;z-index:1001}
+.lang-toggle{display:flex;align-items:center;gap:0.4rem;padding:0.4rem 0.8rem;background:var(--gray-900);border:1px solid var(--gray-800);border-radius:4px;color:var(--gray-300);font-family:var(--font-display);font-size:0.75rem;font-weight:600;letter-spacing:1px;cursor:pointer;transition:var(--transition)}
+.lang-toggle:hover{border-color:var(--red);color:var(--white)}
+.lang-flag{font-size:1rem;line-height:1}
+.lang-code{text-transform:uppercase}
+.lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;min-width:180px;background:var(--dark);border:1px solid var(--gray-800);border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.5);overflow:hidden;animation:dropdownFade 0.2s ease}
+@keyframes dropdownFade{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.lang-option{display:flex;align-items:center;gap:0.6rem;width:100%;padding:0.7rem 1rem;background:transparent;border:none;color:var(--gray-300);font-family:var(--font-body);font-size:0.85rem;cursor:pointer;transition:var(--transition);text-align:left}
+.lang-option:hover{background:var(--gray-900);color:var(--white)}
+.lang-option.active{background:rgba(200,16,46,0.1);color:var(--red-light)}
+.lang-option .lang-label{flex:1}
+.lang-option svg{color:var(--red)}
+
 /* === HERO === */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--black)}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--black) 0%,var(--gray-900) 50%,var(--black) 100%)}

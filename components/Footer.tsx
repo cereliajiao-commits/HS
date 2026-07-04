@@ -1,6 +1,9 @@
 'use client';
 
+import { useLanguage } from './LanguageProvider';
+
 export default function Footer() {
+  const { t } = useLanguage();
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const target = document.querySelector(href);
@@ -19,11 +22,11 @@ export default function Footer() {
               HONG<span>SHENG</span>
             </a>
             <p>
-              Hengshui Hongsheng Auto Parts Co., Ltd. &mdash; Professional manufacturer of steering systems for automobiles, agricultural machinery, and construction equipment since 1996.
+              {t('footer.desc')}
             </p>
           </div>
           <div className="footer-col">
-            <h4>Products</h4>
+            <h4>{t('footer.products')}</h4>
             <ul>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Steering Arms</a></li>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Steering Knuckles</a></li>
@@ -33,16 +36,16 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Company</h4>
+            <h4>{t('footer.company')}</h4>
             <ul>
-              <li><a href="#about" onClick={(e) => handleClick(e, '#about')}>About Us</a></li>
-              <li><a href="#advantages" onClick={(e) => handleClick(e, '#advantages')}>Why Choose Us</a></li>
-              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>Contact</a></li>
-              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>Request Quote</a></li>
+              <li><a href="#about" onClick={(e) => handleClick(e, '#about')}>{t('footer.aboutUs')}</a></li>
+              <li><a href="#advantages" onClick={(e) => handleClick(e, '#advantages')}>{t('footer.whyChooseUs')}</a></li>
+              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>{t('footer.contact')}</a></li>
+              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>{t('footer.requestQuote')}</a></li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Contact</h4>
+            <h4>{t('footer.contact')}</h4>
             <ul>
               <li><a href="tel:+8613613183888">+86 136 1318 3888</a></li>
               <li><a href="mailto:chinahs@hotmail.com">chinahs@hotmail.com</a></li>
@@ -52,8 +55,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; 2024 Hengshui Hongsheng Auto Parts Co., Ltd. All rights reserved.</span>
-          <span>ISO 9001 Certified Manufacturer</span>
+          <span>{t('footer.copyright')}</span>
+          <span>{t('footer.iso')}</span>
         </div>
       </div>
     </footer>

@@ -1,46 +1,35 @@
 'use client';
 
-const advantages = [
-  {
-    icon: '&#9881;',
-    title: 'Advanced Manufacturing',
-    desc: 'Five friction press forging lines, three extrusion lines, CNC machining centers, high-precision grinding machines, and CNC high-frequency quenching systems ensure consistent quality at scale.',
-  },
-  {
-    icon: '&#9878;',
-    title: 'Rigorous Quality Control',
-    desc: 'Equipped with magnetic flaw detectors, metallographic analyzers, chemical analysis labs, and tensile testing machines. ISO 9001 certified with Six Sigma management practices.',
-  },
-  {
-    icon: '&#128295;',
-    title: 'Comprehensive Product Range',
-    desc: 'Over 200 models covering steering knuckles, steering arms, vertical arms, drive shafts, half-shafts, and agricultural components for all major Chinese and international truck brands.',
-  },
-  {
-    icon: '&#128640;',
-    title: 'OEM & Custom Solutions',
-    desc: 'Established OEM partnerships with American Airport Special Vehicles, Shandong Kaima, Chery Heavy Industry, and more. Custom design and manufacturing to your specifications.',
-  },
-  {
-    icon: '&#128197;',
-    title: '28+ Years Experience',
-    desc: 'Since 1996, we have built deep expertise in steering system manufacturing, serving automotive, agricultural, and construction machinery sectors with proven reliability.',
-  },
-  {
-    icon: '&#127760;',
-    title: 'Global Service Network',
-    desc: 'We serve clients worldwide with responsive communication via WhatsApp, WeChat, and email. Dedicated support team for international orders and technical inquiries.',
-  },
+import { useLanguage } from './LanguageProvider';
+
+const advantageIcons = [
+  '&#9881;',
+  '&#9878;',
+  '&#128295;',
+  '&#128640;',
+  '&#128197;',
+  '&#127760;',
 ];
 
 export default function AdvantagesSection() {
+  const { t } = useLanguage();
+
+  const advantages = [
+    { icon: advantageIcons[0], title: t('adv.t1'), desc: t('adv.d1') },
+    { icon: advantageIcons[1], title: t('adv.t2'), desc: t('adv.d2') },
+    { icon: advantageIcons[2], title: t('adv.t3'), desc: t('adv.d3') },
+    { icon: advantageIcons[3], title: t('adv.t4'), desc: t('adv.d4') },
+    { icon: advantageIcons[4], title: t('adv.t5'), desc: t('adv.d5') },
+    { icon: advantageIcons[5], title: t('adv.t6'), desc: t('adv.d6') },
+  ];
+
   return (
     <section id="advantages">
       <div className="advantages-bg"></div>
       <div className="container">
         <div className="advantages-header">
-          <div className="section-label fade-up" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-          <h2 className="section-title fade-up stagger-1">Built on Quality, Driven by Innovation</h2>
+          <div className="section-label fade-up" style={{ justifyContent: 'center' }}>{t('adv.label')}</div>
+          <h2 className="section-title fade-up stagger-1">{t('adv.title')}</h2>
         </div>
         <div className="advantages-grid">
           {advantages.map((adv, i) => (

@@ -7,6 +7,7 @@ import { productContent } from '@/data/productContent';
 
 export default function ProductModal() {
   const { lang } = useLanguage();
+  const productLocale = lang === 'zh' ? 'zh' : 'en';
   const [isOpen, setIsOpen] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
 
@@ -61,7 +62,7 @@ export default function ProductModal() {
 
   const product = productDetails[productId];
   if (!product) return null;
-  const localized = productContent[productId]?.[lang];
+  const localized = productContent[productId]?.[productLocale];
   const title = localized?.title ?? product.title;
   const description = localized?.description ?? product.description;
   const specs = localized?.specs ?? product.specs;

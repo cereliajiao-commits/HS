@@ -7,6 +7,7 @@ import { productContent } from '@/data/productContent';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
+  const productLocale = lang === 'zh' ? 'zh' : 'en';
 
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
@@ -93,7 +94,7 @@ export default function ProductsSection() {
         </div>
         <div className="products-grid">
           {filteredCards.map((card) => {
-            const localized = productContent[card.id]?.[lang];
+            const localized = productContent[card.id]?.[productLocale];
             const title = localized?.title ?? card.title;
             const description = localized?.description ?? card.description;
 

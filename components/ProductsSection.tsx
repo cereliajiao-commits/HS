@@ -12,13 +12,16 @@ export default function ProductsSection() {
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
     { filter: 'vertical', label: t('products.verticalArms') },
+    { filter: 'shaft', label: t('products.driveShafts') },
   ];
 
   const brandTabs = [
     { filter: 'all', label: t('products.all') },
+    { filter: 'sinotruk', label: 'SINOTRUK' },
     { filter: 'dongfeng', label: 'Dongfeng' },
     { filter: 'auman', label: 'Auman' },
-    { filter: 'sinotruk', label: 'SINOTRUK' },
+    { filter: 'howo', label: 'HOWO' },
+    { filter: 'shaanxi', label: 'Shaanxi' },
     { filter: 'others', label: t('products.others') },
   ];
   const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');

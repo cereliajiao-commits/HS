@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { productDetails } from '@/data/productDetails';
 import { useLanguage } from './LanguageProvider';
 import { productContent } from '@/data/productContent';
@@ -10,6 +10,17 @@ export default function ProductModal() {
   const productLocale = lang === 'zh' ? 'zh' : 'en';
   const [isOpen, setIsOpen] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
+  const [rotation, setRotation] = useState({ x: 8, y: -14 });
+  const [dragging, setDragging] = useState(false);
+  const dragOrigin = useRef<{ x: number; y: number; rx: number; ry: number } | null>(null);
+
+  useEffect(() => {
+    if (productId) {
+      setRotation({ x: 8, y: -14 });
+      setDragging(false);
+      dragOrigin.current = null;
+    }
+  }, [productId]);
 
   useEffect(() => {
     const handleOpen = (e: Event) => {
@@ -46,6 +57,32 @@ export default function ProductModal() {
     }
   };
 
+  const handleViewerPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setDragging(true);
+    dragOrigin.current = {
+      x: e.clientX,
+      y: e.clientY,
+      rx: rotation.x,
+      ry: rotation.y,
+    };
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+
+  const handleViewerPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!dragging || !dragOrigin.current) return;
+    const dx = e.clientX - dragOrigin.current.x;
+    const dy = e.clientY - dragOrigin.current.y;
+    const nextY = dragOrigin.current.ry + dx / 5;
+    const nextX = Math.max(-18, Math.min(18, dragOrigin.current.rx - dy / 10));
+    setRotation({ x: nextX, y: nextY });
+  };
+
+  const handleViewerPointerUp = () => {
+    setDragging(false);
+    dragOrigin.current = null;
+  };
+
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     closeModal();
@@ -70,13 +107,43 @@ export default function ProductModal() {
   const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : 'Compatible Vehicles / Applications';
   const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
   const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
+  const viewerLabel = lang === 'zh' ? '拖动图片可预览 360° 效果' : 'Drag the image for a 360°-style preview';
+  const resetLabel = lang === 'zh' ? '重置视图' : 'Reset View';
 
   return (
     <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
       <div className="modal-content">
         <button className="modal-close" onClick={closeModal}>&times;</button>
-        <div className="modal-image">
-          <img src={product.image} alt={title} />
+        <div className="modal-image modal-spin-stage">
+          <div
+            className={`spin-viewer ${dragging ? 'dragging' : ''}`}
+            onPointerDown={handleViewerPointerDown}
+            onPointerMove={handleViewerPointerMove}
+            onPointerUp={handleViewerPointerUp}
+            onPointerCancel={handleViewerPointerUp}
+            onPointerLeave={handleViewerPointerUp}
+          >
+            <div className="spin-viewer-shell">
+              <div
+                className="spin-viewer-frame"
+                style={{
+                  transform: `perspective(1200px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+                }}
+              >
+                <img src={product.image} alt={title} draggable={false} />
+              </div>
+            </div>
+          </div>
+          <div className="spin-hint-row">
+            <span className="spin-hint">{viewerLabel}</span>
+            <button
+              type="button"
+              className="spin-reset"
+              onClick={() => setRotation({ x: 8, y: -14 })}
+            >
+              {resetLabel}
+            </button>
+          </div>
         </div>
         <div className="modal-body">
           <div className="modal-category">{product.category}</div>

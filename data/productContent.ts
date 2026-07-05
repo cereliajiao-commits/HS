@@ -421,4 +421,220 @@ export const productContent: Record<string, ProductContent> = {
       applications: ['商用卡车', '转向维修', '后市场供应'],
     },
   },
+  'drive-shaft-sinotruk-str': {
+    en: {
+      title: 'SINOTRUK STR Drive Shaft',
+      description: 'Drive shaft for STR heavy-duty platforms, built for stable torque transmission and reliable operation.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Platform', value: 'STR' },
+        { label: 'Material', value: 'Forged alloy steel' },
+        { label: 'Finish', value: 'Protective coating' },
+      ],
+      applications: ['STR heavy trucks', 'Transmission systems', 'Replacement parts'],
+    },
+    zh: {
+      title: '重汽 STR 传动轴',
+      description: '用于 STR 重型平台的传动轴，传动稳定，运行可靠。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '平台', value: 'STR' },
+        { label: '材质', value: '锻造合金钢' },
+        { label: '表面', value: '保护涂层' },
+      ],
+      applications: ['STR 重卡', '传动系统', '替换件'],
+    },
+  },
+  'drive-shaft-sinotruk': {
+    en: {
+      title: 'SINOTRUK Drive Shaft',
+      description: 'General drive shaft for SINOTRUK applications with durable structure and stable power transfer.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Brand', value: 'SINOTRUK' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Finish', value: 'Anti-corrosion coating' },
+      ],
+      applications: ['SINOTRUK vehicles', 'Power transmission', 'Service replacement'],
+    },
+    zh: {
+      title: '重汽传动轴',
+      description: '适用于重汽平台的通用传动轴，结构耐用，动力传递稳定。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '品牌', value: '重汽' },
+        { label: '材质', value: '锻造钢' },
+        { label: '表面', value: '防腐涂层' },
+      ],
+      applications: ['重汽车辆', '动力传动', '维修替换'],
+    },
+  },
+  'drive-shaft-howo': {
+    en: {
+      title: 'HOWO Drive Shaft',
+      description: 'Drive shaft for HOWO truck platforms, designed for long service life and dependable torque delivery.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Platform', value: 'HOWO' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Finish', value: 'Protective coating' },
+      ],
+      applications: ['HOWO trucks', 'Transmission assembly', 'Maintenance replacement'],
+    },
+    zh: {
+      title: '重庆豪沃传动轴',
+      description: '适用于豪沃平台的传动轴，寿命长，动力输出稳定可靠。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '平台', value: '豪沃' },
+        { label: '材质', value: '锻造钢' },
+        { label: '表面', value: '保护涂层' },
+      ],
+      applications: ['豪沃卡车', '传动总成', '维修替换'],
+    },
+  },
+  'drive-shaft-dongfeng-tianlong': {
+    en: {
+      title: 'Dongfeng Tianlong Drive Shaft',
+      description: 'Drive shaft for Dongfeng Tianlong series with dependable transmission performance.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Series', value: 'Dongfeng Tianlong' },
+        { label: 'Material', value: 'Forged alloy steel' },
+        { label: 'Finish', value: 'Anti-corrosion coating' },
+      ],
+      applications: ['Dongfeng Tianlong trucks', 'Power transmission', 'Aftermarket supply'],
+    },
+    zh: {
+      title: '东风天龙传动轴',
+      description: '适用于东风天龙系列的传动轴，动力传递稳定，性能可靠。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '系列', value: '东风天龙' },
+        { label: '材质', value: '锻造合金钢' },
+        { label: '表面', value: '防腐涂层' },
+      ],
+      applications: ['东风天龙卡车', '动力传动', '后市场供应'],
+    },
+  },
+  'drive-shaft-shaanxi-delong': {
+    en: {
+      title: 'Shaanxi Delong Drive Shaft',
+      description: 'Drive shaft for Shaanxi Delong series with stable geometry and reliable performance.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Series', value: 'Shaanxi Delong' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Finish', value: 'Protective coating' },
+      ],
+      applications: ['Shaanxi Delong trucks', 'Transmission systems', 'Replacement parts'],
+    },
+    zh: {
+      title: '陕汽德龙传动轴',
+      description: '适用于陕汽德龙系列的传动轴，结构稳定，性能可靠。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '系列', value: '陕汽德龙' },
+        { label: '材质', value: '锻造钢' },
+        { label: '表面', value: '保护涂层' },
+      ],
+      applications: ['陕汽德龙卡车', '传动系统', '替换件'],
+    },
+  },
+  'drive-shaft-str0125': {
+    en: {
+      title: 'SINOTRUK STR0125 Drive Shaft',
+      description: 'Drive shaft for STR0125 platform, produced for stable rotation and dependable torque transfer.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Platform', value: 'STR0125' },
+        { label: 'Material', value: 'Forged alloy steel' },
+        { label: 'Finish', value: 'Anti-corrosion coating' },
+      ],
+      applications: ['STR0125 trucks', 'Transmission repair', 'Catalog display'],
+    },
+    zh: {
+      title: '重汽 STR0125 传动轴',
+      description: '适用于 STR0125 平台的传动轴，旋转稳定，扭矩传递可靠。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '平台', value: 'STR0125' },
+        { label: '材质', value: '锻造合金钢' },
+        { label: '表面', value: '防腐涂层' },
+      ],
+      applications: ['STR0125 车型', '传动维修', '目录展示'],
+    },
+  },
+  'drive-shaft-auman': {
+    en: {
+      title: 'Auman Drive Shaft',
+      description: 'Drive shaft for Auman commercial trucks with robust construction and stable drive transfer.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Brand', value: 'Auman' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Finish', value: 'Protective coating' },
+      ],
+      applications: ['Auman trucks', 'Commercial transport', 'Replacement supply'],
+    },
+    zh: {
+      title: '欧曼汽车传动轴',
+      description: '适用于欧曼商用车的传动轴，结构扎实，动力传递稳定。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '品牌', value: '欧曼' },
+        { label: '材质', value: '锻造钢' },
+        { label: '表面', value: '保护涂层' },
+      ],
+      applications: ['欧曼卡车', '商用运输', '替换供应'],
+    },
+  },
+  'drive-shaft-dongfeng-balong': {
+    en: {
+      title: 'Dongfeng Balong Drive Shaft',
+      description: 'Drive shaft for Dongfeng Balong series with durable design and steady transmission output.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Series', value: 'Dongfeng Balong' },
+        { label: 'Material', value: 'Forged alloy steel' },
+        { label: 'Finish', value: 'Protective coating' },
+      ],
+      applications: ['Dongfeng Balong trucks', 'Transmission system', 'Maintenance replacement'],
+    },
+    zh: {
+      title: '东风霸龙传动轴',
+      description: '适用于东风霸龙系列的传动轴，耐用设计，输出稳定。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '系列', value: '东风霸龙' },
+        { label: '材质', value: '锻造合金钢' },
+        { label: '表面', value: '防腐涂层' },
+      ],
+      applications: ['东风霸龙卡车', '传动系统', '维修替换'],
+    },
+  },
+  'drive-shaft-shaanxi-aolong': {
+    en: {
+      title: 'Shaanxi Aolong Drive Shaft',
+      description: 'Drive shaft for Shaanxi Aolong series with strong transmission performance and service durability.',
+      specs: [
+        { label: 'Type', value: 'Drive shaft' },
+        { label: 'Series', value: 'Shaanxi Aolong' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Finish', value: 'Anti-corrosion coating' },
+      ],
+      applications: ['Shaanxi Aolong trucks', 'Power transfer', 'Replacement parts'],
+    },
+    zh: {
+      title: '陕汽奥龙传动轴',
+      description: '适用于陕汽奥龙系列的传动轴，传动性能强，耐用性好。',
+      specs: [
+        { label: '类型', value: '传动轴' },
+        { label: '系列', value: '陕汽奥龙' },
+        { label: '材质', value: '锻造钢' },
+        { label: '表面', value: '防腐涂层' },
+      ],
+      applications: ['陕汽奥龙卡车', '动力传递', '替换件'],
+    },
+  },
 };

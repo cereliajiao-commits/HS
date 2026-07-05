@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { productDetails } from '@/data/productDetails';
+import { useLanguage } from './LanguageProvider';
+import { productContent } from '@/data/productContent';
 
 export default function ProductModal() {
+  const { lang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
 
@@ -58,20 +61,28 @@ export default function ProductModal() {
 
   const product = productDetails[productId];
   if (!product) return null;
+  const localized = productContent[productId]?.[lang];
+  const title = localized?.title ?? product.title;
+  const description = localized?.description ?? product.description;
+  const specs = localized?.specs ?? product.specs;
+  const applications = localized?.applications ?? product.applications;
+  const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : 'Compatible Vehicles / Applications';
+  const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
+  const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
 
   return (
     <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
       <div className="modal-content">
         <button className="modal-close" onClick={closeModal}>&times;</button>
         <div className="modal-image">
-          <img src={product.image} alt={product.title} />
+          <img src={product.image} alt={title} />
         </div>
         <div className="modal-body">
           <div className="modal-category">{product.category}</div>
-          <h2 className="modal-title">{product.title}</h2>
-          <p className="modal-description">{product.description}</p>
+          <h2 className="modal-title">{title}</h2>
+          <p className="modal-description">{description}</p>
           <div className="modal-specs">
-            {product.specs.map((spec, i) => (
+            {specs.map((spec, i) => (
               <div key={i} className="modal-spec">
                 <div className="modal-spec-label">{spec.label}</div>
                 <div className="modal-spec-value">{spec.value}</div>
@@ -79,16 +90,16 @@ export default function ProductModal() {
             ))}
           </div>
           <div className="modal-applications">
-            <h4>Compatible Vehicles / Applications</h4>
+            <h4>{compatibleLabel}</h4>
             <ul>
-              {product.applications.map((app, i) => (
+              {applications.map((app, i) => (
                 <li key={i}>{app}</li>
               ))}
             </ul>
           </div>
           <div className="modal-cta">
-            <a href="#contact" className="btn btn-primary" onClick={handleScrollToContact}>Request Quote</a>
-            <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer" className="btn btn-outline">WhatsApp Inquiry</a>
+            <a href="#contact" className="btn btn-primary" onClick={handleScrollToContact}>{requestQuoteLabel}</a>
+            <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{whatsappLabel}</a>
           </div>
         </div>
       </div>

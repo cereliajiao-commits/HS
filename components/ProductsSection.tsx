@@ -3,30 +3,21 @@
 import { useState, useCallback } from 'react';
 import { productCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
+import { productContent } from '@/data/productContent';
 
 export default function ProductsSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
-    { filter: 'steering', label: t('products.steeringArms') },
-    { filter: 'knuckle', label: t('products.steeringKnuckles') },
     { filter: 'vertical', label: t('products.verticalArms') },
-    { filter: 'shaft', label: t('products.driveShafts') },
-    { filter: 'suspension', label: t('products.suspension') },
-    { filter: 'agri', label: t('products.agricultural') },
   ];
 
   const brandTabs = [
     { filter: 'all', label: t('products.all') },
-    { filter: 'faw', label: 'FAW' },
-    { filter: 'howo', label: 'HOWO' },
-    { filter: 'auman', label: 'Auman' },
     { filter: 'dongfeng', label: 'Dongfeng' },
-    { filter: 'shaanxi', label: 'Shaanxi' },
+    { filter: 'auman', label: 'Auman' },
     { filter: 'sinotruk', label: 'SINOTRUK' },
-    { filter: 'liberation', label: 'Liberation' },
-    { filter: 'john-deere', label: 'John Deere' },
     { filter: 'others', label: t('products.others') },
   ];
   const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');
@@ -101,22 +92,28 @@ export default function ProductsSection() {
           </div>
         </div>
         <div className="products-grid">
-          {filteredCards.map((card, index) => (
-            <div
-              key={card.id}
-              className={`product-card fade-up visible`}
-              onClick={() => openProductDetail(card.id)}
-            >
-              <div className="product-card-img">
-                <img src={card.image} alt={card.title} />
+          {filteredCards.map((card) => {
+            const localized = productContent[card.id]?.[lang];
+            const title = localized?.title ?? card.title;
+            const description = localized?.description ?? card.description;
+
+            return (
+              <div
+                key={card.id}
+                className="product-card fade-up visible"
+                onClick={() => openProductDetail(card.id)}
+              >
+                <div className="product-card-img">
+                  <img src={card.image} alt={title} />
+                </div>
+                <div className="product-card-body">
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <span className="product-tag">{card.tag}</span>
+                </div>
               </div>
-              <div className="product-card-body">
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-                <span className="product-tag">{card.tag}</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="view-all-btn fade-up">
           <a href="#contact" className="btn btn-outline" onClick={handleScrollToContact}>

@@ -93,11 +93,14 @@ def card_title(category: str, model_en: str, code: str) -> str:
 
 def extract_model_code(stem: str) -> str:
   text = stem.replace('：', ':').replace('（', '(').replace('）', ')')
-  text = re.sub(r'[^\w:\-/]+', ' ', text)
   text = re.sub(r'[\u4e00-\u9fff]+', ' ', text)
+  text = re.sub(r'[^A-Za-z0-9:\-/]+', ' ', text)
   text = text.replace(':', '/')
   text = re.sub(r'\s+', ' ', text).strip()
-  return text or stem
+  if text:
+    return text
+  digits = re.findall(r'\d+[A-Za-z0-9./+-]*', stem)
+  return ' '.join(digits).strip() or 'Model'
 
 
 def category_title(category: str, lang: str, model: str, code: str) -> str:

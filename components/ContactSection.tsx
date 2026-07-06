@@ -4,21 +4,31 @@ import { useState } from 'react';
 import { useLanguage } from './LanguageProvider';
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
+    const form = e.currentTarget;
+    const payload = Object.fromEntries(new FormData(form).entries());
 
-    // Form action is empty - ready for Formspree integration
-    // To integrate Formspree: change the form action to your Formspree endpoint
-    // or use the /api/inquiry route
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error('Failed');
       setSubmitted(true);
+      form.reset();
+    } catch {
+      alert(lang === 'zh' ? '提交失败，请稍后再试，或直接通过 WhatsApp 联系我们。' : 'Submission failed. Please try again later or contact us via WhatsApp.');
+    } finally {
       setSubmitting(false);
-    }, 1500);
+    }
   };
 
   const openWeChatModal = () => {
@@ -116,15 +126,13 @@ export default function ContactSection() {
                 <div className="form-group">
                   <label>{t('contact.productInterest')}</label>
                   <select name="product">
-                    <option value="">Select a category...</option>
-                    <option value="steering-arms">Steering Arms</option>
-                    <option value="steering-knuckles">Steering Knuckles</option>
-                    <option value="vertical-arms">Vertical Arms / Drop Arms</option>
-                    <option value="drive-shafts">Drive Shafts</option>
-                    <option value="agricultural">Agricultural Machinery Parts</option>
-                    <option value="john-deere">John Deere Series</option>
-                    <option value="custom">Custom / OEM Manufacturing</option>
-                    <option value="other">Other</option>
+                    <option value="">{t('contact.selectCategory')}</option>
+                    <option value="steering-arms">{t('products.steeringArms')}</option>
+                    <option value="steering-knuckles">{t('products.steeringKnuckles')}</option>
+                    <option value="vertical-arms">{t('products.verticalArms')}</option>
+                    <option value="drive-shafts">{t('products.driveShafts')}</option>
+                    <option value="custom">OEM / Custom</option>
+                    <option value="other">{t('products.others')}</option>
                   </select>
                 </div>
                 <div className="form-group">

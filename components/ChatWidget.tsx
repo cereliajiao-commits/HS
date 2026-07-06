@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useLanguage } from './LanguageProvider';
 
 const WHATSAPP_NUMBER = '8617751097209';
 
@@ -14,73 +15,160 @@ function getCurrentTime() {
   return new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
 }
 
-function getBotReply(message: string): string {
-  const msg = message.toLowerCase();
+function quickText(lang: string, type: 'quote' | 'products' | 'support' | 'moq') {
+  const map: Record<string, Record<string, string>> = {
+    en: {
+      quote: 'I need a quote for steering arms',
+      products: 'What products do you offer?',
+      support: 'I need technical support',
+      moq: 'What is your MOQ?',
+    },
+    zh: {
+      quote: '我需要转向臂报价',
+      products: '你们有哪些产品？',
+      support: '我需要技术支持',
+      moq: '最小起订量是多少？',
+    },
+    es: {
+      quote: 'Necesito una cotización',
+      products: '¿Qué productos ofrecen?',
+      support: 'Necesito soporte técnico',
+      moq: '¿Cuál es su MOQ?',
+    },
+    fr: {
+      quote: 'Je veux un devis',
+      products: 'Quels produits proposez-vous ?',
+      support: 'J’ai besoin d’assistance technique',
+      moq: 'Quel est votre MOQ ?',
+    },
+    ar: {
+      quote: 'أحتاج إلى عرض سعر',
+      products: 'ما المنتجات التي تقدمونها؟',
+      support: 'أحتاج إلى دعم فني',
+      moq: 'ما هو الحد الأدنى للطلب؟',
+    },
+    ru: {
+      quote: 'Мне нужна цена',
+      products: 'Какие у вас есть продукты?',
+      support: 'Мне нужна техническая поддержка',
+      moq: 'Какой у вас MOQ?',
+    },
+    pt: {
+      quote: 'Preciso de um orçamento',
+      products: 'Quais produtos vocês oferecem?',
+      support: 'Preciso de suporte técnico',
+      moq: 'Qual é o MOQ?',
+    },
+  };
+  return map[lang]?.[type] ?? map.en[type];
+}
 
-  if (msg.includes('quote') || msg.includes('price') || msg.includes('cost')) {
-    return `<strong>Quote Request</strong><br/><br/>Thanks for your interest! To provide an accurate quote, please let us know:<br/>&#8226; Product model/type<br/>&#8226; Quantity needed<br/>&#8226; Your company name<br/><br/>Our team will respond within 2 hours during business hours.`;
-  }
-  if (msg.includes('product') || msg.includes('catalog') || msg.includes('what do you')) {
-    return `<strong>Our Product Range</strong><br/><br/>We manufacture:<br/>&#8226; Steering Arms (200+ models)<br/>&#8226; Steering Knuckles (all major truck brands)<br/>&#8226; Vertical Arms / Drop Arms<br/>&#8226; Drive Shafts (agricultural & industrial)<br/>&#8226; Suspension Assemblies (John Deere)<br/><br/>Browse our products above or ask about specific models!`;
-  }
-  if (msg.includes('support') || msg.includes('technical') || msg.includes('help')) {
-    return `<strong>Technical Support</strong><br/><br/>Our engineering team can help with:<br/>&#8226; Product specifications<br/>&#8226; Compatibility questions<br/>&#8226; Custom manufacturing<br/>&#8226; OEM partnerships<br/><br/>For immediate assistance, chat with us on WhatsApp for real-time support.`;
-  }
-  if (msg.includes('moq') || msg.includes('minimum') || msg.includes('order')) {
-    return `<strong>Minimum Order Quantity</strong><br/><br/>Our MOQ varies by product:<br/>&#8226; Standard products: 50-100 pcs<br/>&#8226; Custom/OEM: 200-500 pcs<br/>&#8226; Sample orders: Available<br/><br/>Contact us for specific MOQ requirements.`;
-  }
-  if (msg.includes('delivery') || msg.includes('shipping') || msg.includes('lead time')) {
-    return `<strong>Delivery Information</strong><br/><br/>&#8226; Sample: 3-5 days<br/>&#8226; Standard orders: 15-25 days<br/>&#8226; Large orders: 30-45 days<br/><br/>We ship worldwide via sea freight, air freight, or express courier.`;
-  }
-  if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
-    return `Hello! Welcome to HONGSHENG Auto Parts.<br/><br/>I'm here to help you with product inquiries, quotes, or technical questions. What can I assist you with today?`;
-  }
+function getReplyLink(message: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
 
-  return `Thank you for your message! Our team will get back to you soon.<br/><br/>For immediate assistance, you can:<br/>&#8226; Chat on WhatsApp for instant response<br/>&#8226; Email us at chinahs@hotmail.com<br/>&#8226; Call: +86 177 5109 7209`;
+function humanNotice(lang: string) {
+  if (lang === 'zh') return '这个问题我先帮你转给人工同事处理。';
+  if (lang === 'es') return 'Voy a pasar este caso a un agente humano.';
+  if (lang === 'fr') return 'Je vais transmettre cette demande à un agent humain.';
+  if (lang === 'ar') return 'سأحوّل هذا الطلب إلى أحد أعضاء الفريق.';
+  if (lang === 'ru') return 'Я передам этот вопрос сотруднику.';
+  if (lang === 'pt') return 'Vou encaminhar este caso para um atendente.';
+  return 'I will pass this to a human agent.';
 }
 
 export default function ChatWidget() {
+  const { lang, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [showBadge, setShowBadge] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: 'Welcome to HONGSHENG Auto Parts!<br/><br/>How can we help you today? Feel free to ask about our products, request a quote, or get technical support.',
+      text: t('chat.welcome'),
       isUser: false,
       time: 'Just now',
     },
   ]);
   const [inputValue, setInputValue] = useState('');
   const [showQuickReplies, setShowQuickReplies] = useState(true);
+  const [sending, setSending] = useState(false);
   const chatBodyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = () => setIsOpen(true);
+    window.addEventListener('openChatWidget', handler as EventListener);
+    return () => window.removeEventListener('openChatWidget', handler as EventListener);
+  }, []);
+
+  useEffect(() => {
+    if (chatBodyRef.current) {
+      chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
     if (!isOpen) setShowBadge(false);
   };
 
-  const sendMessage = (text?: string) => {
+  const sendMessage = async (text?: string) => {
     const message = text || inputValue.trim();
-    if (!message) return;
+    if (!message || sending) return;
 
     const userMsg: Message = { text: message, isUser: true, time: getCurrentTime() };
     setMessages((prev) => [...prev, userMsg]);
     setInputValue('');
     setShowQuickReplies(false);
+    setSending(true);
 
-    setTimeout(() => {
-      const botReply = getBotReply(message);
-      const botMsg: Message = { text: botReply, isUser: false, time: getCurrentTime() };
-      setMessages((prev) => [...prev, botMsg]);
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, lang }),
+      });
+      const data = await res.json();
+      const replyText = data?.reply || t('contact.successMsg');
 
-      setTimeout(() => {
-        const waMsg: Message = {
-          text: `For faster response, continue the conversation on WhatsApp:<br/><br/><a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}" target="_blank" rel="noopener noreferrer" style="color:#25D366;font-weight:600;text-decoration:underline">Click here to chat on WhatsApp &rarr;</a>`,
+      setMessages((prev) => [...prev, { text: replyText, isUser: false, time: getCurrentTime() }]);
+
+      if (data?.needsHuman || data?.action === 'handoff' || data?.action === 'draft_for_human') {
+        void fetch('/api/handoff', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message, language: data?.language || lang }),
+        });
+        setMessages((prev) => [
+          ...prev,
+          {
+            text: humanNotice(lang),
+            isUser: false,
+            time: getCurrentTime(),
+          },
+        ]);
+      } else {
+        setTimeout(() => {
+          setMessages((prev) => [
+            ...prev,
+            {
+              text: `For faster response, continue on WhatsApp:<br/><br/><a href="${getReplyLink(message)}" target="_blank" rel="noopener noreferrer" style="color:#25D366;font-weight:600;text-decoration:underline">Click here to chat on WhatsApp &rarr;</a>`,
+              isUser: false,
+              time: getCurrentTime(),
+            },
+          ]);
+        }, 500);
+      }
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          text: lang === 'zh' ? '系统暂时繁忙，请稍后再试，或直接联系我们的 WhatsApp。' : 'The system is temporarily busy. Please try again later or contact us on WhatsApp.',
           isUser: false,
           time: getCurrentTime(),
-        };
-        setMessages((prev) => [...prev, waMsg]);
-      }, 2000);
-    }, 800);
+        },
+      ]);
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -125,10 +213,10 @@ export default function ChatWidget() {
         <div className="chat-input-area">
           {showQuickReplies && (
             <div className="chat-quick-replies">
-              <button className="chat-quick-btn" onClick={() => sendMessage('I need a quote for steering arms')}>Quote Request</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage('What products do you offer?')}>Products</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage('I need technical support')}>Support</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage('What is your MOQ?')}>MOQ</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'quote'))}>Quote Request</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'products'))}>Products</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'support'))}>Support</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'moq'))}>MOQ</button>
             </div>
           )}
           <div className="chat-wa-notice">
@@ -138,12 +226,12 @@ export default function ChatWidget() {
             <input
               type="text"
               className="chat-input"
-              placeholder="Type your message..."
+              placeholder={t('chat.placeholder')}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyPress}
             />
-            <button className="chat-send" onClick={() => sendMessage()}>
+            <button className="chat-send" onClick={() => sendMessage()} disabled={sending}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
               </svg>

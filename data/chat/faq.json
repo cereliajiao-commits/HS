@@ -1,0 +1,159 @@
+{
+  "company": {
+    "name": "Hengshui Hongsheng Auto Parts Co., Ltd.",
+    "type": {
+      "en": "We are a professional manufacturer of automotive steering and suspension parts.",
+      "zh": "我们是一家专业生产汽车转向和悬挂系统零部件的工厂。"
+    },
+    "mainProducts": {
+      "en": "Our main products include steering arms, drag links, drive shafts, and related components.",
+      "zh": "我们的主要产品包括转向臂、直拉杆、传动轴等相关零部件。"
+    },
+    "support": {
+      "en": "OEM and custom manufacturing are available.",
+      "zh": "支持 OEM 和定制生产。"
+    }
+  },
+  "faq": [
+    {
+      "id": "custom",
+      "intent": "custom",
+      "answer": {
+        "en": "Yes, we support OEM and custom manufacturing. Please send us your drawings, samples, or specific requirements, and we will evaluate and quote accordingly.",
+        "zh": "是的，我们支持 OEM 和定制生产。请提供您的图纸、样品或具体需求，我们会根据要求评估并报价。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "moq",
+      "intent": "moq",
+      "answer": {
+        "en": "MOQ depends on the specific product model. Please send us the part number or a photo, and we will confirm the details for you.",
+        "zh": "最小起订量会根据具体产品型号而定。请发送产品型号或图片，我们会为您确认详细信息。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "lead_time",
+      "intent": "lead_time",
+      "answer": {
+        "en": "The usual lead time is 15–30 days, depending on the product model, order quantity, and production schedule.",
+        "zh": "通常交期为 15–30 天，具体取决于产品型号、订单数量和生产安排。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "stock",
+      "intent": "stock",
+      "answer": {
+        "en": "Some regular models may be in stock. Please send us the model you need, and we will check availability for you.",
+        "zh": "部分常规型号可能有库存。请发送您需要的型号，我们会尽快帮您确认。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "sample",
+      "intent": "sample",
+      "answer": {
+        "en": "Yes, sample orders are available. Please send us the model number and quantity, and we will arrange it accordingly.",
+        "zh": "可以，我们支持样品订单。请提供产品型号和数量，我们会根据情况安排。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "packing",
+      "intent": "packing",
+      "answer": {
+        "en": "We usually use standard export packaging. Customized packaging is also available upon request.",
+        "zh": "我们通常使用标准出口包装，也可以根据客户要求提供定制包装。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "payment",
+      "intent": "payment",
+      "answer": {
+        "en": "We usually accept T/T payment. Other payment methods can also be discussed based on the order.",
+        "zh": "我们通常接受 T/T 付款。其他付款方式也可以根据订单情况协商。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "shipping",
+      "intent": "shipping",
+      "answer": {
+        "en": "We can arrange shipping by sea, air, or express according to your needs.",
+        "zh": "我们可以根据您的需求安排海运、空运或快递发货。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "export",
+      "intent": "export",
+      "answer": {
+        "en": "Our products have been exported to many countries and regions, and we can arrange according to customer requirements.",
+        "zh": "我们产品已出口到多个国家和地区，具体可根据客户需求安排。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "quality_issue",
+      "intent": "after_sales",
+      "answer": {
+        "en": "If you find any quality issue after receiving the goods, please contact us with photos or videos. We will review the case and provide a solution as soon as possible.",
+        "zh": "如果您收到货后发现质量问题，请及时提供照片或视频联系我们，我们会尽快核实并给出解决方案。"
+      },
+      "needsHuman": true
+    },
+    {
+      "id": "catalog",
+      "intent": "catalog",
+      "answer": {
+        "en": "Yes, please let us know which product category you are interested in, and we can send you the relevant catalog.",
+        "zh": "可以，请告诉我们您感兴趣的产品类别，我们可以发送相关目录给您。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "factory",
+      "intent": "factory",
+      "answer": {
+        "en": "We are a factory specializing in the production of automotive steering and suspension parts.",
+        "zh": "我们是工厂，专注于汽车转向和悬挂系统零部件的生产。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "quote",
+      "intent": "quote",
+      "answer": {
+        "en": "Yes, please send us the product model, quantity, and destination country/port, and we will quote you as soon as possible.",
+        "zh": "可以，请发送产品型号、数量和收货国家/港口，我们会尽快给您报价。"
+      },
+      "needsHuman": false
+    },
+    {
+      "id": "languages",
+      "intent": "language",
+      "answer": {
+        "en": "We can communicate in Chinese and English, and we can also assist with other languages if needed.",
+        "zh": "我们可以用中文和英文沟通，也可以根据需要提供其他语言辅助回复。"
+      },
+      "needsHuman": false
+    }
+  ],
+  "riskKeywords": [
+    "complaint",
+    "claim",
+    "refund",
+    "compensation",
+    "dispute",
+    "lawsuit",
+    "赔付",
+    "投诉",
+    "争议",
+    "索赔",
+    "退款",
+    "赔偿"
+  ]
+}

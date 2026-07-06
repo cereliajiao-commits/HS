@@ -3,9 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { productDetails } from '@/data/productDetails';
 import { useLanguage } from './LanguageProvider';
-import { productContent } from '@/data/productContent';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
-import { importedProductContent } from '@/data/imported-products.content.generated';
+import { resolveProductText } from '@/data/productLocalization';
 
 type ImportedDetail = {
   image: string;
@@ -14,11 +13,6 @@ type ImportedDetail = {
   description: string;
   specs: { label: string; value: string }[];
   applications: string[];
-};
-
-type ImportedContent = {
-  en: { title: string; description: string; specs: { label: string; value: string }[]; applications: string[] };
-  zh: { title: string; description: string; specs: { label: string; value: string }[]; applications: string[] };
 };
 
 export default function ProductModal() {
@@ -114,15 +108,14 @@ export default function ProductModal() {
   if (!isOpen || !productId) return null;
 
   const importedDetails = importedProductDetails as unknown as Record<string, ImportedDetail>;
-  const importedContent = importedProductContent as unknown as Record<string, ImportedContent>;
   const product = productDetails[productId] ?? importedDetails[productId];
-  const localized = productContent[productId]?.[productLocale] ?? importedContent[productId]?.[productLocale];
+  const localized = resolveProductText(productId, product?.category ?? 'product', lang);
   if (!product && !localized) return null;
   const title = localized?.title ?? product?.title ?? 'Product';
   const description = localized?.description ?? product?.description ?? '';
   const specs = localized?.specs ?? product?.specs ?? [];
   const applications = localized?.applications ?? product?.applications ?? [];
-  const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : 'Compatible Vehicles / Applications';
+  const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : lang === 'en' ? 'Compatible Vehicles / Applications' : localized?.categoryLabel ?? 'Applications';
   const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
   const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
   const viewerLabel = lang === 'zh' ? '拖动图片可预览 360° 效果' : 'Drag the image for a 360°-style preview';

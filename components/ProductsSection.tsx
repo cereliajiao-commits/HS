@@ -3,9 +3,7 @@
 import { useState, useCallback } from 'react';
 import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
-import { productContent } from '@/data/productContent';
-
-const containsCjk = (text: string) => /[\u4e00-\u9fff]/.test(text);
+import { resolveProductText } from '@/data/productLocalization';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -105,9 +103,10 @@ export default function ProductsSection() {
         </div>
         <div className="products-grid">
           {filteredCards.map((card) => {
-            const localized = productContent[card.id]?.[productLocale];
+            const localized = resolveProductText(card.id, card.category, lang);
             const title = localized?.title ?? card.title;
             const description = localized?.description ?? card.description;
+            const tag = localized?.categoryLabel ?? card.tag;
 
             return (
               <div
@@ -121,7 +120,7 @@ export default function ProductsSection() {
                 <div className="product-card-body">
                   <h3>{title}</h3>
                   <p>{description}</p>
-                  <span className="product-tag">{card.tag}</span>
+                  <span className="product-tag">{tag}</span>
                 </div>
               </div>
             );

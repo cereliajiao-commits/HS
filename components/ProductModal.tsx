@@ -4,6 +4,22 @@ import { useEffect, useRef, useState } from 'react';
 import { productDetails } from '@/data/productDetails';
 import { useLanguage } from './LanguageProvider';
 import { productContent } from '@/data/productContent';
+import { importedProductDetails } from '@/data/imported-products.details.generated';
+import { importedProductContent } from '@/data/imported-products.content.generated';
+
+type ImportedDetail = {
+  image: string;
+  category: string;
+  title: string;
+  description: string;
+  specs: { label: string; value: string }[];
+  applications: string[];
+};
+
+type ImportedContent = {
+  en: { title: string; description: string; specs: { label: string; value: string }[]; applications: string[] };
+  zh: { title: string; description: string; specs: { label: string; value: string }[]; applications: string[] };
+};
 
 export default function ProductModal() {
   const { lang } = useLanguage();
@@ -97,13 +113,15 @@ export default function ProductModal() {
 
   if (!isOpen || !productId) return null;
 
-  const product = productDetails[productId];
-  if (!product) return null;
-  const localized = productContent[productId]?.[productLocale];
-  const title = localized?.title ?? product.title;
-  const description = localized?.description ?? product.description;
-  const specs = localized?.specs ?? product.specs;
-  const applications = localized?.applications ?? product.applications;
+  const importedDetails = importedProductDetails as unknown as Record<string, ImportedDetail>;
+  const importedContent = importedProductContent as unknown as Record<string, ImportedContent>;
+  const product = productDetails[productId] ?? importedDetails[productId];
+  const localized = productContent[productId]?.[productLocale] ?? importedContent[productId]?.[productLocale];
+  if (!product && !localized) return null;
+  const title = localized?.title ?? product?.title ?? 'Product';
+  const description = localized?.description ?? product?.description ?? '';
+  const specs = localized?.specs ?? product?.specs ?? [];
+  const applications = localized?.applications ?? product?.applications ?? [];
   const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : 'Compatible Vehicles / Applications';
   const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
   const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
@@ -146,7 +164,7 @@ export default function ProductModal() {
           </div>
         </div>
         <div className="modal-body">
-          <div className="modal-category">{product.category}</div>
+          <div className="modal-category">{product?.category ?? 'Product Series'}</div>
           <h2 className="modal-title">{title}</h2>
           <p className="modal-description">{description}</p>
           <div className="modal-specs">

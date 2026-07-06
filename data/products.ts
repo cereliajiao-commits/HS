@@ -36,3 +36,7 @@ export const productCards: ProductCard[] = [
   { id: 'drive-shaft-dongfeng-balong', category: 'shaft', brand: 'dongfeng', image: '/images/products/dongfeng-balong-drive-shaft.png', title: 'Dongfeng Balong Drive Shaft', description: 'Drive shaft for Dongfeng Balong series.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-shaanxi-aolong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-aolong-drive-shaft.png', title: 'Shaanxi Aolong Drive Shaft', description: 'Drive shaft for Shaanxi Aolong series.', tag: 'Drive Shaft' },
 ];
+
+import { importedProductCards } from './imported-products.generated';
+
+export const allProductCards: ProductCard[] = [...productCards, ...(importedProductCards as unknown as ProductCard[])];

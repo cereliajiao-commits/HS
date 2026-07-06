@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { productCards } from '@/data/products';
+import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { productContent } from '@/data/productContent';
 
@@ -12,7 +12,12 @@ export default function ProductsSection() {
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
     { filter: 'vertical', label: t('products.verticalArms') },
+    { filter: 'steering-arm', label: t('products.steeringArms') },
+    { filter: 'steering-knuckle', label: t('products.steeringKnuckles') },
+    { filter: 'agricultural', label: t('products.agricultural') },
+    { filter: 'john-deere', label: 'John Deere' },
     { filter: 'shaft', label: t('products.driveShafts') },
+    { filter: 'long-shaft', label: 'Long Shaft' },
   ];
 
   const brandTabs = [
@@ -22,6 +27,7 @@ export default function ProductsSection() {
     { filter: 'auman', label: 'Auman' },
     { filter: 'howo', label: 'HOWO' },
     { filter: 'shaanxi', label: 'Shaanxi' },
+    { filter: 'john-deere', label: 'John Deere' },
     { filter: 'others', label: t('products.others') },
   ];
   const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');
@@ -41,7 +47,7 @@ export default function ProductsSection() {
     window.dispatchEvent(event);
   }, []);
 
-  const filteredCards = productCards.filter((card) => {
+  const filteredCards = allProductCards.filter((card) => {
     if (currentFilter === 'all') return true;
     if (filterMode === 'type') return card.category === currentFilter;
     return card.brand === currentFilter;

@@ -106,9 +106,7 @@ export default function ProductsSection() {
         <div className="products-grid">
           {filteredCards.map((card) => {
             const localized = productContent[card.id]?.[productLocale];
-            const title = productLocale === 'en'
-              ? (localized?.title && !containsCjk(localized.title) ? localized.title : card.title.replace(/[\u4e00-\u9fff]+/g, '').replace(/\s+-\s+$/, '').trim())
-              : (localized?.title ?? card.title);
+            const title = localized?.title ?? card.title;
             const description = localized?.description ?? card.description;
 
             return (

@@ -33,6 +33,16 @@ def crop_content(rgba: Image.Image) -> Image.Image:
             return rgba
         left, top, right, bottom = bbox
 
+    white = Image.new("RGB", rgba.size, (255, 255, 255))
+    nonwhite = ImageChops.difference(rgba.convert("RGB"), white).convert("L")
+    white_bbox = nonwhite.point(lambda p: 255 if p > 20 else 0).getbbox()
+    if white_bbox:
+        w_left, w_top, w_right, w_bottom = white_bbox
+        white_area = (w_right - w_left) * (w_bottom - w_top)
+        canvas_area = rgba.width * rgba.height
+        if white_area < canvas_area * 0.96:
+            left, top, right, bottom = white_bbox
+
     pad_x = max(8, int((right - left) * 0.08))
     pad_y = max(8, int((bottom - top) * 0.08))
     left = max(0, left - pad_x)

@@ -1,6 +1,6 @@
 export const importedProductDetails = {
   'new-steering-arm-001': {
-    image: '/images/products/imported/steering-arm/001-1045弯臂.png',
+    image: '/images/products/imported-steering-arm-001-1045弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1045',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -17,7 +17,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-002': {
-    image: '/images/products/imported/steering-arm/002-1060-2弯臂.png',
+    image: '/images/products/imported-steering-arm-002-1060-2弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1060-2',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -34,7 +34,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-003': {
-    image: '/images/products/imported/steering-arm/003-1060弯直臂.png',
+    image: '/images/products/imported-steering-arm-003-1060弯直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1060',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -51,7 +51,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-004': {
-    image: '/images/products/imported/steering-arm/004-1061转直臂.png',
+    image: '/images/products/imported-steering-arm-004-1061转直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1061',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -68,7 +68,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-005': {
-    image: '/images/products/imported/steering-arm/005-10款赛龙弯臂.png',
+    image: '/images/products/imported-steering-arm-005-10款赛龙弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 10',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -85,7 +85,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-006': {
-    image: '/images/products/imported/steering-arm/006-130直臂.png',
+    image: '/images/products/imported-steering-arm-006-130直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 130',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -102,7 +102,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-007': {
-    image: '/images/products/imported/steering-arm/007-136弯臂.png',
+    image: '/images/products/imported-steering-arm-007-136弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 136',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -119,7 +119,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-008': {
-    image: '/images/products/imported/steering-arm/008-140弯直臂.png',
+    image: '/images/products/imported-steering-arm-008-140弯直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 140',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -136,7 +136,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-009': {
-    image: '/images/products/imported/steering-arm/009-14by弯臂.png',
+    image: '/images/products/imported-steering-arm-009-14by弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 14BY',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -153,7 +153,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-010': {
-    image: '/images/products/imported/steering-arm/010-153转直臂.png',
+    image: '/images/products/imported-steering-arm-010-153转直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 153',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -170,7 +170,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-011': {
-    image: '/images/products/imported/steering-arm/011-1cco弯臂.png',
+    image: '/images/products/imported-steering-arm-011-1cco弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1cco',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -187,7 +187,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-012': {
-    image: '/images/products/imported/steering-arm/012-385弯臂.png',
+    image: '/images/products/imported-steering-arm-012-385弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 385',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -204,7 +204,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-013': {
-    image: '/images/products/imported/steering-arm/013-608弯臂.png',
+    image: '/images/products/imported-steering-arm-013-608弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 608',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -221,7 +221,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-014': {
-    image: '/images/products/imported/steering-arm/014-6700弯臂.png',
+    image: '/images/products/imported-steering-arm-014-6700弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 6700',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -238,7 +238,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-015': {
-    image: '/images/products/imported/steering-arm/015-k36弯臂.png',
+    image: '/images/products/imported-steering-arm-015-k36弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - K36',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -255,7 +255,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-016': {
-    image: '/images/products/imported/steering-arm/016-ka005弯臂.png',
+    image: '/images/products/imported-steering-arm-016-ka005弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - KA005',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -272,7 +272,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-017': {
-    image: '/images/products/imported/steering-arm/017-q448弯臂.png',
+    image: '/images/products/imported-steering-arm-017-q448弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Q448',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -289,7 +289,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-018': {
-    image: '/images/products/imported/steering-arm/018-wb1058弯臂.png',
+    image: '/images/products/imported-steering-arm-018-wb1058弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - WB1058',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -306,7 +306,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-019': {
-    image: '/images/products/imported/steering-arm/019-丁字臂-一桥-二桥.png',
+    image: '/images/products/imported-steering-arm-019-丁字臂-一桥-二桥.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -323,7 +323,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-020': {
-    image: '/images/products/imported/steering-arm/020-东风q30-q40弯臂.png',
+    image: '/images/products/imported-steering-arm-020-东风q30-q40弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Q30 Q40',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -340,7 +340,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-021': {
-    image: '/images/products/imported/steering-arm/021-五十铃弯臂.png',
+    image: '/images/products/imported-steering-arm-021-五十铃弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -357,7 +357,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-022': {
-    image: '/images/products/imported/steering-arm/022-公狮弯臂.png',
+    image: '/images/products/imported-steering-arm-022-公狮弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -374,7 +374,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-023': {
-    image: '/images/products/imported/steering-arm/023-六平弯直臂.png',
+    image: '/images/products/imported-steering-arm-023-六平弯直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -391,7 +391,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-024': {
-    image: '/images/products/imported/steering-arm/024-十六平左右直臂.png',
+    image: '/images/products/imported-steering-arm-024-十六平左右直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -408,7 +408,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-025': {
-    image: '/images/products/imported/steering-arm/025-华川-2粗细弯臂.png',
+    image: '/images/products/imported-steering-arm-025-华川-2粗细弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 2',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -425,7 +425,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-026': {
-    image: '/images/products/imported/steering-arm/026-华川1041弯直臂.png',
+    image: '/images/products/imported-steering-arm-026-华川1041弯直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1041',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -442,7 +442,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-027': {
-    image: '/images/products/imported/steering-arm/027-南骏转向正反臂.png',
+    image: '/images/products/imported-steering-arm-027-南骏转向正反臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -459,7 +459,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-028': {
-    image: '/images/products/imported/steering-arm/028-外贸弯臂.png',
+    image: '/images/products/imported-steering-arm-028-外贸弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -476,7 +476,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-029': {
-    image: '/images/products/imported/steering-arm/029-外贸弯臂1.png',
+    image: '/images/products/imported-steering-arm-029-外贸弯臂1.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -493,7 +493,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-030': {
-    image: '/images/products/imported/steering-arm/030-奥驰弯臂-四种.png',
+    image: '/images/products/imported-steering-arm-030-奥驰弯臂-四种.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -510,7 +510,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-031': {
-    image: '/images/products/imported/steering-arm/031-拖拉机弯臂.png',
+    image: '/images/products/imported-steering-arm-031-拖拉机弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -527,7 +527,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-032': {
-    image: '/images/products/imported/steering-arm/032-拖车钩.png',
+    image: '/images/products/imported-steering-arm-032-拖车钩.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -544,7 +544,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-033': {
-    image: '/images/products/imported/steering-arm/033-时代金刚弯臂.png',
+    image: '/images/products/imported-steering-arm-033-时代金刚弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -561,7 +561,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-034': {
-    image: '/images/products/imported/steering-arm/034-柳汽乘龙弯臂.png',
+    image: '/images/products/imported-steering-arm-034-柳汽乘龙弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -578,7 +578,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-035': {
-    image: '/images/products/imported/steering-arm/035-欧曼-1左右臂.png',
+    image: '/images/products/imported-steering-arm-035-欧曼-1左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 1',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -595,7 +595,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-036': {
-    image: '/images/products/imported/steering-arm/036-欧曼加强左右臂.png',
+    image: '/images/products/imported-steering-arm-036-欧曼加强左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -612,7 +612,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-037': {
-    image: '/images/products/imported/steering-arm/037-江淮康铃弯臂.png',
+    image: '/images/products/imported-steering-arm-037-江淮康铃弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -629,7 +629,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-038': {
-    image: '/images/products/imported/steering-arm/038-浮桥左右臂.png',
+    image: '/images/products/imported-steering-arm-038-浮桥左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -646,7 +646,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-039': {
-    image: '/images/products/imported/steering-arm/039-红岩左右臂.png',
+    image: '/images/products/imported-steering-arm-039-红岩左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -663,7 +663,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-040': {
-    image: '/images/products/imported/steering-arm/040-联合众卡左右臂.png',
+    image: '/images/products/imported-steering-arm-040-联合众卡左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -680,7 +680,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-041': {
-    image: '/images/products/imported/steering-arm/041-联合众卡左右臂-侧面图.png',
+    image: '/images/products/imported-steering-arm-041-联合众卡左右臂-侧面图.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -697,7 +697,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-042': {
-    image: '/images/products/imported/steering-arm/042-英田弯臂.png',
+    image: '/images/products/imported-steering-arm-042-英田弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -714,7 +714,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-043': {
-    image: '/images/products/imported/steering-arm/043-豪沃09款左右臂.png',
+    image: '/images/products/imported-steering-arm-043-豪沃09款左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 09',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -731,7 +731,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-044': {
-    image: '/images/products/imported/steering-arm/044-豪沃10款左右臂.png',
+    image: '/images/products/imported-steering-arm-044-豪沃10款左右臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - 10',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -748,7 +748,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-045': {
-    image: '/images/products/imported/steering-arm/045-赛龙弯直臂.png',
+    image: '/images/products/imported-steering-arm-045-赛龙弯直臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -765,7 +765,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-046': {
-    image: '/images/products/imported/steering-arm/046-雷沃弯臂.png',
+    image: '/images/products/imported-steering-arm-046-雷沃弯臂.png',
     category: 'Steering Arm',
     title: 'Heavy-Duty Steering Arm - Model',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
@@ -782,7 +782,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-001': {
-    image: '/images/products/imported/steering-knuckle/001-1041羊角左右.png',
+    image: '/images/products/imported-steering-knuckle-001-1041羊角左右.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 1041',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -799,7 +799,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-002': {
-    image: '/images/products/imported/steering-knuckle/002-1060.png',
+    image: '/images/products/imported-steering-knuckle-002-1060.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 1060',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -816,7 +816,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-003': {
-    image: '/images/products/imported/steering-knuckle/003-1061.png',
+    image: '/images/products/imported-steering-knuckle-003-1061.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 1061',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -833,7 +833,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-004': {
-    image: '/images/products/imported/steering-knuckle/004-1061-abs.png',
+    image: '/images/products/imported-steering-knuckle-004-1061-abs.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 1061 ABS',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -850,7 +850,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-005': {
-    image: '/images/products/imported/steering-knuckle/005-140.png',
+    image: '/images/products/imported-steering-knuckle-005-140.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 140',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -867,7 +867,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-006': {
-    image: '/images/products/imported/steering-knuckle/006-140abs.png',
+    image: '/images/products/imported-steering-knuckle-006-140abs.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 140ABS',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -884,7 +884,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-007': {
-    image: '/images/products/imported/steering-knuckle/007-140羊角右.png',
+    image: '/images/products/imported-steering-knuckle-007-140羊角右.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 140',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -901,7 +901,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-008': {
-    image: '/images/products/imported/steering-knuckle/008-145.png',
+    image: '/images/products/imported-steering-knuckle-008-145.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 145',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -918,7 +918,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-009': {
-    image: '/images/products/imported/steering-knuckle/009-153.png',
+    image: '/images/products/imported-steering-knuckle-009-153.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 153',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -935,7 +935,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-010': {
-    image: '/images/products/imported/steering-knuckle/010-598羊角.png',
+    image: '/images/products/imported-steering-knuckle-010-598羊角.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 598',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -952,7 +952,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-011': {
-    image: '/images/products/imported/steering-knuckle/011-rw140.png',
+    image: '/images/products/imported-steering-knuckle-011-rw140.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - RW140',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -969,7 +969,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-012': {
-    image: '/images/products/imported/steering-knuckle/012-rw145.png',
+    image: '/images/products/imported-steering-knuckle-012-rw145.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - RW145',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -986,7 +986,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-013': {
-    image: '/images/products/imported/steering-knuckle/013-z01.png',
+    image: '/images/products/imported-steering-knuckle-013-z01.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - Z01',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1003,7 +1003,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-014': {
-    image: '/images/products/imported/steering-knuckle/014-zb1.png',
+    image: '/images/products/imported-steering-knuckle-014-zb1.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - ZB1',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1020,7 +1020,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-015': {
-    image: '/images/products/imported/steering-knuckle/015-华菱a3.png',
+    image: '/images/products/imported-steering-knuckle-015-华菱a3.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - A3',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1037,7 +1037,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-016': {
-    image: '/images/products/imported/steering-knuckle/016-格尔发.png',
+    image: '/images/products/imported-steering-knuckle-016-格尔发.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - Model',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1054,7 +1054,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-017': {
-    image: '/images/products/imported/steering-knuckle/017-红岩杰狮.png',
+    image: '/images/products/imported-steering-knuckle-017-红岩杰狮.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - Model',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1071,7 +1071,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-018': {
-    image: '/images/products/imported/steering-knuckle/018-解放1066.png',
+    image: '/images/products/imported-steering-knuckle-018-解放1066.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 1066',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1088,7 +1088,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-019': {
-    image: '/images/products/imported/steering-knuckle/019-解放54w.png',
+    image: '/images/products/imported-steering-knuckle-019-解放54w.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 54W',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1105,7 +1105,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-020': {
-    image: '/images/products/imported/steering-knuckle/020-解放a2q.png',
+    image: '/images/products/imported-steering-knuckle-020-解放a2q.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - A2Q',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1122,7 +1122,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-021': {
-    image: '/images/products/imported/steering-knuckle/021-豪沃16款.png',
+    image: '/images/products/imported-steering-knuckle-021-豪沃16款.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - 16',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1139,7 +1139,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-022': {
-    image: '/images/products/imported/steering-knuckle/022-重汽斯太尔.png',
+    image: '/images/products/imported-steering-knuckle-022-重汽斯太尔.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - Model',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1156,7 +1156,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-023': {
-    image: '/images/products/imported/steering-knuckle/023-陕汽f2000-北奔.png',
+    image: '/images/products/imported-steering-knuckle-023-陕汽f2000-北奔.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - F2000',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1173,7 +1173,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-knuckle-024': {
-    image: '/images/products/imported/steering-knuckle/024-陕汽f3000.png',
+    image: '/images/products/imported-steering-knuckle-024-陕汽f3000.png',
     category: 'Steering Knuckle',
     title: 'Truck Steering Knuckle - F3000',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
@@ -1190,7 +1190,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-001': {
-    image: '/images/products/imported/agricultural/001-d618垂臂.png',
+    image: '/images/products/imported-agricultural-001-d618垂臂.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - D618',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1207,7 +1207,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-002': {
-    image: '/images/products/imported/agricultural/002-kt提升臂.png',
+    image: '/images/products/imported-agricultural-002-kt提升臂.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - KT',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1224,7 +1224,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-003': {
-    image: '/images/products/imported/agricultural/003-y0049.png',
+    image: '/images/products/imported-agricultural-003-y0049.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Y0049',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1241,7 +1241,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-004': {
-    image: '/images/products/imported/agricultural/004-俄罗斯羊角.png',
+    image: '/images/products/imported-agricultural-004-俄罗斯羊角.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1258,7 +1258,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-005': {
-    image: '/images/products/imported/agricultural/005-农机配件.png',
+    image: '/images/products/imported-agricultural-005-农机配件.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1275,7 +1275,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-006': {
-    image: '/images/products/imported/agricultural/006-外贸垂臂.png',
+    image: '/images/products/imported-agricultural-006-外贸垂臂.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1292,7 +1292,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-007': {
-    image: '/images/products/imported/agricultural/007-大小疙瘩臂.png',
+    image: '/images/products/imported-agricultural-007-大小疙瘩臂.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1309,7 +1309,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-008': {
-    image: '/images/products/imported/agricultural/008-大铲子.png',
+    image: '/images/products/imported-agricultural-008-大铲子.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1326,7 +1326,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-009': {
-    image: '/images/products/imported/agricultural/009-小大链板.png',
+    image: '/images/products/imported-agricultural-009-小大链板.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1343,7 +1343,7 @@ export const importedProductDetails = {
     ],
   },
   'new-agricultural-010': {
-    image: '/images/products/imported/agricultural/010-小铲子左右.png',
+    image: '/images/products/imported-agricultural-010-小铲子左右.png',
     category: 'Agricultural Part',
     title: 'Agricultural Machinery Part - Model',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
@@ -1360,7 +1360,7 @@ export const importedProductDetails = {
     ],
   },
   'new-john-deere-001': {
-    image: '/images/products/imported/john-deere/001-约翰迪尔5-754-854-950悬挂机构总成.png',
+    image: '/images/products/imported-john-deere-001-约翰迪尔5-754-854-950悬挂机构总成.png',
     category: 'John Deere Assembly',
     title: 'John Deere Suspension Assembly - 5-754 854 950',
     description: 'John Deere series suspension assembly for agricultural applications, built for dependable fit and performance.',
@@ -1377,7 +1377,7 @@ export const importedProductDetails = {
     ],
   },
   'new-john-deere-002': {
-    image: '/images/products/imported/john-deere/002-约翰迪尔6b-1404悬挂总成.png',
+    image: '/images/products/imported-john-deere-002-约翰迪尔6b-1404悬挂总成.png',
     category: 'John Deere Assembly',
     title: 'John Deere Suspension Assembly - 6B-1404',
     description: 'John Deere series suspension assembly for agricultural applications, built for dependable fit and performance.',
@@ -1394,7 +1394,7 @@ export const importedProductDetails = {
     ],
   },
   'new-john-deere-003': {
-    image: '/images/products/imported/john-deere/003-约翰迪尔系列.png',
+    image: '/images/products/imported-john-deere-003-约翰迪尔系列.png',
     category: 'John Deere Assembly',
     title: 'John Deere Suspension Assembly - Model',
     description: 'John Deere series suspension assembly for agricultural applications, built for dependable fit and performance.',
@@ -1411,7 +1411,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-001': {
-    image: '/images/products/imported/shaft/001-东风天龙传动轴.png',
+    image: '/images/products/imported-shaft-001-东风天龙传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1428,7 +1428,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-002': {
-    image: '/images/products/imported/shaft/002-东风霸龙传动轴.png',
+    image: '/images/products/imported-shaft-002-东风霸龙传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1445,7 +1445,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-003': {
-    image: '/images/products/imported/shaft/003-欧曼汽车传动轴.png',
+    image: '/images/products/imported-shaft-003-欧曼汽车传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1462,7 +1462,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-004': {
-    image: '/images/products/imported/shaft/004-重庆豪沃传动轴.png',
+    image: '/images/products/imported-shaft-004-重庆豪沃传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1479,7 +1479,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-005': {
-    image: '/images/products/imported/shaft/005-重汽str0125传动轴.png',
+    image: '/images/products/imported-shaft-005-重汽str0125传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - STR0125',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1496,7 +1496,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-006': {
-    image: '/images/products/imported/shaft/006-重汽str传动轴.png',
+    image: '/images/products/imported-shaft-006-重汽str传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - STR',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1513,7 +1513,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-007': {
-    image: '/images/products/imported/shaft/007-重汽传动轴.png',
+    image: '/images/products/imported-shaft-007-重汽传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1530,7 +1530,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-008': {
-    image: '/images/products/imported/shaft/008-陕汽奥龙传动轴.png',
+    image: '/images/products/imported-shaft-008-陕汽奥龙传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1547,7 +1547,7 @@ export const importedProductDetails = {
     ],
   },
   'new-shaft-009': {
-    image: '/images/products/imported/shaft/009-陕汽德龙传动轴.png',
+    image: '/images/products/imported-shaft-009-陕汽德龙传动轴.png',
     category: 'Drive Shaft',
     title: 'Heavy-Duty Drive Shaft - Model',
     description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
@@ -1564,7 +1564,7 @@ export const importedProductDetails = {
     ],
   },
   'new-long-shaft-001': {
-    image: '/images/products/imported/long-shaft/001-长轴系列.png',
+    image: '/images/products/imported-long-shaft-001-长轴系列.png',
     category: 'Long Shaft',
     title: 'Long Shaft Assembly - Model',
     description: 'Long shaft assembly for custom drivetrain and transmission applications requiring stable rotation and strength.',

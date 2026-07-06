@@ -7,9 +7,9 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 
-TARGET_WIDTH = 1400
-TARGET_HEIGHT = 1050
-PADDING_RATIO = 0.14
+TARGET_WIDTH = 1200
+TARGET_HEIGHT = 1200
+PADDING_RATIO = 0.05
 
 
 def normalize_image(src: Path, dst: Path) -> None:
@@ -18,7 +18,14 @@ def normalize_image(src: Path, dst: Path) -> None:
         alpha = rgba.getchannel("A")
         bbox = alpha.getbbox()
         if bbox:
-            rgba = rgba.crop(bbox)
+            left, top, right, bottom = bbox
+            pad_x = max(8, int((right - left) * 0.06))
+            pad_y = max(8, int((bottom - top) * 0.06))
+            left = max(0, left - pad_x)
+            top = max(0, top - pad_y)
+            right = min(rgba.width, right + pad_x)
+            bottom = min(rgba.height, bottom + pad_y)
+            rgba = rgba.crop((left, top, right, bottom))
 
         max_w = int(TARGET_WIDTH * (1 - PADDING_RATIO * 2))
         max_h = int(TARGET_HEIGHT * (1 - PADDING_RATIO * 2))

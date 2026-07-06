@@ -71,8 +71,8 @@ BRAND_RULES = [
 ]
 
 IMG_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
-TARGET_SIZE = (1400, 1050)
-PADDING_RATIO = 0.14
+TARGET_SIZE = (1200, 1200)
+PADDING_RATIO = 0.05
 RESAMPLE = getattr(Image, "Resampling", Image).LANCZOS
 
 
@@ -89,7 +89,14 @@ def normalize_image(src: Path, dst: Path) -> None:
     alpha = rgba.getchannel("A")
     bbox = alpha.getbbox()
     if bbox:
-      rgba = rgba.crop(bbox)
+      left, top, right, bottom = bbox
+      pad_x = max(8, int((right - left) * 0.06))
+      pad_y = max(8, int((bottom - top) * 0.06))
+      left = max(0, left - pad_x)
+      top = max(0, top - pad_y)
+      right = min(rgba.width, right + pad_x)
+      bottom = min(rgba.height, bottom + pad_y)
+      rgba = rgba.crop((left, top, right, bottom))
 
     max_w = int(TARGET_SIZE[0] * (1 - PADDING_RATIO * 2))
     max_h = int(TARGET_SIZE[1] * (1 - PADDING_RATIO * 2))

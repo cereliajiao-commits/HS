@@ -70,6 +70,26 @@ def clean_model(stem: str) -> str:
   return stem
 
 
+def split_model_and_label(stem: str) -> tuple[str, str]:
+  raw = clean_model(stem).replace('：', ':').replace('（', '(').replace('）', ')')
+  cleaned = re.sub(r'\s+', ' ', raw).strip()
+  english = re.sub(r'[\u4e00-\u9fff]+', ' ', cleaned)
+  english = english.replace(':', ' ').replace('(', ' ').replace(')', ' ')
+  english = re.sub(r'[^A-Za-z0-9./+-]+', ' ', english)
+  english = re.sub(r'\s+', ' ', english).strip()
+  english = english.strip('-_/ ')
+  if not english:
+    english = re.sub(r'[^A-Za-z0-9]+', ' ', cleaned)
+    english = re.sub(r'\s+', ' ', english).strip() or 'Model'
+  return cleaned, english
+
+
+def card_title(category: str, model_en: str, code: str) -> str:
+  rule = CATEGORY_RULES[category]
+  suffix = model_en if model_en and model_en != 'Model' else code
+  return f"{rule['title_en']} - {suffix}"
+
+
 def extract_model_code(stem: str) -> str:
   text = stem.replace('：', ':').replace('（', '(').replace('）', ')')
   text = re.sub(r'[^\w:\-/]+', ' ', text)
@@ -143,18 +163,20 @@ def main() -> None:
   content_lines = ['export const importedProductContent = {']
 
   for item in data:
-    model = clean_model(item['titleZh'])
+    model_zh, model_en = split_model_and_label(item['titleZh'])
     code = extract_model_code(item['titleZh'])
+    card_title_en = card_title(item['category'], model_en, code)
     card_lines.append('  {')
-    for key in ['id', 'category', 'brand', 'image', 'title', 'description', 'tag']:
+    for key in ['id', 'category', 'brand', 'image', 'description', 'tag']:
       value = esc(item[key])
       card_lines.append(f"    {key}: '{value}',")
+    card_lines.append(f"    title: '{esc(card_title_en)}',")
     card_lines.append('  },')
 
     detail_lines.append(f"  '{item['id']}': {{")
     detail_lines.append(f"    image: '{item['image']}',")
     detail_lines.append(f"    category: '{item['categoryLabelEn']}',")
-    detail_lines.append(f"    title: '{esc(category_title(item['category'], 'en', model, code))}',")
+    detail_lines.append(f"    title: '{esc(category_title(item['category'], 'en', model_zh, model_en or code))}',")
     detail_lines.append(f"    description: '{esc(category_desc(item['category'], 'en'))}',")
     detail_lines.append('    specs: [')
     for spec in spec_items(item['category'], 'en'):
@@ -169,7 +191,7 @@ def main() -> None:
     content_lines.append(f"  '{item['id']}': {{")
     for lang in ['en', 'zh']:
       content_lines.append(f"    {lang}: {{")
-      content_lines.append(f"      title: '{esc(category_title(item['category'], lang, model, code))}',")
+      content_lines.append(f"      title: '{esc(category_title(item['category'], lang, model_zh, model_en or code))}',")
       content_lines.append(f"      description: '{esc(category_desc(item['category'], lang))}',")
       content_lines.append('      specs: [')
       for spec in spec_items(item['category'], lang):

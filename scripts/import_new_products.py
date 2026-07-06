@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from PIL import Image, ImageOps
+from PIL import ImageChops
 
 
 CATEGORY_MAP = {
@@ -72,7 +73,7 @@ BRAND_RULES = [
 
 IMG_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 TARGET_SIZE = (1200, 1200)
-PADDING_RATIO = 0.05
+PADDING_RATIO = 0.02
 RESAMPLE = getattr(Image, "Resampling", Image).LANCZOS
 
 
@@ -83,20 +84,40 @@ def slugify(text: str) -> str:
   return text or "item"
 
 
+def crop_content(rgba: Image.Image) -> Image.Image:
+  alpha = rgba.getchannel("A")
+  alpha_bbox = alpha.getbbox()
+  if alpha_bbox:
+    left, top, right, bottom = alpha_bbox
+  else:
+    rgb = rgba.convert("RGB")
+    corners = [
+      rgb.getpixel((0, 0)),
+      rgb.getpixel((max(0, rgb.width - 1), 0)),
+      rgb.getpixel((0, max(0, rgb.height - 1))),
+      rgb.getpixel((max(0, rgb.width - 1), max(0, rgb.height - 1))),
+    ]
+    bg = tuple(sum(pixel[i] for pixel in corners) // len(corners) for i in range(3))
+    diff = ImageChops.difference(rgb, Image.new("RGB", rgb.size, bg)).convert("L")
+    mask = diff.point(lambda p: 255 if p > 18 else 0)
+    bbox = mask.getbbox()
+    if not bbox:
+      return rgba
+    left, top, right, bottom = bbox
+
+  pad_x = max(8, int((right - left) * 0.08))
+  pad_y = max(8, int((bottom - top) * 0.08))
+  left = max(0, left - pad_x)
+  top = max(0, top - pad_y)
+  right = min(rgba.width, right + pad_x)
+  bottom = min(rgba.height, bottom + pad_y)
+  return rgba.crop((left, top, right, bottom))
+
+
 def normalize_image(src: Path, dst: Path) -> None:
   with Image.open(src) as img:
     rgba = img.convert("RGBA")
-    alpha = rgba.getchannel("A")
-    bbox = alpha.getbbox()
-    if bbox:
-      left, top, right, bottom = bbox
-      pad_x = max(8, int((right - left) * 0.06))
-      pad_y = max(8, int((bottom - top) * 0.06))
-      left = max(0, left - pad_x)
-      top = max(0, top - pad_y)
-      right = min(rgba.width, right + pad_x)
-      bottom = min(rgba.height, bottom + pad_y)
-      rgba = rgba.crop((left, top, right, bottom))
+    rgba = crop_content(rgba)
 
     max_w = int(TARGET_SIZE[0] * (1 - PADDING_RATIO * 2))
     max_h = int(TARGET_SIZE[1] * (1 - PADDING_RATIO * 2))

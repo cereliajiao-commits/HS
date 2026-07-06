@@ -73,21 +73,22 @@ def clean_model(stem: str) -> str:
 def split_model_and_label(stem: str) -> tuple[str, str]:
   raw = clean_model(stem).replace('：', ':').replace('（', '(').replace('）', ')')
   cleaned = re.sub(r'\s+', ' ', raw).strip()
-  english = re.sub(r'[\u4e00-\u9fff]+', ' ', cleaned)
+  matches = re.findall(r'[A-Za-z0-9]+(?:[./+-][A-Za-z0-9]+)*', cleaned)
+  english = ' '.join(matches).strip()
   english = english.replace(':', ' ').replace('(', ' ').replace(')', ' ')
-  english = re.sub(r'[^A-Za-z0-9./+-]+', ' ', english)
   english = re.sub(r'\s+', ' ', english).strip()
-  english = english.strip('-_/ ')
   if not english:
-    english = re.sub(r'[^A-Za-z0-9]+', ' ', cleaned)
-    english = re.sub(r'\s+', ' ', english).strip() or 'Model'
+    digits = re.findall(r'\d+[A-Za-z0-9./+-]*', cleaned)
+    english = ' '.join(digits).strip()
+  if not english:
+    english = 'Model'
   return cleaned, english
 
 
 def card_title(category: str, model_en: str, code: str) -> str:
   rule = CATEGORY_RULES[category]
   suffix = model_en if model_en and model_en != 'Model' else code
-  return f"{rule['title_en']} - {suffix}"
+  return f"{rule['title_en']} - {suffix}" if suffix else rule['title_en']
 
 
 def extract_model_code(stem: str) -> str:

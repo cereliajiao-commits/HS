@@ -5,6 +5,8 @@ import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { productContent } from '@/data/productContent';
 
+const containsCjk = (text: string) => /[\u4e00-\u9fff]/.test(text);
+
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
   const productLocale = lang === 'zh' ? 'zh' : 'en';
@@ -104,7 +106,9 @@ export default function ProductsSection() {
         <div className="products-grid">
           {filteredCards.map((card) => {
             const localized = productContent[card.id]?.[productLocale];
-            const title = localized?.title ?? card.title;
+            const title = productLocale === 'en'
+              ? (localized?.title && !containsCjk(localized.title) ? localized.title : card.title.replace(/[\u4e00-\u9fff]+/g, '').replace(/\s+-\s+$/, '').trim())
+              : (localized?.title ?? card.title);
             const description = localized?.description ?? card.description;
 
             return (

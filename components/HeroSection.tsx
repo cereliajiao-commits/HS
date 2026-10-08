@@ -1,10 +1,12 @@
 'use client';
 
 import { useLanguage } from './LanguageProvider';
+import { trackEvent } from '@/lib/analytics';
 
 export default function HeroSection() {
   const { t } = useLanguage();
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    trackEvent(href === '#products' ? 'view_products' : 'begin_inquiry', { location: 'hero' });
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useLanguage } from './LanguageProvider';
+import { trackEvent } from '@/lib/analytics';
 
 export default function ContactSection() {
   const { t, lang } = useLanguage();
@@ -11,6 +12,7 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
+    trackEvent('generate_lead', { method: 'inquiry_form' });
     const form = e.currentTarget;
     const payload = Object.fromEntries(new FormData(form).entries());
 
@@ -72,7 +74,7 @@ export default function ContactSection() {
                 <div>
                   <h4>WhatsApp</h4>
                   <p>
-                    <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer">+86 177 5109 7209</a><br />
+                    <a href="https://wa.me/8617751097209" onClick={() => trackEvent('whatsapp_click', { location: 'contact_section' })} target="_blank" rel="noopener noreferrer">+86 177 5109 7209</a><br />
                     Click to chat directly
                   </p>
                 </div>

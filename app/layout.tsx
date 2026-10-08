@@ -1,9 +1,60 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+const siteUrl = 'https://www.hsaxle.com';
+const siteName = 'HONGSHENG Auto Parts';
+const siteDescription =
+  'Hengshui Hongsheng Auto Parts Co., Ltd. - Leading manufacturer of steering knuckles, steering arms, drive shafts, and suspension systems for heavy-duty trucks and agricultural machinery. ISO9001 certified.';
 
 export const metadata: Metadata = {
-  title: 'HONGSHENG Auto Parts | Professional Steering & Suspension Systems Since 1996',
-  description: 'Hengshui Hongsheng Auto Parts Co., Ltd. - Leading manufacturer of steering knuckles, steering arms, drive shafts, and suspension systems for heavy-duty trucks and agricultural machinery. ISO9001 certified.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    'steering knuckle manufacturer',
+    'truck steering parts supplier',
+    'heavy-duty truck suspension parts',
+    'steering arm manufacturer',
+    'drive shaft supplier',
+    'agricultural machinery parts manufacturer',
+    'OEM auto parts supplier',
+    'forged auto parts factory',
+    'HONGSHENG Auto Parts',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    siteName,
+    title: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    description: siteDescription,
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    description: siteDescription,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +72,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <GoogleAnalytics />
+      </body>
     </html>
   );
 }

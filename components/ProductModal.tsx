@@ -5,6 +5,7 @@ import { productDetails } from '@/data/productDetails';
 import { useLanguage } from './LanguageProvider';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
 import { resolveProductText } from '@/data/productLocalization';
+import { trackEvent } from '@/lib/analytics';
 
 type ImportedDetail = {
   image: string;
@@ -36,6 +37,7 @@ export default function ProductModal() {
     const handleOpen = (e: Event) => {
       const customEvent = e as CustomEvent<string>;
       setProductId(customEvent.detail);
+      trackEvent('view_product', { product_id: customEvent.detail });
       setIsOpen(true);
       document.body.style.overflow = 'hidden';
     };
@@ -178,7 +180,7 @@ export default function ProductModal() {
           </div>
           <div className="modal-cta">
             <a href="#contact" className="btn btn-primary" onClick={handleScrollToContact}>{requestQuoteLabel}</a>
-            <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{whatsappLabel}</a>
+            <a href="https://wa.me/8617751097209" onClick={() => trackEvent('whatsapp_click', { location: 'product_modal', product_id: productId })} target="_blank" rel="noopener noreferrer" className="btn btn-outline">{whatsappLabel}</a>
           </div>
         </div>
       </div>

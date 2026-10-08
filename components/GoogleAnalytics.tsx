@@ -2,7 +2,9 @@
 
 import Script from 'next/script';
 
-const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// GA4 measurement IDs are public browser identifiers; the fallback keeps tracking enabled
+// on deployments where the hosting provider has not configured environment variables.
+const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-CN81GNY7EX';
 
 export default function GoogleAnalytics() {
   if (!measurementId) return null;

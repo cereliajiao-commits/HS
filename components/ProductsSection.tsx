@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { resolveProductText } from '@/data/productLocalization';
+import { trackEvent } from '@/lib/analytics';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -41,11 +42,6 @@ export default function ProductsSection() {
   const handleFilter = (filter: string) => {
     setCurrentFilter(filter);
   };
-
-  const openProductDetail = useCallback((productId: string) => {
-    const event = new CustomEvent('openProductModal', { detail: productId });
-    window.dispatchEvent(event);
-  }, []);
 
   const filteredCards = allProductCards.filter((card) => {
     if (currentFilter === 'all') return true;
@@ -109,10 +105,12 @@ export default function ProductsSection() {
             const tag = localized?.categoryLabel ?? card.tag;
 
             return (
-              <div
+              <a
                 key={card.id}
+                href={`/product/${encodeURIComponent(card.id)}${lang === 'zh' ? '?lang=zh' : ''}`}
                 className="product-card fade-up visible"
-                onClick={() => openProductDetail(card.id)}
+                onClick={() => trackEvent('view_product', { product_id: card.id, location: 'product_grid' })}
+                aria-label={`${title} product details`}
               >
                 <div className="product-card-img">
                   <img src={card.image} alt={title} />
@@ -122,7 +120,7 @@ export default function ProductsSection() {
                   <p>{description}</p>
                   <span className="product-tag">{tag}</span>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageProvider';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
+import BenefitsStrip from './BenefitsStrip';
 import AboutSection from './AboutSection';
 import ProductsSection from './ProductsSection';
 import AdvantagesSection from './AdvantagesSection';
@@ -37,6 +38,7 @@ export default function HomePage() {
     <LanguageProvider>
       <Navigation />
       <HeroSection />
+      <BenefitsStrip />
       <AboutSection />
       <ProductsSection />
       <AdvantagesSection />

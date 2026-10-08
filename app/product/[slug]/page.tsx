@@ -90,7 +90,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     };
   }
 
-  const title = `${product.title} | HONGSHENG Auto Parts`;
+  const title = product.title;
   const description = product.description || (lang === 'zh'
     ? `了解 ${product.title}，获取 HONGSHENG Auto Parts 的产品规格、应用和询价支持。`
     : `Explore ${product.title}, including specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);

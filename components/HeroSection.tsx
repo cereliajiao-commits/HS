@@ -63,10 +63,6 @@ export default function HeroSection() {
             <div className="hero-stat-label">{t('hero.stat2Label')}</div>
           </div>
           <div>
-            <div className="hero-stat-num">{t('hero.stat3Num')}</div>
-            <div className="hero-stat-label">{t('hero.stat3Label')}</div>
-          </div>
-          <div>
             <div className="hero-stat-num">{t('hero.stat4Num')}</div>
             <div className="hero-stat-label">{t('hero.stat4Label')}</div>
           </div>

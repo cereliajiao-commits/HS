@@ -73,16 +73,16 @@ export default function ProductsSection() {
         <div className="product-tabs fade-up stagger-3">
           <div className="filter-mode-toggle">
             <button
-              className={`mode-btn ${filterMode === 'type' ? 'active' : ''}`}
-              onClick={() => handleModeSwitch('type')}
-            >
-              {t('products.byType')}
-            </button>
-            <button
               className={`mode-btn ${filterMode === 'brand' ? 'active' : ''}`}
               onClick={() => handleModeSwitch('brand')}
             >
               {t('products.byBrand')}
+            </button>
+            <button
+              className={`mode-btn ${filterMode === 'type' ? 'active' : ''}`}
+              onClick={() => handleModeSwitch('type')}
+            >
+              {t('products.byType')}
             </button>
           </div>
           <div className="filter-tabs">

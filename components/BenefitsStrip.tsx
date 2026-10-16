@@ -3,11 +3,11 @@
 import { useLanguage } from './LanguageProvider';
 
 const benefitIcons = [
-  <svg key="moq" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l3 3v15H5zM8 8h7M8 12h7M8 16h4" /></svg>,
-  <svg key="price" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H5V3h2zM9 7h5M12 10v8M15 12.5c0-1.1-1.2-1.7-2.4-1.7S10 11.4 10 12.4s1 1.4 2.2 1.7 2.2.7 2.2 1.8-1.1 1.7-2.4 1.7-2.4-.6-2.4-1.8" /></svg>,
-  <svg key="oem" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c4-1 6-4 8-9 4 2 7 5 10 10-4 0-7 1-10 5-1-3-3-5-8-6z" /></svg>,
-  <svg key="warranty" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5M17 17l2 2 4-5" /></svg>,
-  <svg key="delivery" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h12v11H3zM15 10h4l2 3v4h-6zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" /></svg>,
+  <svg key="moq" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h17v26H8a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" /><path className="icon-cutout" d="M10 10h10v2H10zm0 5h10v2H10zm-1 9h14v2H9z" /></svg>,
+  <svg key="price" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 2h13l7 7v21H6Z" /><path className="icon-cutout" d="M19 2v8h7v-2h-5V2ZM9 7h6v2H9Z" /><text x="16" y="25" textAnchor="middle" fill="white" fontSize="18" fontFamily="Arial" fontWeight="700">$</text></svg>,
+  <svg key="oem" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3c10 4 17 12 20 23H17C17 16 14 9 8 3Zm0 9c5 3 8 8 8 14H2c8-3 10-7 6-14Z" /></svg>,
+  <svg key="warranty" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 12h11v7H3zm15 0h11v7H18zM5 21h9v9H5zm13 0h9v9h-9Z" /><path d="M16 12C3 12 5 1 11 4c3 1 5 8 5 8Zm0 0C29 12 27 1 21 4c-3 1-5 8-5 8Z" fill="none" stroke="currentColor" strokeWidth="2.8" /></svg>,
+  <svg key="delivery" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 3h10v4h-3V6h-4v1h-3ZM4 8h23v18H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2Z" /><path className="icon-cutout" d="M2 14h25v2H2Z" /><circle cx="24" cy="24" r="8" stroke="white" strokeWidth="2" /><path d="M24 19v5h3" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>,
 ];
 
 export default function BenefitsStrip() {

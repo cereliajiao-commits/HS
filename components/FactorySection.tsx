@@ -10,7 +10,7 @@ const content = {
     gateAlt: 'Entrance of Hengshui Hongsheng Auto Parts factory',
     stats: [
       ['1996', 'Manufacturing since'],
-      ['5', 'Forging lines'],
+      ['10', 'Production lines'],
       ['3', 'Extrusion lines'],
       ['CNC', 'Precision machining'],
       ['ISO 9001', 'Quality system'],
@@ -19,7 +19,7 @@ const content = {
       {
         title: 'Production Capacity for Repeat Orders',
         text: 'Dedicated equipment and organized in-process handling support volume orders across truck, agricultural, and construction machinery product families.',
-        image: '/images/company/production-workshop.jpg',
+        image: '/images/company/production-workshop.jpg?v=20261016-2',
       },
       {
         title: 'Precision Machining',
@@ -34,12 +34,12 @@ const content = {
       {
         title: 'Warehouse & Order Control',
         text: 'Products are organized by model and order stage to support repeat purchasing and mixed-model orders.',
-        image: '/images/company/warehouse.jpg',
+        image: '/images/company/warehouse.jpg?v=20261016-2',
       },
       {
         title: 'Export-Ready Packaging',
         text: 'Heavy components are packed in reinforced wooden cases to reduce movement and damage during international transport.',
-        image: '/images/company/export-packaging.jpg',
+        image: '/images/company/export-packaging.jpg?v=20261016-2',
       },
     ],
     buyerTitle: 'What international buyers can expect',
@@ -52,7 +52,7 @@ const content = {
     gateAlt: '衡水宏盛汽车配件有限公司工厂入口',
     stats: [
       ['1996', '开始专业制造'],
-      ['5', '条锻造生产线'],
+      ['10', '条生产线'],
       ['3', '条挤压生产线'],
       ['CNC', '精密加工'],
       ['ISO 9001', '质量管理体系'],
@@ -61,7 +61,7 @@ const content = {
       {
         title: '稳定承接重复与批量订单',
         text: '专业加工设备与规范的在制品管理，可支持重卡、农业机械和工程机械多类零部件的批量生产。',
-        image: '/images/company/production-workshop.jpg',
+        image: '/images/company/production-workshop.jpg?v=20261016-2',
       },
       {
         title: '精密机械加工',
@@ -76,12 +76,12 @@ const content = {
       {
         title: '仓储与订单管理',
         text: '产品按型号和订单阶段有序管理，便于重复采购和多型号混装订单。',
-        image: '/images/company/warehouse.jpg',
+        image: '/images/company/warehouse.jpg?v=20261016-2',
       },
       {
         title: '出口运输包装',
         text: '重型零部件采用加固木箱包装，减少国际运输过程中的移动、磕碰和损坏。',
-        image: '/images/company/export-packaging.jpg',
+        image: '/images/company/export-packaging.jpg?v=20261016-2',
       },
     ],
     buyerTitle: '海外采购商可以获得',

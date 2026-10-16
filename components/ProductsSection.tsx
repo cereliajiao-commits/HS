@@ -113,7 +113,7 @@ export default function ProductsSection() {
                 aria-label={`${title} product details`}
               >
                 <div className="product-card-img">
-                  <img src={card.image} alt={title} />
+                  <img src={`${card.image}?v=20261016-white`} alt={title} />
                 </div>
                 <div className="product-card-body">
                   <h3>{title}</h3>

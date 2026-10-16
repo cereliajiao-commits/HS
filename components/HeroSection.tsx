@@ -4,7 +4,16 @@ import { useLanguage } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const platformLabel = ({
+    en: 'Engineered for leading truck platforms',
+    zh: '适配主流重卡平台',
+    ru: 'Для ведущих грузовых платформ',
+    ar: 'مصمم لمنصات الشاحنات الرائدة',
+    es: 'Diseñado para plataformas líderes',
+    pt: 'Projetado para plataformas líderes',
+    fr: 'Conçu pour les principales plateformes',
+  } as const)[lang];
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     trackEvent(href === '#products' ? 'view_products' : 'begin_inquiry', { location: 'hero' });
     e.preventDefault();
@@ -39,6 +48,10 @@ export default function HeroSection() {
           <a href="#contact" className="btn btn-outline" onClick={(e) => handleClick(e, '#contact')}>
             {t('hero.requestQuote')}
           </a>
+        </div>
+        <div className="hero-platforms fade-up stagger-4">
+          <span>{platformLabel}</span>
+          <div><strong>HOWO</strong><strong>FAW</strong><strong>SHACMAN</strong></div>
         </div>
         <div className="hero-stats fade-up stagger-4">
           <div>

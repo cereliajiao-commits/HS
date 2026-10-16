@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import BenefitsStrip from './BenefitsStrip';
 import AboutSection from './AboutSection';
+import FactorySection from './FactorySection';
 import ProductsSection from './ProductsSection';
 import AdvantagesSection from './AdvantagesSection';
 import ContactSection from './ContactSection';
@@ -40,6 +41,7 @@ export default function HomePage() {
       <HeroSection />
       <BenefitsStrip />
       <AboutSection />
+      <FactorySection />
       <ProductsSection />
       <AdvantagesSection />
       <ContactSection />

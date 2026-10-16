@@ -8,7 +8,8 @@ import ProductSearch from './ProductSearch';
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const factoryLabel = ({ en: 'Factory', zh: '工厂', ru: 'Завод', ar: 'المصنع', es: 'Fábrica', pt: 'Fábrica', fr: 'Usine' } as const)[lang];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +38,7 @@ export default function Navigation() {
         </a>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`} id="navLinks">
           <a href="#about" onClick={(e) => handleLinkClick(e, '#about')}>{t('nav.about')}</a>
+          <a href="#factory" onClick={(e) => handleLinkClick(e, '#factory')}>{factoryLabel}</a>
           <a href="#products" onClick={(e) => handleLinkClick(e, '#products')}>{t('nav.products')}</a>
           <a href="#advantages" onClick={(e) => handleLinkClick(e, '#advantages')}>{t('nav.whyUs')}</a>
           <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.contact')}</a>

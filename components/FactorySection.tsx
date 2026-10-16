@@ -97,8 +97,10 @@ export default function FactorySection() {
     <section id="factory" className="factory-section">
       <div className="container">
         <div className="factory-header fade-up">
-          <div className="section-label">{copy.label}</div>
-          <h2 className="section-title">{copy.title}</h2>
+          <div className="factory-header-title">
+            <div className="section-label">{copy.label}</div>
+            <h2 className="section-title">{copy.title}</h2>
+          </div>
           <p>{copy.intro}</p>
         </div>
 
@@ -118,7 +120,7 @@ export default function FactorySection() {
         <div className="factory-process-grid">
           {copy.cards.map((card, index) => (
             <article className={`factory-process-card fade-up ${index === 0 ? 'factory-process-card--wide' : ''}`} key={card.title}>
-              <div className="factory-process-image"><img src={card.image} alt={card.title} /></div>
+              <div className={`factory-process-image factory-process-image--${index + 1}`}><img src={card.image} alt={card.title} /></div>
               <div className="factory-process-copy">
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <h3>{card.title}</h3>

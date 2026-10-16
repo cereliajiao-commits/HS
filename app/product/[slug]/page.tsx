@@ -5,6 +5,7 @@ import { productDetails } from '@/data/productDetails';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
 import { resolveProductText, translateCategoryLabel } from '@/data/productLocalization';
 import type { Language } from '@/components/LanguageProvider';
+import ProductImageZoom from '@/components/ProductImageZoom';
 
 type ProductDetailRecord = {
   image: string;
@@ -203,6 +204,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
         requestQuote: '获取报价',
         whatsapp: 'WhatsApp 咨询',
         inquiryNote: '告诉我们型号、数量和目标市场，我们会尽快回复。',
+        zoomHint: '移动鼠标查看细节',
         language: 'English',
       }
     : {
@@ -212,6 +214,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
         requestQuote: 'Request a Quote',
         whatsapp: 'WhatsApp Inquiry',
         inquiryNote: 'Tell us the model, quantity, and target market. Our team will respond shortly.',
+        zoomHint: 'Move cursor to zoom',
         language: '中文',
       };
 
@@ -242,7 +245,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
         <section className="product-detail-layout">
           <div className="product-detail-media">
-            <img src={product.image} alt={product.title} />
+            <ProductImageZoom src={product.image} alt={product.title} hint={labels.zoomHint} />
           </div>
           <div className="product-detail-content">
             <div className="section-label">{product.categoryLabel}</div>

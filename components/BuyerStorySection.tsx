@@ -4,9 +4,9 @@ import { useLanguage } from './LanguageProvider';
 
 const content = {
   en: {
-    label: 'Built for Uptime',
-    title: 'The Parts Behind Every Working Day',
-    intro: 'Fleet operators, repair businesses and distributors all need the same thing: the right part, made consistently and delivered when the job depends on it. Hongsheng supports the people who keep heavy-duty vehicles working.',
+    label: 'OE-Grade Manufacturing',
+    title: 'Consistent Parts for Every Working Day',
+    intro: 'Hongsheng manufactures for OEM/ODM programs and the independent aftermarket. Defined drawings, materials and process controls help us deliver OE-grade fit, stable repeat-order quality and dependable supply for heavy-duty vehicles.',
     points: [
       ['Reliable Fitment', 'Controlled machining and inspection help every repeat order match the required dimensions.'],
       ['Dependable Supply', 'Organized production and 200+ product models support ongoing and mixed-model purchasing.'],
@@ -14,9 +14,9 @@ const content = {
     ],
   },
   zh: {
-    label: '为稳定运营而制造',
-    title: '让每一辆重卡持续创造价值',
-    intro: '车队运营商、维修企业和经销商都需要同一件事：型号正确、品质稳定，并在业务需要时按计划交付。宏盛专注于支持每一位保障重型车辆正常运行的人。',
+    label: '按 OE 级要求制造',
+    title: '稳定品质，保障每一个工作日',
+    intro: '宏盛面向 OEM/ODM 项目及独立售后市场供货。我们依据明确的图纸、材料和工艺要求组织生产，以 OE 级安装匹配、稳定的重复订单品质和可靠供应，支持重型车辆持续运营。',
     points: [
       ['可靠匹配', '通过受控加工与检测，让重复订单持续符合所需尺寸和安装要求。'],
       ['稳定供应', '规范生产管理与 200 多种产品型号，支持长期采购及多型号订单。'],
@@ -24,9 +24,9 @@ const content = {
     ],
   },
   ru: {
-    label: 'Для бесперебойной работы',
-    title: 'Детали, которые поддерживают каждый рабочий день',
-    intro: 'Автопаркам, ремонтным компаниям и дистрибьюторам нужны правильные детали, стабильное качество и своевременные поставки. Hongsheng помогает тем, кто поддерживает тяжелую технику в работе.',
+    label: 'Производство уровня OE',
+    title: 'Стабильные детали для каждого рабочего дня',
+    intro: 'Hongsheng производит детали для программ OEM/ODM и независимого рынка запчастей. Чертежи, материалы и контроль процессов обеспечивают посадку уровня OE, стабильность повторных заказов и надежные поставки.',
     points: [
       ['Надежная совместимость', 'Контролируемая обработка и проверка обеспечивают стабильные размеры повторных заказов.'],
       ['Стабильные поставки', 'Организованное производство и более 200 моделей поддерживают регулярные и смешанные заказы.'],
@@ -34,9 +34,9 @@ const content = {
     ],
   },
   ar: {
-    label: 'مصممة لاستمرار العمل',
-    title: 'قطع تدعم كل يوم عمل',
-    intro: 'تحتاج أساطيل النقل وورش الصيانة والموزعون إلى القطعة الصحيحة والجودة الثابتة والتسليم في الموعد. تدعم هونغشنغ كل من يحافظ على عمل المركبات الثقيلة.',
+    label: 'تصنيع بمستوى OE',
+    title: 'قطع ثابتة الجودة لكل يوم عمل',
+    intro: 'تصنّع هونغشنغ لبرامج OEM/ODM ولسوق قطع الغيار المستقل. تساعد الرسومات والمواد وضوابط العمليات المحددة على توفير توافق بمستوى OE وجودة ثابتة للطلبات المتكررة وتوريد موثوق.',
     points: [
       ['توافق موثوق', 'تساعد المعالجة والفحص المنضبطان على ثبات الأبعاد في الطلبات المتكررة.'],
       ['توريد مستقر', 'إنتاج منظم وأكثر من 200 طراز يدعمان الطلبات المستمرة والمتنوعة.'],
@@ -44,9 +44,9 @@ const content = {
     ],
   },
   es: {
-    label: 'Fabricado para seguir en marcha',
-    title: 'Las piezas detrás de cada jornada de trabajo',
-    intro: 'Flotas, talleres y distribuidores necesitan la pieza correcta, calidad constante y entrega a tiempo. Hongsheng apoya a quienes mantienen los vehículos pesados en funcionamiento.',
+    label: 'Fabricación de nivel OE',
+    title: 'Piezas consistentes para cada jornada',
+    intro: 'Hongsheng fabrica para programas OEM/ODM y el mercado independiente de recambios. Planos, materiales y controles de proceso definidos permiten ofrecer ajuste de nivel OE, calidad constante y suministro fiable.',
     points: [
       ['Ajuste confiable', 'El mecanizado y la inspección controlados mantienen las dimensiones en pedidos repetidos.'],
       ['Suministro estable', 'La producción organizada y más de 200 modelos permiten compras continuas y combinadas.'],
@@ -54,9 +54,9 @@ const content = {
     ],
   },
   pt: {
-    label: 'Feito para manter em movimento',
-    title: 'As peças por trás de cada dia de trabalho',
-    intro: 'Frotas, oficinas e distribuidores precisam da peça certa, qualidade consistente e entrega pontual. A Hongsheng apoia quem mantém veículos pesados em operação.',
+    label: 'Fabricação de nível OE',
+    title: 'Peças consistentes para cada dia de trabalho',
+    intro: 'A Hongsheng fabrica para programas OEM/ODM e para o mercado independente de reposição. Desenhos, materiais e controles de processo definidos ajudam a garantir encaixe de nível OE, qualidade consistente e fornecimento confiável.',
     points: [
       ['Encaixe confiável', 'Usinagem e inspeção controladas mantêm as dimensões consistentes em pedidos repetidos.'],
       ['Fornecimento estável', 'Produção organizada e mais de 200 modelos apoiam compras contínuas e combinadas.'],
@@ -64,9 +64,9 @@ const content = {
     ],
   },
   fr: {
-    label: 'Conçu pour rester opérationnel',
-    title: 'Les pièces qui soutiennent chaque journée de travail',
-    intro: 'Flottes, réparateurs et distributeurs ont besoin de la bonne pièce, d’une qualité constante et d’une livraison ponctuelle. Hongsheng accompagne ceux qui maintiennent les véhicules industriels en activité.',
+    label: 'Fabrication de niveau OE',
+    title: 'Des pièces constantes pour chaque journée de travail',
+    intro: 'Hongsheng fabrique pour les programmes OEM/ODM et le marché indépendant de la rechange. Des plans, matériaux et procédés définis assurent un montage de niveau OE, une qualité constante et un approvisionnement fiable.',
     points: [
       ['Montage fiable', 'Un usinage et un contrôle maîtrisés assurent des dimensions constantes à chaque commande.'],
       ['Approvisionnement stable', 'Une production organisée et plus de 200 modèles facilitent les achats réguliers et mixtes.'],

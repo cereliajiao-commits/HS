@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
+const WECHAT_ID = 'a17751097209';
+
 export default function WeChatModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -35,12 +37,12 @@ export default function WeChatModal() {
   };
 
   const copyWeChatId = () => {
-    navigator.clipboard.writeText('hongsheng_qipei').then(() => {
+    navigator.clipboard.writeText(WECHAT_ID).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }).catch(() => {
       const textArea = document.createElement('textarea');
-      textArea.value = 'hongsheng_qipei';
+      textArea.value = WECHAT_ID;
       document.body.appendChild(textArea);
       textArea.select();
       document.execCommand('copy');
@@ -68,15 +70,19 @@ export default function WeChatModal() {
           <p style={{ color: 'var(--gray-400)', fontSize: '0.9rem', marginBottom: '2rem' }}>
             Scan the QR code or search the WeChat ID below
           </p>
-          <div style={{ width: '200px', height: '200px', background: 'var(--white)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', padding: '1rem' }}>
-            <div style={{ width: '100%', height: '100%', background: 'var(--gray-100)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gray-600)', fontSize: '0.75rem', textAlign: 'center', padding: '0.5rem' }}>
-              Replace with<br />WeChat QR Code
-            </div>
+          <div style={{ width: '240px', maxWidth: '100%', background: 'var(--white)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', padding: '0.65rem' }}>
+            <img
+              src="/images/company/wechat-qr.jpg"
+              alt="WeChat QR code for a17751097209"
+              width="888"
+              height="1131"
+              style={{ display: 'block', width: '100%', height: 'auto', borderRadius: '4px' }}
+            />
           </div>
           <div style={{ background: 'var(--gray-900)', border: '1px solid var(--gray-800)', borderRadius: '8px', padding: '1rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div>
               <div style={{ fontSize: '0.7rem', color: 'var(--gray-400)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>WeChat ID</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)' }}>hongsheng_qipei</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)' }}>{WECHAT_ID}</div>
             </div>
             <button
               onClick={copyWeChatId}

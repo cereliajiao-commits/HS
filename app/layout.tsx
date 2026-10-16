@@ -5,12 +5,12 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 const siteUrl = 'https://www.hsaxle.com';
 const siteName = 'HONGSHENG Auto Parts';
 const siteDescription =
-  'Hengshui Hongsheng Auto Parts Co., Ltd. - Leading manufacturer of steering knuckles, steering arms, drive shafts, and suspension systems for heavy-duty trucks and agricultural machinery. ISO9001 certified.';
+  'Hengshui Hongsheng Auto Parts Co., Ltd. - ISO 9001 certified manufacturer of heavy-duty truck, agricultural machinery, construction equipment, driveline, chassis, and custom components.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    default: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName,
-    title: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    title: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
     description: siteDescription,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary',
-    title: `${siteName} | Professional Steering & Suspension Systems Since 1996`,
+    title: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
     description: siteDescription,
   },
   verification: {

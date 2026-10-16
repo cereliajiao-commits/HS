@@ -2,8 +2,8 @@
   "company": {
     "name": "Hengshui Hongsheng Auto Parts Co., Ltd.",
     "type": {
-      "en": "We are a professional manufacturer of automotive steering and suspension parts.",
-      "zh": "我们是一家专业生产汽车转向和悬挂系统零部件的工厂。"
+      "en": "We are a professional manufacturer of heavy-duty vehicle, agricultural machinery, and construction equipment components.",
+      "zh": "我们是一家专业生产重型车辆、农业机械和工程机械零部件的工厂。"
     },
     "mainProducts": {
       "en": "Our main products include steering arms, drag links, drive shafts, and related components.",
@@ -118,8 +118,8 @@
       "id": "factory",
       "intent": "factory",
       "answer": {
-        "en": "We are a factory specializing in the production of automotive steering and suspension parts.",
-        "zh": "我们是工厂，专注于汽车转向和悬挂系统零部件的生产。"
+        "en": "We are a factory specializing in components for heavy-duty vehicles, agricultural machinery, and construction equipment.",
+        "zh": "我们是工厂，专注于重型车辆、农业机械和工程机械零部件的生产。"
       },
       "needsHuman": false
     },

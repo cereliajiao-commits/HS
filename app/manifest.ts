@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'HONGSHENG Auto Parts',
     short_name: 'HONGSHENG',
     description:
-      'Professional steering and suspension systems for heavy-duty trucks and agricultural machinery.',
+      'Heavy-duty truck, agricultural machinery, construction equipment, driveline, chassis, and custom components.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0d1117',

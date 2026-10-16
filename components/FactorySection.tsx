@@ -18,7 +18,7 @@ const content = {
     cards: [
       {
         title: 'Production Capacity for Repeat Orders',
-        text: 'Dedicated machining equipment and organized in-process handling support volume orders across steering and suspension product families.',
+        text: 'Dedicated equipment and organized in-process handling support volume orders across truck, agricultural, and construction machinery product families.',
         image: '/images/company/production-workshop.jpg',
       },
       {
@@ -60,7 +60,7 @@ const content = {
     cards: [
       {
         title: '稳定承接重复与批量订单',
-        text: '专业加工设备与规范的在制品管理，可支持多种转向和悬挂类产品的批量生产。',
+        text: '专业加工设备与规范的在制品管理，可支持重卡、农业机械和工程机械多类零部件的批量生产。',
         image: '/images/company/production-workshop.jpg',
       },
       {

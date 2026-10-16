@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from './LanguageProvider';
 import LanguageSwitcher from './LanguageSwitcher';
+import ProductSearch from './ProductSearch';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,9 +42,12 @@ export default function Navigation() {
           <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.contact')}</a>
           <a href="#contact" className="nav-cta" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.getQuote')}</a>
         </div>
-        <LanguageSwitcher />
-        <div className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <span></span><span></span><span></span>
+        <div className="nav-tools">
+          <ProductSearch />
+          <LanguageSwitcher />
+          <button className="nav-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </nav>

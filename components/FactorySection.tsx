@@ -96,7 +96,7 @@ export default function FactorySection() {
   return (
     <section id="factory" className="factory-section">
       <div className="container">
-        <div className="factory-header fade-up">
+        <div className="factory-header">
           <div className="factory-header-title">
             <div className="section-label">{copy.label}</div>
             <h2 className="section-title">{copy.title}</h2>
@@ -104,11 +104,11 @@ export default function FactorySection() {
           <p>{copy.intro}</p>
         </div>
 
-        <div className="factory-gate fade-up stagger-1">
+        <div className="factory-gate">
           <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} />
         </div>
 
-        <div className="factory-stats fade-up stagger-2">
+        <div className="factory-stats">
           {copy.stats.map(([value, label]) => (
             <div className="factory-stat" key={label}>
               <strong>{value}</strong>
@@ -119,7 +119,7 @@ export default function FactorySection() {
 
         <div className="factory-process-grid">
           {copy.cards.map((card, index) => (
-            <article className={`factory-process-card fade-up ${index === 0 ? 'factory-process-card--wide' : ''}`} key={card.title}>
+            <article className={`factory-process-card ${index === 0 ? 'factory-process-card--wide' : ''}`} key={card.title}>
               <div className={`factory-process-image factory-process-image--${index + 1}`}><img src={card.image} alt={card.title} /></div>
               <div className="factory-process-copy">
                 <span>{String(index + 1).padStart(2, '0')}</span>
@@ -130,7 +130,7 @@ export default function FactorySection() {
           ))}
         </div>
 
-        <div className="factory-buyer-bar fade-up">
+        <div className="factory-buyer-bar">
           <strong>{copy.buyerTitle}</strong>
           <div>
             {copy.buyerPoints.map((point) => <span key={point}>{point}</span>)}

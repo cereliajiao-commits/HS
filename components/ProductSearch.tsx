@@ -124,7 +124,7 @@ export default function ProductSearch() {
                       trackEvent('search_product', { product_id: card.id, query });
                     }}
                   >
-                    <span className="product-search-result-image"><img src={card.image} alt="" /></span>
+                    <span className="product-search-result-image"><img src={card.image} alt="" loading="lazy" decoding="async" /></span>
                     <span className="product-search-result-copy">
                       <strong>{title}</strong>
                       <small>{category}</small>

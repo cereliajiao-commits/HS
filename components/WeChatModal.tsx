@@ -74,6 +74,8 @@ export default function WeChatModal() {
             <img
               src="/images/company/wechat-qr.jpg"
               alt="WeChat QR code for a17751097209"
+              loading="lazy"
+              decoding="async"
               width="888"
               height="1131"
               style={{ display: 'block', width: '100%', height: 'auto', borderRadius: '4px' }}

@@ -105,7 +105,7 @@ export default function FactorySection() {
         </div>
 
         <div className="factory-gate">
-          <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} />
+          <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} loading="lazy" decoding="async" />
         </div>
 
         <div className="factory-stats">
@@ -120,7 +120,7 @@ export default function FactorySection() {
         <div className="factory-process-grid">
           {copy.cards.map((card, index) => (
             <article className={`factory-process-card ${index === 0 ? 'factory-process-card--wide' : ''}`} key={card.title}>
-              <div className={`factory-process-image factory-process-image--${index + 1}`}><img src={card.image} alt={card.title} /></div>
+              <div className={`factory-process-image factory-process-image--${index + 1}`}><img src={card.image} alt={card.title} loading="lazy" decoding="async" /></div>
               <div className="factory-process-copy">
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <h3>{card.title}</h3>

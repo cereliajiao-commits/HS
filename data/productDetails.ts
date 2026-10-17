@@ -9,7 +9,7 @@ export interface ProductDetail {
 
 export const productDetails: Record<string, ProductDetail> = {
   'vertical-arm-153': {
-    image: '/images/products/153垂臂.png',
+    image: '/images/products/153垂臂.webp',
     category: 'Vertical Arm Series',
     title: '153 Vertical Arm',
     description: 'Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.',
@@ -22,7 +22,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Dongfeng trucks', 'Steering drag link systems', 'Medium-duty vehicle repairs'],
   },
   'vertical-arm-str-double': {
-    image: '/images/products/STR双桥垂臂（四种）.png',
+    image: '/images/products/STR双桥垂臂（四种）.webp',
     category: 'Vertical Arm Series',
     title: 'STR Double Bridge Vertical Arm',
     description: 'Heavy-duty vertical arm for STR and Steyr double-bridge applications, built for stable steering transfer.',
@@ -35,7 +35,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['STR chassis', 'Steyr-based trucks', 'Heavy-duty steering linkage'],
   },
   'vertical-arm-a50a': {
-    image: '/images/products/A50A垂臂.png',
+    image: '/images/products/A50A垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'A50A Vertical Arm',
     description: 'A50A vertical arm for commercial steering systems, supplied as an individual catalog item.',
@@ -48,7 +48,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Steering linkage replacement', 'Product catalog'],
   },
   'vertical-arm-k36a0': {
-    image: '/images/products/K36A0垂臂.png',
+    image: '/images/products/K36A0垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'K36A0 Vertical Arm',
     description: 'K36A0 vertical arm with stable geometry and durable forged construction.',
@@ -61,7 +61,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering linkage', 'Replacement parts', 'Catalog display'],
   },
   'vertical-arm-80a-60w': {
-    image: '/images/products/80A-60W垂臂.png',
+    image: '/images/products/80A-60W垂臂.webp',
     category: 'Vertical Arm Series',
     title: '80A:60W Vertical Arm',
     description: 'Vertical arm for the 80A:60W model, presented as a single catalog product.',
@@ -74,7 +74,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Steering linkage replacement', 'Product catalog'],
   },
   'vertical-arm-violet': {
-    image: '/images/products/紫罗兰（一弯:两弯）.png',
+    image: '/images/products/紫罗兰（一弯:两弯）.webp',
     category: 'Vertical Arm Series',
     title: 'Violet Vertical Arm',
     description: 'Violet model vertical arm in single-arm and twin-arm variants.',
@@ -87,7 +87,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Special steering linkage', 'Catalog display'],
   },
   'vertical-arm-f13': {
-    image: '/images/products/F13垂臂.png',
+    image: '/images/products/F13垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'F13 Vertical Arm',
     description: 'F13 vertical arm for steering linkage replacement and catalog presentation.',
@@ -100,7 +100,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering systems', 'Replacement parts', 'Catalog display'],
   },
   'vertical-arm-f44': {
-    image: '/images/products/F44垂臂.png',
+    image: '/images/products/F44垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'F44 Vertical Arm',
     description: 'F44 vertical arm with durable forged construction for steering linkage applications.',
@@ -113,7 +113,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Steering repairs', 'Catalog reference'],
   },
   'vertical-arm-f58': {
-    image: '/images/products/F58垂臂.png',
+    image: '/images/products/F58垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'F58 Vertical Arm',
     description: 'F58 vertical arm for heavy-duty steering linkage systems.',
@@ -126,7 +126,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering linkage', 'Replacement parts', 'Catalog display'],
   },
   'vertical-arm-aag3': {
-    image: '/images/products/AAG3垂臂.png',
+    image: '/images/products/AAG3垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'AAG3 Vertical Arm',
     description: 'AAG3 vertical arm shown as an individual product entry.',
@@ -139,7 +139,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Steering linkage replacement', 'Product catalog'],
   },
   'vertical-arm-str-single': {
-    image: '/images/products/STR单桥垂臂（四种）.png',
+    image: '/images/products/STR单桥垂臂（四种）.webp',
     category: 'Vertical Arm Series',
     title: 'STR Single Bridge Vertical Arm',
     description: 'Single-bridge STR vertical arm for heavy-duty steering applications.',
@@ -152,7 +152,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['STR chassis', 'Steyr-based trucks', 'Heavy-duty steering linkage'],
   },
   'vertical-arm-1061': {
-    image: '/images/products/1061垂臂.png',
+    image: '/images/products/1061垂臂.webp',
     category: 'Vertical Arm Series',
     title: '1061 Vertical Arm',
     description: '1061 vertical arm for steering linkage applications, shown as an individual product.',
@@ -165,7 +165,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering linkage', 'Replacement parts', 'Catalog display'],
   },
   'vertical-arm-tractor': {
-    image: '/images/products/拖拉机垂臂.png',
+    image: '/images/products/拖拉机垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'Tractor Vertical Arm',
     description: 'Vertical arm for tractor steering systems and agricultural machinery.',
@@ -178,7 +178,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Tractors', 'Agricultural machinery', 'Steering linkage replacement'],
   },
   'vertical-arm-bullnose': {
-    image: '/images/products/牛鼻子垂臂.png',
+    image: '/images/products/牛鼻子垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'Bull Nose Vertical Arm',
     description: 'Bull nose style vertical arm for steering linkage applications.',
@@ -191,7 +191,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial vehicles', 'Steering repairs', 'Catalog reference'],
   },
   'vertical-arm-145': {
-    image: '/images/products/145垂臂.png',
+    image: '/images/products/145垂臂.webp',
     category: 'Vertical Arm Series',
     title: '145 Vertical Arm',
     description: '145-type vertical arm for commercial steering linkage.',
@@ -204,7 +204,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering linkage', 'Replacement parts', 'Catalog display'],
   },
   'vertical-arm-175x0': {
-    image: '/images/products/175X0垂臂.png',
+    image: '/images/products/175X0垂臂.webp',
     category: 'Vertical Arm Series',
     title: '175X0 Vertical Arm',
     description: 'Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.',
@@ -217,7 +217,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Truck steering systems', 'Heavy-duty repair', 'Catalog reference'],
   },
   'vertical-arm-kc100': {
-    image: '/images/products/KC100垂臂.png',
+    image: '/images/products/KC100垂臂.webp',
     category: 'Vertical Arm Series',
     title: 'KC100 Vertical Arm',
     description: 'KC100 vertical arm designed for stable steering control and long service life.',
@@ -230,7 +230,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Commercial trucks', 'Steering repair', 'Aftermarket supply'],
   },
   'drive-shaft-sinotruk-str': {
-    image: '/images/products/sinotruk-str-drive-shaft.png',
+    image: '/images/products/sinotruk-str-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'SINOTRUK STR Drive Shaft',
     description: 'Drive shaft for STR heavy-duty platforms, built for stable torque transmission and reliable operation.',
@@ -243,7 +243,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['STR heavy trucks', 'Transmission systems', 'Replacement parts'],
   },
   'drive-shaft-sinotruk': {
-    image: '/images/products/sinotruk-drive-shaft.png',
+    image: '/images/products/sinotruk-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'SINOTRUK Drive Shaft',
     description: 'General drive shaft for SINOTRUK applications with durable structure and stable power transfer.',
@@ -256,7 +256,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['SINOTRUK vehicles', 'Power transmission', 'Service replacement'],
   },
   'drive-shaft-howo': {
-    image: '/images/products/howo-drive-shaft.png',
+    image: '/images/products/howo-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'HOWO Drive Shaft',
     description: 'Drive shaft for HOWO truck platforms, designed for long service life and dependable torque delivery.',
@@ -269,7 +269,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['HOWO trucks', 'Transmission assembly', 'Maintenance replacement'],
   },
   'drive-shaft-dongfeng-tianlong': {
-    image: '/images/products/dongfeng-tianlong-drive-shaft.png',
+    image: '/images/products/dongfeng-tianlong-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'Dongfeng Tianlong Drive Shaft',
     description: 'Drive shaft for Dongfeng Tianlong series with dependable transmission performance.',
@@ -282,7 +282,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Dongfeng Tianlong trucks', 'Power transmission', 'Aftermarket supply'],
   },
   'drive-shaft-shaanxi-delong': {
-    image: '/images/products/shaanxi-delong-drive-shaft.png',
+    image: '/images/products/shaanxi-delong-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'Shaanxi Delong Drive Shaft',
     description: 'Drive shaft for Shaanxi Delong series with stable geometry and reliable performance.',
@@ -295,7 +295,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Shaanxi Delong trucks', 'Transmission systems', 'Replacement parts'],
   },
   'drive-shaft-str0125': {
-    image: '/images/products/sinotruk-str0125-drive-shaft.png',
+    image: '/images/products/sinotruk-str0125-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'SINOTRUK STR0125 Drive Shaft',
     description: 'Drive shaft for STR0125 platform, produced for stable rotation and dependable torque transfer.',
@@ -308,7 +308,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['STR0125 trucks', 'Transmission repair', 'Catalog display'],
   },
   'drive-shaft-auman': {
-    image: '/images/products/auman-drive-shaft.png',
+    image: '/images/products/auman-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'Auman Drive Shaft',
     description: 'Drive shaft for Auman commercial trucks with robust construction and stable drive transfer.',
@@ -321,7 +321,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Auman trucks', 'Commercial transport', 'Replacement supply'],
   },
   'drive-shaft-dongfeng-balong': {
-    image: '/images/products/dongfeng-balong-drive-shaft.png',
+    image: '/images/products/dongfeng-balong-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'Dongfeng Balong Drive Shaft',
     description: 'Drive shaft for Dongfeng Balong series with durable design and steady transmission output.',
@@ -334,7 +334,7 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['Dongfeng Balong trucks', 'Transmission system', 'Maintenance replacement'],
   },
   'drive-shaft-shaanxi-aolong': {
-    image: '/images/products/shaanxi-aolong-drive-shaft.png',
+    image: '/images/products/shaanxi-aolong-drive-shaft.webp',
     category: 'Drive Shaft Series',
     title: 'Shaanxi Aolong Drive Shaft',
     description: 'Drive shaft for Shaanxi Aolong series with strong transmission performance and service durability.',

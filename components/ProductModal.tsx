@@ -143,7 +143,7 @@ export default function ProductModal() {
                   transform: `perspective(1200px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
                 }}
               >
-                <img src={product.image} alt={title} draggable={false} />
+                <img src={product.image} alt={title} draggable={false} decoding="async" />
               </div>
             </div>
           </div>

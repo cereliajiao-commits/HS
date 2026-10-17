@@ -280,7 +280,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
         <section className="product-detail-layout">
           <div className="product-detail-media">
-            <ProductImageZoom src={`${product.image}?v=20261016-white`} alt={product.title} hint={labels.zoomHint} />
+            <ProductImageZoom src={`${product.image}?v=20261017-webp`} alt={product.title} hint={labels.zoomHint} />
           </div>
           <div className="product-detail-content">
             <div className="section-label">{product.categoryLabel}</div>

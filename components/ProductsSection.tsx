@@ -9,6 +9,23 @@ import { trackEvent } from '@/lib/analytics';
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
   const productLocale = lang === 'zh' ? 'zh' : 'en';
+  const platformBrands = [
+    'SINOTRUK HOWO', 'FAW Jiefang', 'Dongfeng', 'Dongfeng Liuzhou', 'SHACMAN', 'Foton Auman', 'CAMC',
+    'Freightliner', 'Peterbilt', 'Kenworth', 'International', 'Ford',
+    'Scania', 'Volvo', 'Mercedes-Benz', 'MAN', 'DAF', 'Renault Trucks', 'IVECO',
+    'Isuzu', 'Hino', 'Mitsubishi Fuso', 'UD Trucks', 'Hyundai', 'Daewoo',
+  ];
+  const platformCopy = lang === 'zh'
+    ? {
+        label: '适配车型平台',
+        intro: '产品应用覆盖中国、北美、欧洲、日本及韩国主流商用车平台，并支持矿用车、宽体车、工程卡车、自卸车和客车零部件定制。',
+        note: '品牌名称仅用于说明产品适配车型，不代表品牌授权或隶属关系。',
+      }
+    : {
+        label: 'Compatible Vehicle Platforms',
+        intro: 'Applications cover leading commercial vehicle platforms from China, North America, Europe, Japan, and Korea, with custom support for mining, wide-body, construction, dump trucks, and buses.',
+        note: 'Brand names identify compatible vehicle applications only and do not imply affiliation or endorsement.',
+      };
 
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
@@ -70,6 +87,16 @@ export default function ProductsSection() {
             {t('products.subtitle')}
           </p>
         </div>
+        <div className="product-platforms fade-up stagger-2">
+          <div className="product-platforms-heading">
+            <span>{platformCopy.label}</span>
+            <p>{platformCopy.intro}</p>
+          </div>
+          <div className="product-platform-brand-list" aria-label={platformCopy.label}>
+            {platformBrands.map((brand) => <span key={brand}>{brand}</span>)}
+          </div>
+          <small>{platformCopy.note}</small>
+        </div>
         <div className="product-tabs fade-up stagger-3">
           <div className="filter-mode-toggle">
             <button
@@ -113,7 +140,7 @@ export default function ProductsSection() {
                 aria-label={`${title} product details`}
               >
                 <div className="product-card-img">
-                  <img src={`${card.image}?v=20261016-white`} alt={title} />
+                  <img src={`${card.image}?v=20261017-webp`} alt={title} loading="lazy" decoding="async" width="1200" height="1200" />
                 </div>
                 <div className="product-card-body">
                   <h3>{title}</h3>

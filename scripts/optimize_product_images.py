@@ -10,8 +10,7 @@ from __future__ import annotations
 import argparse
 import re
 from pathlib import Path
-
-from PIL import Image
+from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,7 +21,7 @@ INPUT_SUFFIXES = {".png", ".jpg", ".jpeg"}
 MAX_BYTES = 500 * 1024
 
 
-def to_white_rgb(image: Image.Image) -> Image.Image:
+def to_white_rgb(image: Any) -> Any:
     rgba = image.convert("RGBA")
     background = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
     background.alpha_composite(rgba)
@@ -43,6 +42,8 @@ def update_references(old_path: Path, new_path: Path) -> None:
 
 
 def optimize() -> None:
+    from PIL import Image
+
     converted = 0
     for path in sorted(IMAGE_DIR.rglob("*")):
         if not path.is_file() or path.suffix.lower() not in INPUT_SUFFIXES:

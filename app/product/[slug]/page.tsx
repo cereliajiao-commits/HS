@@ -76,6 +76,19 @@ function productUrl(slug: string, lang?: Language) {
   return url.toString();
 }
 
+function compactMetaText(text: string, maxLength: number) {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= maxLength) return clean;
+  const shortened = clean.slice(0, maxLength - 1);
+  const lastSpace = shortened.lastIndexOf(' ');
+  return `${shortened.slice(0, lastSpace > maxLength * 0.7 ? lastSpace : maxLength - 1).replace(/[.,;:!?\s]+$/, '')}…`;
+}
+
+function seoTitle(title: string, lang: Language) {
+  const suffix = lang === 'zh' ? ' | 宏盛汽车配件厂家' : ' | HONGSHENG Manufacturer';
+  return `${compactMetaText(title, 60 - suffix.length)}${suffix}`;
+}
+
 export function generateStaticParams() {
   return allProductCards.map((product) => ({ slug: product.id }));
 }
@@ -91,25 +104,40 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     };
   }
 
-  const title = product.title;
-  const description = product.description || (lang === 'zh'
+  const title = seoTitle(product.title, lang);
+  const rawDescription = product.description || (lang === 'zh'
     ? `了解 ${product.title}，获取 HONGSHENG Auto Parts 的产品规格、应用和询价支持。`
     : `Explore ${product.title}, including specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
+  const description = compactMetaText(
+    `${rawDescription} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : 'OEM/ODM support. Request specifications and a quote.'}`,
+    155
+  );
   const url = productUrl(params.slug, lang);
+  const englishUrl = productUrl(params.slug, 'en');
+  const chineseUrl = productUrl(params.slug, 'zh');
   const image = absoluteUrl(product.image);
 
   return {
-    title,
+    title: { absolute: title },
     description,
+    keywords: [product.title, product.categoryLabel, `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'],
     alternates: {
       canonical: url,
+      languages: {
+        en: englishUrl,
+        'zh-CN': chineseUrl,
+        'x-default': englishUrl,
+      },
     },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       type: 'website',
       url,
       title,
       description,
       siteName: 'HONGSHENG Auto Parts',
+      locale: lang === 'zh' ? 'zh_CN' : 'en_US',
+      alternateLocale: lang === 'zh' ? ['en_US'] : ['zh_CN'],
       images: [{ url: image, alt: product.title }],
     },
     twitter: {
@@ -130,6 +158,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
     name: product.title,
     description: product.description,
     image: [image],
+    sku: product.card.id,
     category: product.categoryLabel,
     brand: {
       '@type': 'Brand',
@@ -141,6 +170,12 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       url: SITE_URL,
     },
     url,
+    inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
+    additionalProperty: product.specs.map((spec) => ({
+      '@type': 'PropertyValue',
+      name: spec.label,
+      value: spec.value,
+    })),
   };
   const organizationSchema = {
     '@context': 'https://schema.org',

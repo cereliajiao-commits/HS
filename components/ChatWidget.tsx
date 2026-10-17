@@ -9,10 +9,13 @@ interface Message {
   text: string;
   isUser: boolean;
   time: string;
+  linkUrl?: string;
+  linkLabel?: string;
 }
 
-function getCurrentTime() {
-  return new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+function getCurrentTime(lang: string) {
+  const locale = ({ zh: 'zh-CN', es: 'es-ES', fr: 'fr-FR', ar: 'ar-SA', ru: 'ru-RU', pt: 'pt-BR' } as Record<string, string>)[lang] ?? 'en-US';
+  return new Date().toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
 }
 
 function quickText(lang: string, type: 'quote' | 'products' | 'support' | 'moq') {
@@ -67,25 +70,30 @@ function getReplyLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-function humanNotice(lang: string) {
-  if (lang === 'zh') return '这个问题我先帮你转给人工同事处理。';
-  if (lang === 'es') return 'Voy a pasar este caso a un agente humano.';
-  if (lang === 'fr') return 'Je vais transmettre cette demande à un agent humain.';
-  if (lang === 'ar') return 'سأحوّل هذا الطلب إلى أحد أعضاء الفريق.';
-  if (lang === 'ru') return 'Я передам этот вопрос сотруднику.';
-  if (lang === 'pt') return 'Vou encaminhar este caso para um atendente.';
-  return 'I will pass this to a human agent.';
+function whatsappLabel(lang: string) {
+  const labels: Record<string, string> = {
+    en: 'Continue on WhatsApp',
+    zh: '转到 WhatsApp 继续咨询',
+    es: 'Continuar en WhatsApp',
+    fr: 'Continuer sur WhatsApp',
+    ar: 'المتابعة عبر واتساب',
+    ru: 'Продолжить в WhatsApp',
+    pt: 'Continuar no WhatsApp',
+  };
+  return labels[lang] ?? labels.en;
 }
 
 export default function ChatWidget() {
   const { lang, t } = useLanguage();
+  const welcomeText = t('chat.welcome');
+  const justNowText = t('chat.justNow');
   const [isOpen, setIsOpen] = useState(false);
   const [showBadge, setShowBadge] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: t('chat.welcome'),
+      text: welcomeText,
       isUser: false,
-      time: 'Just now',
+      time: justNowText,
     },
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -105,6 +113,13 @@ export default function ChatWidget() {
     }
   }, [messages]);
 
+  useEffect(() => {
+    setMessages((current) => {
+      if (current.length !== 1 || current[0].isUser) return current;
+      return [{ ...current[0], text: welcomeText, time: justNowText }];
+    });
+  }, [lang, welcomeText, justNowText]);
+
   const toggleChat = () => {
     setIsOpen(!isOpen);
     if (!isOpen) setShowBadge(false);
@@ -114,7 +129,7 @@ export default function ChatWidget() {
     const message = text || inputValue.trim();
     if (!message || sending) return;
 
-    const userMsg: Message = { text: message, isUser: true, time: getCurrentTime() };
+    const userMsg: Message = { text: message, isUser: true, time: getCurrentTime(lang) };
     setMessages((prev) => [...prev, userMsg]);
     setInputValue('');
     setShowQuickReplies(false);
@@ -129,7 +144,13 @@ export default function ChatWidget() {
       const data = await res.json();
       const replyText = data?.reply || t('contact.successMsg');
 
-      setMessages((prev) => [...prev, { text: replyText, isUser: false, time: getCurrentTime() }]);
+      setMessages((prev) => [...prev, {
+        text: replyText,
+        isUser: false,
+        time: getCurrentTime(lang),
+        linkUrl: data?.needsHuman ? undefined : getReplyLink(message),
+        linkLabel: data?.needsHuman ? undefined : whatsappLabel(lang),
+      }]);
 
       if (data?.needsHuman || data?.action === 'handoff' || data?.action === 'draft_for_human') {
         void fetch('/api/handoff', {
@@ -137,25 +158,6 @@ export default function ChatWidget() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message, language: data?.language || lang }),
         });
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: humanNotice(lang),
-            isUser: false,
-            time: getCurrentTime(),
-          },
-        ]);
-      } else {
-        setTimeout(() => {
-          setMessages((prev) => [
-            ...prev,
-            {
-              text: `For faster response, continue on WhatsApp:<br/><br/><a href="${getReplyLink(message)}" target="_blank" rel="noopener noreferrer" style="color:#25D366;font-weight:600;text-decoration:underline">Click here to chat on WhatsApp &rarr;</a>`,
-              isUser: false,
-              time: getCurrentTime(),
-            },
-          ]);
-        }, 500);
       }
     } catch {
       setMessages((prev) => [
@@ -163,7 +165,7 @@ export default function ChatWidget() {
         {
           text: lang === 'zh' ? '系统暂时繁忙，请稍后再试，或直接联系我们的 WhatsApp。' : 'The system is temporarily busy. Please try again later or contact us on WhatsApp.',
           isUser: false,
-          time: getCurrentTime(),
+          time: getCurrentTime(lang),
         },
       ]);
     } finally {
@@ -186,10 +188,10 @@ export default function ChatWidget() {
 
       <div className={`chat-window ${isOpen ? 'active' : ''}`}>
         <div className="chat-header">
-          <div className="chat-avatar">&#127981;</div>
+          <div className="chat-avatar" aria-hidden="true">🏭</div>
           <div className="chat-header-info">
-            <h4>HONGSHENG Support</h4>
-            <p>Online now</p>
+            <h4>{t('chat.title')}</h4>
+            <p>{t('chat.online')}</p>
           </div>
           <button className="chat-close" onClick={toggleChat}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -201,9 +203,17 @@ export default function ChatWidget() {
         <div className="chat-body" ref={chatBodyRef}>
           {messages.map((msg, i) => (
             <div key={i} className={`chat-message ${msg.isUser ? 'user' : 'bot'}`}>
-              <div className="chat-msg-avatar">{msg.isUser ? '&#128100;' : '&#127981;'}</div>
-              <div>
-                <div className="chat-msg-bubble" dangerouslySetInnerHTML={{ __html: msg.text }} />
+              <div className="chat-msg-avatar" aria-hidden="true">{msg.isUser ? '👤' : '🏭'}</div>
+              <div className="chat-msg-content">
+                <div className="chat-msg-sender">{msg.isUser ? t('chat.you') : t('chat.title')}</div>
+                <div className="chat-msg-bubble">
+                  <span>{msg.text}</span>
+                  {msg.linkUrl && (
+                    <a className="chat-msg-action" href={msg.linkUrl} target="_blank" rel="noopener noreferrer">
+                      {msg.linkLabel} <span aria-hidden="true">→</span>
+                    </a>
+                  )}
+                </div>
                 <div className="chat-msg-time">{msg.time}</div>
               </div>
             </div>
@@ -213,14 +223,14 @@ export default function ChatWidget() {
         <div className="chat-input-area">
           {showQuickReplies && (
             <div className="chat-quick-replies">
-              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'quote'))}>Quote Request</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'products'))}>Products</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'support'))}>Support</button>
-              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'moq'))}>MOQ</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'quote'))}>{t('chat.quoteBtn')}</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'products'))}>{t('chat.productsBtn')}</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'support'))}>{t('chat.supportBtn')}</button>
+              <button className="chat-quick-btn" onClick={() => sendMessage(quickText(lang, 'moq'))}>{t('chat.moqBtn')}</button>
             </div>
           )}
           <div className="chat-wa-notice">
-            Messages are sent via <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">WhatsApp</a> for instant response
+            {t('chat.waNotice')}
           </div>
           <div className="chat-input-row">
             <input

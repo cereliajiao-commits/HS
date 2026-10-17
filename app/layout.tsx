@@ -4,25 +4,31 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const siteUrl = 'https://www.hsaxle.com';
 const siteName = 'HONGSHENG Auto Parts';
+const siteTitle = 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG';
 const siteDescription =
-  'Hengshui Hongsheng Auto Parts Co., Ltd. - ISO 9001 certified manufacturer of heavy-duty truck, agricultural machinery, construction equipment, driveline, chassis, and custom components.';
+  'ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks. OEM/ODM support. Request a quote.';
+const socialImage = '/images/company/og-hongsheng-auto-parts.jpg';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
+    default: siteTitle,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
+  applicationName: siteName,
+  category: 'Automotive',
+  creator: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
+  publisher: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
   keywords: [
+    'truck steering parts manufacturer',
     'steering knuckle manufacturer',
-    'truck steering parts supplier',
-    'heavy-duty truck suspension parts',
     'steering arm manufacturer',
-    'drive shaft supplier',
+    'truck drive shaft manufacturer',
+    'heavy-duty truck suspension parts',
+    'forged truck parts supplier',
     'agricultural machinery parts manufacturer',
     'OEM auto parts supplier',
-    'forged auto parts factory',
     'HONGSHENG Auto Parts',
   ],
   alternates: {
@@ -32,15 +38,23 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName,
-    title: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
+    title: siteTitle,
     description: siteDescription,
     locale: 'en_US',
+    images: [{
+      url: socialImage,
+      width: 1200,
+      height: 630,
+      alt: 'HONGSHENG heavy-duty truck parts manufacturing',
+    }],
   },
   twitter: {
-    card: 'summary',
-    title: `${siteName} | Heavy-Duty Vehicle Parts Manufacturer Since 1996`,
+    card: 'summary_large_image',
+    title: siteTitle,
     description: siteDescription,
+    images: [socialImage],
   },
+  formatDetection: { email: false, address: false, telephone: false },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },

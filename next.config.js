@@ -24,6 +24,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/images/products/:name.png',
+        destination: '/images/products/:name.webp',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

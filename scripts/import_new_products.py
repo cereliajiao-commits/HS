@@ -133,13 +133,13 @@ def normalize_image(src: Path, dst: Path) -> None:
     max_h = int(TARGET_SIZE[1] * (1 - PADDING_RATIO * 2))
     fitted = ImageOps.contain(rgba, (max_w, max_h), method=RESAMPLE)
 
-    canvas = Image.new("RGBA", TARGET_SIZE, (0, 0, 0, 0))
+    canvas = Image.new("RGBA", TARGET_SIZE, (255, 255, 255, 255))
     x = (TARGET_SIZE[0] - fitted.width) // 2
     y = (TARGET_SIZE[1] - fitted.height) // 2
     canvas.paste(fitted, (x, y), fitted)
 
     dst.parent.mkdir(parents=True, exist_ok=True)
-    canvas.save(dst)
+    canvas.convert("RGB").save(dst, "WEBP", quality=84, method=6, exact=True)
 
 
 def detect_brand(stem: str, folder: str) -> str:
@@ -164,7 +164,7 @@ def build_manifest(source: Path, out_dir: Path) -> List[Dict[str, str]]:
     )
     for index, src in enumerate(files, start=1):
       stem = src.stem
-      safe_name = f"{index:03d}-{slugify(stem)}.png"
+      safe_name = f"{index:03d}-{slugify(stem)}.webp"
       dst = out_dir / meta["category"] / safe_name
       normalize_image(src, dst)
 

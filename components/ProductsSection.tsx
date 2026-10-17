@@ -125,7 +125,7 @@ export default function ProductsSection() {
           </div>
         </div>
         <div className="products-grid">
-          {filteredCards.map((card) => {
+          {filteredCards.map((card, index) => {
             const localized = resolveProductText(card.id, card.category, lang);
             const title = localized?.title ?? card.title;
             const description = localized?.description ?? card.description;
@@ -135,12 +135,20 @@ export default function ProductsSection() {
               <a
                 key={card.id}
                 href={`/product/${encodeURIComponent(card.id)}${lang === 'zh' ? '?lang=zh' : ''}`}
-                className="product-card fade-up visible"
+                className={`product-card fade-up visible${index < 12 ? ' product-card--priority' : ''}`}
                 onClick={() => trackEvent('view_product', { product_id: card.id, location: 'product_grid' })}
                 aria-label={`${title} product details`}
               >
                 <div className="product-card-img">
-                  <img src={`${card.image}?v=20261017-webp`} alt={title} loading="lazy" decoding="async" width="1200" height="1200" />
+                  <img
+                    src={`${card.image}?v=20261017-webp`}
+                    alt={title}
+                    loading={index < 12 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    fetchPriority={index < 4 ? 'high' : 'auto'}
+                    width="1200"
+                    height="1200"
+                  />
                 </div>
                 <div className="product-card-body">
                   <h3>{title}</h3>

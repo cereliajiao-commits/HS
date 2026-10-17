@@ -6,6 +6,7 @@ import { useLanguage } from './LanguageProvider';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
 import { resolveProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
+import { oemReferences } from '@/data/oemReference.generated';
 
 type ImportedDetail = {
   image: string;
@@ -117,6 +118,7 @@ export default function ProductModal() {
   const description = localized?.description ?? product?.description ?? '';
   const specs = localized?.specs ?? product?.specs ?? [];
   const applications = localized?.applications ?? product?.applications ?? [];
+  const oem = oemReferences[productId];
   const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : lang === 'en' ? 'Compatible Vehicles / Applications' : localized?.categoryLabel ?? 'Applications';
   const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
   const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
@@ -178,6 +180,12 @@ export default function ProductModal() {
               ))}
             </ul>
           </div>
+          {oem?.oemNumbers.length ? (
+            <div className="modal-applications modal-oem">
+              <h4>{lang === 'zh' ? 'OEM / OE 对照号' : 'OEM / OE Reference Numbers'}</h4>
+              <ul>{oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}</ul>
+            </div>
+          ) : null}
           <div className="modal-cta">
             <a href="#contact" className="btn btn-primary" onClick={handleScrollToContact}>{requestQuoteLabel}</a>
             <a href="https://wa.me/8617751097209" onClick={() => trackEvent('whatsapp_click', { location: 'product_modal', product_id: productId })} target="_blank" rel="noopener noreferrer" className="btn btn-outline">{whatsappLabel}</a>

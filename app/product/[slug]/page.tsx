@@ -6,6 +6,7 @@ import { importedProductDetails } from '@/data/imported-products.details.generat
 import { resolveProductText, translateCategoryLabel } from '@/data/productLocalization';
 import type { Language } from '@/components/LanguageProvider';
 import ProductImageZoom from '@/components/ProductImageZoom';
+import { oemReferences } from '@/data/oemReference.generated';
 
 type ProductDetailRecord = {
   image: string;
@@ -54,6 +55,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
   const fallbackDescription = detail?.description ?? card.description;
   const fallbackSpecs = detail?.specs ?? [];
   const fallbackApplications = detail?.applications ?? [];
+  const oem = oemReferences[slug];
 
   return {
     ...product,
@@ -61,6 +63,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
     description: localized?.description ?? fallbackDescription,
     specs: localized?.specs ?? fallbackSpecs,
     applications: localized?.applications ?? fallbackApplications,
+    oem,
     categoryLabel: localized?.categoryLabel ?? translateCategoryLabel(card.category, lang),
     image: detail?.image ?? card.image,
   };
@@ -109,7 +112,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     ? `了解 ${product.title}，获取 HONGSHENG Auto Parts 的产品规格、应用和询价支持。`
     : `Explore ${product.title}, including specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
   const description = compactMetaText(
-    `${rawDescription} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : 'OEM/ODM support. Request specifications and a quote.'}`,
+    `${rawDescription} ${product.oem?.oemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.oem.oemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : 'OEM/ODM support. Request specifications and a quote.'}`,
     155
   );
   const url = productUrl(params.slug, lang);
@@ -120,7 +123,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
   return {
     title: { absolute: title },
     description,
-    keywords: [product.title, product.categoryLabel, `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'],
+    keywords: [product.title, product.categoryLabel, ...(product.oem?.oemNumbers ?? []), product.oem?.vehicleApplication ?? '', `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'].filter(Boolean),
     alternates: {
       canonical: url,
       languages: {
@@ -175,7 +178,11 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       '@type': 'PropertyValue',
       name: spec.label,
       value: spec.value,
-    })),
+    })).concat(product.oem?.oemNumbers.length ? [{
+      '@type': 'PropertyValue',
+      name: 'OEM / OE reference numbers',
+      value: product.oem.oemNumbers.join(', '),
+    }] : []),
   };
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -236,6 +243,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
         back: '返回产品目录',
         specifications: '产品规格',
         applications: '适用车型 / 应用',
+        oem: 'OEM / OE 对照号',
         requestQuote: '获取报价',
         whatsapp: 'WhatsApp 咨询',
         inquiryNote: '告诉我们型号、数量和目标市场，我们会尽快回复。',
@@ -246,6 +254,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
         back: 'Back to Product Catalog',
         specifications: 'Product Specifications',
         applications: 'Compatible Vehicles / Applications',
+        oem: 'OEM / OE Reference Numbers',
         requestQuote: 'Request a Quote',
         whatsapp: 'WhatsApp Inquiry',
         inquiryNote: 'Tell us the model, quantity, and target market. Our team will respond shortly.',
@@ -309,6 +318,17 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                 </ul>
               </div>
             )}
+
+            {product.oem?.oemNumbers.length ? (
+              <div className="product-detail-section product-detail-oem">
+                <h2>{labels.oem}</h2>
+                <ul className="product-detail-oem-list">
+                  {product.oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}
+                </ul>
+                {product.oem.vehicleApplication && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
+                <p className="product-detail-oem-note">{lang === 'zh' ? 'OEM号用于车型和规格对照，订货前请按实物尺寸、孔位及左右件确认。' : 'Reference numbers are for vehicle and specification cross-checking. Confirm dimensions, hole pattern, and side before ordering.'}</p>
+              </div>
+            ) : null}
 
             <div className="product-detail-cta">
               <a href={inquiryUrl} className="btn btn-primary">{labels.requestQuote}</a>

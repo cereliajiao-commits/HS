@@ -5,6 +5,7 @@ import { allProductCards } from '@/data/products';
 import { resolveProductText } from '@/data/productLocalization';
 import { useLanguage, type Language } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
+import { oemReferences } from '@/data/oemReference.generated';
 
 const searchCopy: Record<Language, { label: string; title: string; placeholder: string; hint: string; noResults: string; results: string }> = {
   en: { label: 'Search products', title: 'Search Products', placeholder: 'Model, product, category or brand', hint: 'Search all product models by keyword.', noResults: 'No matching products found.', results: 'matching products' },
@@ -55,6 +56,8 @@ export default function ProductSearch() {
         chinese?.title,
         chinese?.description,
         chinese?.categoryLabel,
+        oemReferences[card.id]?.oemNumbers.join(' '),
+        oemReferences[card.id]?.vehicleApplication,
       ].filter(Boolean).join(' ').toLocaleLowerCase();
 
       return terms.every((term) => haystack.includes(term));

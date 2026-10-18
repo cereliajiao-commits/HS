@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CookieConsent from '@/components/CookieConsent';
 
 const siteUrl = 'https://www.hsaxle.com';
 const siteName = 'HONGSHENG Auto Parts';
@@ -88,6 +89,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <CookieConsent />
         <GoogleAnalytics />
       </body>
     </html>

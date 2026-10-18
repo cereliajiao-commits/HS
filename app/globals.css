@@ -146,6 +146,7 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
 .product-card-body h3{font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:0.3rem}
 .product-card-body p{font-size:0.8rem;color:var(--gray-400);line-height:1.5}.product-card-oem{margin-top:.7rem;color:var(--gray-200);font-size:.7rem;line-height:1.45;word-break:break-word}.product-card-oem span{display:inline-block;margin-right:.35rem;color:var(--red-light);font-weight:800;letter-spacing:.08em;font-size:.62rem}
 .footer-entity-name{margin-top:1rem!important;color:var(--gray-300)!important;font-size:.75rem!important;line-height:1.7!important}.footer-entity-name strong{color:var(--white)}
+.cookie-consent{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:1400;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;max-width:920px;margin:0 auto;padding:1rem 1.2rem;background:rgba(20,20,20,.97);border:1px solid var(--gray-700);border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,.45);color:var(--gray-200)}.cookie-consent-copy{min-width:0}.cookie-consent-copy strong{display:block;margin-bottom:.2rem;color:var(--white);font-family:var(--font-display);font-size:.9rem}.cookie-consent-copy p{font-size:.75rem;line-height:1.5;color:var(--gray-400)}.cookie-consent-actions{display:flex;flex:0 0 auto;gap:.55rem}.cookie-consent-actions button{padding:.6rem .85rem;border-radius:4px;font:600 .72rem var(--font-display);cursor:pointer}.cookie-consent-decline{border:1px solid var(--gray-700);background:transparent;color:var(--gray-300)}.cookie-consent-accept{border:1px solid var(--red);background:var(--red);color:var(--white)}.cookie-consent-actions button:hover{filter:brightness(1.12)}
 .product-card-body .product-tag{display:inline-block;margin-top:0.5rem;font-size:0.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--red);background:rgba(200,16,46,0.1);padding:0.2rem 0.6rem;border-radius:2px}
 .view-all-btn{text-align:center;margin-top:3rem}
 
@@ -340,6 +341,7 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
   .container{padding:0 1.2rem}
   .chat-window{width:calc(100vw - 2rem);left:-0.5rem;bottom:75px;height:calc(100vh - 120px)}
   .chat-widget{bottom:1.5rem;left:1.5rem}
+  .cookie-consent{left:.7rem;right:.7rem;bottom:.7rem;display:block;padding:1rem}.cookie-consent-actions{margin-top:.8rem;display:grid;grid-template-columns:1fr 1fr}.cookie-consent-actions button{width:100%;font-size:.68rem}
 }
 @media(max-width:768px){
   .modal-content{max-width:100%;margin:1rem}

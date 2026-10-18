@@ -30,11 +30,11 @@ export const productCards: ProductCard[] = [
   { id: 'drive-shaft-sinotruk', category: 'shaft', brand: 'sinotruk', image: '/images/products/sinotruk-drive-shaft.webp', title: 'SINOTRUK Drive Shaft', description: 'General drive shaft for SINOTRUK applications.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-howo', category: 'shaft', brand: 'howo', image: '/images/products/howo-drive-shaft.webp', title: 'HOWO Drive Shaft', description: 'Drive shaft for HOWO truck platforms.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-dongfeng-tianlong', category: 'shaft', brand: 'dongfeng', image: '/images/products/dongfeng-tianlong-drive-shaft.webp', title: 'Dongfeng Tianlong Drive Shaft', description: 'Drive shaft for Dongfeng Tianlong series.', tag: 'Drive Shaft' },
-  { id: 'drive-shaft-shaanxi-delong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-delong-drive-shaft.webp', title: 'Shaanxi Delong Drive Shaft', description: 'Drive shaft for Shaanxi Delong series.', tag: 'Drive Shaft' },
+  { id: 'drive-shaft-shaanxi-delong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-delong-drive-shaft.webp', title: 'SHACMAN Delong Drive Shaft', description: 'Drive shaft for SHACMAN Delong series.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-str0125', category: 'shaft', brand: 'sinotruk', image: '/images/products/sinotruk-str0125-drive-shaft.webp', title: 'SINOTRUK STR0125 Drive Shaft', description: 'Drive shaft for STR0125 platform.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-auman', category: 'shaft', brand: 'auman', image: '/images/products/auman-drive-shaft.webp', title: 'Auman Drive Shaft', description: 'Drive shaft for Auman commercial trucks.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-dongfeng-balong', category: 'shaft', brand: 'dongfeng', image: '/images/products/dongfeng-balong-drive-shaft.webp', title: 'Dongfeng Balong Drive Shaft', description: 'Drive shaft for Dongfeng Balong series.', tag: 'Drive Shaft' },
-  { id: 'drive-shaft-shaanxi-aolong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-aolong-drive-shaft.webp', title: 'Shaanxi Aolong Drive Shaft', description: 'Drive shaft for Shaanxi Aolong series.', tag: 'Drive Shaft' },
+  { id: 'drive-shaft-shaanxi-aolong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-aolong-drive-shaft.webp', title: 'SHACMAN Aolong Drive Shaft', description: 'Drive shaft for SHACMAN Aolong series.', tag: 'Drive Shaft' },
 ];
 
 import { importedProductCards } from './imported-products.generated';

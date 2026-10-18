@@ -284,15 +284,15 @@ export const productDetails: Record<string, ProductDetail> = {
   'drive-shaft-shaanxi-delong': {
     image: '/images/products/shaanxi-delong-drive-shaft.webp',
     category: 'Drive Shaft Series',
-    title: 'Shaanxi Delong Drive Shaft',
-    description: 'Drive shaft for Shaanxi Delong series with stable geometry and reliable performance.',
+    title: 'SHACMAN Delong Drive Shaft',
+    description: 'Drive shaft for SHACMAN Delong series with stable geometry and reliable performance.',
     specs: [
       { label: 'Type', value: 'Drive shaft' },
-      { label: 'Series', value: 'Shaanxi Delong' },
+      { label: 'Series', value: 'SHACMAN Delong' },
       { label: 'Material', value: 'Forged steel' },
       { label: 'Finish', value: 'Protective coating' },
     ],
-    applications: ['Shaanxi Delong trucks', 'Transmission systems', 'Replacement parts'],
+    applications: ['SHACMAN Delong trucks', 'Transmission systems', 'Replacement parts'],
   },
   'drive-shaft-str0125': {
     image: '/images/products/sinotruk-str0125-drive-shaft.webp',
@@ -336,14 +336,14 @@ export const productDetails: Record<string, ProductDetail> = {
   'drive-shaft-shaanxi-aolong': {
     image: '/images/products/shaanxi-aolong-drive-shaft.webp',
     category: 'Drive Shaft Series',
-    title: 'Shaanxi Aolong Drive Shaft',
-    description: 'Drive shaft for Shaanxi Aolong series with strong transmission performance and service durability.',
+    title: 'SHACMAN Aolong Drive Shaft',
+    description: 'Drive shaft for SHACMAN Aolong series with strong transmission performance and service durability.',
     specs: [
       { label: 'Type', value: 'Drive shaft' },
-      { label: 'Series', value: 'Shaanxi Aolong' },
+      { label: 'Series', value: 'SHACMAN Aolong' },
       { label: 'Material', value: 'Forged steel' },
       { label: 'Finish', value: 'Anti-corrosion coating' },
     ],
-    applications: ['Shaanxi Aolong trucks', 'Power transfer', 'Replacement parts'],
+    applications: ['SHACMAN Aolong trucks', 'Power transfer', 'Replacement parts'],
   },
 };

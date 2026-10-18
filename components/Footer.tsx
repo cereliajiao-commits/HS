@@ -24,6 +24,10 @@ export default function Footer() {
             <p>
               {t('footer.desc')}
             </p>
+            <p className="footer-entity-name">
+              <strong>衡水宏盛汽车配件有限公司</strong><br />
+              Hengshui Hongsheng Auto Parts Co., Ltd.
+            </p>
           </div>
           <div className="footer-col">
             <h4>{t('footer.products')}</h4>

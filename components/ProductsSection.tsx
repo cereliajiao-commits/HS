@@ -5,6 +5,7 @@ import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { resolveProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
+import { oemReferences } from '@/data/oemReference.generated';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -44,7 +45,7 @@ export default function ProductsSection() {
     { filter: 'dongfeng', label: 'Dongfeng' },
     { filter: 'auman', label: 'Auman' },
     { filter: 'howo', label: 'HOWO' },
-    { filter: 'shaanxi', label: 'Shaanxi' },
+    { filter: 'shaanxi', label: 'SHACMAN' },
     { filter: 'john-deere', label: 'John Deere' },
     { filter: 'others', label: t('products.others') },
   ];
@@ -130,6 +131,7 @@ export default function ProductsSection() {
             const title = localized?.title ?? card.title;
             const description = localized?.description ?? card.description;
             const tag = localized?.categoryLabel ?? card.tag;
+            const oem = oemReferences[card.id];
 
             return (
               <a
@@ -153,6 +155,11 @@ export default function ProductsSection() {
                 <div className="product-card-body">
                   <h3>{title}</h3>
                   <p>{description}</p>
+                  {oem?.oemNumbers.length ? (
+                    <div className="product-card-oem" aria-label={`OEM reference numbers: ${oem.oemNumbers.join(', ')}`}>
+                      <span>OEM</span> {oem.oemNumbers.join(' · ')}
+                    </div>
+                  ) : null}
                   <span className="product-tag">{tag}</span>
                 </div>
               </a>

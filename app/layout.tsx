@@ -6,7 +6,7 @@ const siteUrl = 'https://www.hsaxle.com';
 const siteName = 'HONGSHENG Auto Parts';
 const siteTitle = 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG';
 const siteDescription =
-  'ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks. OEM/ODM support. Request a quote.';
+  'Hengshui Hongsheng Auto Parts Co., Ltd. (衡水宏盛汽车配件有限公司) is an ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks. OEM/ODM support. Request a quote.';
 const socialImage = '/images/company/og-hongsheng-auto-parts.jpg';
 
 export const metadata: Metadata = {
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     'forged truck parts supplier',
     'agricultural machinery parts manufacturer',
     'OEM auto parts supplier',
+    'SHACMAN truck parts',
+    'OEM cross reference numbers',
+    'truck parts supplier China',
     'HONGSHENG Auto Parts',
   ],
   alternates: {

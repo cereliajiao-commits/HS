@@ -131,6 +131,7 @@ export default function ProductSearch() {
                     <span className="product-search-result-copy">
                       <strong>{title}</strong>
                       <small>{category}</small>
+                      {oemReferences[card.id]?.oemNumbers.length ? <small className="product-search-result-oem">OEM: {oemReferences[card.id].oemNumbers.join(' · ')}</small> : null}
                     </span>
                     <span className="product-search-result-arrow" aria-hidden="true">→</span>
                   </a>

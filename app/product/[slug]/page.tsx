@@ -162,6 +162,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
     description: product.description,
     image: [image],
     sku: product.card.id,
+    ...(product.oem?.oemNumbers[0] ? { mpn: product.oem.oemNumbers[0] } : {}),
     category: product.categoryLabel,
     brand: {
       '@type': 'Brand',

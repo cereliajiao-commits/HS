@@ -1117,5 +1117,14 @@ export const oemReferences: Record<string, OemReference> = {
     "confidence": "未查到",
     "sourceUrl": "",
     "note": "英文name为占位符“Long Shaft Assembly - Model”，desc为custom drivetrain/transmission通用长轴，img_cn为“长轴系列”(imported-long-shaft-001)。检索“重汽长轴/传动轴花键轴 WG”仅得斯太尔/豪沃各式传动轴号(如AZ9231320261、AZ9938311188等)，与本品无明确绑定关系；传动轴类按车型/长度/齿数定制，无法确定对应OE号。"
-  }
+  },
+  'john-deere-r212837-yoke-shaft': {
+    productId: 'john-deere-r212837-yoke-shaft',
+    oemNumbers: ['R212837'],
+    vehicleApplication: 'John Deere 5105, 5205, 5220, 5225, 5303, 5320, 5325, 5403, 5420, 5425, 5520',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and application list supplied by the user.',
+  },
+
 };

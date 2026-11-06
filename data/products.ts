@@ -35,6 +35,7 @@ export const productCards: ProductCard[] = [
   { id: 'drive-shaft-auman', category: 'shaft', brand: 'auman', image: '/images/products/auman-drive-shaft.webp', title: 'Auman Drive Shaft', description: 'Drive shaft for Auman commercial trucks.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-dongfeng-balong', category: 'shaft', brand: 'dongfeng', image: '/images/products/dongfeng-balong-drive-shaft.webp', title: 'Dongfeng Balong Drive Shaft', description: 'Drive shaft for Dongfeng Balong series.', tag: 'Drive Shaft' },
   { id: 'drive-shaft-shaanxi-aolong', category: 'shaft', brand: 'shaanxi', image: '/images/products/shaanxi-aolong-drive-shaft.webp', title: 'SHACMAN Aolong Drive Shaft', description: 'Drive shaft for SHACMAN Aolong series.', tag: 'Drive Shaft' },
+  { id: 'john-deere-r212837-yoke-shaft', category: 'john-deere', brand: 'john-deere', image: '/images/products/john-deere-r212837-yoke-with-shaft.webp', title: 'John Deere R212837 Front Axle Yoke with Shaft', description: 'Front axle yoke with shaft for John Deere tractors, OEM reference R212837.', tag: 'John Deere' },
 ];
 
 import { importedProductCards } from './imported-products.generated';

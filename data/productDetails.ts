@@ -346,4 +346,18 @@ export const productDetails: Record<string, ProductDetail> = {
     ],
     applications: ['SHACMAN Aolong trucks', 'Power transfer', 'Replacement parts'],
   },
+  'john-deere-r212837-yoke-shaft': {
+    image: '/images/products/john-deere-r212837-yoke-with-shaft.webp',
+    category: 'John Deere Agricultural Parts',
+    title: 'John Deere R212837 Front Axle Yoke with Shaft',
+    description: 'Front axle yoke with shaft for John Deere tractors. OEM reference R212837 for front axle and driveline service applications.',
+    specs: [
+      { label: 'Type', value: 'Front axle yoke with shaft' },
+      { label: 'OEM / OE', value: 'R212837' },
+      { label: 'Brand', value: 'John Deere' },
+      { label: 'Supply', value: 'OEM reference / replacement' },
+    ],
+    applications: ['John Deere 5105', 'John Deere 5205', 'John Deere 5220', 'John Deere 5225', 'John Deere 5303', 'John Deere 5320', 'John Deere 5325', 'John Deere 5403', 'John Deere 5420', 'John Deere 5425', 'John Deere 5520'],
+  },
+
 };

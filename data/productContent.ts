@@ -637,4 +637,29 @@ export const productContent: Record<string, ProductContent> = {
       applications: ['陕汽奥龙卡车', '动力传递', '替换件'],
     },
   },
+  'john-deere-r212837-yoke-shaft': {
+    en: {
+      title: 'John Deere R212837 Front Axle Yoke with Shaft',
+      description: 'Front axle yoke with shaft for John Deere tractors. OEM reference R212837 for front axle and driveline service applications.',
+      specs: [
+        { label: 'Type', value: 'Front axle yoke with shaft' },
+        { label: 'OEM / OE', value: 'R212837' },
+        { label: 'Brand', value: 'John Deere' },
+        { label: 'Supply', value: 'OEM reference / replacement' },
+      ],
+      applications: ['John Deere 5105', 'John Deere 5205', 'John Deere 5220', 'John Deere 5225', 'John Deere 5303', 'John Deere 5320', 'John Deere 5325', 'John Deere 5403', 'John Deere 5420', 'John Deere 5425', 'John Deere 5520'],
+    },
+    zh: {
+      title: '约翰迪尔 R212837 前桥轭架带轴',
+      description: '适用于约翰迪尔拖拉机的前桥轭架带轴，OEM 对照号为 R212837，用于前桥和传动系统维修更换。',
+      specs: [
+        { label: '类型', value: '前桥轭架带轴' },
+        { label: 'OEM / OE号', value: 'R212837' },
+        { label: '品牌', value: 'John Deere 约翰迪尔' },
+        { label: '供货', value: 'OEM 对照 / 替换件' },
+      ],
+      applications: ['约翰迪尔 5105', '约翰迪尔 5205', '约翰迪尔 5220', '约翰迪尔 5225', '约翰迪尔 5303', '约翰迪尔 5320', '约翰迪尔 5325', '约翰迪尔 5403', '约翰迪尔 5420', '约翰迪尔 5425', '约翰迪尔 5520'],
+    },
+  },
+
 };

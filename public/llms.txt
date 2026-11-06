@@ -82,6 +82,8 @@
 - [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-008): OEM/OE DZ9114312072、DZ9114313164; compatible application: 陕汽奥龙 (Shacman Aolong).
 - [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-009): OEM/OE DZ9114312067、DZ9114311067; compatible application: 陕汽德龙 (Shacman Delong).
 
+- [John Deere R212837 Front Axle Yoke with Shaft](https://www.hsaxle.com/product/john-deere-r212837-yoke-shaft): OEM/OE R212837; compatible application: John Deere 5105, 5205, 5220, 5225, 5303, 5320, 5325, 5403, 5420, 5425, 5520.
+
 ## Crawlable resources
 
 - Product sitemap: https://www.hsaxle.com/sitemap.xml

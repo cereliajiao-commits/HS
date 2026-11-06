@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { allProductCards } from '@/data/products';
+import { oemReferences } from '@/data/oemReference.generated';
 
 const siteUrl = 'https://www.hsaxle.com';
 
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages },
     }];
   });
+  const oemUrls = Object.values(oemReferences).flatMap((ref) => ref.oemNumbers.map((number) => ({ url: `${siteUrl}/oem/${encodeURIComponent(number)}`, lastModified, changeFrequency: 'monthly' as const, priority: 0.75 })));
 
   return [
     {
@@ -34,5 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...productUrls,
+    ...oemUrls,
   ];
 }

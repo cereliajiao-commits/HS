@@ -84,6 +84,8 @@
 
 - [John Deere R212837 Front Axle Yoke with Shaft](https://www.hsaxle.com/product/john-deere-r212837-yoke-shaft): OEM/OE R212837; compatible application: John Deere 5105, 5205, 5220, 5225, 5303, 5320, 5325, 5403, 5420, 5425, 5520.
 
+- [John Deere AL161317 Front Axle Drive Shaft Assembly](https://www.hsaxle.com/product/john-deere-al161317-drive-shaft): OEM/OE AL161317; compatible application: John Deere 6320, 6420, 6430, 6520, 6115D, 6215, 6415.
+
 ## Crawlable resources
 
 - Product sitemap: https://www.hsaxle.com/sitemap.xml

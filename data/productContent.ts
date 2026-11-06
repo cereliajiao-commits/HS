@@ -662,4 +662,9 @@ export const productContent: Record<string, ProductContent> = {
     },
   },
 
+  'john-deere-al161317-drive-shaft': {
+    en: { title: 'John Deere AL161317 Front Axle Drive Shaft Assembly', description: 'Front axle drive shaft assembly for John Deere tractors. OEM reference AL161317 for front axle driveline service and replacement.', specs: [{ label: 'Type', value: 'Front axle drive shaft assembly' }, { label: 'OEM / OE', value: 'AL161317' }, { label: 'Brand', value: 'John Deere' }, { label: 'Supply', value: 'OEM reference / replacement' }], applications: ['John Deere 6320', 'John Deere 6420', 'John Deere 6430', 'John Deere 6520', 'John Deere 6115D', 'John Deere 6215', 'John Deere 6415'] },
+    zh: { title: '约翰迪尔 AL161317 前桥方向传动轴总成', description: '适用于约翰迪尔拖拉机的前桥方向传动轴总成，OEM 对照号为 AL161317，用于前桥传动系统维修更换。', specs: [{ label: '类型', value: '前桥方向传动轴总成' }, { label: 'OEM / OE号', value: 'AL161317' }, { label: '品牌', value: 'John Deere 约翰迪尔' }, { label: '供货', value: 'OEM 对照 / 替换件' }], applications: ['约翰迪尔 6320', '约翰迪尔 6420', '约翰迪尔 6430', '约翰迪尔 6520', '约翰迪尔 6115D', '约翰迪尔 6215', '约翰迪尔 6415'] },
+  },
+
 };

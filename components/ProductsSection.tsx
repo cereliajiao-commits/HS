@@ -143,7 +143,7 @@ export default function ProductsSection() {
               >
                 <div className="product-card-img">
                   <img
-                    src={`${card.image}?v=20261017-webp`}
+                    src={`${card.image}?v=20261106-media`}
                     alt={title}
                     loading={index < 12 ? 'eager' : 'lazy'}
                     decoding="async"

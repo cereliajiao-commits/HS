@@ -1127,4 +1127,6 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and application list supplied by the user.',
   },
 
+  'john-deere-al161317-drive-shaft': { productId: 'john-deere-al161317-drive-shaft', oemNumbers: ['AL161317'], vehicleApplication: 'John Deere 6320, 6420, 6430, 6520, 6115D, 6215, 6415', confidence: '用户提供', sourceUrl: '', note: 'Product image and application list supplied by the user.' },
+
 };

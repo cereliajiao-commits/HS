@@ -360,4 +360,13 @@ export const productDetails: Record<string, ProductDetail> = {
     applications: ['John Deere 5105', 'John Deere 5205', 'John Deere 5220', 'John Deere 5225', 'John Deere 5303', 'John Deere 5320', 'John Deere 5325', 'John Deere 5403', 'John Deere 5420', 'John Deere 5425', 'John Deere 5520'],
   },
 
+  'john-deere-al161317-drive-shaft': {
+    image: '/images/products/john-deere-al161317-front-axle-drive-shaft.webp',
+    category: 'John Deere Agricultural Parts',
+    title: 'John Deere AL161317 Front Axle Drive Shaft Assembly',
+    description: 'Front axle drive shaft assembly for John Deere tractors. OEM reference AL161317 for front axle driveline service and replacement.',
+    specs: [{ label: 'Type', value: 'Front axle drive shaft assembly' }, { label: 'OEM / OE', value: 'AL161317' }, { label: 'Brand', value: 'John Deere' }, { label: 'Supply', value: 'OEM reference / replacement' }],
+    applications: ['John Deere 6320', 'John Deere 6420', 'John Deere 6430', 'John Deere 6520', 'John Deere 6115D', 'John Deere 6215', 'John Deere 6415'],
+  },
+
 };

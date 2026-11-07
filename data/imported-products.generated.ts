@@ -858,7 +858,7 @@ export const importedProductCards = [
     id: 'new-differential-assembly-001',
     category: 'differential',
     brand: 'howo',
-    image: '/images/products/imported-differential-assembly-001-main.webp',
+    image: '/images/products/howo-az9231320271-differential.webp',
     description: 'Differential assembly for SINOTRUK HOWO heavy-duty truck drivetrain and axle applications.',
     tag: 'Differential Assembly',
     title: 'Differential Assembly - AZ9231320271',

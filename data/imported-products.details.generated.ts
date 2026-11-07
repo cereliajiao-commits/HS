@@ -1615,9 +1615,9 @@ export const importedProductDetails = {
     ],
   },
   'new-differential-assembly-001': {
-    image: '/images/products/imported-differential-assembly-001-main.webp',
+    image: '/images/products/howo-az9231320271-differential.webp',
     images: [
-      '/images/products/imported-differential-assembly-001-main.webp',
+      '/images/products/howo-az9231320271-differential.webp',
       '/images/products/imported-differential-assembly-001-view2.webp',
       '/images/products/imported-differential-assembly-001-view3.webp',
     ],

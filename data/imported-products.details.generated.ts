@@ -801,7 +801,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-002': {
     image: '/images/products/imported-steering-knuckle-002-1060.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1060',
+    title: 'Steering Knuckle - 1060',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -818,7 +818,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-003': {
     image: '/images/products/imported-steering-knuckle-003-1061.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1061',
+    title: 'Steering Knuckle - 1061',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -835,7 +835,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-004': {
     image: '/images/products/imported-steering-knuckle-004-1061-abs.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1061 ABS',
+    title: 'Steering Knuckle - 1061（ABS）',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -852,7 +852,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-005': {
     image: '/images/products/imported-steering-knuckle-005-140.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 140',
+    title: 'Steering Knuckle - 140',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -869,7 +869,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-006': {
     image: '/images/products/imported-steering-knuckle-006-140abs.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 140ABS',
+    title: 'Steering Knuckle - 140ABS',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -903,7 +903,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-008': {
     image: '/images/products/imported-steering-knuckle-008-145.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 145',
+    title: 'Steering Knuckle - 145',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -920,7 +920,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-009': {
     image: '/images/products/imported-steering-knuckle-009-153.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 153',
+    title: 'Steering Knuckle - 153',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -954,7 +954,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-011': {
     image: '/images/products/imported-steering-knuckle-011-rw140.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - RW140',
+    title: 'Steering Knuckle - RW140',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -971,7 +971,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-012': {
     image: '/images/products/imported-steering-knuckle-012-rw145.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - RW145',
+    title: 'Steering Knuckle - RW145',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -988,7 +988,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-013': {
     image: '/images/products/imported-steering-knuckle-013-z01.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - Z01',
+    title: 'Steering Knuckle - Z01',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -1005,7 +1005,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-014': {
     image: '/images/products/imported-steering-knuckle-014-zb1.webp',
     category: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - ZB1',
+    title: 'Steering Knuckle - ZB1',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },
@@ -1226,7 +1226,7 @@ export const importedProductDetails = {
   'new-agricultural-003': {
     image: '/images/products/imported-agricultural-003-y0049.webp',
     category: 'Agricultural Part',
-    title: 'Agricultural Machinery Part - Y0049',
+    title: 'Agricultural Part - Y0049',
     description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
     specs: [
       { label: 'Type', value: 'Agricultural part' },
@@ -1583,7 +1583,7 @@ export const importedProductDetails = {
   'new-control-arm-001': {
     image: '/images/products/imported-control-arm-001-shacman-f3000.webp',
     category: 'Control Arm',
-    title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+    title: 'SHACMAN F3000 DZ9100410082 Control Arm',
     description: 'Heavy-duty control arm for truck suspension applications, suitable for OEM replacement and aftermarket supply.',
     specs: [
       { label: 'Type', value: 'Control arm' },
@@ -1600,7 +1600,7 @@ export const importedProductDetails = {
   'new-torque-rod-001': {
     image: '/images/products/imported-torque-rod-001-howo.webp',
     category: 'Torque Rod',
-    title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
+    title: 'HOWO AZ9725529272 V Thrust Rod / Torque Rod',
     description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
     specs: [
       { label: 'Type', value: 'V thrust rod / torque rod' },
@@ -1622,7 +1622,7 @@ export const importedProductDetails = {
       '/images/products/imported-differential-assembly-001-view3.webp',
     ],
     category: 'Differential Assembly',
-    title: 'Differential Assembly - AZ9231320271',
+    title: 'HOWO AZ9231320271 Differential Assembly',
     description: 'Differential assembly for heavy-duty truck drivetrain and axle applications.',
     specs: [
       { label: 'Type', value: 'Differential assembly' },
@@ -1644,7 +1644,7 @@ export const importedProductDetails = {
       '/images/products/howo-az9631523175-torque-rod-view3.webp',
     ],
     category: 'Torque Rod',
-    title: 'Heavy-Duty V Thrust Rod - AZ9631523175',
+    title: 'HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly',
     description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
     specs: [
       { label: 'Type', value: 'V thrust rod / torque rod' },

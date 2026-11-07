@@ -16,7 +16,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 1045弯臂',
+      title: '1045弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -48,7 +48,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 1060-2弯臂',
+      title: '1060-2弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -80,7 +80,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 1060弯直臂',
+      title: '1060弯直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -112,7 +112,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 1061转直臂',
+      title: '1061转直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -144,7 +144,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 10款赛龙弯臂',
+      title: '10款赛龙弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -176,7 +176,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 130直臂',
+      title: '130直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -208,7 +208,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 136弯臂',
+      title: '136弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -240,7 +240,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 140弯直臂',
+      title: '140弯直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -272,7 +272,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 14BY弯臂',
+      title: '14BY弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -304,7 +304,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 153转直臂',
+      title: '153转直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -336,7 +336,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 1cco弯臂',
+      title: '1cco弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -368,7 +368,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 385弯臂',
+      title: '385弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -400,7 +400,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 608弯臂',
+      title: '608弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -432,7 +432,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 6700弯臂',
+      title: '6700弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -464,7 +464,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - K36弯臂',
+      title: 'K36弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -496,7 +496,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - KA005弯臂',
+      title: 'KA005弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -528,7 +528,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - Q448弯臂',
+      title: 'Q448弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -560,7 +560,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - WB1058弯臂',
+      title: 'WB1058弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -592,7 +592,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 丁字臂(一桥:二桥)',
+      title: '丁字臂（一桥:二桥）',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -624,7 +624,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 东风Q30:Q40弯臂',
+      title: '东风Q30:Q40弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -656,7 +656,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 五十铃弯臂',
+      title: '五十铃弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -688,7 +688,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 公狮弯臂',
+      title: '公狮弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -720,7 +720,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 六平弯直臂',
+      title: '六平弯直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -752,7 +752,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 十六平左右直臂',
+      title: '十六平左右直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -784,7 +784,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 华川-2粗细弯臂',
+      title: '华川-2粗细弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -816,7 +816,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 华川1041弯直臂',
+      title: '华川1041弯直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -848,7 +848,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 南骏转向正反臂',
+      title: '南骏转向正反臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -880,7 +880,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 外贸弯臂',
+      title: '外贸弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -912,7 +912,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 外贸弯臂1',
+      title: '外贸弯臂1',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -944,7 +944,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 奥驰弯臂(四种)',
+      title: '奥驰弯臂（四种）',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -976,7 +976,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 拖拉机弯臂',
+      title: '拖拉机弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1008,7 +1008,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 拖车钩',
+      title: '拖车钩',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1040,7 +1040,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 时代金刚弯臂',
+      title: '时代金刚弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1072,7 +1072,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 柳汽乘龙弯臂',
+      title: '柳汽乘龙弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1104,7 +1104,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 欧曼-1左右臂',
+      title: '欧曼-1左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1136,7 +1136,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 欧曼加强左右臂',
+      title: '欧曼加强左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1168,7 +1168,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 江淮康铃弯臂',
+      title: '江淮康铃弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1200,7 +1200,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 浮桥左右臂',
+      title: '浮桥左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1232,7 +1232,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 红岩左右臂',
+      title: '红岩左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1264,7 +1264,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 联合众卡左右臂',
+      title: '联合众卡左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1296,7 +1296,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 联合众卡左右臂(侧面图)',
+      title: '联合众卡左右臂（侧面图）',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1328,7 +1328,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 英田弯臂',
+      title: '英田弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1360,7 +1360,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 豪沃09款左右臂',
+      title: '豪沃09款左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1392,7 +1392,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 豪沃10款左右臂',
+      title: '豪沃10款左右臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1424,7 +1424,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 赛龙弯直臂',
+      title: '赛龙弯直臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1456,7 +1456,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型转向臂 - 雷沃弯臂',
+      title: '雷沃弯臂',
       description: '精密制造的重型转向臂，适用于卡车转向传动系统，可用于替换及 OEM 配套。',
       specs: [
         { label: '类型', value: '转向臂' },
@@ -1488,7 +1488,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 1041羊角左右',
+      title: '1041羊角左右',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1505,7 +1505,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-002': {
     en: {
-      title: 'Truck Steering Knuckle - 1060',
+      title: 'Steering Knuckle - 1060',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1520,7 +1520,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 1060',
+      title: '1060',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1537,7 +1537,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-003': {
     en: {
-      title: 'Truck Steering Knuckle - 1061',
+      title: 'Steering Knuckle - 1061',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1552,7 +1552,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 1061',
+      title: '1061',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1569,7 +1569,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-004': {
     en: {
-      title: 'Truck Steering Knuckle - 1061 ABS',
+      title: 'Steering Knuckle - 1061（ABS）',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1584,7 +1584,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 1061(ABS)',
+      title: '1061（ABS）',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1601,7 +1601,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-005': {
     en: {
-      title: 'Truck Steering Knuckle - 140',
+      title: 'Steering Knuckle - 140',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1616,7 +1616,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 140',
+      title: '140',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1633,7 +1633,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-006': {
     en: {
-      title: 'Truck Steering Knuckle - 140ABS',
+      title: 'Steering Knuckle - 140ABS',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1648,7 +1648,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 140ABS',
+      title: '140ABS',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1680,7 +1680,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 140羊角右',
+      title: '140羊角右',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1697,7 +1697,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-008': {
     en: {
-      title: 'Truck Steering Knuckle - 145',
+      title: 'Steering Knuckle - 145',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1712,7 +1712,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 145',
+      title: '145',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1729,7 +1729,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-009': {
     en: {
-      title: 'Truck Steering Knuckle - 153',
+      title: 'Steering Knuckle - 153',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1744,7 +1744,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 153',
+      title: '153',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1776,7 +1776,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 598羊角',
+      title: '598羊角',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1793,7 +1793,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-011': {
     en: {
-      title: 'Truck Steering Knuckle - RW140',
+      title: 'Steering Knuckle - RW140',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1808,7 +1808,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - RW140',
+      title: 'RW140',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1825,7 +1825,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-012': {
     en: {
-      title: 'Truck Steering Knuckle - RW145',
+      title: 'Steering Knuckle - RW145',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1840,7 +1840,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - RW145',
+      title: 'RW145',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1857,7 +1857,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-013': {
     en: {
-      title: 'Truck Steering Knuckle - Z01',
+      title: 'Steering Knuckle - Z01',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1872,7 +1872,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - Z01',
+      title: 'Z01',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1889,7 +1889,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-014': {
     en: {
-      title: 'Truck Steering Knuckle - ZB1',
+      title: 'Steering Knuckle - ZB1',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },
@@ -1904,7 +1904,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - ZB1',
+      title: 'ZB1',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1936,7 +1936,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 华菱A3',
+      title: '华菱A3',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -1968,7 +1968,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 格尔发',
+      title: '格尔发',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2000,7 +2000,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 红岩杰狮',
+      title: '红岩杰狮',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2032,7 +2032,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 解放1066',
+      title: '解放1066',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2064,7 +2064,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 解放54W',
+      title: '解放54W',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2096,7 +2096,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 解放A2Q',
+      title: '解放A2Q',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2128,7 +2128,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 豪沃16款',
+      title: '豪沃16款',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2160,7 +2160,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 重汽斯太尔',
+      title: '重汽斯太尔',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2192,7 +2192,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 陕汽F2000:北奔',
+      title: '陕汽F2000:北奔',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2224,7 +2224,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '卡车羊角 - 陕汽F3000',
+      title: '陕汽F3000',
       description: '耐用型羊角，专为重型车辆稳定转向传递和长寿命使用而设计。',
       specs: [
         { label: '类型', value: '羊角' },
@@ -2256,7 +2256,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - D618垂臂',
+      title: 'D618垂臂',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2288,7 +2288,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - KT提升臂',
+      title: 'KT提升臂',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2305,7 +2305,7 @@ export const importedProductContent = {
   },
   'new-agricultural-003': {
     en: {
-      title: 'Agricultural Machinery Part - Y0049',
+      title: 'Agricultural Part - Y0049',
       description: 'Agricultural machinery component designed for reliable steering and linkage performance in field equipment.',
       specs: [
         { label: 'Type', value: 'Agricultural part' },
@@ -2320,7 +2320,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - Y0049',
+      title: 'Y0049',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2352,7 +2352,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 俄罗斯羊角',
+      title: '俄罗斯羊角',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2384,7 +2384,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 农机配件',
+      title: '农机配件',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2416,7 +2416,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 外贸垂臂',
+      title: '外贸垂臂',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2448,7 +2448,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 大小疙瘩臂',
+      title: '大小疙瘩臂',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2480,7 +2480,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 大铲子',
+      title: '大铲子',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2512,7 +2512,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 小大链板',
+      title: '小大链板',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2544,7 +2544,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '农机配件 - 小铲子左右',
+      title: '小铲子左右',
       description: '适用于农机设备的配件，提供可靠的转向和连接性能。',
       specs: [
         { label: '类型', value: '农机配件' },
@@ -2576,7 +2576,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '约翰迪尔悬挂总成 - 约翰迪尔5-754:854:950悬挂机构总成',
+      title: '约翰迪尔5-754:854:950悬挂机构总成',
       description: '约翰迪尔系列悬挂总成，适用于农业应用，装配稳定、性能可靠。',
       specs: [
         { label: '类型', value: '悬挂总成' },
@@ -2608,7 +2608,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '约翰迪尔悬挂总成 - 约翰迪尔6B-1404悬挂总成',
+      title: '约翰迪尔6B-1404悬挂总成',
       description: '约翰迪尔系列悬挂总成，适用于农业应用，装配稳定、性能可靠。',
       specs: [
         { label: '类型', value: '悬挂总成' },
@@ -2640,7 +2640,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '约翰迪尔悬挂总成 - 约翰迪尔系列',
+      title: '约翰迪尔系列',
       description: '约翰迪尔系列悬挂总成，适用于农业应用，装配稳定、性能可靠。',
       specs: [
         { label: '类型', value: '悬挂总成' },
@@ -2672,7 +2672,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 东风天龙传动轴',
+      title: '东风天龙传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2704,7 +2704,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 东风霸龙传动轴',
+      title: '东风霸龙传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2736,7 +2736,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 欧曼汽车传动轴',
+      title: '欧曼汽车传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2768,7 +2768,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 重庆豪沃传动轴',
+      title: '重庆豪沃传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2800,7 +2800,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 重汽STR0125传动轴',
+      title: '重汽STR0125传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2832,7 +2832,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 重汽STR传动轴',
+      title: '重汽STR传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2864,7 +2864,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 重汽传动轴',
+      title: '重汽传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2896,7 +2896,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 陕汽奥龙传动轴',
+      title: '陕汽奥龙传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2928,7 +2928,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型传动轴 - 陕汽德龙传动轴',
+      title: '陕汽德龙传动轴',
       description: '适用于重型卡车平台的传动轴，提供稳定扭矩传递和可靠运行。',
       specs: [
         { label: '类型', value: '传动轴' },
@@ -2960,7 +2960,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '长轴总成 - 长轴系列',
+      title: '长轴系列',
       description: '用于定制传动和动力传输应用的长轴总成，具备稳定转动和高强度表现。',
       specs: [
         { label: '类型', value: '长轴' },
@@ -2977,7 +2977,7 @@ export const importedProductContent = {
   },
   'new-control-arm-001': {
     en: {
-      title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+      title: 'SHACMAN F3000 DZ9100410082 Control Arm',
       description: 'Heavy-duty control arm for truck suspension applications, suitable for OEM replacement and aftermarket supply.',
       specs: [
         { label: 'Type', value: 'Control arm' },
@@ -2992,7 +2992,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型控制臂 - 陕汽德龙F3000 DZ9100410082',
+      title: '陕汽德龙F3000 DZ9100410082',
       description: '适用于卡车悬挂系统的重型控制臂，可用于 OEM 替换及售后市场供货。',
       specs: [
         { label: '类型', value: '控制臂' },
@@ -3009,7 +3009,7 @@ export const importedProductContent = {
   },
   'new-torque-rod-001': {
     en: {
-      title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
+      title: 'HOWO AZ9725529272 V Thrust Rod / Torque Rod',
       description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
       specs: [
         { label: 'Type', value: 'V thrust rod / torque rod' },
@@ -3024,7 +3024,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型V型推力杆 - 中国重汽豪沃 AZ9725529272 V型推力杆/扭矩杆',
+      title: '中国重汽豪沃 AZ9725529272 V型推力杆/扭矩杆',
       description: '适用于重型卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成。',
       specs: [
         { label: '类型', value: 'V型推力杆 / 扭矩杆' },
@@ -3041,7 +3041,7 @@ export const importedProductContent = {
   },
   'new-differential-assembly-001': {
     en: {
-      title: 'Differential Assembly - AZ9231320271',
+      title: 'HOWO AZ9231320271 Differential Assembly',
       description: 'Differential assembly for heavy-duty truck drivetrain and axle applications.',
       specs: [
         { label: 'Type', value: 'Differential assembly' },
@@ -3056,7 +3056,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '差速器总成 - 中国重汽豪沃 AZ9231320271 差速器总成',
+      title: '中国重汽豪沃 AZ9231320271 差速器总成',
       description: '适用于重型卡车传动系统和车桥的差速器总成。',
       specs: [
         { label: '类型', value: '差速器总成' },
@@ -3073,7 +3073,7 @@ export const importedProductContent = {
   },
   'new-torque-rod-002': {
     en: {
-      title: 'Heavy-Duty V Thrust Rod - AZ9631523175',
+      title: 'HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly',
       description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
       specs: [
         { label: 'Type', value: 'V thrust rod / torque rod' },
@@ -3088,7 +3088,7 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '重型V型推力杆 - 中国重汽豪沃 AZ9631523175 下推力杆/扭矩杆总成',
+      title: '中国重汽豪沃 AZ9631523175 下推力杆/扭矩杆总成',
       description: '适用于重型卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成。',
       specs: [
         { label: '类型', value: 'V型推力杆 / 扭矩杆' },

@@ -92,7 +92,8 @@ function compactMetaText(text: string, maxLength: number) {
 
 function seoTitle(title: string, lang: Language) {
   const suffix = lang === 'zh' ? ' | 宏盛汽车配件厂家' : ' | HONGSHENG Manufacturer';
-  return `${compactMetaText(title, 60 - suffix.length)}${suffix}`;
+  // Keep the model and OEM suffix visible in search results whenever possible.
+  return `${compactMetaText(title, 78 - suffix.length)}${suffix}`;
 }
 
 export function generateStaticParams() {

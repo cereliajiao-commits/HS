@@ -142,6 +142,17 @@ def category_desc(category: str, lang: str) -> str:
   return rule['desc_en'] if lang == 'en' else rule['desc_zh']
 
 
+def source_title(item: dict, lang: str, model_zh: str, model_en: str, code: str) -> str:
+  """Prefer curated bilingual catalog names over category-only fallbacks."""
+  if lang == 'zh' and item.get('titleZh'):
+    return item['titleZh']
+  if lang == 'en':
+    title_en = item.get('titleEn', '').strip()
+    if title_en and not re.search(r'[\u4e00-\u9fff]', title_en):
+      return title_en
+  return category_title(item['category'], lang, model_zh, model_en or code)
+
+
 def spec_items(category: str, lang: str):
   rule = CATEGORY_RULES[category]
   items = []
@@ -202,7 +213,7 @@ def main() -> None:
   for item in data:
     model_zh, model_en = split_model_and_label(item['titleZh'])
     code = extract_model_code(item['titleZh'])
-    card_title_en = card_title(item['category'], model_en, code)
+    card_title_en = source_title(item, 'en', model_zh, model_en, code)
     card_lines.append('  {')
     for key in ['id', 'category', 'brand', 'image', 'description', 'tag']:
       value = esc(item[key])
@@ -218,7 +229,7 @@ def main() -> None:
         detail_lines.append(f"      '{esc(image)}',")
       detail_lines.append('    ],')
     detail_lines.append(f"    category: '{item['categoryLabelEn']}',")
-    detail_lines.append(f"    title: '{esc(category_title(item['category'], 'en', model_zh, model_en or code))}',")
+    detail_lines.append(f"    title: '{esc(source_title(item, 'en', model_zh, model_en, code))}',")
     detail_lines.append(f"    description: '{esc(category_desc(item['category'], 'en'))}',")
     detail_lines.append('    specs: [')
     for spec in spec_items(item['category'], 'en'):
@@ -233,7 +244,7 @@ def main() -> None:
     content_lines.append(f"  '{item['id']}': {{")
     for lang in ['en', 'zh']:
       content_lines.append(f"    {lang}: {{")
-      content_lines.append(f"      title: '{esc(category_title(item['category'], lang, model_zh, model_en or code))}',")
+      content_lines.append(f"      title: '{esc(source_title(item, lang, model_zh, model_en, code))}',")
       content_lines.append(f"      description: '{esc(category_desc(item['category'], lang))}',")
       content_lines.append('      specs: [')
       for spec in spec_items(item['category'], lang):

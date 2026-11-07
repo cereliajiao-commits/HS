@@ -168,7 +168,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-arm-019-丁字臂-一桥-二桥.webp',
     description: 'High-quality steering arm for heavy-duty truck steering systems.',
     tag: 'Steering Arm',
-    title: 'Heavy-Duty Steering Arm - /',
+    title: 'Heavy-Duty Steering Arm - Model',
   },
   {
     id: 'new-steering-arm-020',
@@ -429,7 +429,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-002-1060.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1060',
+    title: 'Steering Knuckle - 1060',
   },
   {
     id: 'new-steering-knuckle-003',
@@ -438,7 +438,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-003-1061.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1061',
+    title: 'Steering Knuckle - 1061',
   },
   {
     id: 'new-steering-knuckle-004',
@@ -447,7 +447,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-004-1061-abs.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 1061 ABS',
+    title: 'Steering Knuckle - 1061（ABS）',
   },
   {
     id: 'new-steering-knuckle-005',
@@ -456,7 +456,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-005-140.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 140',
+    title: 'Steering Knuckle - 140',
   },
   {
     id: 'new-steering-knuckle-006',
@@ -465,7 +465,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-006-140abs.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 140ABS',
+    title: 'Steering Knuckle - 140ABS',
   },
   {
     id: 'new-steering-knuckle-007',
@@ -483,7 +483,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-008-145.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 145',
+    title: 'Steering Knuckle - 145',
   },
   {
     id: 'new-steering-knuckle-009',
@@ -492,7 +492,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-009-153.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - 153',
+    title: 'Steering Knuckle - 153',
   },
   {
     id: 'new-steering-knuckle-010',
@@ -510,7 +510,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-011-rw140.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - RW140',
+    title: 'Steering Knuckle - RW140',
   },
   {
     id: 'new-steering-knuckle-012',
@@ -519,7 +519,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-012-rw145.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - RW145',
+    title: 'Steering Knuckle - RW145',
   },
   {
     id: 'new-steering-knuckle-013',
@@ -528,7 +528,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-013-z01.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - Z01',
+    title: 'Steering Knuckle - Z01',
   },
   {
     id: 'new-steering-knuckle-014',
@@ -537,7 +537,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-014-zb1.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Truck Steering Knuckle - ZB1',
+    title: 'Steering Knuckle - ZB1',
   },
   {
     id: 'new-steering-knuckle-015',
@@ -654,7 +654,7 @@ export const importedProductCards = [
     image: '/images/products/imported-agricultural-003-y0049.webp',
     description: 'Agricultural machinery component for steering and linkage assemblies.',
     tag: 'Agricultural',
-    title: 'Agricultural Machinery Part - Y0049',
+    title: 'Agricultural Part - Y0049',
   },
   {
     id: 'new-agricultural-004',
@@ -843,7 +843,7 @@ export const importedProductCards = [
     image: '/images/products/imported-control-arm-001-shacman-f3000.webp',
     description: 'Heavy-duty control arm for SHACMAN F3000 truck suspension applications.',
     tag: 'Control Arm',
-    title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+    title: 'SHACMAN F3000 DZ9100410082 Control Arm',
   },
   {
     id: 'new-torque-rod-001',
@@ -852,7 +852,7 @@ export const importedProductCards = [
     image: '/images/products/imported-torque-rod-001-howo.webp',
     description: 'V thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.',
     tag: 'Torque Rod',
-    title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
+    title: 'HOWO AZ9725529272 V Thrust Rod / Torque Rod',
   },
   {
     id: 'new-differential-assembly-001',
@@ -861,7 +861,7 @@ export const importedProductCards = [
     image: '/images/products/howo-az9231320271-differential.webp',
     description: 'Differential assembly for SINOTRUK HOWO heavy-duty truck drivetrain and axle applications.',
     tag: 'Differential Assembly',
-    title: 'Differential Assembly - AZ9231320271',
+    title: 'HOWO AZ9231320271 Differential Assembly',
   },
   {
     id: 'new-torque-rod-002',
@@ -870,6 +870,6 @@ export const importedProductCards = [
     image: '/images/products/howo-az9631523175-torque-rod.webp',
     description: 'Lower thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.',
     tag: 'Torque Rod',
-    title: 'Heavy-Duty V Thrust Rod - AZ9631523175',
+    title: 'HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly',
   },
 ] as const;

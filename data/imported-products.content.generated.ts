@@ -3039,4 +3039,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-differential-assembly-001': {
+    en: {
+      title: 'Differential Assembly - AZ9231320271',
+      description: 'Differential assembly for heavy-duty truck drivetrain and axle applications.',
+      specs: [
+        { label: 'Type', value: 'Differential assembly' },
+        { label: 'Application', value: 'Truck drivetrain and axles' },
+        { label: 'Platform', value: 'HOWO heavy-duty trucks' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'HOWO trucks',
+        'Truck drivetrain and axles',
+        'Differential replacement',
+      ],
+    },
+    zh: {
+      title: '差速器总成 - 中国重汽豪沃 AZ9231320271 差速器总成',
+      description: '适用于重型卡车传动系统和车桥的差速器总成。',
+      specs: [
+        { label: '类型', value: '差速器总成' },
+        { label: '适用', value: '卡车传动与车桥' },
+        { label: '平台', value: '豪沃重卡' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '豪沃卡车',
+        '卡车传动与车桥',
+        '差速器替换',
+      ],
+    },
+  },
 } as const;

@@ -1147,4 +1147,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and catalog screenshot supplied by the user.',
   },
 
+  'new-differential-assembly-001': {
+    productId: 'new-differential-assembly-001',
+    oemNumbers: ['AZ9231320271'],
+    vehicleApplication: 'SINOTRUK HOWO T7H, SITRAK C7H/C9H, TX, G7S heavy-duty trucks',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Three product images and catalog screenshot supplied by the user.',
+  },
+
 };

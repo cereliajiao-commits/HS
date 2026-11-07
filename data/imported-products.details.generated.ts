@@ -1614,4 +1614,26 @@ export const importedProductDetails = {
       'Axle linkage replacement',
     ],
   },
+  'new-differential-assembly-001': {
+    image: '/images/products/imported-differential-assembly-001-view1.webp',
+    images: [
+      '/images/products/imported-differential-assembly-001-view1.webp',
+      '/images/products/imported-differential-assembly-001-view2.webp',
+      '/images/products/imported-differential-assembly-001-view3.webp',
+    ],
+    category: 'Differential Assembly',
+    title: 'Differential Assembly - AZ9231320271',
+    description: 'Differential assembly for heavy-duty truck drivetrain and axle applications.',
+    specs: [
+      { label: 'Type', value: 'Differential assembly' },
+      { label: 'Application', value: 'Truck drivetrain and axles' },
+      { label: 'Platform', value: 'HOWO heavy-duty trucks' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'HOWO trucks',
+      'Truck drivetrain and axles',
+      'Differential replacement',
+    ],
+  },
 } as const;

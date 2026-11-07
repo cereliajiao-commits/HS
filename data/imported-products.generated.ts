@@ -854,4 +854,13 @@ export const importedProductCards = [
     tag: 'Torque Rod',
     title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
   },
+  {
+    id: 'new-differential-assembly-001',
+    category: 'differential',
+    brand: 'howo',
+    image: '/images/products/imported-differential-assembly-001-view1.webp',
+    description: 'Differential assembly for SINOTRUK HOWO heavy-duty truck drivetrain and axle applications.',
+    tag: 'Differential Assembly',
+    title: 'Differential Assembly - AZ9231320271',
+  },
 ] as const;

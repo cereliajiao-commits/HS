@@ -5,11 +5,12 @@ import { productDetails } from '@/data/productDetails';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
 import { resolveProductText, translateCategoryLabel } from '@/data/productLocalization';
 import type { Language } from '@/components/LanguageProvider';
-import ProductImageZoom from '@/components/ProductImageZoom';
+import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
 
 type ProductDetailRecord = {
   image: string;
+  images?: string[];
   category?: string;
   title?: string;
   description?: string;
@@ -66,6 +67,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
     oem,
     categoryLabel: localized?.categoryLabel ?? translateCategoryLabel(card.category, lang),
     image: detail?.image ?? card.image,
+    images: detail?.images?.length ? detail.images : [detail?.image ?? card.image],
   };
 }
 
@@ -118,7 +120,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
   const url = productUrl(params.slug, lang);
   const englishUrl = productUrl(params.slug, 'en');
   const chineseUrl = productUrl(params.slug, 'zh');
-  const image = absoluteUrl(product.image);
+  const images = product.images.map(absoluteUrl);
 
   return {
     title: { absolute: title },
@@ -141,26 +143,26 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
       siteName: 'HONGSHENG Auto Parts',
       locale: lang === 'zh' ? 'zh_CN' : 'en_US',
       alternateLocale: lang === 'zh' ? ['en_US'] : ['zh_CN'],
-      images: [{ url: image, alt: product.title }],
+      images: images.map((url) => ({ url, alt: product.title })),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [image],
+      images,
     },
   };
 }
 
 function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnType<typeof getLocalizedProduct>>; slug: string; lang: Language }) {
   const url = productUrl(slug, lang);
-  const image = absoluteUrl(product.image);
+  const images = product.images.map(absoluteUrl);
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.title,
     description: product.description,
-    image: [image],
+    image: images,
     sku: product.card.id,
     ...(product.oem?.oemNumbers[0] ? { mpn: product.oem.oemNumbers[0] } : {}),
     category: product.categoryLabel,
@@ -289,8 +291,8 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
         </nav>
 
         <section className="product-detail-layout">
-          <div className="product-detail-media">
-            <ProductImageZoom src={`${product.image}?v=20261106-r212837`} alt={product.title} hint={labels.zoomHint} />
+          <div className={`product-detail-media${product.images.length > 1 ? ' product-detail-media--gallery' : ''}`}>
+            <ProductGallery images={product.images} alt={product.title} hint={labels.zoomHint} />
           </div>
           <div className="product-detail-content">
             <div className="section-label">{product.categoryLabel}</div>

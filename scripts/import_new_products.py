@@ -36,6 +36,14 @@ CATEGORY_MAP = {
         "desc_en": "V thrust rod and torque rod assembly for heavy-duty truck suspension systems.",
         "desc_zh": "适用于重型卡车悬挂系统的V型推力杆/扭矩杆总成。",
     },
+    "差速器_处理图": {
+        "category": "differential",
+        "tag": "Differential Assembly",
+        "title_en": "Differential Assembly",
+        "title_zh": "差速器总成",
+        "desc_en": "Differential assembly for heavy-duty truck drivetrain and axle applications.",
+        "desc_zh": "适用于重型卡车传动系统和车桥的差速器总成。",
+    },
     "羊角系列_处理图片": {
         "category": "steering-knuckle",
         "tag": "Steering Knuckle",

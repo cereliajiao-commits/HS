@@ -1423,5 +1423,25 @@
     "descriptionZh": "适用于中国重汽豪沃卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成，OEM号为 AZ9725529272。",
     "categoryLabelEn": "Torque Rod",
     "categoryLabelZh": "扭矩杆"
+  },
+  {
+    "id": "new-differential-assembly-001",
+    "category": "differential",
+    "brand": "howo",
+    "image": "/images/products/imported-differential-assembly-001-view1.webp",
+    "images": [
+      "/images/products/imported-differential-assembly-001-view1.webp",
+      "/images/products/imported-differential-assembly-001-view2.webp",
+      "/images/products/imported-differential-assembly-001-view3.webp"
+    ],
+    "title": "Differential Assembly - 豪沃 AZ9231320271",
+    "description": "Differential assembly for SINOTRUK HOWO heavy-duty truck drivetrain and axle applications.",
+    "tag": "Differential Assembly",
+    "titleEn": "HOWO AZ9231320271 Differential Assembly",
+    "titleZh": "中国重汽豪沃 AZ9231320271 差速器总成",
+    "descriptionEn": "Differential assembly for SINOTRUK HOWO heavy-duty truck drivetrain and axle applications, OEM reference AZ9231320271.",
+    "descriptionZh": "适用于中国重汽豪沃重卡传动系统和车桥的差速器总成，OEM号为 AZ9231320271。",
+    "categoryLabelEn": "Differential Assembly",
+    "categoryLabelZh": "差速器总成"
   }
 ]

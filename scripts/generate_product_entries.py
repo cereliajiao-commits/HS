@@ -34,6 +34,15 @@ CATEGORY_RULES = {
     'specs': [('Type', 'V thrust rod / torque rod', '类型', 'V型推力杆 / 扭矩杆'), ('Application', 'Heavy-duty truck suspension', '适用', '重型卡车悬挂系统'), ('Platform', 'HOWO trucks', '平台', '豪沃卡车'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
     'applications': ['HOWO trucks', 'Truck suspension systems', 'Axle linkage replacement'],
   },
+  'differential': {
+    'tag': 'Differential Assembly',
+    'title_en': 'Differential Assembly',
+    'title_zh': '差速器总成',
+    'desc_en': 'Differential assembly for heavy-duty truck drivetrain and axle applications.',
+    'desc_zh': '适用于重型卡车传动系统和车桥的差速器总成。',
+    'specs': [('Type', 'Differential assembly', '类型', '差速器总成'), ('Application', 'Truck drivetrain and axles', '适用', '卡车传动与车桥'), ('Platform', 'HOWO heavy-duty trucks', '平台', '豪沃重卡'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
+    'applications': ['HOWO trucks', 'Truck drivetrain and axles', 'Differential replacement'],
+  },
   'steering-knuckle': {
     'tag': 'Steering Knuckle',
     'title_en': 'Truck Steering Knuckle',
@@ -151,6 +160,8 @@ def app_items(category: str, lang: str):
       'SHACMAN F3000 trucks': '陕汽德龙F3000卡车',
       'HOWO trucks': '豪沃卡车',
       'Axle linkage replacement': '车桥连接替换',
+      'Truck drivetrain and axles': '卡车传动与车桥',
+      'Differential replacement': '差速器替换',
       'OEM replacement': 'OEM 替换',
       'Aftermarket supply': '售后市场供应',
       'Truck axle assemblies': '卡车车桥总成',
@@ -201,6 +212,11 @@ def main() -> None:
 
     detail_lines.append(f"  '{item['id']}': {{")
     detail_lines.append(f"    image: '{item['image']}',")
+    if item.get('images'):
+      detail_lines.append('    images: [')
+      for image in item['images']:
+        detail_lines.append(f"      '{esc(image)}',")
+      detail_lines.append('    ],')
     detail_lines.append(f"    category: '{item['categoryLabelEn']}',")
     detail_lines.append(f"    title: '{esc(category_title(item['category'], 'en', model_zh, model_en or code))}',")
     detail_lines.append(f"    description: '{esc(category_desc(item['category'], 'en'))}',")

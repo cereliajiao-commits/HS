@@ -16,7 +16,7 @@ export default function ProductGallery({ images, alt, hint }: ProductGalleryProp
   return (
     <div className="product-detail-gallery">
       <div className="product-detail-gallery-main">
-        <ProductImageZoom src={`${activeImage}?v=20261107-gallery2`} alt={alt} hint={hint} />
+        <ProductImageZoom src={`${activeImage}?v=20261107-differential-ai1`} alt={alt} hint={hint} />
       </div>
       {images.length > 1 && (
         <div className="product-detail-gallery-thumbs" aria-label="Product images">
@@ -29,7 +29,7 @@ export default function ProductGallery({ images, alt, hint }: ProductGalleryProp
               aria-label={`View product image ${index + 1}`}
               aria-pressed={selected === index}
             >
-              <img src={`${image}?v=20261107-gallery2`} alt="" loading="lazy" />
+              <img src={`${image}?v=20261107-differential-ai1`} alt="" loading="lazy" />
             </button>
           ))}
         </div>

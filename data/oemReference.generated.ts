@@ -1156,4 +1156,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Three product images and catalog screenshot supplied by the user.',
   },
 
+  'new-torque-rod-002': {
+    productId: 'new-torque-rod-002',
+    oemNumbers: ['AZ9631523175'],
+    vehicleApplication: 'SINOTRUK HOWO A7 and SITRAK heavy-duty trucks',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Three product images and catalog screenshot supplied by the user.',
+  },
+
 };

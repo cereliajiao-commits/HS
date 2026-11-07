@@ -3071,4 +3071,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-torque-rod-002': {
+    en: {
+      title: 'Heavy-Duty V Thrust Rod - AZ9631523175',
+      description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
+      specs: [
+        { label: 'Type', value: 'V thrust rod / torque rod' },
+        { label: 'Application', value: 'Heavy-duty truck suspension' },
+        { label: 'Platform', value: 'HOWO trucks' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'HOWO trucks',
+        'Truck suspension systems',
+        'Axle linkage replacement',
+      ],
+    },
+    zh: {
+      title: '重型V型推力杆 - 中国重汽豪沃 AZ9631523175 下推力杆/扭矩杆总成',
+      description: '适用于重型卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成。',
+      specs: [
+        { label: '类型', value: 'V型推力杆 / 扭矩杆' },
+        { label: '适用', value: '重型卡车悬挂系统' },
+        { label: '平台', value: '豪沃卡车' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '豪沃卡车',
+        '卡车悬挂系统',
+        '车桥连接替换',
+      ],
+    },
+  },
 } as const;

@@ -1443,5 +1443,25 @@
     "descriptionZh": "适用于中国重汽豪沃重卡传动系统和车桥的差速器总成，OEM号为 AZ9231320271。",
     "categoryLabelEn": "Differential Assembly",
     "categoryLabelZh": "差速器总成"
+  },
+  {
+    "id": "new-torque-rod-002",
+    "category": "torque-rod",
+    "brand": "howo",
+    "image": "/images/products/howo-az9631523175-torque-rod.webp",
+    "images": [
+      "/images/products/howo-az9631523175-torque-rod.webp",
+      "/images/products/howo-az9631523175-torque-rod-view2.webp",
+      "/images/products/howo-az9631523175-torque-rod-view3.webp"
+    ],
+    "title": "Torque Rod - 豪沃 AZ9631523175 下推力杆",
+    "description": "Lower thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.",
+    "tag": "Torque Rod",
+    "titleEn": "HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly",
+    "titleZh": "中国重汽豪沃 AZ9631523175 下推力杆/扭矩杆总成",
+    "descriptionEn": "Lower thrust rod and torque rod assembly for SINOTRUK HOWO A7 and SITRAK heavy-duty truck suspension applications, OEM reference AZ9631523175.",
+    "descriptionZh": "适用于中国重汽豪沃A7、SITRAK重卡悬挂系统的下推力杆/扭矩杆总成，OEM号为 AZ9631523175。",
+    "categoryLabelEn": "Torque Rod",
+    "categoryLabelZh": "扭矩杆"
   }
 ]

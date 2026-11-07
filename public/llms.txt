@@ -21,6 +21,7 @@
 ## OEM / OE product references
 
 - [HOWO AZ9231320271 Differential Assembly](https://www.hsaxle.com/product/new-differential-assembly-001): OEM/OE AZ9231320271; compatible application: SINOTRUK HOWO T7H, SITRAK C7H/C9H, TX, G7S heavy-duty trucks.
+- [HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly](https://www.hsaxle.com/product/new-torque-rod-002): OEM/OE AZ9631523175; compatible application: SINOTRUK HOWO A7 and SITRAK heavy-duty trucks.
 - [HOWO AZ9725529272 V Thrust Rod / Torque Rod](https://www.hsaxle.com/product/new-torque-rod-001): OEM/OE AZ9725529272; compatible application: 中国重汽豪沃 HOWO heavy-duty trucks.
 - [SHACMAN F3000 DZ9100410082 Control Arm](https://www.hsaxle.com/product/new-control-arm-001): OEM/OE DZ9100410082; compatible application: SHACMAN F3000 / 陕汽德龙F3000 truck suspension.
 - [153 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-153): OEM/OE 34N-01011-A; compatible application: 东风153(EQ153).

@@ -863,4 +863,13 @@ export const importedProductCards = [
     tag: 'Differential Assembly',
     title: 'Differential Assembly - AZ9231320271',
   },
+  {
+    id: 'new-torque-rod-002',
+    category: 'torque-rod',
+    brand: 'howo',
+    image: '/images/products/howo-az9631523175-torque-rod.webp',
+    description: 'Lower thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.',
+    tag: 'Torque Rod',
+    title: 'Heavy-Duty V Thrust Rod - AZ9631523175',
+  },
 ] as const;

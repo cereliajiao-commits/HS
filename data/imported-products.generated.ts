@@ -845,4 +845,13 @@ export const importedProductCards = [
     tag: 'Control Arm',
     title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
   },
+  {
+    id: 'new-torque-rod-001',
+    category: 'torque-rod',
+    brand: 'howo',
+    image: '/images/products/imported-torque-rod-001-howo.webp',
+    description: 'V thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.',
+    tag: 'Torque Rod',
+    title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
+  },
 ] as const;

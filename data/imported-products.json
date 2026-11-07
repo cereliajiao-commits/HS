@@ -1408,5 +1408,20 @@
     "descriptionZh": "适用于陕汽德龙F3000卡车悬挂系统的控制臂，OEM号为 DZ9100410082。",
     "categoryLabelEn": "Control Arm",
     "categoryLabelZh": "控制臂"
+  },
+  {
+    "id": "new-torque-rod-001",
+    "category": "torque-rod",
+    "brand": "howo",
+    "image": "/images/products/imported-torque-rod-001-howo.webp",
+    "title": "Torque Rod - 豪沃 AZ9725529272 V型推力杆",
+    "description": "V thrust rod and torque rod assembly for HOWO heavy-duty truck suspension systems.",
+    "tag": "Torque Rod",
+    "titleEn": "HOWO AZ9725529272 V Thrust Rod / Torque Rod",
+    "titleZh": "中国重汽豪沃 AZ9725529272 V型推力杆/扭矩杆",
+    "descriptionEn": "V thrust rod and torque rod assembly for HOWO heavy-duty truck suspension and axle linkage applications, OEM reference AZ9725529272.",
+    "descriptionZh": "适用于中国重汽豪沃卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成，OEM号为 AZ9725529272。",
+    "categoryLabelEn": "Torque Rod",
+    "categoryLabelZh": "扭矩杆"
   }
 ]

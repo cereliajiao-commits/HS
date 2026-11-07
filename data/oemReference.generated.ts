@@ -1138,4 +1138,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and catalog screenshot supplied by the user.',
   },
 
+  'new-torque-rod-001': {
+    productId: 'new-torque-rod-001',
+    oemNumbers: ['AZ9725529272'],
+    vehicleApplication: '中国重汽豪沃 HOWO heavy-duty trucks',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and catalog screenshot supplied by the user.',
+  },
+
 };

@@ -28,6 +28,14 @@ CATEGORY_MAP = {
         "desc_en": "Heavy-duty control arm for truck suspension applications.",
         "desc_zh": "适用于卡车悬挂系统的重型控制臂。",
     },
+    "扭矩杆_处理图": {
+        "category": "torque-rod",
+        "tag": "Torque Rod",
+        "title_en": "Torque Rod",
+        "title_zh": "扭矩杆",
+        "desc_en": "V thrust rod and torque rod assembly for heavy-duty truck suspension systems.",
+        "desc_zh": "适用于重型卡车悬挂系统的V型推力杆/扭矩杆总成。",
+    },
     "羊角系列_处理图片": {
         "category": "steering-knuckle",
         "tag": "Steering Knuckle",

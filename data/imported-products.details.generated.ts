@@ -1597,4 +1597,21 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-torque-rod-001': {
+    image: '/images/products/imported-torque-rod-001-howo.webp',
+    category: 'Torque Rod',
+    title: 'Heavy-Duty V Thrust Rod - AZ9725529272 V',
+    description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
+    specs: [
+      { label: 'Type', value: 'V thrust rod / torque rod' },
+      { label: 'Application', value: 'Heavy-duty truck suspension' },
+      { label: 'Platform', value: 'HOWO trucks' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'HOWO trucks',
+      'Truck suspension systems',
+      'Axle linkage replacement',
+    ],
+  },
 } as const;

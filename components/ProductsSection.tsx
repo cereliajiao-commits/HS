@@ -33,6 +33,7 @@ export default function ProductsSection() {
     { filter: 'vertical', label: t('products.verticalArms') },
     { filter: 'steering-arm', label: t('products.steeringArms') },
     { filter: 'control-arm', label: lang === 'zh' ? '控制臂' : 'Control Arms' },
+    { filter: 'torque-rod', label: lang === 'zh' ? '扭矩杆' : 'Torque Rods' },
     { filter: 'steering-knuckle', label: t('products.steeringKnuckles') },
     { filter: 'agricultural', label: t('products.agricultural') },
     { filter: 'john-deere', label: 'John Deere' },

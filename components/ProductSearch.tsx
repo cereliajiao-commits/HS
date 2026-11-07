@@ -6,6 +6,7 @@ import { resolveProductText } from '@/data/productLocalization';
 import { useLanguage, type Language } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
+import { withOemTitle } from '@/data/productTitles';
 
 const searchCopy: Record<Language, { label: string; title: string; placeholder: string; hint: string; noResults: string; results: string }> = {
   en: { label: 'Search products', title: 'Search Products', placeholder: 'Model, product, category or brand', hint: 'Search all product models by keyword.', noResults: 'No matching products found.', results: 'matching products' },
@@ -115,7 +116,7 @@ export default function ProductSearch() {
               )}
               {matches.map((card) => {
                 const localized = resolveProductText(card.id, card.category, lang);
-                const title = localized?.title ?? card.title;
+                const title = withOemTitle(localized?.title ?? card.title, card.id, lang);
                 const category = localized?.categoryLabel ?? card.tag;
                 return (
                   <a

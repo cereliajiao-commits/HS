@@ -7,6 +7,7 @@ import { importedProductDetails } from '@/data/imported-products.details.generat
 import { resolveProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
+import { withOemTitle } from '@/data/productTitles';
 
 type ImportedDetail = {
   image: string;
@@ -114,7 +115,7 @@ export default function ProductModal() {
   const product = productDetails[productId] ?? importedDetails[productId];
   const localized = resolveProductText(productId, product?.category ?? 'product', lang);
   if (!product && !localized) return null;
-  const title = localized?.title ?? product?.title ?? 'Product';
+  const title = withOemTitle(localized?.title ?? product?.title ?? 'Product', productId, lang);
   const description = localized?.description ?? product?.description ?? '';
   const specs = localized?.specs ?? product?.specs ?? [];
   const applications = localized?.applications ?? product?.applications ?? [];

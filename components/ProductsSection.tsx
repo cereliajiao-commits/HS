@@ -6,6 +6,7 @@ import { useLanguage } from './LanguageProvider';
 import { resolveProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
+import { withOemTitle } from '@/data/productTitles';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -131,7 +132,7 @@ export default function ProductsSection() {
         <div className="products-grid">
           {filteredCards.map((card, index) => {
             const localized = resolveProductText(card.id, card.category, lang);
-            const title = localized?.title ?? card.title;
+            const title = withOemTitle(localized?.title ?? card.title, card.id, lang);
             const description = localized?.description ?? card.description;
             const tag = localized?.categoryLabel ?? card.tag;
             const oem = oemReferences[card.id];

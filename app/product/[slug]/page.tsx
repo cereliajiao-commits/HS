@@ -7,6 +7,7 @@ import { resolveProductText, translateCategoryLabel } from '@/data/productLocali
 import type { Language } from '@/components/LanguageProvider';
 import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
+import { withOemTitle } from '@/data/productTitles';
 
 type ProductDetailRecord = {
   image: string;
@@ -60,7 +61,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
 
   return {
     ...product,
-    title: localized?.title ?? fallbackTitle,
+    title: withOemTitle(localized?.title ?? fallbackTitle, slug, lang),
     description: localized?.description ?? fallbackDescription,
     specs: localized?.specs ?? fallbackSpecs,
     applications: localized?.applications ?? fallbackApplications,
@@ -160,6 +161,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${url}#product`,
     name: product.title,
     description: product.description,
     image: images,
@@ -176,6 +178,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       url: SITE_URL,
     },
     url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
     additionalProperty: product.specs.map((spec) => ({
       '@type': 'PropertyValue',
@@ -185,6 +188,10 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       '@type': 'PropertyValue',
       name: 'OEM / OE reference numbers',
       value: product.oem.oemNumbers.join(', '),
+    }] : []).concat(product.oem?.vehicleApplication ? [{
+      '@type': 'PropertyValue',
+      name: 'Vehicle application',
+      value: product.oem.vehicleApplication,
     }] : []),
   };
   const organizationSchema = {

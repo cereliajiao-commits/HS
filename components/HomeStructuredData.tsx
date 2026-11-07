@@ -1,3 +1,7 @@
+import { allProductCards } from '@/data/products';
+import { oemReferences } from '@/data/oemReference.generated';
+import { withOemTitle } from '@/data/productTitles';
+
 const SITE_URL = 'https://www.hsaxle.com';
 
 export default function HomeStructuredData() {
@@ -60,6 +64,34 @@ export default function HomeStructuredData() {
         description: 'Hengshui Hongsheng Auto Parts Co., Ltd. (衡水宏盛汽车配件有限公司) — heavy-duty truck steering, suspension and driveline parts manufacturer.',
         inLanguage: 'en',
         publisher: { '@id': `${SITE_URL}/#organization` },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${SITE_URL}/?q={search_term_string}#products`,
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${SITE_URL}/#product-catalog`,
+        name: 'HONGSHENG Heavy-Duty Truck and Machinery Parts Catalog',
+        description: 'Searchable catalog of truck steering, suspension, driveline, axle, and agricultural machinery parts with OEM/OE reference numbers.',
+        numberOfItems: allProductCards.length,
+        itemListElement: allProductCards.map((product, index) => {
+          const oem = oemReferences[product.id];
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `${SITE_URL}/product/${encodeURIComponent(product.id)}`,
+            item: {
+              '@type': 'Product',
+              name: withOemTitle(product.title, product.id, 'en'),
+              image: `${SITE_URL}${product.image}`,
+              category: product.category,
+              sku: product.id,
+              ...(oem?.oemNumbers[0] ? { mpn: oem.oemNumbers[0] } : {}),
+            },
+          };
+        }),
       },
       {
         '@type': 'WebPage',

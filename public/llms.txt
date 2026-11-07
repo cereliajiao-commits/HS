@@ -13,6 +13,7 @@
 ## Product categories
 
 - Steering arms and vertical arms
+- Control arms, torque rods, and differential assemblies
 - Steering knuckles
 - Drive shafts and long shaft assemblies
 - Agricultural machinery components
@@ -20,75 +21,75 @@
 
 ## OEM / OE product references
 
-- [HOWO AZ9231320271 Differential Assembly](https://www.hsaxle.com/product/new-differential-assembly-001): OEM/OE AZ9231320271; compatible application: SINOTRUK HOWO T7H, SITRAK C7H/C9H, TX, G7S heavy-duty trucks.
-- [HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly](https://www.hsaxle.com/product/new-torque-rod-002): OEM/OE AZ9631523175; compatible application: SINOTRUK HOWO A7 and SITRAK heavy-duty trucks.
-- [HOWO AZ9725529272 V Thrust Rod / Torque Rod](https://www.hsaxle.com/product/new-torque-rod-001): OEM/OE AZ9725529272; compatible application: 中国重汽豪沃 HOWO heavy-duty trucks.
-- [SHACMAN F3000 DZ9100410082 Control Arm](https://www.hsaxle.com/product/new-control-arm-001): OEM/OE DZ9100410082; compatible application: SHACMAN F3000 / 陕汽德龙F3000 truck suspension.
-- [153 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-153): OEM/OE 34N-01011-A; compatible application: 东风153(EQ153).
-- [STR Double Bridge Vertical Arm](https://www.hsaxle.com/product/vertical-arm-str-double): OEM/OE WG9123478029、WG9100470235; compatible application: 重汽斯太尔(STR)双桥.
-- [A50A Vertical Arm](https://www.hsaxle.com/product/vertical-arm-a50a): OEM/OE 3003041-A50A; compatible application: 一汽解放J5/J6系列.
-- [K36A0 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-k36a0): OEM/OE 3412021-K36A0; compatible application: 东风天龙/大力神(随动器第二垂臂).
-- [80A:60W Vertical Arm](https://www.hsaxle.com/product/vertical-arm-80a-60w): OEM/OE 3411010-80A; compatible application: 一汽解放J6单桥.
-- [F13 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-f13): OEM/OE F13-3411010; compatible application: 王牌轻卡/东风轻卡(F13系列).
-- [F44 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-f44): OEM/OE F144-3411010; compatible application: 东风140(尖头/教练车).
-- [F58 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-f58): OEM/OE F58; compatible application: 三环十通/东风嘉龙/力神/联达.
-- [STR Single Bridge Vertical Arm](https://www.hsaxle.com/product/vertical-arm-str-single): OEM/OE WG9123478029、WG9100470235; compatible application: 重汽斯太尔(STR)单桥.
-- [Tractor Vertical Arm](https://www.hsaxle.com/product/vertical-arm-tractor): OEM/OE 34150-11220; compatible application: 农机拖拉机(通用垂臂).
-- [KC100 Vertical Arm](https://www.hsaxle.com/product/vertical-arm-kc100): OEM/OE 3412011-KC100; compatible application: 东风天锦(EQ1120).
-- [SINOTRUK STR Drive Shaft](https://www.hsaxle.com/product/drive-shaft-sinotruk-str): OEM/OE 199118310036、AZ932831; compatible application: 重汽斯太尔STR (SINOTRUK STR).
-- [SINOTRUK Drive Shaft](https://www.hsaxle.com/product/drive-shaft-sinotruk): OEM/OE WG9014310125; compatible application: 中国重汽 (SINOTRUK 通用).
-- [HOWO Drive Shaft](https://www.hsaxle.com/product/drive-shaft-howo): OEM/OE WG9014310125、AZ9557310625、AZ9716310615; compatible application: 重汽豪沃 HOWO.
-- [Dongfeng Tianlong Drive Shaft](https://www.hsaxle.com/product/drive-shaft-dongfeng-tianlong): OEM/OE 2201010-KJ2H0、2201010-T2201; compatible application: 东风天龙 (Dongfeng Tianlong).
-- [Shaanxi Delong Drive Shaft](https://www.hsaxle.com/product/drive-shaft-shaanxi-delong): OEM/OE DZ9114312067、DZ9114311067; compatible application: 陕汽德龙 (Shacman Delong).
-- [Auman Drive Shaft](https://www.hsaxle.com/product/drive-shaft-auman): OEM/OE H0220260000A0A0256A、LG9720311763、LG9719311080; compatible application: 福田欧曼 Auman.
-- [Dongfeng Balong Drive Shaft](https://www.hsaxle.com/product/drive-shaft-dongfeng-balong): OEM/OE TU1461WE-2203010、4M5YM40D33H0A-2201010; compatible application: 东风霸龙 (柳汽乘龙霸龙).
-- [Shaanxi Aolong Drive Shaft](https://www.hsaxle.com/product/drive-shaft-shaanxi-aolong): OEM/OE DZ9114312072、DZ9114313164; compatible application: 陕汽奥龙 (Shacman Aolong).
-- [Heavy-Duty Steering Arm - 10](https://www.hsaxle.com/product/new-steering-arm-005): OEM/OE 3001034-X141; compatible application: 青岛解放赛龙/赛虎(10款).
-- [Heavy-Duty Steering Arm - 136](https://www.hsaxle.com/product/new-steering-arm-007): OEM/OE WB136; compatible application: 东风多利卡/福瑞卡/金霸(K938前桥).
-- [Heavy-Duty Steering Arm - 140](https://www.hsaxle.com/product/new-steering-arm-008): OEM/OE 30D-01044; compatible application: 东风EQ140/145/1094.
-- [Heavy-Duty Steering Arm - 153](https://www.hsaxle.com/product/new-steering-arm-010): OEM/OE 30N-01044; compatible application: 东风EQ153/东风德纳.
-- [Heavy-Duty Steering Arm - K36](https://www.hsaxle.com/product/new-steering-arm-015): OEM/OE 3412021-K36A0; compatible application: 东风天龙/大力神(前四后八).
-- [Heavy-Duty Steering Arm - KA005](https://www.hsaxle.com/product/new-steering-arm-016): OEM/OE KA-005; compatible application: 三菱扶桑Canter(Fuso).
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-019): OEM/OE AZ9719411021; compatible application: 重汽豪沃/金王子.
-- [Heavy-Duty Steering Arm - Q30 Q40](https://www.hsaxle.com/product/new-steering-arm-020): OEM/OE 30.59Q40A-01041; compatible application: 东风多利卡/福瑞卡/金霸/东风之星.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-021): OEM/OE 8972107710、8972107712; compatible application: 五十铃NPR/NQR/NKR(庆铃100P/600P).
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-023): OEM/OE 3001034A8E/A; compatible application: 解放六平柴/151/J6L.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-034): OEM/OE DX-3001544、1M3YJ18A51D0B-3001044; compatible application: 东风柳汽乘龙 转向弯臂.
-- [Heavy-Duty Steering Arm - 1](https://www.hsaxle.com/product/new-steering-arm-035): OEM/OE H0340180111A0; compatible application: 福田欧曼-1 左右转向臂.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-037): OEM/OE 3003400N; compatible application: 江淮康铃 转向弯臂.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-039): OEM/OE 5801754529、5801754530、5801754527、5801754528; compatible application: 上汽红岩杰狮/新金刚 左右转向横拉杆臂.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-042): OEM/OE YT1060; compatible application: 英田汽车（YT1060）转向弯臂.
-- [Heavy-Duty Steering Arm - 09](https://www.hsaxle.com/product/new-steering-arm-043): OEM/OE AZ9719413003、AZ9719413004; compatible application: 重汽豪沃09款 左右转向横拉杆臂.
-- [Heavy-Duty Steering Arm - 10](https://www.hsaxle.com/product/new-steering-arm-044): OEM/OE AZ9719413003、AZ9719413004; compatible application: 重汽豪沃10款 左右转向横拉杆臂.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-045): OEM/OE 3001034-X141、3001032-X141; compatible application: 一汽解放青岛赛龙 弯臂/直臂.
-- [Heavy-Duty Steering Arm - Model](https://www.hsaxle.com/product/new-steering-arm-046): OEM/OE 1104330000022; compatible application: 福田瑞沃/雷沃 转向节臂.
-- [Truck Steering Knuckle - 140](https://www.hsaxle.com/product/new-steering-knuckle-005): OEM/OE 30D-01015(左)、30D-01016(右); compatible application: 东风EQ140.
-- [Truck Steering Knuckle - 140ABS](https://www.hsaxle.com/product/new-steering-knuckle-006): OEM/OE 30D-01015(左)、30D-01016(右); compatible application: 东风EQ140(ABS版).
-- [Truck Steering Knuckle - 140](https://www.hsaxle.com/product/new-steering-knuckle-007): OEM/OE 30D-01016(右); compatible application: 东风EQ140(右侧).
-- [Truck Steering Knuckle - 153](https://www.hsaxle.com/product/new-steering-knuckle-009): OEM/OE 30N-01015(左)、30N-01016(右); compatible application: 东风EQ153.
-- [Truck Steering Knuckle - ZB1](https://www.hsaxle.com/product/new-steering-knuckle-014): OEM/OE 30ZB1-01015; compatible application: 东风天龙/大力神(ZB1桥型).
-- [Truck Steering Knuckle - A3](https://www.hsaxle.com/product/new-steering-knuckle-015): OEM/OE 3001017A3-A(左)、3001011-A3; compatible application: 华菱重卡A3.
-- [Truck Steering Knuckle - Model](https://www.hsaxle.com/product/new-steering-knuckle-017): OEM/OE AZ4095410005; compatible application: 上汽红岩杰狮.
-- [Truck Steering Knuckle - 1066](https://www.hsaxle.com/product/new-steering-knuckle-018): OEM/OE 3001015-1066/B(左); compatible application: 一汽解放(1066桥型).
-- [Truck Steering Knuckle - 54W](https://www.hsaxle.com/product/new-steering-knuckle-019): OEM/OE 3001015-54W/B; compatible application: 一汽解放J6(54W桥型).
-- [Truck Steering Knuckle - 16](https://www.hsaxle.com/product/new-steering-knuckle-021): OEM/OE AZ9112410055(左)、AZ9112410056(右); compatible application: 重汽豪沃(16款/Howo 7-9T前桥).
-- [Truck Steering Knuckle - Model](https://www.hsaxle.com/product/new-steering-knuckle-022): OEM/OE 880410028; compatible application: 重汽斯太尔(STR/STRW).
-- [Truck Steering Knuckle - F2000](https://www.hsaxle.com/product/new-steering-knuckle-023): OEM/OE DZ9100410400; compatible application: 陕汽德龙F2000/北奔.
-- [Truck Steering Knuckle - F3000](https://www.hsaxle.com/product/new-steering-knuckle-024): OEM/OE DZ9100410400、81.44201.0143(左)、81.44201.0144(右); compatible application: 陕汽德龙F3000(汉德9.5T前桥).
-- [Agricultural Machinery Part - Model](https://www.hsaxle.com/product/new-agricultural-004): OEM/OE 70-3001085; compatible application: MTZ/白俄罗斯拖拉机 80/82系列 转向节（羊角）.
-- [John Deere Suspension Assembly - 5-754 854 950](https://www.hsaxle.com/product/new-john-deere-001): OEM/OE RE243216; compatible application: John Deere 约翰迪尔 5E系列 5-754/854/950 拖拉机后悬挂机构总成.
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-001): OEM/OE 2201010-KJ2H0、2201010-T2201; compatible application: 东风天龙 (Dongfeng Tianlong).
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-002): OEM/OE TU1461WE-2203010、4M5YM40D33H0A-2201010; compatible application: 东风霸龙 (柳汽乘龙霸龙).
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-003): OEM/OE H0220260000A0A0256A、LG9720311763、LG9719311080; compatible application: 福田欧曼 Auman.
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-004): OEM/OE AZ9557310625、AZ9716310615、WG9014310125; compatible application: 重庆豪沃 (重汽豪沃).
-- [Heavy-Duty Drive Shaft - STR](https://www.hsaxle.com/product/new-shaft-006): OEM/OE 199118310036、AZ932831; compatible application: 重汽斯太尔STR (SINOTRUK STR).
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-007): OEM/OE AZ9113310102、WG9014310125; compatible application: 中国重汽 (SINOTRUK 通用).
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-008): OEM/OE DZ9114312072、DZ9114313164; compatible application: 陕汽奥龙 (Shacman Aolong).
-- [Heavy-Duty Drive Shaft - Model](https://www.hsaxle.com/product/new-shaft-009): OEM/OE DZ9114312067、DZ9114311067; compatible application: 陕汽德龙 (Shacman Delong).
+- [HOWO Differential Assembly | OEM AZ9231320271](https://www.hsaxle.com/product/new-differential-assembly-001): OEM/OE AZ9231320271; compatible application: SINOTRUK HOWO T7H, SITRAK C7H/C9H, TX, G7S heavy-duty trucks.
+- [HOWO Lower Thrust Rod / Torque Rod Assembly | OEM AZ9631523175](https://www.hsaxle.com/product/new-torque-rod-002): OEM/OE AZ9631523175; compatible application: SINOTRUK HOWO A7 and SITRAK heavy-duty trucks.
+- [HOWO V Thrust Rod / Torque Rod | OEM AZ9725529272](https://www.hsaxle.com/product/new-torque-rod-001): OEM/OE AZ9725529272; compatible application: 中国重汽豪沃 HOWO heavy-duty trucks.
+- [SHACMAN F3000 Control Arm | OEM DZ9100410082](https://www.hsaxle.com/product/new-control-arm-001): OEM/OE DZ9100410082; compatible application: SHACMAN F3000 / 陕汽德龙F3000 truck suspension.
+- [153 Vertical Arm | OEM 34N-01011-A](https://www.hsaxle.com/product/vertical-arm-153): OEM/OE 34N-01011-A; compatible application: 东风153(EQ153).
+- [STR Double Bridge Vertical Arm | OEM WG9123478029 / WG9100470235](https://www.hsaxle.com/product/vertical-arm-str-double): OEM/OE WG9123478029、WG9100470235; compatible application: 重汽斯太尔(STR)双桥.
+- [A50A Vertical Arm | OEM 3003041-A50A](https://www.hsaxle.com/product/vertical-arm-a50a): OEM/OE 3003041-A50A; compatible application: 一汽解放J5/J6系列.
+- [K36A0 Vertical Arm | OEM 3412021-K36A0](https://www.hsaxle.com/product/vertical-arm-k36a0): OEM/OE 3412021-K36A0; compatible application: 东风天龙/大力神(随动器第二垂臂).
+- [80A:60W Vertical Arm | OEM 3411010-80A](https://www.hsaxle.com/product/vertical-arm-80a-60w): OEM/OE 3411010-80A; compatible application: 一汽解放J6单桥.
+- [F13 Vertical Arm | OEM F13-3411010](https://www.hsaxle.com/product/vertical-arm-f13): OEM/OE F13-3411010; compatible application: 王牌轻卡/东风轻卡(F13系列).
+- [F44 Vertical Arm | OEM F144-3411010](https://www.hsaxle.com/product/vertical-arm-f44): OEM/OE F144-3411010; compatible application: 东风140(尖头/教练车).
+- [Vertical Arm | OEM F58](https://www.hsaxle.com/product/vertical-arm-f58): OEM/OE F58; compatible application: 三环十通/东风嘉龙/力神/联达.
+- [STR Single Bridge Vertical Arm | OEM WG9123478029 / WG9100470235](https://www.hsaxle.com/product/vertical-arm-str-single): OEM/OE WG9123478029、WG9100470235; compatible application: 重汽斯太尔(STR)单桥.
+- [Tractor Vertical Arm | OEM 34150-11220](https://www.hsaxle.com/product/vertical-arm-tractor): OEM/OE 34150-11220; compatible application: 农机拖拉机(通用垂臂).
+- [KC100 Vertical Arm | OEM 3412011-KC100](https://www.hsaxle.com/product/vertical-arm-kc100): OEM/OE 3412011-KC100; compatible application: 东风天锦(EQ1120).
+- [SINOTRUK STR Drive Shaft | OEM 199118310036 / AZ932831](https://www.hsaxle.com/product/drive-shaft-sinotruk-str): OEM/OE 199118310036、AZ932831; compatible application: 重汽斯太尔STR (SINOTRUK STR).
+- [SINOTRUK Drive Shaft | OEM WG9014310125](https://www.hsaxle.com/product/drive-shaft-sinotruk): OEM/OE WG9014310125; compatible application: 中国重汽 (SINOTRUK 通用).
+- [HOWO Drive Shaft | OEM WG9014310125 / AZ9557310625 / AZ9716310615](https://www.hsaxle.com/product/drive-shaft-howo): OEM/OE WG9014310125、AZ9557310625、AZ9716310615; compatible application: 重汽豪沃 HOWO.
+- [Dongfeng Tianlong Drive Shaft | OEM 2201010-KJ2H0 / 2201010-T2201](https://www.hsaxle.com/product/drive-shaft-dongfeng-tianlong): OEM/OE 2201010-KJ2H0、2201010-T2201; compatible application: 东风天龙 (Dongfeng Tianlong).
+- [Shaanxi Delong Drive Shaft | OEM DZ9114312067 / DZ9114311067](https://www.hsaxle.com/product/drive-shaft-shaanxi-delong): OEM/OE DZ9114312067、DZ9114311067; compatible application: 陕汽德龙 (Shacman Delong).
+- [Auman Drive Shaft | OEM H0220260000A0A0256A / LG9720311763 / LG9719311080](https://www.hsaxle.com/product/drive-shaft-auman): OEM/OE H0220260000A0A0256A、LG9720311763、LG9719311080; compatible application: 福田欧曼 Auman.
+- [Dongfeng Balong Drive Shaft | OEM TU1461WE-2203010 / 4M5YM40D33H0A-2201010](https://www.hsaxle.com/product/drive-shaft-dongfeng-balong): OEM/OE TU1461WE-2203010、4M5YM40D33H0A-2201010; compatible application: 东风霸龙 (柳汽乘龙霸龙).
+- [Shaanxi Aolong Drive Shaft | OEM DZ9114312072 / DZ9114313164](https://www.hsaxle.com/product/drive-shaft-shaanxi-aolong): OEM/OE DZ9114312072、DZ9114313164; compatible application: 陕汽奥龙 (Shacman Aolong).
+- [Heavy-Duty Steering Arm - 10 | OEM 3001034-X141](https://www.hsaxle.com/product/new-steering-arm-005): OEM/OE 3001034-X141; compatible application: 青岛解放赛龙/赛虎(10款).
+- [Heavy-Duty Steering Arm - 136 | OEM WB136](https://www.hsaxle.com/product/new-steering-arm-007): OEM/OE WB136; compatible application: 东风多利卡/福瑞卡/金霸(K938前桥).
+- [Heavy-Duty Steering Arm - 140 | OEM 30D-01044](https://www.hsaxle.com/product/new-steering-arm-008): OEM/OE 30D-01044; compatible application: 东风EQ140/145/1094.
+- [Heavy-Duty Steering Arm - 153 | OEM 30N-01044](https://www.hsaxle.com/product/new-steering-arm-010): OEM/OE 30N-01044; compatible application: 东风EQ153/东风德纳.
+- [Heavy-Duty Steering Arm - K36 | OEM 3412021-K36A0](https://www.hsaxle.com/product/new-steering-arm-015): OEM/OE 3412021-K36A0; compatible application: 东风天龙/大力神(前四后八).
+- [Heavy-Duty Steering Arm - KA005 | OEM KA-005](https://www.hsaxle.com/product/new-steering-arm-016): OEM/OE KA-005; compatible application: 三菱扶桑Canter(Fuso).
+- [Heavy-Duty Steering Arm - Model | OEM AZ9719411021](https://www.hsaxle.com/product/new-steering-arm-019): OEM/OE AZ9719411021; compatible application: 重汽豪沃/金王子.
+- [Heavy-Duty Steering Arm - Q30 Q40 | OEM 30.59Q40A-01041](https://www.hsaxle.com/product/new-steering-arm-020): OEM/OE 30.59Q40A-01041; compatible application: 东风多利卡/福瑞卡/金霸/东风之星.
+- [Heavy-Duty Steering Arm - Model | OEM 8972107710 / 8972107712](https://www.hsaxle.com/product/new-steering-arm-021): OEM/OE 8972107710、8972107712; compatible application: 五十铃NPR/NQR/NKR(庆铃100P/600P).
+- [Heavy-Duty Steering rm - Model | OEM 3001034A8E / A](https://www.hsaxle.com/product/new-steering-arm-023): OEM/OE 3001034A8E、A; compatible application: 解放六平柴/151/J6L.
+- [Heavy-Duty Steering Arm - Model | OEM DX-3001544 / 1M3YJ18A51D0B-3001044](https://www.hsaxle.com/product/new-steering-arm-034): OEM/OE DX-3001544、1M3YJ18A51D0B-3001044; compatible application: 东风柳汽乘龙 转向弯臂.
+- [Heavy-Duty Steering Arm - 1 | OEM H0340180111A0](https://www.hsaxle.com/product/new-steering-arm-035): OEM/OE H0340180111A0; compatible application: 福田欧曼-1 左右转向臂.
+- [Heavy-Duty Steering Arm - Model | OEM 3003400N](https://www.hsaxle.com/product/new-steering-arm-037): OEM/OE 3003400N; compatible application: 江淮康铃 转向弯臂.
+- [Heavy-Duty Steering Arm - Model | OEM 5801754529 / 5801754530 / 5801754527 / 5801754528](https://www.hsaxle.com/product/new-steering-arm-039): OEM/OE 5801754529、5801754530、5801754527、5801754528; compatible application: 上汽红岩杰狮/新金刚 左右转向横拉杆臂.
+- [Heavy-Duty Steering Arm - Model | OEM YT1060](https://www.hsaxle.com/product/new-steering-arm-042): OEM/OE YT1060; compatible application: 英田汽车（YT1060）转向弯臂.
+- [Heavy-Duty Steering Arm - 09 | OEM AZ9719413003 / AZ9719413004](https://www.hsaxle.com/product/new-steering-arm-043): OEM/OE AZ9719413003、AZ9719413004; compatible application: 重汽豪沃09款 左右转向横拉杆臂.
+- [Heavy-Duty Steering Arm - 10 | OEM AZ9719413003 / AZ9719413004](https://www.hsaxle.com/product/new-steering-arm-044): OEM/OE AZ9719413003、AZ9719413004; compatible application: 重汽豪沃10款 左右转向横拉杆臂.
+- [Heavy-Duty Steering Arm - Model | OEM 3001034-X141 / 3001032-X141](https://www.hsaxle.com/product/new-steering-arm-045): OEM/OE 3001034-X141、3001032-X141; compatible application: 一汽解放青岛赛龙 弯臂/直臂.
+- [Heavy-Duty Steering Arm - Model | OEM 1104330000022](https://www.hsaxle.com/product/new-steering-arm-046): OEM/OE 1104330000022; compatible application: 福田瑞沃/雷沃 转向节臂.
+- [Truck Steering Knuckle - 140 | OEM 30D-01015(左) / 30D-01016(右)](https://www.hsaxle.com/product/new-steering-knuckle-005): OEM/OE 30D-01015(左)、30D-01016(右); compatible application: 东风EQ140.
+- [Truck Steering Knuckle - 140ABS | OEM 30D-01015(左) / 30D-01016(右)](https://www.hsaxle.com/product/new-steering-knuckle-006): OEM/OE 30D-01015(左)、30D-01016(右); compatible application: 东风EQ140(ABS版).
+- [Truck Steering Knuckle - 140 | OEM 30D-01016(右)](https://www.hsaxle.com/product/new-steering-knuckle-007): OEM/OE 30D-01016(右); compatible application: 东风EQ140(右侧).
+- [Truck Steering Knuckle - 153 | OEM 30N-01015(左) / 30N-01016(右)](https://www.hsaxle.com/product/new-steering-knuckle-009): OEM/OE 30N-01015(左)、30N-01016(右); compatible application: 东风EQ153.
+- [Truck Steering Knuckle - ZB1 | OEM 30ZB1-01015](https://www.hsaxle.com/product/new-steering-knuckle-014): OEM/OE 30ZB1-01015; compatible application: 东风天龙/大力神(ZB1桥型).
+- [Truck Steering Knuckle - A3 | OEM 3001017A3-A(左) / 3001011-A3](https://www.hsaxle.com/product/new-steering-knuckle-015): OEM/OE 3001017A3-A(左)、3001011-A3; compatible application: 华菱重卡A3.
+- [Truck Steering Knuckle - Model | OEM AZ4095410005](https://www.hsaxle.com/product/new-steering-knuckle-017): OEM/OE AZ4095410005; compatible application: 上汽红岩杰狮.
+- [Truck Steering Knuckle - 1066 | OEM 3001015-1066 / B(左)](https://www.hsaxle.com/product/new-steering-knuckle-018): OEM/OE 3001015-1066、B(左); compatible application: 一汽解放(1066桥型).
+- [Truck Steering Knuckle - 54W | OEM 3001015-54W / B](https://www.hsaxle.com/product/new-steering-knuckle-019): OEM/OE 3001015-54W、B; compatible application: 一汽解放J6(54W桥型).
+- [Truck Steering Knuckle - 16 | OEM AZ9112410055(左) / AZ9112410056(右)](https://www.hsaxle.com/product/new-steering-knuckle-021): OEM/OE AZ9112410055(左)、AZ9112410056(右); compatible application: 重汽豪沃(16款/Howo 7-9T前桥).
+- [Truck Steering Knuckle - Model | OEM 880410028](https://www.hsaxle.com/product/new-steering-knuckle-022): OEM/OE 880410028; compatible application: 重汽斯太尔(STR/STRW).
+- [Truck Steering Knuckle - F2000 | OEM DZ9100410400](https://www.hsaxle.com/product/new-steering-knuckle-023): OEM/OE DZ9100410400; compatible application: 陕汽德龙F2000/北奔.
+- [Truck Steering Knuckle - F3000 | OEM DZ9100410400 / 81.44201.0143(左) / 81.44201.0144(右)](https://www.hsaxle.com/product/new-steering-knuckle-024): OEM/OE DZ9100410400、81.44201.0143(左)、81.44201.0144(右); compatible application: 陕汽德龙F3000(汉德9.5T前桥).
+- [Agricultural Machinery Part - Model | OEM 70-3001085](https://www.hsaxle.com/product/new-agricultural-004): OEM/OE 70-3001085; compatible application: MTZ/白俄罗斯拖拉机 80/82系列 转向节（羊角）.
+- [John Deere Suspension Assembly - 5-754 854 950 | OEM RE243216](https://www.hsaxle.com/product/new-john-deere-001): OEM/OE RE243216; compatible application: John Deere 约翰迪尔 5E系列 5-754/854/950 拖拉机后悬挂机构总成.
+- [Heavy-Duty Drive Shaft - Model | OEM 2201010-KJ2H0 / 2201010-T2201](https://www.hsaxle.com/product/new-shaft-001): OEM/OE 2201010-KJ2H0、2201010-T2201; compatible application: 东风天龙 (Dongfeng Tianlong).
+- [Heavy-Duty Drive Shaft - Model | OEM TU1461WE-2203010 / 4M5YM40D33H0A-2201010](https://www.hsaxle.com/product/new-shaft-002): OEM/OE TU1461WE-2203010、4M5YM40D33H0A-2201010; compatible application: 东风霸龙 (柳汽乘龙霸龙).
+- [Heavy-Duty Drive Shaft - Model | OEM H0220260000A0A0256A / LG9720311763 / LG9719311080](https://www.hsaxle.com/product/new-shaft-003): OEM/OE H0220260000A0A0256A、LG9720311763、LG9719311080; compatible application: 福田欧曼 Auman.
+- [Heavy-Duty Drive Shaft - Model | OEM AZ9557310625 / AZ9716310615 / WG9014310125](https://www.hsaxle.com/product/new-shaft-004): OEM/OE AZ9557310625、AZ9716310615、WG9014310125; compatible application: 重庆豪沃 (重汽豪沃).
+- [Heavy-Duty Drive Shaft - STR | OEM 199118310036 / AZ932831](https://www.hsaxle.com/product/new-shaft-006): OEM/OE 199118310036、AZ932831; compatible application: 重汽斯太尔STR (SINOTRUK STR).
+- [Heavy-Duty Drive Shaft - Model | OEM AZ9113310102 / WG9014310125](https://www.hsaxle.com/product/new-shaft-007): OEM/OE AZ9113310102、WG9014310125; compatible application: 中国重汽 (SINOTRUK 通用).
+- [Heavy-Duty Drive Shaft - Model | OEM DZ9114312072 / DZ9114313164](https://www.hsaxle.com/product/new-shaft-008): OEM/OE DZ9114312072、DZ9114313164; compatible application: 陕汽奥龙 (Shacman Aolong).
+- [Heavy-Duty Drive Shaft - Model | OEM DZ9114312067 / DZ9114311067](https://www.hsaxle.com/product/new-shaft-009): OEM/OE DZ9114312067、DZ9114311067; compatible application: 陕汽德龙 (Shacman Delong).
 
-- [John Deere R212837 Front Axle Yoke with Shaft](https://www.hsaxle.com/product/john-deere-r212837-yoke-shaft): OEM/OE R212837; compatible application: John Deere 5105, 5205, 5220, 5225, 5303, 5320, 5325, 5403, 5420, 5425, 5520.
+- [John Deere Front Axle Yoke with Shaft | OEM R212837](https://www.hsaxle.com/product/john-deere-r212837-yoke-shaft): OEM/OE R212837; compatible application: John Deere 5105, 5205, 5220, 5225, 5303, 5320, 5325, 5403, 5420, 5425, 5520.
 
-- [John Deere AL161317 Front Axle Drive Shaft Assembly](https://www.hsaxle.com/product/john-deere-al161317-drive-shaft): OEM/OE AL161317; compatible application: John Deere 6320, 6420, 6430, 6520, 6115D, 6215, 6415.
+- [John Deere Front Axle Drive Shaft Assembly | OEM AL161317](https://www.hsaxle.com/product/john-deere-al161317-drive-shaft): OEM/OE AL161317; compatible application: John Deere 6320, 6420, 6430, 6520, 6115D, 6215, 6415.
 
 ## Crawlable resources
 
@@ -96,4 +97,8 @@
 - Robots: https://www.hsaxle.com/robots.txt
 - Product catalog: https://www.hsaxle.com/#products
 
-OEM numbers are reference data for matching vehicle applications. Confirm dimensions, hole patterns, spline details, and left/right configuration before ordering.
+## Product matching guidance
+
+- Use the exact OEM/OE number as the primary lookup key, then verify the vehicle application and product category.
+- Product pages expose the English and Chinese product name, OEM/OE references, applications, specifications, images, and an inquiry route.
+- OEM numbers are reference data for matching vehicle applications. Confirm dimensions, hole patterns, spline details, and left/right configuration before ordering.

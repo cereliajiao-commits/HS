@@ -836,4 +836,13 @@ export const importedProductCards = [
     tag: 'Long Shaft',
     title: 'Long Shaft Assembly - Model',
   },
+  {
+    id: 'new-control-arm-001',
+    category: 'control-arm',
+    brand: 'shaanxi',
+    image: '/images/products/imported-control-arm-001-shacman-f3000.webp',
+    description: 'Heavy-duty control arm for SHACMAN F3000 truck suspension applications.',
+    tag: 'Control Arm',
+    title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+  },
 ] as const;

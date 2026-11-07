@@ -20,6 +20,14 @@ CATEGORY_MAP = {
         "desc_en": "High-quality steering arm for heavy-duty truck steering systems.",
         "desc_zh": "高品质转向臂，适用于重型卡车转向系统。",
     },
+    "控制臂_处理图": {
+        "category": "control-arm",
+        "tag": "Control Arm",
+        "title_en": "Control Arm",
+        "title_zh": "控制臂",
+        "desc_en": "Heavy-duty control arm for truck suspension applications.",
+        "desc_zh": "适用于卡车悬挂系统的重型控制臂。",
+    },
     "羊角系列_处理图片": {
         "category": "steering-knuckle",
         "tag": "Steering Knuckle",

@@ -2975,4 +2975,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-control-arm-001': {
+    en: {
+      title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+      description: 'Heavy-duty control arm for truck suspension applications, suitable for OEM replacement and aftermarket supply.',
+      specs: [
+        { label: 'Type', value: 'Control arm' },
+        { label: 'Application', value: 'Truck suspension system' },
+        { label: 'Material', value: 'Forged steel' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'Truck suspension systems',
+        'SHACMAN F3000 trucks',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '重型控制臂 - 陕汽德龙F3000 DZ9100410082',
+      description: '适用于卡车悬挂系统的重型控制臂，可用于 OEM 替换及售后市场供货。',
+      specs: [
+        { label: '类型', value: '控制臂' },
+        { label: '适用', value: '卡车悬挂系统' },
+        { label: '材质', value: '锻造钢' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '卡车悬挂系统',
+        '陕汽德龙F3000卡车',
+        'OEM 替换',
+      ],
+    },
+  },
 } as const;

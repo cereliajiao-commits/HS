@@ -1129,4 +1129,13 @@ export const oemReferences: Record<string, OemReference> = {
 
   'john-deere-al161317-drive-shaft': { productId: 'john-deere-al161317-drive-shaft', oemNumbers: ['AL161317'], vehicleApplication: 'John Deere 6320, 6420, 6430, 6520, 6115D, 6215, 6415', confidence: '用户提供', sourceUrl: '', note: 'Product image and application list supplied by the user.' },
 
+  'new-control-arm-001': {
+    productId: 'new-control-arm-001',
+    oemNumbers: ['DZ9100410082'],
+    vehicleApplication: 'SHACMAN F3000 / 陕汽德龙F3000 truck suspension',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and catalog screenshot supplied by the user.',
+  },
+
 };

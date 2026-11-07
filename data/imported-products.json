@@ -1393,5 +1393,20 @@
     "descriptionZh": "长轴产品，适用于定制传动系统和动力传递应用。",
     "categoryLabelEn": "Long Shaft",
     "categoryLabelZh": "长轴"
+  },
+  {
+    "id": "new-control-arm-001",
+    "category": "control-arm",
+    "brand": "shaanxi",
+    "image": "/images/products/imported-control-arm-001-shacman-f3000.webp",
+    "title": "Control Arm - 陕汽德龙F3000 DZ9100410082",
+    "description": "Heavy-duty control arm for SHACMAN F3000 truck suspension applications.",
+    "tag": "Control Arm",
+    "titleEn": "SHACMAN F3000 DZ9100410082 Control Arm",
+    "titleZh": "陕汽德龙F3000 DZ9100410082",
+    "descriptionEn": "Factory-supply control arm for SHACMAN F3000 truck suspension applications, OEM reference DZ9100410082.",
+    "descriptionZh": "适用于陕汽德龙F3000卡车悬挂系统的控制臂，OEM号为 DZ9100410082。",
+    "categoryLabelEn": "Control Arm",
+    "categoryLabelZh": "控制臂"
   }
 ]

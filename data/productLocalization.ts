@@ -259,6 +259,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   en: {
     vertical: 'Vertical Arm',
     'steering-arm': 'Steering Arm',
+    'control-arm': 'Control Arm',
     'steering-knuckle': 'Steering Knuckle',
     agricultural: 'Agricultural Part',
     'john-deere': 'John Deere Assembly',
@@ -268,6 +269,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   zh: {
     vertical: '垂臂',
     'steering-arm': '转向臂',
+    'control-arm': '控制臂',
     'steering-knuckle': '转向节',
     agricultural: '农机配件',
     'john-deere': '约翰迪尔总成',
@@ -277,6 +279,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   ru: {
     vertical: 'Вертикальный рычаг',
     'steering-arm': 'Рычаг рулевого управления',
+    'control-arm': 'Рычаг подвески',
     'steering-knuckle': 'Поворотный кулак',
     agricultural: 'Деталь сельхозтехники',
     'john-deere': 'Узел John Deere',
@@ -286,6 +289,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   es: {
     vertical: 'Brazo vertical',
     'steering-arm': 'Brazo de dirección',
+    'control-arm': 'Brazo de suspensión',
     'steering-knuckle': 'Mangueta de dirección',
     agricultural: 'Pieza agrícola',
     'john-deere': 'Conjunto John Deere',
@@ -295,6 +299,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   fr: {
     vertical: 'Bras vertical',
     'steering-arm': 'Bras de direction',
+    'control-arm': 'Bras de suspension',
     'steering-knuckle': 'Fusée de direction',
     agricultural: 'Pièce agricole',
     'john-deere': 'Ensemble John Deere',
@@ -304,6 +309,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   ar: {
     vertical: 'ذراع رأسي',
     'steering-arm': 'ذراع توجيه',
+    'control-arm': 'ذراع تعليق',
     'steering-knuckle': 'مفصل توجيه',
     agricultural: 'قطعة زراعية',
     'john-deere': 'مجموعة جون دير',
@@ -313,6 +319,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   pt: {
     vertical: 'Braço vertical',
     'steering-arm': 'Braço de direção',
+    'control-arm': 'Braço de suspensão',
     'steering-knuckle': 'Manga de direção',
     agricultural: 'Peça agrícola',
     'john-deere': 'Conjunto John Deere',

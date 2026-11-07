@@ -1580,4 +1580,21 @@ export const importedProductDetails = {
       'Special projects',
     ],
   },
+  'new-control-arm-001': {
+    image: '/images/products/imported-control-arm-001-shacman-f3000.webp',
+    category: 'Control Arm',
+    title: 'Heavy-Duty Control Arm - F3000 DZ9100410082',
+    description: 'Heavy-duty control arm for truck suspension applications, suitable for OEM replacement and aftermarket supply.',
+    specs: [
+      { label: 'Type', value: 'Control arm' },
+      { label: 'Application', value: 'Truck suspension system' },
+      { label: 'Material', value: 'Forged steel' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'Truck suspension systems',
+      'SHACMAN F3000 trucks',
+      'OEM replacement',
+    ],
+  },
 } as const;

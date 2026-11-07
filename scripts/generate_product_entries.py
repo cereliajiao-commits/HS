@@ -16,6 +16,15 @@ CATEGORY_RULES = {
     'specs': [('Type', 'Steering arm', '类型', '转向臂'), ('Application', 'Truck steering system', '适用', '卡车转向系统'), ('Material', 'Forged steel', '材质', '锻造钢'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
     'applications': ['Truck steering linkage', 'OEM replacement', 'Aftermarket supply'],
   },
+  'control-arm': {
+    'tag': 'Control Arm',
+    'title_en': 'Heavy-Duty Control Arm',
+    'title_zh': '重型控制臂',
+    'desc_en': 'Heavy-duty control arm for truck suspension applications, suitable for OEM replacement and aftermarket supply.',
+    'desc_zh': '适用于卡车悬挂系统的重型控制臂，可用于 OEM 替换及售后市场供货。',
+    'specs': [('Type', 'Control arm', '类型', '控制臂'), ('Application', 'Truck suspension system', '适用', '卡车悬挂系统'), ('Material', 'Forged steel', '材质', '锻造钢'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
+    'applications': ['Truck suspension systems', 'SHACMAN F3000 trucks', 'OEM replacement'],
+  },
   'steering-knuckle': {
     'tag': 'Steering Knuckle',
     'title_en': 'Truck Steering Knuckle',
@@ -129,6 +138,8 @@ def app_items(category: str, lang: str):
   if lang == 'zh':
     zh_map = {
       'Truck steering linkage': '卡车转向传动',
+      'Truck suspension systems': '卡车悬挂系统',
+      'SHACMAN F3000 trucks': '陕汽德龙F3000卡车',
       'OEM replacement': 'OEM 替换',
       'Aftermarket supply': '售后市场供应',
       'Truck axle assemblies': '卡车车桥总成',

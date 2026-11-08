@@ -1484,5 +1484,24 @@
     "descriptionZh": "适用于中国重汽豪沃 A7、T7H 卡车转向传动和前桥系统的重型转向拉杆总成，OEM号为 AZ9925430015、AZ9719430010。",
     "categoryLabelEn": "Tie Rod Assembly",
     "categoryLabelZh": "转向拉杆总成"
+  },
+  {
+    "id": "new-shock-absorber-001",
+    "category": "shock-absorber",
+    "brand": "howo",
+    "image": "/images/products/howo-wg9925688101-shock-absorber.webp",
+    "images": [
+      "/images/products/howo-wg9925688101-shock-absorber.webp",
+      "/images/products/howo-wg9925688101-shock-absorber-view2.webp"
+    ],
+    "title": "Shock Absorber Assembly - 豪沃 T7H/SITRAK C7H",
+    "description": "Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO T7H and SITRAK C7H truck suspension applications.",
+    "tag": "Shock Absorber Assembly",
+    "titleEn": "HOWO T7H / SITRAK C7H Rear Axle Shock Absorber Assembly",
+    "titleZh": "中国重汽豪沃 T7H / SITRAK C7H 后桥减震器总成",
+    "descriptionEn": "Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO T7H and SITRAK C7H truck suspension applications, OEM reference WG9925688101.",
+    "descriptionZh": "适用于中国重汽豪沃 T7H、SITRAK C7H 卡车后桥悬挂系统的重型减震器总成，OEM号为 WG9925688101。",
+    "categoryLabelEn": "Shock Absorber Assembly",
+    "categoryLabelZh": "减震器总成"
   }
 ]

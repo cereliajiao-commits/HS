@@ -1681,4 +1681,25 @@ export const importedProductDetails = {
       'Truck front-axle steering linkage',
     ],
   },
+  'new-shock-absorber-001': {
+    image: '/images/products/howo-wg9925688101-shock-absorber.webp',
+    images: [
+      '/images/products/howo-wg9925688101-shock-absorber.webp',
+      '/images/products/howo-wg9925688101-shock-absorber-view2.webp',
+    ],
+    category: 'Shock Absorber Assembly',
+    title: 'HOWO T7H / SITRAK C7H Rear Axle Shock Absorber Assembly',
+    description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+    specs: [
+      { label: 'Type', value: 'Rear axle shock absorber assembly' },
+      { label: 'Application', value: 'Truck rear axle suspension' },
+      { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO T7H trucks',
+      'SITRAK C7H trucks',
+      'Rear axle suspension replacement',
+    ],
+  },
 } as const;

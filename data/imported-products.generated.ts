@@ -881,4 +881,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'HOWO A7/T7H Tie Rod Assembly',
   },
+  {
+    id: 'new-shock-absorber-001',
+    category: 'shock-absorber',
+    brand: 'howo',
+    image: '/images/products/howo-wg9925688101-shock-absorber.webp',
+    description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO T7H and SITRAK C7H truck suspension applications.',
+    tag: 'Shock Absorber Assembly',
+    title: 'HOWO T7H / SITRAK C7H Rear Axle Shock Absorber Assembly',
+  },
 ] as const;

@@ -3135,4 +3135,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-shock-absorber-001': {
+    en: {
+      title: 'HOWO T7H / SITRAK C7H Rear Axle Shock Absorber Assembly',
+      description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+      specs: [
+        { label: 'Type', value: 'Rear axle shock absorber assembly' },
+        { label: 'Application', value: 'Truck rear axle suspension' },
+        { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO T7H trucks',
+        'SITRAK C7H trucks',
+        'Rear axle suspension replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃 T7H / SITRAK C7H 后桥减震器总成',
+      description: '适用于中国重汽豪沃重卡后桥悬挂系统的重型减震器总成。',
+      specs: [
+        { label: '类型', value: '后桥减震器总成' },
+        { label: '适用', value: '卡车后桥悬挂系统' },
+        { label: '平台', value: '中国重汽豪沃 T7H / SITRAK C7H' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃 T7H 卡车',
+        'SITRAK C7H 卡车',
+        '后桥悬挂替换',
+      ],
+    },
+  },
 } as const;

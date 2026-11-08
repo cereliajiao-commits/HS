@@ -1174,4 +1174,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Four product images and catalog screenshot supplied by the user.',
   },
 
+  'new-shock-absorber-001': {
+    productId: 'new-shock-absorber-001',
+    oemNumbers: ['WG9925688101'],
+    vehicleApplication: 'SINOTRUK HOWO T7H and SITRAK C7H heavy-duty trucks rear axle suspension',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Two product images and catalog screenshot supplied by the user.',
+  },
+
 };

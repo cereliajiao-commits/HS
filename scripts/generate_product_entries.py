@@ -25,6 +25,15 @@ CATEGORY_RULES = {
     'specs': [('Type', 'Control arm', '类型', '控制臂'), ('Application', 'Truck suspension system', '适用', '卡车悬挂系统'), ('Material', 'Forged steel', '材质', '锻造钢'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
     'applications': ['Truck suspension systems', 'SHACMAN F3000 trucks', 'OEM replacement'],
   },
+  'tie-rod': {
+    'tag': 'Tie Rod Assembly',
+    'title_en': 'Heavy-Duty Tie Rod Assembly',
+    'title_zh': '重型转向拉杆总成',
+    'desc_en': 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    'desc_zh': '适用于重型卡车转向传动和前桥系统的转向拉杆总成。',
+    'specs': [('Type', 'Tie rod assembly', '类型', '转向拉杆总成'), ('Application', 'Truck steering linkage', '适用', '卡车转向传动'), ('Platform', 'SINOTRUK HOWO A7 / T7H', '平台', '中国重汽豪沃 A7 / T7H'), ('Supply', 'OEM / aftermarket', '供货', 'OEM / 售后市场')],
+    'applications': ['SINOTRUK HOWO A7 trucks', 'SINOTRUK HOWO T7H trucks', 'Truck front-axle steering linkage'],
+  },
   'torque-rod': {
     'tag': 'Torque Rod',
     'title_en': 'Heavy-Duty V Thrust Rod',
@@ -167,6 +176,9 @@ def app_items(category: str, lang: str):
   if lang == 'zh':
     zh_map = {
       'Truck steering linkage': '卡车转向传动',
+      'SINOTRUK HOWO A7 trucks': '中国重汽豪沃 A7 卡车',
+      'SINOTRUK HOWO T7H trucks': '中国重汽豪沃 T7H 卡车',
+      'Truck front-axle steering linkage': '卡车前桥转向传动',
       'Truck suspension systems': '卡车悬挂系统',
       'SHACMAN F3000 trucks': '陕汽德龙F3000卡车',
       'HOWO trucks': '豪沃卡车',

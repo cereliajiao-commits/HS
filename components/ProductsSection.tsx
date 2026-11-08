@@ -33,6 +33,7 @@ export default function ProductsSection() {
     { filter: 'all', label: t('products.all') },
     { filter: 'vertical', label: t('products.verticalArms') },
     { filter: 'steering-arm', label: t('products.steeringArms') },
+    { filter: 'tie-rod', label: lang === 'zh' ? '转向拉杆' : 'Tie Rods' },
     { filter: 'control-arm', label: lang === 'zh' ? '控制臂' : 'Control Arms' },
     { filter: 'torque-rod', label: lang === 'zh' ? '扭矩杆' : 'Torque Rods' },
     { filter: 'differential', label: lang === 'zh' ? '差速器总成' : 'Differentials' },

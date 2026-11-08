@@ -3103,4 +3103,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-001': {
+    en: {
+      title: 'HOWO A7/T7H Tie Rod Assembly',
+      description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+      specs: [
+        { label: 'Type', value: 'Tie rod assembly' },
+        { label: 'Application', value: 'Truck steering linkage' },
+        { label: 'Platform', value: 'SINOTRUK HOWO A7 / T7H' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO A7 trucks',
+        'SINOTRUK HOWO T7H trucks',
+        'Truck front-axle steering linkage',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃 A7/T7H 转向拉杆总成',
+      description: '适用于重型卡车转向传动和前桥系统的转向拉杆总成。',
+      specs: [
+        { label: '类型', value: '转向拉杆总成' },
+        { label: '适用', value: '卡车转向传动' },
+        { label: '平台', value: '中国重汽豪沃 A7 / T7H' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃 A7 卡车',
+        '中国重汽豪沃 T7H 卡车',
+        '卡车前桥转向传动',
+      ],
+    },
+  },
 } as const;

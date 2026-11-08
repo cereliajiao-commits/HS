@@ -259,6 +259,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   en: {
     vertical: 'Vertical Arm',
     'steering-arm': 'Steering Arm',
+    'tie-rod': 'Tie Rod Assembly',
     'control-arm': 'Control Arm',
     'torque-rod': 'Torque Rod',
     differential: 'Differential Assembly',
@@ -271,6 +272,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   zh: {
     vertical: '垂臂',
     'steering-arm': '转向臂',
+    'tie-rod': '转向拉杆总成',
     'control-arm': '控制臂',
     'torque-rod': '扭矩杆',
     differential: '差速器总成',
@@ -283,6 +285,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   ru: {
     vertical: 'Вертикальный рычаг',
     'steering-arm': 'Рычаг рулевого управления',
+    'tie-rod': 'Рулевая тяга в сборе',
     'control-arm': 'Рычаг подвески',
     'torque-rod': 'Реактивная штанга',
     differential: 'Дифференциал в сборе',
@@ -295,6 +298,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   es: {
     vertical: 'Brazo vertical',
     'steering-arm': 'Brazo de dirección',
+    'tie-rod': 'Conjunto de barra de dirección',
     'control-arm': 'Brazo de suspensión',
     'torque-rod': 'Barra de reacción',
     differential: 'Conjunto diferencial',
@@ -307,6 +311,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   fr: {
     vertical: 'Bras vertical',
     'steering-arm': 'Bras de direction',
+    'tie-rod': 'Ensemble de barre de direction',
     'control-arm': 'Bras de suspension',
     'torque-rod': 'Barre de poussée',
     differential: 'Ensemble différentiel',
@@ -319,6 +324,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   ar: {
     vertical: 'ذراع رأسي',
     'steering-arm': 'ذراع توجيه',
+    'tie-rod': 'مجموعة قضيب التوجيه',
     'control-arm': 'ذراع تعليق',
     'torque-rod': 'قضيب عزم',
     differential: 'مجموعة الترس التفاضلي',
@@ -331,6 +337,7 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   pt: {
     vertical: 'Braço vertical',
     'steering-arm': 'Braço de direção',
+    'tie-rod': 'Conjunto da barra de direção',
     'control-arm': 'Braço de suspensão',
     'torque-rod': 'Barra de torque',
     differential: 'Conjunto do diferencial',

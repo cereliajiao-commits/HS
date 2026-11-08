@@ -1165,4 +1165,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Three product images and catalog screenshot supplied by the user.',
   },
 
+  'new-tie-rod-001': {
+    productId: 'new-tie-rod-001',
+    oemNumbers: ['AZ9925430015', 'AZ9719430010'],
+    vehicleApplication: 'SINOTRUK HOWO A7 and T7H heavy-duty trucks',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Four product images and catalog screenshot supplied by the user.',
+  },
+
 };

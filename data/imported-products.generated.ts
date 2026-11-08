@@ -872,4 +872,13 @@ export const importedProductCards = [
     tag: 'Torque Rod',
     title: 'HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly',
   },
+  {
+    id: 'new-tie-rod-001',
+    category: 'tie-rod',
+    brand: 'howo',
+    image: '/images/products/howo-az9925430015-tie-rod.webp',
+    description: 'Heavy-duty tie rod assembly for SINOTRUK HOWO A7 and T7H truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'HOWO A7/T7H Tie Rod Assembly',
+  },
 ] as const;

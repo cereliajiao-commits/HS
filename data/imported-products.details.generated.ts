@@ -1658,4 +1658,27 @@ export const importedProductDetails = {
       'Axle linkage replacement',
     ],
   },
+  'new-tie-rod-001': {
+    image: '/images/products/howo-az9925430015-tie-rod.webp',
+    images: [
+      '/images/products/howo-az9925430015-tie-rod.webp',
+      '/images/products/howo-az9925430015-tie-rod-view2.webp',
+      '/images/products/howo-az9925430015-tie-rod-view3.webp',
+      '/images/products/howo-az9925430015-tie-rod-view4.webp',
+    ],
+    category: 'Tie Rod Assembly',
+    title: 'HOWO A7/T7H Tie Rod Assembly',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Tie rod assembly' },
+      { label: 'Application', value: 'Truck steering linkage' },
+      { label: 'Platform', value: 'SINOTRUK HOWO A7 / T7H' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO A7 trucks',
+      'SINOTRUK HOWO T7H trucks',
+      'Truck front-axle steering linkage',
+    ],
+  },
 } as const;

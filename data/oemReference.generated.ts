@@ -1192,4 +1192,22 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Two product images and catalog screenshot supplied by the user.',
   },
 
+  'new-air-spring-002': {
+    productId: 'new-air-spring-002',
+    oemNumbers: ['712W41722-6032'],
+    vehicleApplication: 'SINOTRUK SITRAK heavy-duty truck suspension and cab support systems',
+    confidence: '用户提供（截图标题）',
+    sourceUrl: '',
+    note: 'Product image and catalog screenshot supplied by the user; screenshot specification also shows 712W41722-6022, so verify before ordering.',
+  },
+
+  'new-shock-absorber-002': {
+    productId: 'new-shock-absorber-002',
+    oemNumbers: ['WG9100680001'],
+    vehicleApplication: 'SINOTRUK HOWO truck front axle suspension',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and catalog screenshot supplied by the user.',
+  },
+
 };

@@ -899,4 +899,22 @@ export const importedProductCards = [
     tag: 'Air Spring Shock Absorber',
     title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6022',
   },
+  {
+    id: 'new-air-spring-002',
+    category: 'air-spring',
+    brand: 'sinotruk',
+    image: '/images/products/sitrak-712w41722-6032-air-spring-shock-absorber.webp',
+    description: 'Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.',
+    tag: 'Air Spring Shock Absorber',
+    title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6032',
+  },
+  {
+    id: 'new-shock-absorber-002',
+    category: 'shock-absorber',
+    brand: 'howo',
+    image: '/images/products/howo-wg9100680001-front-axle-shock-absorber.webp',
+    description: 'Front axle shock absorber for SINOTRUK HOWO truck suspension applications.',
+    tag: 'Shock Absorber Assembly',
+    title: 'SINOTRUK HOWO Front Axle Shock Absorber WG9100680001',
+  },
 ] as const;

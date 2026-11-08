@@ -1522,5 +1522,35 @@
     "descriptionZh": "适用于中国重汽SITRAK卡车悬挂及驾驶室支撑系统的重型空气弹簧减震器，OEM号为 712W41722-6022。",
     "categoryLabelEn": "Air Spring Shock Absorber",
     "categoryLabelZh": "空气弹簧减震器"
+  },
+  {
+    "id": "new-air-spring-002",
+    "category": "air-spring",
+    "brand": "sinotruk",
+    "image": "/images/products/sitrak-712w41722-6032-air-spring-shock-absorber.webp",
+    "title": "Air Spring Shock Absorber - SITRAK 712W41722-6032",
+    "description": "Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.",
+    "tag": "Air Spring Shock Absorber",
+    "titleEn": "SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6032",
+    "titleZh": "中国重汽SITRAK空气弹簧减震器 712W41722-6032",
+    "descriptionEn": "Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications, OEM reference 712W41722-6032.",
+    "descriptionZh": "适用于中国重汽SITRAK卡车悬挂及驾驶室支撑系统的重型空气弹簧减震器，OEM号为 712W41722-6032。截图规格字段另显示 712W41722-6022，订购前请核对。",
+    "categoryLabelEn": "Air Spring Shock Absorber",
+    "categoryLabelZh": "空气弹簧减震器"
+  },
+  {
+    "id": "new-shock-absorber-002",
+    "category": "shock-absorber",
+    "brand": "howo",
+    "image": "/images/products/howo-wg9100680001-front-axle-shock-absorber.webp",
+    "title": "Front Axle Shock Absorber - HOWO WG9100680001",
+    "description": "Front axle shock absorber for SINOTRUK HOWO truck suspension applications.",
+    "tag": "Shock Absorber Assembly",
+    "titleEn": "SINOTRUK HOWO Front Axle Shock Absorber WG9100680001",
+    "titleZh": "中国重汽豪沃前桥减震器 WG9100680001",
+    "descriptionEn": "Front axle shock absorber for SINOTRUK HOWO truck suspension applications, OEM reference WG9100680001.",
+    "descriptionZh": "适用于中国重汽豪沃卡车前桥悬挂系统的前桥减震器，OEM号为 WG9100680001。",
+    "categoryLabelEn": "Shock Absorber Assembly",
+    "categoryLabelZh": "减震器总成"
   }
 ]

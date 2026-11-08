@@ -1723,4 +1723,38 @@ export const importedProductDetails = {
       'Cab support replacement',
     ],
   },
+  'new-air-spring-002': {
+    image: '/images/products/sitrak-712w41722-6032-air-spring-shock-absorber.webp',
+    category: 'Air Spring Shock Absorber',
+    title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6032',
+    description: 'Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.',
+    specs: [
+      { label: 'Type', value: 'Air spring shock absorber' },
+      { label: 'Application', value: 'Truck suspension and cab support' },
+      { label: 'Platform', value: 'SINOTRUK SITRAK' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK SITRAK trucks',
+      'Truck suspension systems',
+      'Cab support replacement',
+    ],
+  },
+  'new-shock-absorber-002': {
+    image: '/images/products/howo-wg9100680001-front-axle-shock-absorber.webp',
+    category: 'Shock Absorber Assembly',
+    title: 'SINOTRUK HOWO Front Axle Shock Absorber WG9100680001',
+    description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+    specs: [
+      { label: 'Type', value: 'Rear axle shock absorber assembly' },
+      { label: 'Application', value: 'Truck rear axle suspension' },
+      { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO T7H trucks',
+      'SITRAK C7H trucks',
+      'Rear axle suspension replacement',
+    ],
+  },
 } as const;

@@ -3199,4 +3199,68 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-air-spring-002': {
+    en: {
+      title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6032',
+      description: 'Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.',
+      specs: [
+        { label: 'Type', value: 'Air spring shock absorber' },
+        { label: 'Application', value: 'Truck suspension and cab support' },
+        { label: 'Platform', value: 'SINOTRUK SITRAK' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK SITRAK trucks',
+        'Truck suspension systems',
+        'Cab support replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽SITRAK空气弹簧减震器 712W41722-6032',
+      description: '适用于中国重汽SITRAK卡车悬挂及驾驶室支撑系统的重型空气弹簧减震器。',
+      specs: [
+        { label: '类型', value: '空气弹簧减震器' },
+        { label: '适用', value: '卡车悬挂及驾驶室支撑' },
+        { label: '平台', value: '中国重汽SITRAK' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽SITRAK卡车',
+        '卡车悬挂系统',
+        '驾驶室支撑替换',
+      ],
+    },
+  },
+  'new-shock-absorber-002': {
+    en: {
+      title: 'SINOTRUK HOWO Front Axle Shock Absorber WG9100680001',
+      description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+      specs: [
+        { label: 'Type', value: 'Rear axle shock absorber assembly' },
+        { label: 'Application', value: 'Truck rear axle suspension' },
+        { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO T7H trucks',
+        'SITRAK C7H trucks',
+        'Rear axle suspension replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃前桥减震器 WG9100680001',
+      description: '适用于中国重汽豪沃重卡后桥悬挂系统的重型减震器总成。',
+      specs: [
+        { label: '类型', value: '后桥减震器总成' },
+        { label: '适用', value: '卡车后桥悬挂系统' },
+        { label: '平台', value: '中国重汽豪沃 T7H / SITRAK C7H' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃 T7H 卡车',
+        'SITRAK C7H 卡车',
+        '后桥悬挂替换',
+      ],
+    },
+  },
 } as const;

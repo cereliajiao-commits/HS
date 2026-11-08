@@ -35,6 +35,7 @@ export default function ProductsSection() {
     { filter: 'steering-arm', label: t('products.steeringArms') },
     { filter: 'tie-rod', label: lang === 'zh' ? '转向拉杆' : 'Tie Rods' },
     { filter: 'shock-absorber', label: lang === 'zh' ? '减震器' : 'Shock Absorbers' },
+    { filter: 'air-spring', label: lang === 'zh' ? '空气弹簧' : 'Air Springs' },
     { filter: 'control-arm', label: lang === 'zh' ? '控制臂' : 'Control Arms' },
     { filter: 'torque-rod', label: lang === 'zh' ? '扭矩杆' : 'Torque Rods' },
     { filter: 'differential', label: lang === 'zh' ? '差速器总成' : 'Differentials' },

@@ -1183,4 +1183,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Two product images and catalog screenshot supplied by the user.',
   },
 
+  'new-air-spring-001': {
+    productId: 'new-air-spring-001',
+    oemNumbers: ['712W41722-6022'],
+    vehicleApplication: 'SINOTRUK SITRAK heavy-duty truck suspension and cab support systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Two product images and catalog screenshot supplied by the user.',
+  },
+
 };

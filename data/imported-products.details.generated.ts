@@ -1702,4 +1702,25 @@ export const importedProductDetails = {
       'Rear axle suspension replacement',
     ],
   },
+  'new-air-spring-001': {
+    image: '/images/products/sitrak-712w41722-6022-air-spring-shock-absorber.webp',
+    images: [
+      '/images/products/sitrak-712w41722-6022-air-spring-shock-absorber.webp',
+      '/images/products/sitrak-712w41722-6022-air-spring-shock-absorber-view2.webp',
+    ],
+    category: 'Air Spring Shock Absorber',
+    title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6022',
+    description: 'Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.',
+    specs: [
+      { label: 'Type', value: 'Air spring shock absorber' },
+      { label: 'Application', value: 'Truck suspension and cab support' },
+      { label: 'Platform', value: 'SINOTRUK SITRAK' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK SITRAK trucks',
+      'Truck suspension systems',
+      'Cab support replacement',
+    ],
+  },
 } as const;

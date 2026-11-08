@@ -890,4 +890,13 @@ export const importedProductCards = [
     tag: 'Shock Absorber Assembly',
     title: 'HOWO T7H / SITRAK C7H Rear Axle Shock Absorber Assembly',
   },
+  {
+    id: 'new-air-spring-001',
+    category: 'air-spring',
+    brand: 'sinotruk',
+    image: '/images/products/sitrak-712w41722-6022-air-spring-shock-absorber.webp',
+    description: 'Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.',
+    tag: 'Air Spring Shock Absorber',
+    title: 'SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6022',
+  },
 ] as const;

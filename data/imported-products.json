@@ -1503,5 +1503,24 @@
     "descriptionZh": "适用于中国重汽豪沃 T7H、SITRAK C7H 卡车后桥悬挂系统的重型减震器总成，OEM号为 WG9925688101。",
     "categoryLabelEn": "Shock Absorber Assembly",
     "categoryLabelZh": "减震器总成"
+  },
+  {
+    "id": "new-air-spring-001",
+    "category": "air-spring",
+    "brand": "sinotruk",
+    "image": "/images/products/sitrak-712w41722-6022-air-spring-shock-absorber.webp",
+    "images": [
+      "/images/products/sitrak-712w41722-6022-air-spring-shock-absorber.webp",
+      "/images/products/sitrak-712w41722-6022-air-spring-shock-absorber-view2.webp"
+    ],
+    "title": "Air Spring Shock Absorber - SITRAK 712W41722-6022",
+    "description": "Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications.",
+    "tag": "Air Spring Shock Absorber",
+    "titleEn": "SINOTRUK SITRAK Air Spring Shock Absorber 712W41722-6022",
+    "titleZh": "中国重汽SITRAK空气弹簧减震器 712W41722-6022",
+    "descriptionEn": "Heavy-duty air spring shock absorber for SINOTRUK SITRAK truck suspension and cab support applications, OEM reference 712W41722-6022.",
+    "descriptionZh": "适用于中国重汽SITRAK卡车悬挂及驾驶室支撑系统的重型空气弹簧减震器，OEM号为 712W41722-6022。",
+    "categoryLabelEn": "Air Spring Shock Absorber",
+    "categoryLabelZh": "空气弹簧减震器"
   }
 ]

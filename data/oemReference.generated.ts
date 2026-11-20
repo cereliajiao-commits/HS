@@ -1228,4 +1228,31 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and catalog screenshot supplied by the user.',
   },
 
+  'new-steering-arm-047': {
+    productId: 'new-steering-arm-047',
+    oemNumbers: ['81.46701.0315'],
+    vehicleApplication: 'SHACMAN / Shaanxi, KAMAZ and Ural heavy-duty trucks steering linkage',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing research supplied by the user.',
+  },
+
+  'new-steering-knuckle-025': {
+    productId: 'new-steering-knuckle-025',
+    oemNumbers: ['DZ90009410137', 'DZ90009410136'],
+    vehicleApplication: 'SHACMAN / Shaanxi, KAMAZ and Ural heavy-duty truck front drive axle',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing research supplied by the user.',
+  },
+
+  'new-tie-rod-002': {
+    productId: 'new-tie-rod-002',
+    oemNumbers: ['DZ9100430003'],
+    vehicleApplication: 'SHACMAN X3000 heavy-duty truck steering linkage and front axle',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing research supplied by the user.',
+  },
+
 };

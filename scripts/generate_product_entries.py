@@ -164,7 +164,11 @@ def category_title(category: str, lang: str, model: str, code: str) -> str:
   return f"{base} - {suffix}"
 
 
-def category_desc(category: str, lang: str) -> str:
+def category_desc(category: str, lang: str, item: dict | None = None) -> str:
+  if item:
+    override = item.get('detailDescriptionEn' if lang == 'en' else 'detailDescriptionZh')
+    if override:
+      return override
   rule = CATEGORY_RULES[category]
   return rule['desc_en'] if lang == 'en' else rule['desc_zh']
 
@@ -180,7 +184,11 @@ def source_title(item: dict, lang: str, model_zh: str, model_en: str, code: str)
   return category_title(item['category'], lang, model_zh, model_en or code)
 
 
-def spec_items(category: str, lang: str):
+def spec_items(category: str, lang: str, item: dict | None = None):
+  if item:
+    override = item.get('specsEn' if lang == 'en' else 'specsZh')
+    if override:
+      return override
   rule = CATEGORY_RULES[category]
   items = []
   for en_label, en_value, zh_label, zh_value in rule['specs']:
@@ -188,7 +196,11 @@ def spec_items(category: str, lang: str):
   return items
 
 
-def app_items(category: str, lang: str):
+def app_items(category: str, lang: str, item: dict | None = None):
+  if item:
+    override = item.get('applicationsEn' if lang == 'en' else 'applicationsZh')
+    if override:
+      return override
   rule = CATEGORY_RULES[category]
   apps = rule['applications']
   if lang == 'zh':
@@ -268,11 +280,11 @@ def main() -> None:
     detail_lines.append(f"    title: '{esc(source_title(item, 'en', model_zh, model_en, code))}',")
     detail_lines.append(f"    description: '{esc(category_desc(item['category'], 'en'))}',")
     detail_lines.append('    specs: [')
-    for spec in spec_items(item['category'], 'en'):
+    for spec in spec_items(item['category'], 'en', item):
       detail_lines.append(f"      {{ label: '{esc(spec['label'])}', value: '{esc(spec['value'])}' }},")
     detail_lines.append('    ],')
     detail_lines.append('    applications: [')
-    for app in app_items(item['category'], 'en'):
+    for app in app_items(item['category'], 'en', item):
       detail_lines.append(f"      '{esc(app)}',")
     detail_lines.append('    ],')
     detail_lines.append('  },')
@@ -281,13 +293,13 @@ def main() -> None:
     for lang in ['en', 'zh']:
       content_lines.append(f"    {lang}: {{")
       content_lines.append(f"      title: '{esc(source_title(item, lang, model_zh, model_en, code))}',")
-      content_lines.append(f"      description: '{esc(category_desc(item['category'], lang))}',")
+      content_lines.append(f"      description: '{esc(category_desc(item['category'], lang, item))}',")
       content_lines.append('      specs: [')
-      for spec in spec_items(item['category'], lang):
+      for spec in spec_items(item['category'], lang, item):
         content_lines.append(f"        {{ label: '{esc(spec['label'])}', value: '{esc(spec['value'])}' }},")
       content_lines.append('      ],')
       content_lines.append('      applications: [')
-      for app in app_items(item['category'], lang):
+      for app in app_items(item['category'], lang, item):
         content_lines.append(f"        '{esc(app)}',")
       content_lines.append('      ],')
       content_lines.append('    },')

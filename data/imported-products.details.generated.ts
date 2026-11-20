@@ -1791,4 +1791,55 @@ export const importedProductDetails = {
       'Rear axle suspension replacement',
     ],
   },
+  'new-steering-arm-047': {
+    image: '/images/products/shacman-81467010315-left-steering-arm.webp',
+    category: 'Steering Arm',
+    title: 'SHACMAN 81.46701.0315 Left Steering Arm',
+    description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
+    specs: [
+      { label: 'Type', value: 'Left steering arm' },
+      { label: 'Application', value: 'Heavy-duty truck steering linkage' },
+      { label: 'Position', value: 'Left-hand' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN / Shaanxi trucks',
+      'KAMAZ trucks',
+      'Ural trucks',
+    ],
+  },
+  'new-steering-knuckle-025': {
+    image: '/images/products/shacman-dz90009410137-dz90009410136-steering-knuckle.webp',
+    category: 'Steering Knuckle',
+    title: 'SHACMAN Front Drive Axle Steering Knuckle DZ90009410137 / DZ90009410136',
+    description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
+    specs: [
+      { label: 'Type', value: 'Front drive axle steering knuckle' },
+      { label: 'Application', value: 'Heavy-duty truck front drive axle' },
+      { label: 'OEM / OE', value: 'DZ90009410137 / DZ90009410136' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN / Shaanxi trucks',
+      'KAMAZ trucks',
+      'Ural trucks',
+    ],
+  },
+  'new-tie-rod-002': {
+    image: '/images/products/shacman-dz9100430003-lh-steering-tie-rod-end.webp',
+    category: 'Tie Rod End',
+    title: 'SHACMAN X3000 LH Tie Rod End DZ9100430003',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'LH tie rod end' },
+      { label: 'Application', value: 'SHACMAN X3000 steering linkage' },
+      { label: 'Position', value: 'Left-hand' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN X3000 trucks',
+      'Truck front-axle steering linkage',
+      'OEM replacement',
+    ],
+  },
 } as const;

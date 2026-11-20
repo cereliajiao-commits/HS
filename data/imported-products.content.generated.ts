@@ -3327,4 +3327,100 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-steering-arm-047': {
+    en: {
+      title: 'SHACMAN 81.46701.0315 Left Steering Arm',
+      description: 'Left steering arm for SHACMAN / Shaanxi, KAMAZ, and Ural heavy-duty truck steering linkage applications, OEM reference 81.46701.0315.',
+      specs: [
+        { label: 'Type', value: 'Left steering arm' },
+        { label: 'Application', value: 'Heavy-duty truck steering linkage' },
+        { label: 'Position', value: 'Left-hand' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN / Shaanxi trucks',
+        'KAMAZ trucks',
+        'Ural trucks',
+      ],
+    },
+    zh: {
+      title: '陕汽 81.46701.0315 左转向臂',
+      description: '适用于陕汽、卡玛斯及乌拉尔重卡转向传动系统的左转向臂，OEM号为 81.46701.0315。',
+      specs: [
+        { label: '类型', value: '左转向臂' },
+        { label: '适用', value: '重型卡车转向传动' },
+        { label: '位置', value: '左侧' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽重卡',
+        '卡玛斯卡车',
+        '乌拉尔卡车',
+      ],
+    },
+  },
+  'new-steering-knuckle-025': {
+    en: {
+      title: 'SHACMAN Front Drive Axle Steering Knuckle DZ90009410137 / DZ90009410136',
+      description: 'Front drive axle steering knuckle for SHACMAN / Shaanxi, KAMAZ, and Ural heavy-duty truck axle applications, OEM references DZ90009410137 and DZ90009410136.',
+      specs: [
+        { label: 'Type', value: 'Front drive axle steering knuckle' },
+        { label: 'Application', value: 'Heavy-duty truck front drive axle' },
+        { label: 'OEM / OE', value: 'DZ90009410137 / DZ90009410136' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN / Shaanxi trucks',
+        'KAMAZ trucks',
+        'Ural trucks',
+      ],
+    },
+    zh: {
+      title: '陕汽前驱动桥转向节 DZ90009410137 / DZ90009410136',
+      description: '适用于陕汽、卡玛斯及乌拉尔重卡前驱动桥的转向节，OEM号为 DZ90009410137、DZ90009410136。',
+      specs: [
+        { label: '类型', value: '前驱动桥转向节' },
+        { label: '适用', value: '重型卡车前驱动桥' },
+        { label: 'OEM / OE号', value: 'DZ90009410137 / DZ90009410136' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽重卡',
+        '卡玛斯卡车',
+        '乌拉尔卡车',
+      ],
+    },
+  },
+  'new-tie-rod-002': {
+    en: {
+      title: 'SHACMAN X3000 LH Tie Rod End DZ9100430003',
+      description: 'Left-hand tie rod end for SHACMAN X3000 heavy-duty truck steering linkage and front-axle applications, OEM reference DZ9100430003.',
+      specs: [
+        { label: 'Type', value: 'LH tie rod end' },
+        { label: 'Application', value: 'SHACMAN X3000 steering linkage' },
+        { label: 'Position', value: 'Left-hand' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN X3000 trucks',
+        'Truck front-axle steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙X3000左转向拉杆球头 DZ9100430003',
+      description: '适用于陕汽德龙X3000重卡转向传动及前桥系统的左转向拉杆球头，OEM号为 DZ9100430003。',
+      specs: [
+        { label: '类型', value: '左转向拉杆球头' },
+        { label: '适用', value: '陕汽德龙X3000转向传动' },
+        { label: '位置', value: '左侧' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙X3000卡车',
+        '卡车前桥转向传动',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

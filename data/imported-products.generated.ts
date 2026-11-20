@@ -939,7 +939,7 @@ export const importedProductCards = [
     id: 'new-steering-arm-047',
     category: 'steering-arm',
     brand: 'shaanxi',
-    image: '/images/products/shacman-81467010315-left-steering-arm.webp',
+    image: '/images/products/shacman-81467010315-left-steering-arm-v2.webp',
     description: 'Left steering arm for SHACMAN and heavy-duty truck steering linkage applications.',
     tag: 'Steering Arm',
     title: 'SHACMAN 81.46701.0315 Left Steering Arm',

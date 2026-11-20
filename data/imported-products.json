@@ -1465,6 +1465,21 @@
     "categoryLabelZh": "扭矩杆"
   },
   {
+    "id": "new-torque-rod-003",
+    "category": "torque-rod",
+    "brand": "shaanxi",
+    "image": "/images/products/shacman-dz91259525275-straight-torque-rod.webp",
+    "title": "Straight Torque Rod - SHACMAN F3000 DZ91259525275",
+    "description": "Straight torque rod assembly for SHACMAN Delong F3000 heavy-duty truck suspension applications.",
+    "tag": "Torque Rod",
+    "titleEn": "SHACMAN Delong F3000 Straight Torque Rod DZ91259525275",
+    "titleZh": "沙克曼德隆F3000直扭力杆 DZ91259525275",
+    "descriptionEn": "Straight torque rod assembly for SHACMAN Delong F3000 heavy-duty truck suspension and axle linkage applications, OEM reference DZ91259525275.",
+    "descriptionZh": "适用于沙克曼德隆 F3000 重卡悬挂及车桥连接系统的直扭力杆总成，OEM号为 DZ91259525275。",
+    "categoryLabelEn": "Torque Rod",
+    "categoryLabelZh": "扭矩杆"
+  },
+  {
     "id": "new-tie-rod-001",
     "category": "tie-rod",
     "brand": "howo",
@@ -1550,6 +1565,21 @@
     "titleZh": "中国重汽豪沃前桥减震器 WG9100680001",
     "descriptionEn": "Front axle shock absorber for SINOTRUK HOWO truck suspension applications, OEM reference WG9100680001.",
     "descriptionZh": "适用于中国重汽豪沃卡车前桥悬挂系统的前桥减震器，OEM号为 WG9100680001。",
+    "categoryLabelEn": "Shock Absorber Assembly",
+    "categoryLabelZh": "减震器总成"
+  },
+  {
+    "id": "new-shock-absorber-003",
+    "category": "shock-absorber",
+    "brand": "howo",
+    "image": "/images/products/sinotruk-811w41722-6022-2-front-shock-absorber.webp",
+    "title": "Front Shock Absorber Assembly - SITRAK 811W41722-6022/2",
+    "description": "Front shock absorber assembly for SINOTRUK HOWO and SITRAK C7H, T5G, and TX truck suspension applications.",
+    "tag": "Shock Absorber Assembly",
+    "titleEn": "SINOTRUK HOWO / SITRAK C7H T5G TX Front Shock Absorber Assembly 811W41722-6022/2",
+    "titleZh": "中国重汽豪沃 / SITRAK C7H T5G TX 前减震器总成 811W41722-6022/2",
+    "descriptionEn": "Front shock absorber assembly for SINOTRUK HOWO and SITRAK C7H, T5G, and TX truck front suspension applications, OEM reference 811W41722-6022/2.",
+    "descriptionZh": "适用于中国重汽豪沃及 SITRAK C7H、T5G、TX 卡车前悬挂系统的前减震器总成，OEM号为 811W41722-6022/2。",
     "categoryLabelEn": "Shock Absorber Assembly",
     "categoryLabelZh": "减震器总成"
   }

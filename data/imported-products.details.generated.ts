@@ -1658,6 +1658,23 @@ export const importedProductDetails = {
       'Axle linkage replacement',
     ],
   },
+  'new-torque-rod-003': {
+    image: '/images/products/shacman-dz91259525275-straight-torque-rod.webp',
+    category: 'Torque Rod',
+    title: 'SHACMAN Delong F3000 Straight Torque Rod DZ91259525275',
+    description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
+    specs: [
+      { label: 'Type', value: 'V thrust rod / torque rod' },
+      { label: 'Application', value: 'Heavy-duty truck suspension' },
+      { label: 'Platform', value: 'HOWO trucks' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'HOWO trucks',
+      'Truck suspension systems',
+      'Axle linkage replacement',
+    ],
+  },
   'new-tie-rod-001': {
     image: '/images/products/howo-az9925430015-tie-rod.webp',
     images: [
@@ -1744,6 +1761,23 @@ export const importedProductDetails = {
     image: '/images/products/howo-wg9100680001-front-axle-shock-absorber.webp',
     category: 'Shock Absorber Assembly',
     title: 'SINOTRUK HOWO Front Axle Shock Absorber WG9100680001',
+    description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+    specs: [
+      { label: 'Type', value: 'Rear axle shock absorber assembly' },
+      { label: 'Application', value: 'Truck rear axle suspension' },
+      { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO T7H trucks',
+      'SITRAK C7H trucks',
+      'Rear axle suspension replacement',
+    ],
+  },
+  'new-shock-absorber-003': {
+    image: '/images/products/sinotruk-811w41722-6022-2-front-shock-absorber.webp',
+    category: 'Shock Absorber Assembly',
+    title: 'SINOTRUK HOWO / SITRAK C7H T5G TX Front Shock Absorber Assembly 811W41722-6022/2',
     description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
     specs: [
       { label: 'Type', value: 'Rear axle shock absorber assembly' },

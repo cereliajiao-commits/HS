@@ -1165,6 +1165,15 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Three product images and catalog screenshot supplied by the user.',
   },
 
+  'new-torque-rod-003': {
+    productId: 'new-torque-rod-003',
+    oemNumbers: ['DZ91259525275'],
+    vehicleApplication: 'SHACMAN Delong F3000 heavy-duty truck suspension',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product listing screenshot supplied by the user; clean reference product image used to avoid the source screenshot overlay.',
+  },
+
   'new-tie-rod-001': {
     productId: 'new-tie-rod-001',
     oemNumbers: ['AZ9925430015', 'AZ9719430010'],
@@ -1205,6 +1214,15 @@ export const oemReferences: Record<string, OemReference> = {
     productId: 'new-shock-absorber-002',
     oemNumbers: ['WG9100680001'],
     vehicleApplication: 'SINOTRUK HOWO truck front axle suspension',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and catalog screenshot supplied by the user.',
+  },
+
+  'new-shock-absorber-003': {
+    productId: 'new-shock-absorber-003',
+    oemNumbers: ['811W41722-6022/2'],
+    vehicleApplication: 'SINOTRUK HOWO and SITRAK C7H, T5G, TX truck front suspension',
     confidence: '用户提供',
     sourceUrl: '',
     note: 'Product image and catalog screenshot supplied by the user.',

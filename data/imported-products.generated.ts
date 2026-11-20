@@ -873,6 +873,15 @@ export const importedProductCards = [
     title: 'HOWO AZ9631523175 Lower Thrust Rod / Torque Rod Assembly',
   },
   {
+    id: 'new-torque-rod-003',
+    category: 'torque-rod',
+    brand: 'shaanxi',
+    image: '/images/products/shacman-dz91259525275-straight-torque-rod.webp',
+    description: 'Straight torque rod assembly for SHACMAN Delong F3000 heavy-duty truck suspension applications.',
+    tag: 'Torque Rod',
+    title: 'SHACMAN Delong F3000 Straight Torque Rod DZ91259525275',
+  },
+  {
     id: 'new-tie-rod-001',
     category: 'tie-rod',
     brand: 'howo',
@@ -916,5 +925,14 @@ export const importedProductCards = [
     description: 'Front axle shock absorber for SINOTRUK HOWO truck suspension applications.',
     tag: 'Shock Absorber Assembly',
     title: 'SINOTRUK HOWO Front Axle Shock Absorber WG9100680001',
+  },
+  {
+    id: 'new-shock-absorber-003',
+    category: 'shock-absorber',
+    brand: 'howo',
+    image: '/images/products/sinotruk-811w41722-6022-2-front-shock-absorber.webp',
+    description: 'Front shock absorber assembly for SINOTRUK HOWO and SITRAK C7H, T5G, and TX truck suspension applications.',
+    tag: 'Shock Absorber Assembly',
+    title: 'SINOTRUK HOWO / SITRAK C7H T5G TX Front Shock Absorber Assembly 811W41722-6022/2',
   },
 ] as const;

@@ -3103,6 +3103,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-torque-rod-003': {
+    en: {
+      title: 'SHACMAN Delong F3000 Straight Torque Rod DZ91259525275',
+      description: 'V thrust rod and torque rod assembly for heavy-duty truck suspension and axle linkage applications.',
+      specs: [
+        { label: 'Type', value: 'V thrust rod / torque rod' },
+        { label: 'Application', value: 'Heavy-duty truck suspension' },
+        { label: 'Platform', value: 'HOWO trucks' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'HOWO trucks',
+        'Truck suspension systems',
+        'Axle linkage replacement',
+      ],
+    },
+    zh: {
+      title: '沙克曼德隆F3000直扭力杆 DZ91259525275',
+      description: '适用于重型卡车悬挂及车桥连接系统的V型推力杆/扭矩杆总成。',
+      specs: [
+        { label: '类型', value: 'V型推力杆 / 扭矩杆' },
+        { label: '适用', value: '重型卡车悬挂系统' },
+        { label: '平台', value: '豪沃卡车' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '豪沃卡车',
+        '卡车悬挂系统',
+        '车桥连接替换',
+      ],
+    },
+  },
   'new-tie-rod-001': {
     en: {
       title: 'HOWO A7/T7H Tie Rod Assembly',
@@ -3249,6 +3281,38 @@ export const importedProductContent = {
     },
     zh: {
       title: '中国重汽豪沃前桥减震器 WG9100680001',
+      description: '适用于中国重汽豪沃重卡后桥悬挂系统的重型减震器总成。',
+      specs: [
+        { label: '类型', value: '后桥减震器总成' },
+        { label: '适用', value: '卡车后桥悬挂系统' },
+        { label: '平台', value: '中国重汽豪沃 T7H / SITRAK C7H' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃 T7H 卡车',
+        'SITRAK C7H 卡车',
+        '后桥悬挂替换',
+      ],
+    },
+  },
+  'new-shock-absorber-003': {
+    en: {
+      title: 'SINOTRUK HOWO / SITRAK C7H T5G TX Front Shock Absorber Assembly 811W41722-6022/2',
+      description: 'Heavy-duty rear axle shock absorber assembly for SINOTRUK HOWO truck suspension applications.',
+      specs: [
+        { label: 'Type', value: 'Rear axle shock absorber assembly' },
+        { label: 'Application', value: 'Truck rear axle suspension' },
+        { label: 'Platform', value: 'SINOTRUK HOWO T7H / SITRAK C7H' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO T7H trucks',
+        'SITRAK C7H trucks',
+        'Rear axle suspension replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃 / SITRAK C7H T5G TX 前减震器总成 811W41722-6022/2',
       description: '适用于中国重汽豪沃重卡后桥悬挂系统的重型减震器总成。',
       specs: [
         { label: '类型', value: '后桥减震器总成' },

@@ -1336,4 +1336,40 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-shaft-011': {
+    productId: 'new-shaft-011',
+    oemNumbers: ['SZ946000001'],
+    vehicleApplication: 'SHACMAN Delong F3000 / X3000 / M3000 heavy-duty truck steering systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-steering-arm-048': {
+    productId: 'new-steering-arm-048',
+    oemNumbers: ['DZ93259470003', 'DZ93259470002'],
+    vehicleApplication: 'SHACMAN Delong F3000 / X3000 heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-tie-rod-010': {
+    productId: 'new-tie-rod-010',
+    oemNumbers: ['81.46711.6725', '81467116725'],
+    vehicleApplication: 'SHACMAN heavy-duty truck steering linkage and front-axle systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-tie-rod-011': {
+    productId: 'new-tie-rod-011',
+    oemNumbers: ['DZ9100430090'],
+    vehicleApplication: 'SHACMAN Delong F3000 right-hand steering systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

@@ -3717,4 +3717,136 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-shaft-011': {
+    en: {
+      title: 'SHACMAN Delong F3000 / X3000 / M3000 Steering Telescopic Shaft Assembly SZ946000001',
+      description: 'Steering telescopic shaft assembly for SHACMAN Delong F3000, X3000 and M3000 heavy-duty truck steering systems, OEM reference SZ946000001.',
+      specs: [
+        { label: 'Type', value: 'Steering telescopic shaft assembly' },
+        { label: 'Application', value: 'SHACMAN Delong F3000 / X3000 / M3000 steering systems' },
+        { label: 'OEM / OE', value: 'SZ946000001' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN Delong F3000 trucks',
+        'SHACMAN Delong X3000 / M3000 trucks',
+        'Truck steering systems',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 F3000 / X3000 / M3000 转向伸缩轴总成 SZ946000001',
+      description: '适用于陕汽德龙F3000、X3000、M3000新型重卡转向系统的转向伸缩轴总成，OEM号为 SZ946000001。',
+      specs: [
+        { label: '类型', value: '转向伸缩轴总成' },
+        { label: '适用', value: '陕汽德龙 F3000 / X3000 / M3000 转向系统' },
+        { label: 'OEM / OE号', value: 'SZ946000001' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙F3000重卡',
+        '陕汽德龙X3000 / M3000重卡',
+        '卡车转向系统',
+      ],
+    },
+  },
+  'new-steering-arm-048': {
+    en: {
+      title: 'SHACMAN Delong F3000 / X3000 Steering Arm DZ93259470003 / DZ93259470002',
+      description: 'Steering arm for SHACMAN Delong F3000 and X3000 heavy-duty truck steering linkage applications, OEM references DZ93259470003 (right-hand) and DZ93259470002 (left-hand).',
+      specs: [
+        { label: 'Type', value: 'Steering arm' },
+        { label: 'Application', value: 'SHACMAN Delong F3000 / X3000 steering linkage' },
+        { label: 'Position', value: 'Right-hand / left-hand options' },
+        { label: 'OEM / OE', value: 'DZ93259470003 / DZ93259470002' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN Delong F3000 trucks',
+        'SHACMAN Delong X3000 trucks',
+        'Truck steering linkage replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 F3000 / X3000 转向臂 DZ93259470003 / DZ93259470002',
+      description: '适用于陕汽德龙F3000、X3000重卡转向传动系统的转向臂，OEM号为 DZ93259470003（右臂）和 DZ93259470002（左臂）。',
+      specs: [
+        { label: '类型', value: '转向臂' },
+        { label: '适用', value: '陕汽德龙 F3000 / X3000 转向传动' },
+        { label: '位置', value: '右臂 / 左臂可选' },
+        { label: 'OEM / OE号', value: 'DZ93259470003 / DZ93259470002' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙F3000重卡',
+        '陕汽德龙X3000重卡',
+        '卡车转向传动替换',
+      ],
+    },
+  },
+  'new-tie-rod-010': {
+    en: {
+      title: 'SHACMAN Steering Tie Rod 81.46711.6725 / 81467116725',
+      description: 'Steering tie rod for SHACMAN heavy-duty truck steering linkage and front-axle applications, OEM reference 81.46711.6725 (81467116725).',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod' },
+        { label: 'Application', value: 'SHACMAN heavy-duty truck steering linkage and front axle' },
+        { label: 'OEM / OE', value: '81.46711.6725 / 81467116725' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN heavy-duty trucks',
+        'Truck front-axle steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽原装转向拉杆 81.46711.6725 / 81467116725',
+      description: '适用于陕汽重卡转向传动及前桥系统的原装转向拉杆，OEM号为 81.46711.6725（81467116725）。',
+      specs: [
+        { label: '类型', value: '转向拉杆' },
+        { label: '适用', value: '陕汽重卡转向传动及前桥系统' },
+        { label: 'OEM / OE号', value: '81.46711.6725 / 81467116725' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽重卡',
+        '卡车前桥转向传动',
+        'OEM替换',
+      ],
+    },
+  },
+  'new-tie-rod-011': {
+    en: {
+      title: 'SHACMAN Delong F3000 Right-Hand Thick Steering Tie Rod DZ9100430090',
+      description: 'Thickened right-hand steering tie rod with tie rod ends for SHACMAN Delong F3000 heavy-duty truck steering systems, OEM reference DZ9100430090.',
+      specs: [
+        { label: 'Type', value: 'Thickened steering tie rod with tie rod ends' },
+        { label: 'Application', value: 'SHACMAN Delong F3000 steering system' },
+        { label: 'Position', value: 'Right-hand side' },
+        { label: 'OEM / OE', value: 'DZ9100430090' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN Delong F3000 trucks',
+        'Right-hand steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 F3000 右侧加厚转向拉杆带球头 DZ9100430090',
+      description: '适用于陕汽德龙F3000重卡转向系统的右侧加厚转向拉杆总成，带球头，OEM号为 DZ9100430090。',
+      specs: [
+        { label: '类型', value: '加厚转向拉杆带球头' },
+        { label: '适用', value: '陕汽德龙 F3000 转向系统' },
+        { label: '位置', value: '右侧' },
+        { label: 'OEM / OE号', value: 'DZ9100430090' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙F3000重卡',
+        '右侧转向传动',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

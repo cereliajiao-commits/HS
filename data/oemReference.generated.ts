@@ -1300,4 +1300,31 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-006': {
+    productId: 'new-tie-rod-006',
+    oemNumbers: ['3003010-1546'],
+    vehicleApplication: 'FAW JH6 heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-tie-rod-007': {
+    productId: 'new-tie-rod-007',
+    oemNumbers: ['DZ9100430011'],
+    vehicleApplication: 'SHACMAN F3000 heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-tie-rod-008': {
+    productId: 'new-tie-rod-008',
+    oemNumbers: ['AZ9719410040'],
+    vehicleApplication: 'SINOTRUK HOWO heavy-duty truck right-hand steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

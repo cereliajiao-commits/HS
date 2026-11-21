@@ -3585,4 +3585,102 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-006': {
+    en: {
+      title: 'FAW JH6 Steering Tie Rod Assembly 3003010-1546',
+      description: 'Steering tie rod assembly for FAW JH6 heavy-duty truck steering linkage applications, OEM reference 3003010-1546.',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod assembly' },
+        { label: 'Application', value: 'FAW JH6 heavy-duty truck steering linkage' },
+        { label: 'OEM / OE', value: '3003010-1546' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'FAW JH6 trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '一汽解放 JH6 转向拉杆总成 3003010-1546',
+      description: '适用于一汽解放JH6重卡转向传动系统的转向拉杆总成，OEM号为 3003010-1546。',
+      specs: [
+        { label: '类型', value: '转向拉杆总成' },
+        { label: '适用', value: '一汽解放JH6重卡转向传动系统' },
+        { label: 'OEM / OE号', value: '3003010-1546' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '一汽解放JH6重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
+  'new-tie-rod-007': {
+    en: {
+      title: 'SHACMAN F3000 Steering Tie Rod / Drag Link DZ9100430011',
+      description: 'Steering tie rod and drag link for SHACMAN F3000 heavy-duty truck steering linkage applications, OEM reference DZ9100430011.',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod / drag link' },
+        { label: 'Application', value: 'SHACMAN F3000 heavy-duty truck steering linkage' },
+        { label: 'OEM / OE', value: 'DZ9100430011' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN F3000 trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 F3000 转向横拉杆 DZ9100430011',
+      description: '适用于陕汽德龙F3000重卡转向传动系统的转向横拉杆，OEM号为 DZ9100430011。',
+      specs: [
+        { label: '类型', value: '转向横拉杆' },
+        { label: '适用', value: '陕汽德龙F3000重卡转向传动系统' },
+        { label: 'OEM / OE号', value: 'DZ9100430011' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙F3000重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
+  'new-tie-rod-008': {
+    en: {
+      title: 'HOWO Right-Hand Steering Tie Rod AZ9719410040',
+      description: 'Right-hand steering tie rod for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ9719410040.',
+      specs: [
+        { label: 'Type', value: 'Right-hand steering tie rod' },
+        { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering linkage' },
+        { label: 'Position', value: 'Right-hand side (RHS)' },
+        { label: 'OEM / OE', value: 'AZ9719410040' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO heavy-duty trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '豪沃右侧转向横拉杆 AZ9719410040',
+      description: '适用于中国重汽豪沃重卡转向传动系统的右侧转向横拉杆，OEM号为 AZ9719410040。',
+      specs: [
+        { label: '类型', value: '右侧转向横拉杆' },
+        { label: '适用', value: '中国重汽豪沃重卡转向传动系统' },
+        { label: '位置', value: '右侧（RHS）' },
+        { label: 'OEM / OE号', value: 'AZ9719410040' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

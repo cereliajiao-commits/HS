@@ -1928,4 +1928,56 @@ export const importedProductDetails = {
       'Front axle steering linkage replacement',
     ],
   },
+  'new-tie-rod-006': {
+    image: '/images/products/faw-jh6-3003010-1546-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'FAW JH6 Steering Tie Rod Assembly 3003010-1546',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering tie rod assembly' },
+      { label: 'Application', value: 'FAW JH6 heavy-duty truck steering linkage' },
+      { label: 'OEM / OE', value: '3003010-1546' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'FAW JH6 trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
+  'new-tie-rod-007': {
+    image: '/images/products/shacman-f3000-dz9100430011-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SHACMAN F3000 Steering Tie Rod / Drag Link DZ9100430011',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering tie rod / drag link' },
+      { label: 'Application', value: 'SHACMAN F3000 heavy-duty truck steering linkage' },
+      { label: 'OEM / OE', value: 'DZ9100430011' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN F3000 trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
+  'new-tie-rod-008': {
+    image: '/images/products/howo-az9719410040-rhs-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'HOWO Right-Hand Steering Tie Rod AZ9719410040',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Right-hand steering tie rod' },
+      { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering linkage' },
+      { label: 'Position', value: 'Right-hand side (RHS)' },
+      { label: 'OEM / OE', value: 'AZ9719410040' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO heavy-duty trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
 } as const;

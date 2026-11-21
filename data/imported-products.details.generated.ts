@@ -2141,4 +2141,22 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-016': {
+    image: '/images/products/faw-j6-8x4-3003010-87a-longitudinal-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'FAW J6 8x4 Longitudinal Steering Tie Rod 3003010-87A',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Longitudinal steering tie rod' },
+      { label: 'Application', value: 'FAW J6 8x4 heavy-duty truck front steering linkage' },
+      { label: 'Position', value: 'Front longitudinal steering linkage' },
+      { label: 'OEM / OE', value: '3003010-87A' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'FAW J6 8x4 heavy-duty trucks',
+      'Front longitudinal steering linkage',
+      'OEM replacement',
+    ],
+  },
 } as const;

@@ -1408,4 +1408,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user; DZ9100430011 is also referenced by an existing SHACMAN listing as a separate product variant.',
   },
 
+  'new-tie-rod-016': {
+    productId: 'new-tie-rod-016',
+    oemNumbers: ['3003010-87A'],
+    vehicleApplication: 'FAW J6 8x4 heavy-duty truck front longitudinal steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

@@ -1115,4 +1115,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'SHACMAN F3000 Steering Transverse Rod Assembly DZ9100430011 / DZ9118430026 / DZ9118430021',
   },
+  {
+    id: 'new-tie-rod-016',
+    category: 'tie-rod',
+    brand: 'others',
+    image: '/images/products/faw-j6-8x4-3003010-87a-longitudinal-steering-tie-rod.webp',
+    description: 'Longitudinal steering tie rod for FAW J6 8x4 heavy-duty truck front steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'FAW J6 8x4 Longitudinal Steering Tie Rod 3003010-87A',
+  },
 ] as const;

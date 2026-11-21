@@ -2382,5 +2382,46 @@
     ],
     "categoryLabelEn": "Tie Rod Assembly",
     "categoryLabelZh": "转向拉杆总成"
+  },
+  {
+    "id": "new-tie-rod-016",
+    "category": "tie-rod",
+    "brand": "others",
+    "image": "/images/products/faw-j6-8x4-3003010-87a-longitudinal-steering-tie-rod.webp",
+    "title": "FAW J6 8x4 Longitudinal Steering Tie Rod - 3003010-87A",
+    "description": "Longitudinal steering tie rod for FAW J6 8x4 heavy-duty truck front steering linkage applications.",
+    "tag": "Tie Rod Assembly",
+    "titleEn": "FAW J6 8x4 Longitudinal Steering Tie Rod 3003010-87A",
+    "titleZh": "一汽解放 J6 8×4 前纵转向拉杆 3003010-87A",
+    "descriptionEn": "Longitudinal steering tie rod for FAW J6 8x4 heavy-duty truck front steering linkage applications, OEM reference 3003010-87A.",
+    "descriptionZh": "适用于一汽解放 J6 8×4 重卡前桥转向传动系统的纵向转向拉杆，OEM号为 3003010-87A。",
+    "detailDescriptionEn": "Longitudinal steering tie rod for FAW J6 8x4 heavy-duty truck front steering linkage applications, OEM reference 3003010-87A.",
+    "detailDescriptionZh": "适用于一汽解放 J6 8×4 重卡前桥转向传动系统的纵向转向拉杆，OEM号为 3003010-87A。",
+    "specsEn": [
+      { "label": "Type", "value": "Longitudinal steering tie rod" },
+      { "label": "Application", "value": "FAW J6 8x4 heavy-duty truck front steering linkage" },
+      { "label": "Position", "value": "Front longitudinal steering linkage" },
+      { "label": "OEM / OE", "value": "3003010-87A" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "前纵转向拉杆" },
+      { "label": "适用", "value": "一汽解放 J6 8×4 重卡前桥转向传动系统" },
+      { "label": "位置", "value": "前桥纵向转向传动" },
+      { "label": "OEM / OE号", "value": "3003010-87A" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "FAW J6 8x4 heavy-duty trucks",
+      "Front longitudinal steering linkage",
+      "OEM replacement"
+    ],
+    "applicationsZh": [
+      "一汽解放 J6 8×4 重卡",
+      "前桥纵向转向传动",
+      "OEM替换"
+    ],
+    "categoryLabelEn": "Tie Rod Assembly",
+    "categoryLabelZh": "转向拉杆总成"
   }
 ]

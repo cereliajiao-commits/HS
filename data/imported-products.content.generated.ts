@@ -3987,4 +3987,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-016': {
+    en: {
+      title: 'FAW J6 8x4 Longitudinal Steering Tie Rod 3003010-87A',
+      description: 'Longitudinal steering tie rod for FAW J6 8x4 heavy-duty truck front steering linkage applications, OEM reference 3003010-87A.',
+      specs: [
+        { label: 'Type', value: 'Longitudinal steering tie rod' },
+        { label: 'Application', value: 'FAW J6 8x4 heavy-duty truck front steering linkage' },
+        { label: 'Position', value: 'Front longitudinal steering linkage' },
+        { label: 'OEM / OE', value: '3003010-87A' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'FAW J6 8x4 heavy-duty trucks',
+        'Front longitudinal steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '一汽解放 J6 8×4 前纵转向拉杆 3003010-87A',
+      description: '适用于一汽解放 J6 8×4 重卡前桥转向传动系统的纵向转向拉杆，OEM号为 3003010-87A。',
+      specs: [
+        { label: '类型', value: '前纵转向拉杆' },
+        { label: '适用', value: '一汽解放 J6 8×4 重卡前桥转向传动系统' },
+        { label: '位置', value: '前桥纵向转向传动' },
+        { label: 'OEM / OE号', value: '3003010-87A' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '一汽解放 J6 8×4 重卡',
+        '前桥纵向转向传动',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

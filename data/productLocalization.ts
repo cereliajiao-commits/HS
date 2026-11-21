@@ -87,6 +87,7 @@ const titlePhraseMap: Record<string, Array<[string, string]>> = {
     ['Agricultural Part', 'Pieza agrícola'],
     ['Model', 'Modelo'],
     ['Left', 'Izquierdo'],
+    ['Control Arm', 'Brazo de suspensión'], ['V Thrust Rod / Torque Rod', 'Barra de reacción en V / barra de torque'], ['Lower Thrust Rod / Torque Rod Assembly', 'Conjunto de barra de reacción inferior / barra de torque'], ['Straight Torque Rod', 'Barra de torque recta'], ['Tie Rod Assembly', 'Conjunto de barra de dirección'], ['Rear Axle Shock Absorber Assembly', 'Conjunto de amortiguador del eje trasero'], ['Front Axle Shock Absorber', 'Amortiguador del eje delantero'], ['Front Shock Absorber Assembly', 'Conjunto de amortiguador delantero'],
   ],
   fr: [
     ['Heavy-Duty Steering Arm', 'Bras de direction renforcé'],
@@ -118,6 +119,7 @@ const titlePhraseMap: Record<string, Array<[string, string]>> = {
     ['Agricultural Part', 'Pièce agricole'],
     ['Model', 'Modèle'],
     ['Left', 'Gauche'],
+    ['Control Arm', 'Bras de suspension'], ['V Thrust Rod / Torque Rod', 'Barre de réaction en V / barre de poussée'], ['Lower Thrust Rod / Torque Rod Assembly', 'Ensemble de barre de réaction inférieure / barre de poussée'], ['Straight Torque Rod', 'Barre de poussée droite'], ['Tie Rod Assembly', 'Ensemble de barre de direction'], ['Rear Axle Shock Absorber Assembly', 'Ensemble d’amortisseur de pont arrière'], ['Front Axle Shock Absorber', 'Amortisseur de pont avant'], ['Front Shock Absorber Assembly', 'Ensemble d’amortisseur avant'],
   ],
   ar: [
     ['Heavy-Duty Steering Arm', 'ذراع توجيه ثقيل'],
@@ -149,6 +151,7 @@ const titlePhraseMap: Record<string, Array<[string, string]>> = {
     ['Agricultural Part', 'قطعة زراعية'],
     ['Model', 'طراز'],
     ['Left', 'أيسر'],
+    ['Control Arm', 'ذراع تعليق'], ['V Thrust Rod / Torque Rod', 'قضيب دفع V / قضيب عزم'], ['Lower Thrust Rod / Torque Rod Assembly', 'مجموعة قضيب الدفع السفلي / قضيب العزم'], ['Straight Torque Rod', 'قضيب عزم مستقيم'], ['Tie Rod Assembly', 'مجموعة قضيب توجيه'], ['Rear Axle Shock Absorber Assembly', 'مجموعة ممتص صدمات المحور الخلفي'], ['Front Axle Shock Absorber', 'ممتص صدمات المحور الأمامي'], ['Front Shock Absorber Assembly', 'مجموعة ممتص صدمات أمامي'],
   ],
   pt: [
     ['Heavy-Duty Steering Arm', 'Braço de direção reforçado'],
@@ -180,6 +183,7 @@ const titlePhraseMap: Record<string, Array<[string, string]>> = {
     ['Agricultural Part', 'Peça agrícola'],
     ['Model', 'Modelo'],
     ['Left', 'Esquerdo'],
+    ['Control Arm', 'Braço de suspensão'], ['V Thrust Rod / Torque Rod', 'Barra de reação em V / barra de torque'], ['Lower Thrust Rod / Torque Rod Assembly', 'Conjunto da barra de reação inferior / barra de torque'], ['Straight Torque Rod', 'Barra de torque reta'], ['Tie Rod Assembly', 'Conjunto da barra de direção'], ['Rear Axle Shock Absorber Assembly', 'Conjunto de amortecedor do eixo traseiro'], ['Front Axle Shock Absorber', 'Amortecedor do eixo dianteiro'], ['Front Shock Absorber Assembly', 'Conjunto de amortecedor dianteiro'],
   ],
 };
 

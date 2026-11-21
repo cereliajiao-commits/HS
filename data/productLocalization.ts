@@ -548,7 +548,11 @@ function translateText(text: string, lang: Language) {
   if (lang === 'en' || lang === 'zh') return text;
   const replacements = genericPhraseMap[lang];
   if (!replacements) return text;
-  return applyReplacements(applyReplacements(text, titlePhraseMap[lang] ?? []), replacements);
+  const longPhrases = replacements.filter(([source]) => source.length > 30);
+  const shortPhrases = replacements.filter(([source]) => source.length <= 30);
+  const withFullSentences = applyReplacements(text, longPhrases);
+  const withTitles = applyReplacements(withFullSentences, titlePhraseMap[lang] ?? []);
+  return applyReplacements(withTitles, shortPhrases);
 }
 
 export function translateProductText(text: string, lang: Language) {

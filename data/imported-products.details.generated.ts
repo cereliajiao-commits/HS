@@ -2086,4 +2086,22 @@ export const importedProductDetails = {
       'MAN / Neoplan OE cross-reference replacement',
     ],
   },
+  'new-tie-rod-013': {
+    image: '/images/products/howo-az962543006298-steering-drag-link.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SINOTRUK HOWO Steering Drag Link Assembly AZ962543006298',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering drag link assembly' },
+      { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering system' },
+      { label: 'Position', value: 'Front steering linkage' },
+      { label: 'OEM / OE', value: 'AZ962543006298' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO heavy-duty trucks',
+      'Truck front steering linkage',
+      'OEM replacement',
+    ],
+  },
 } as const;

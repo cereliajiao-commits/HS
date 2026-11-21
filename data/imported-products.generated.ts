@@ -1088,4 +1088,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'SHACMAN / Shaanxi Steering Transverse Rod Assembly 81.46711.6736 / 81467116736',
   },
+  {
+    id: 'new-tie-rod-013',
+    category: 'tie-rod',
+    brand: 'howo',
+    image: '/images/products/howo-az962543006298-steering-drag-link.webp',
+    description: 'Steering drag link assembly for SINOTRUK HOWO heavy-duty truck steering systems.',
+    tag: 'Tie Rod Assembly',
+    title: 'SINOTRUK HOWO Steering Drag Link Assembly AZ962543006298',
+  },
 ] as const;

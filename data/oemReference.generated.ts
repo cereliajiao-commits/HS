@@ -1381,4 +1381,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product screenshot supplied by the user; public OE cross-reference used to confirm the alternate number and replacement application.',
   },
 
+  'new-tie-rod-013': {
+    productId: 'new-tie-rod-013',
+    oemNumbers: ['AZ962543006298'],
+    vehicleApplication: 'SINOTRUK HOWO heavy-duty truck steering systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

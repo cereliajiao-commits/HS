@@ -3883,4 +3883,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-013': {
+    en: {
+      title: 'SINOTRUK HOWO Steering Drag Link Assembly AZ962543006298',
+      description: 'Steering drag link assembly for SINOTRUK HOWO heavy-duty truck steering systems, OEM reference AZ962543006298.',
+      specs: [
+        { label: 'Type', value: 'Steering drag link assembly' },
+        { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering system' },
+        { label: 'Position', value: 'Front steering linkage' },
+        { label: 'OEM / OE', value: 'AZ962543006298' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO heavy-duty trucks',
+        'Truck front steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃转向直拉杆总成 AZ962543006298',
+      description: '适用于中国重汽豪沃重卡转向系统的转向直拉杆总成，OEM号为 AZ962543006298。',
+      specs: [
+        { label: '类型', value: '转向直拉杆总成' },
+        { label: '适用', value: '中国重汽豪沃重卡转向系统' },
+        { label: '位置', value: '前桥转向传动' },
+        { label: 'OEM / OE号', value: 'AZ962543006298' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃重卡',
+        '卡车前桥转向传动',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

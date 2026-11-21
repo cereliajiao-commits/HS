@@ -163,7 +163,7 @@ export default function ChatWidget() {
       setMessages((prev) => [
         ...prev,
         {
-          text: lang === 'zh' ? '系统暂时繁忙，请稍后再试，或直接联系我们的 WhatsApp。' : 'The system is temporarily busy. Please try again later or contact us on WhatsApp.',
+          text: t('chat.error'),
           isUser: false,
           time: getCurrentTime(lang),
         },

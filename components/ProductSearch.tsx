@@ -19,7 +19,7 @@ const searchCopy: Record<Language, { label: string; title: string; placeholder: 
 };
 
 export default function ProductSearch() {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
@@ -90,7 +90,7 @@ export default function ProductSearch() {
                 <h2>{copy.title}</h2>
                 <p>{copy.hint}</p>
               </div>
-              <button className="product-search-close" type="button" onClick={() => setIsOpen(false)} aria-label="Close">×</button>
+              <button className="product-search-close" type="button" onClick={() => setIsOpen(false)} aria-label={t('search.close')}>×</button>
             </div>
             <label className="product-search-input-wrap">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +122,7 @@ export default function ProductSearch() {
                   <a
                     className="product-search-result"
                     key={card.id}
-                    href={`/product/${encodeURIComponent(card.id)}${lang === 'zh' ? '?lang=zh' : ''}`}
+                    href={`/product/${encodeURIComponent(card.id)}${lang === 'en' ? '' : `?lang=${lang}`}`}
                     onClick={() => {
                       setIsOpen(false);
                       trackEvent('search_product', { product_id: card.id, query });

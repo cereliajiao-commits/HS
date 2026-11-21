@@ -10,40 +10,33 @@ import { withOemTitle } from '@/data/productTitles';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
-  const productLocale = lang === 'zh' ? 'zh' : 'en';
   const platformBrands = [
     'SINOTRUK HOWO', 'FAW Jiefang', 'Dongfeng', 'Dongfeng Liuzhou', 'SHACMAN', 'Foton Auman', 'CAMC',
     'Freightliner', 'Peterbilt', 'Kenworth', 'International', 'Ford',
     'Scania', 'Volvo', 'Mercedes-Benz', 'MAN', 'DAF', 'Renault Trucks', 'IVECO',
     'Isuzu', 'Hino', 'Mitsubishi Fuso', 'UD Trucks', 'Hyundai', 'Daewoo',
   ];
-  const platformCopy = lang === 'zh'
-    ? {
-        label: '适配车型平台',
-        intro: '产品应用覆盖中国、北美、欧洲、日本及韩国主流商用车平台，并支持矿用车、宽体车、工程卡车、自卸车和客车零部件定制。',
-        note: '品牌名称仅用于说明产品适配车型，不代表品牌授权或隶属关系。',
-      }
-    : {
-        label: 'Compatible Vehicle Platforms',
-        intro: 'Applications cover leading commercial vehicle platforms from China, North America, Europe, Japan, and Korea, with custom support for mining, wide-body, construction, dump trucks, and buses.',
-        note: 'Brand names identify compatible vehicle applications only and do not imply affiliation or endorsement.',
-      };
+  const platformCopy = {
+    label: t('products.platformLabel'),
+    intro: t('products.platformIntro'),
+    note: t('products.platformNote'),
+  };
 
   const typeTabs = [
     { filter: 'all', label: t('products.all') },
     { filter: 'vertical', label: t('products.verticalArms') },
     { filter: 'steering-arm', label: t('products.steeringArms') },
-    { filter: 'tie-rod', label: lang === 'zh' ? '转向拉杆' : 'Tie Rods' },
-    { filter: 'shock-absorber', label: lang === 'zh' ? '减震器' : 'Shock Absorbers' },
-    { filter: 'air-spring', label: lang === 'zh' ? '空气弹簧' : 'Air Springs' },
-    { filter: 'control-arm', label: lang === 'zh' ? '控制臂' : 'Control Arms' },
-    { filter: 'torque-rod', label: lang === 'zh' ? '扭矩杆' : 'Torque Rods' },
-    { filter: 'differential', label: lang === 'zh' ? '差速器总成' : 'Differentials' },
+    { filter: 'tie-rod', label: t('products.tieRods') },
+    { filter: 'shock-absorber', label: t('products.shockAbsorbers') },
+    { filter: 'air-spring', label: t('products.airSprings') },
+    { filter: 'control-arm', label: t('products.controlArms') },
+    { filter: 'torque-rod', label: t('products.torqueRods') },
+    { filter: 'differential', label: t('products.differentials') },
     { filter: 'steering-knuckle', label: t('products.steeringKnuckles') },
     { filter: 'agricultural', label: t('products.agricultural') },
-    { filter: 'john-deere', label: 'John Deere' },
+    { filter: 'john-deere', label: t('products.johnDeere') },
     { filter: 'shaft', label: t('products.driveShafts') },
-    { filter: 'long-shaft', label: 'Long Shaft' },
+    { filter: 'long-shaft', label: t('products.longShaft') },
   ];
 
   const brandTabs = [
@@ -143,10 +136,10 @@ export default function ProductsSection() {
             return (
               <a
                 key={card.id}
-                href={`/product/${encodeURIComponent(card.id)}${lang === 'zh' ? '?lang=zh' : ''}`}
+                href={`/product/${encodeURIComponent(card.id)}${lang === 'en' ? '' : `?lang=${lang}`}`}
                 className={`product-card fade-up visible${index < 12 ? ' product-card--priority' : ''}`}
                 onClick={() => trackEvent('view_product', { product_id: card.id, location: 'product_grid' })}
-                aria-label={`${title} product details`}
+                aria-label={`${title} — ${t('products.cardDetails')}`}
               >
                 <div className="product-card-img">
                   <img
@@ -163,7 +156,7 @@ export default function ProductsSection() {
                   <h3>{title}</h3>
                   <p>{description}</p>
                   {oem?.oemNumbers.length ? (
-                    <div className="product-card-oem" aria-label={`OEM reference numbers: ${oem.oemNumbers.join(', ')}`}>
+                    <div className="product-card-oem" aria-label={`${t('products.oemReferenceNumbers')}: ${oem.oemNumbers.join(', ')}`}>
                       <span>OEM</span> {oem.oemNumbers.join(' · ')}
                     </div>
                   ) : null}

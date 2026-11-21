@@ -8,6 +8,7 @@ import type { Language } from '@/components/LanguageProvider';
 import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
 import { withOemTitle } from '@/data/productTitles';
+import { translations } from '@/data/translations';
 
 type ProductDetailRecord = {
   image: string;
@@ -33,7 +34,10 @@ const importedDetails = importedProductDetails as unknown as Record<string, Prod
 const baseDetails = productDetails as Record<string, ProductDetailRecord>;
 
 function getLanguage(value?: string): Language {
-  return value?.toLowerCase() === 'zh' ? 'zh' : 'en';
+  const normalized = value?.toLowerCase();
+  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
+    ? normalized as Language
+    : 'en';
 }
 
 function getProduct(slug: string) {
@@ -78,7 +82,7 @@ function absoluteUrl(path: string) {
 
 function productUrl(slug: string, lang?: Language) {
   const url = new URL(`/product/${encodeURIComponent(slug)}`, SITE_URL);
-  if (lang === 'zh') url.searchParams.set('lang', 'zh');
+  if (lang && lang !== 'en') url.searchParams.set('lang', lang);
   return url.toString();
 }
 
@@ -91,7 +95,7 @@ function compactMetaText(text: string, maxLength: number) {
 }
 
 function seoTitle(title: string, lang: Language) {
-  const suffix = lang === 'zh' ? ' | 宏盛汽车配件厂家' : ' | HONGSHENG Manufacturer';
+  const suffix = translations[lang]['product.seoSuffix'] ?? translations.en['product.seoSuffix'];
   // Keep the model and OEM suffix visible in search results whenever possible.
   return `${compactMetaText(title, 78 - suffix.length)}${suffix}`;
 }
@@ -114,9 +118,10 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
   const title = seoTitle(product.title, lang);
   const rawDescription = product.description || (lang === 'zh'
     ? `了解 ${product.title}，获取 HONGSHENG Auto Parts 的产品规格、应用和询价支持。`
-    : `Explore ${product.title}, including specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
+    : `${product.title}: specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
+  const copy = translations[lang];
   const description = compactMetaText(
-    `${rawDescription} ${product.oem?.oemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.oem.oemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : 'OEM/ODM support. Request specifications and a quote.'}`,
+    `${rawDescription} ${product.oem?.oemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.oem.oemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : copy['product.requestQuote']}`,
     155
   );
   const url = productUrl(params.slug, lang);
@@ -143,8 +148,10 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
       title,
       description,
       siteName: 'HONGSHENG Auto Parts',
-      locale: lang === 'zh' ? 'zh_CN' : 'en_US',
-      alternateLocale: lang === 'zh' ? ['en_US'] : ['zh_CN'],
+      locale: ({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR' } as Record<Language, string>)[lang],
+      alternateLocale: Object.entries({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR' } as Record<Language, string>)
+        .filter(([code]) => code !== lang)
+        .map(([, locale]) => locale),
       images: images.map((url) => ({ url, alt: product.title })),
     },
     twitter: {
@@ -180,7 +187,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
     },
     url,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
+    inLanguage: ({ en: 'en', zh: 'zh-CN', ru: 'ru', ar: 'ar', es: 'es', pt: 'pt', fr: 'fr' } as Record<Language, string>)[lang],
     additionalProperty: product.specs.map((spec) => ({
       '@type': 'PropertyValue',
       name: spec.label,
@@ -249,29 +256,18 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
   if (!product) notFound();
 
-  const labels = lang === 'zh'
-    ? {
-        back: '返回产品目录',
-        specifications: '产品规格',
-        applications: '适用车型 / 应用',
-        oem: 'OEM / OE 对照号',
-        requestQuote: '获取报价',
-        whatsapp: 'WhatsApp 咨询',
-        inquiryNote: '告诉我们型号、数量和目标市场，我们会尽快回复。',
-        zoomHint: '移动鼠标查看细节',
-        language: 'English',
-      }
-    : {
-        back: 'Back to Product Catalog',
-        specifications: 'Product Specifications',
-        applications: 'Compatible Vehicles / Applications',
-        oem: 'OEM / OE Reference Numbers',
-        requestQuote: 'Request a Quote',
-        whatsapp: 'WhatsApp Inquiry',
-        inquiryNote: 'Tell us the model, quantity, and target market. Our team will respond shortly.',
-        zoomHint: 'Move cursor to zoom',
-        language: '中文',
-      };
+  const copy = translations[lang];
+  const labels = {
+    back: copy['product.back'],
+    specifications: copy['product.specifications'],
+    applications: copy['product.applications'],
+    oem: copy['product.oem'],
+    requestQuote: copy['product.requestQuote'],
+    whatsapp: copy['product.whatsapp'],
+    inquiryNote: copy['product.inquiryNote'],
+    zoomHint: copy['product.zoomHint'],
+    language: copy['product.language'],
+  };
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
   const languageUrl = lang === 'zh' ? productUrl(params.slug, 'en') : productUrl(params.slug, 'zh');
@@ -280,7 +276,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
     <main className="product-detail-page">
       <StructuredData product={product} slug={params.slug} lang={lang} />
       <header className="product-detail-nav">
-        <a href="/" className="nav-logo" aria-label="HONGSHENG Auto Parts">
+          <a href="/" className="nav-logo" aria-label="HONGSHENG Auto Parts">
           HONG<span>SHENG</span>
         </a>
         <div className="product-detail-nav-actions">
@@ -291,9 +287,9 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">{lang === 'zh' ? '首页' : 'Home'}</a>
+          <a href="/">{lang === 'zh' ? '首页' : lang === 'ru' ? 'Главная' : 'Home'}</a>
           <span aria-hidden="true">/</span>
-          <a href="/#products">{lang === 'zh' ? '产品' : 'Products'}</a>
+          <a href="/#products">{lang === 'zh' ? '产品' : lang === 'ru' ? 'Продукция' : 'Products'}</a>
           <span aria-hidden="true">/</span>
           <span>{product.title}</span>
         </nav>
@@ -337,7 +333,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                   {product.oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}
                 </ul>
                 {product.oem.vehicleApplication && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
-                <p className="product-detail-oem-note">{lang === 'zh' ? 'OEM号用于车型和规格对照，订货前请按实物尺寸、孔位及左右件确认。' : 'Reference numbers are for vehicle and specification cross-checking. Confirm dimensions, hole pattern, and side before ordering.'}</p>
+                <p className="product-detail-oem-note">{copy['product.oemNote']}</p>
               </div>
             ) : null}
 

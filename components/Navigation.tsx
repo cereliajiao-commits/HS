@@ -9,7 +9,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { t, lang } = useLanguage();
-  const factoryLabel = ({ en: 'Factory', zh: '工厂', ru: 'Завод', ar: 'المصنع', es: 'Fábrica', pt: 'Fábrica', fr: 'Usine' } as const)[lang];
+  const factoryLabel = t('nav.factory');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +47,7 @@ export default function Navigation() {
         <div className="nav-tools">
           <ProductSearch />
           <LanguageSwitcher />
-          <button className="nav-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
+          <button className="nav-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={t('nav.toggle')}>
             <span></span><span></span><span></span>
           </button>
         </div>

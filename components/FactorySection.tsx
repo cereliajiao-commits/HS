@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from './LanguageProvider';
+import { useLanguage, type Language } from './LanguageProvider';
 
 const content = {
   en: {
@@ -87,11 +87,34 @@ const content = {
     buyerTitle: '海外采购商可以获得',
     buyerPoints: ['稳定的尺寸与安装匹配', '清晰及时的生产沟通', '适合国际运输的包装保护'],
   },
+  ru: {
+    label: 'Внутри Hongsheng',
+    title: 'От производственного цеха до готовых к экспорту деталей',
+    intro: 'Зарубежным покупателям нужен не только каталог, но и уверенность в стабильности размеров, точной совместимости повторных заказов и надежной защите при перевозке. Наши процессы производства, контроля, хранения и упаковки созданы именно для этого.',
+    gateAlt: 'Вход на завод Hengshui Hongsheng Auto Parts',
+    stats: [
+      ['1996', 'Производство с'],
+      ['10', 'Производственных линий'],
+      ['3', 'Экструзионные линии'],
+      ['CNC', 'Прецизионная обработка'],
+      ['ISO 9001', 'Система качества'],
+    ],
+    cards: [
+      { title: 'Производственные мощности для повторных заказов', text: 'Специализированное оборудование и организованный контроль производства поддерживают крупные заказы для грузовиков, сельхозтехники и строительной техники.', image: '/images/company/production-workshop.jpg?v=20261016-2' },
+      { title: 'Прецизионная механообработка', text: 'Контролируемые операции CNC и шлифование помогают сохранять критические размеры, качество поверхности и надежную совместимость.', image: '/images/company/precision-machining.jpg' },
+      { title: 'Контроль размеров', text: 'Критические размеры и функциональные элементы проверяются до упаковки и отгрузки.', image: '/images/company/quality-inspection.jpg' },
+      { title: 'Склад и контроль заказов', text: 'Изделия организованы по моделям и этапам заказа, что упрощает повторные и смешанные поставки.', image: '/images/company/warehouse.jpg?v=20261016-2' },
+      { title: 'Упаковка для экспорта', text: 'Тяжелые детали упаковываются в усиленные деревянные ящики для снижения риска перемещения и повреждений при международной перевозке.', image: '/images/company/export-packaging.jpg?v=20261016-2' },
+    ],
+    buyerTitle: 'Что получают международные покупатели',
+    buyerPoints: ['Стабильная совместимость и размеры', 'Понятная коммуникация по производству', 'Защищенная международная доставка'],
+  },
 };
 
 export default function FactorySection() {
   const { lang } = useLanguage();
-  const copy = lang === 'zh' ? content.zh : content.en;
+  const localizedContent = content as Partial<Record<Language, (typeof content.en)>>;
+  const copy = localizedContent[lang] ?? content.en;
 
   return (
     <section id="factory" className="factory-section">

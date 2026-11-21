@@ -36,7 +36,7 @@ export default function ContactSection() {
       setSubmitted(true);
       form.reset();
     } catch {
-      alert(lang === 'zh' ? '提交失败，请稍后再试，或直接通过 WhatsApp 联系我们。' : 'Submission failed. Please try again later or contact us via WhatsApp.');
+      alert(t('contact.submitError'));
     } finally {
       setSubmitting(false);
     }

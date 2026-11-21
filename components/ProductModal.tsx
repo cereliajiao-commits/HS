@@ -19,8 +19,7 @@ type ImportedDetail = {
 };
 
 export default function ProductModal() {
-  const { lang } = useLanguage();
-  const productLocale = lang === 'zh' ? 'zh' : 'en';
+  const { lang, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
   const [rotation, setRotation] = useState({ x: 8, y: -14 });
@@ -115,16 +114,16 @@ export default function ProductModal() {
   const product = productDetails[productId] ?? importedDetails[productId];
   const localized = resolveProductText(productId, product?.category ?? 'product', lang);
   if (!product && !localized) return null;
-  const title = withOemTitle(localized?.title ?? product?.title ?? 'Product', productId, lang);
+  const title = withOemTitle(localized?.title ?? product?.title ?? t('product.fallbackTitle'), productId, lang);
   const description = localized?.description ?? product?.description ?? '';
   const specs = localized?.specs ?? product?.specs ?? [];
   const applications = localized?.applications ?? product?.applications ?? [];
   const oem = oemReferences[productId];
-  const compatibleLabel = lang === 'zh' ? '适用车型 / 应用' : lang === 'en' ? 'Compatible Vehicles / Applications' : localized?.categoryLabel ?? 'Applications';
-  const requestQuoteLabel = lang === 'zh' ? '获取报价' : 'Request Quote';
-  const whatsappLabel = lang === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp Inquiry';
-  const viewerLabel = lang === 'zh' ? '拖动图片可预览 360° 效果' : 'Drag the image for a 360°-style preview';
-  const resetLabel = lang === 'zh' ? '重置视图' : 'Reset View';
+  const compatibleLabel = t('product.applications');
+  const requestQuoteLabel = t('product.requestQuote');
+  const whatsappLabel = t('product.whatsapp');
+  const viewerLabel = t('product.zoomHint');
+  const resetLabel = t('product.resetView');
 
   return (
     <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
@@ -162,7 +161,7 @@ export default function ProductModal() {
           </div>
         </div>
         <div className="modal-body">
-          <div className="modal-category">{product?.category ?? 'Product Series'}</div>
+          <div className="modal-category">{localized?.categoryLabel ?? product?.category ?? t('product.productSeries')}</div>
           <h2 className="modal-title">{title}</h2>
           <p className="modal-description">{description}</p>
           <div className="modal-specs">
@@ -183,7 +182,7 @@ export default function ProductModal() {
           </div>
           {oem?.oemNumbers.length ? (
             <div className="modal-applications modal-oem">
-              <h4>{lang === 'zh' ? 'OEM / OE 对照号' : 'OEM / OE Reference Numbers'}</h4>
+              <h4>{t('product.oem')}</h4>
               <ul>{oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}</ul>
             </div>
           ) : null}

@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="footer-col">
             <h4>{t('footer.products')}</h4>
             <ul>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Steering Arms</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Steering Knuckles</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Vertical Arms</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Drive Shafts</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>Agricultural Parts</a></li>
+              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringArms')}</a></li>
+              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringKnuckles')}</a></li>
+              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.verticalArms')}</a></li>
+              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.driveShafts')}</a></li>
+              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.agriculturalParts')}</a></li>
             </ul>
           </div>
           <div className="footer-col">

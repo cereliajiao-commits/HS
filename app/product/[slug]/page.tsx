@@ -341,7 +341,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                 <ul className="product-detail-oem-list">
                   {product.oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}
                 </ul>
-                {product.oem.vehicleApplication && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
+                {product.oem.vehicleApplication && (lang === 'zh' || !/[\u3400-\u9fff]/.test(product.oem.vehicleApplication)) && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
                 <p className="product-detail-oem-note">{copy['product.oemNote']}</p>
               </div>
             ) : null}

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { allProductCards } from '@/data/products';
-import { resolveProductText } from '@/data/productLocalization';
+import { resolveProductText, translateProductText } from '@/data/productLocalization';
 import { useLanguage, type Language } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
@@ -51,8 +51,8 @@ export default function ProductSearch() {
         card.tag,
         card.category,
         card.brand,
-        localized?.title,
-        localized?.description,
+        localized?.title ?? translateProductText(card.title, lang),
+        localized?.description ?? translateProductText(card.description, lang),
         localized?.categoryLabel,
         chinese?.title,
         chinese?.description,

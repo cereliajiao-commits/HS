@@ -1893,4 +1893,21 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-004': {
+    image: '/images/products/shacman-x3000-dz97319430805-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SHACMAN Delong X3000 Steering Tie Rod Assembly DZ97319430805',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering tie rod assembly' },
+      { label: 'Application', value: 'SHACMAN Delong X3000 heavy-duty truck steering linkage' },
+      { label: 'OEM / OE', value: 'DZ97319430805' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN Delong X3000 trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
 } as const;

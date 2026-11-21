@@ -3519,4 +3519,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-004': {
+    en: {
+      title: 'SHACMAN Delong X3000 Steering Tie Rod Assembly DZ97319430805',
+      description: 'Steering tie rod assembly for SHACMAN Delong X3000 heavy-duty truck steering linkage applications, OEM reference DZ97319430805.',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod assembly' },
+        { label: 'Application', value: 'SHACMAN Delong X3000 heavy-duty truck steering linkage' },
+        { label: 'OEM / OE', value: 'DZ97319430805' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN Delong X3000 trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 X3000 转向连杆总成 DZ97319430805',
+      description: '适用于陕汽德龙X3000重卡转向传动系统的转向连杆总成，OEM号为 DZ97319430805。',
+      specs: [
+        { label: '类型', value: '转向连杆总成' },
+        { label: '适用', value: '陕汽德龙X3000重卡转向传动系统' },
+        { label: 'OEM / OE号', value: 'DZ97319430805' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙X3000重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

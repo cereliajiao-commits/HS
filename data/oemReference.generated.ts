@@ -1282,4 +1282,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-004': {
+    productId: 'new-tie-rod-004',
+    oemNumbers: ['DZ97319430805'],
+    vehicleApplication: 'SHACMAN Delong X3000 heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

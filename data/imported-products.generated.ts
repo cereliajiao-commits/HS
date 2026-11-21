@@ -989,4 +989,13 @@ export const importedProductCards = [
     tag: 'Steering Shaft Assembly',
     title: 'SINOTRUK HOWO Steering Telescopic Shaft Assembly AZ962547390129',
   },
+  {
+    id: 'new-tie-rod-004',
+    category: 'tie-rod',
+    brand: 'shaanxi',
+    image: '/images/products/shacman-x3000-dz97319430805-steering-tie-rod.webp',
+    description: 'Steering tie rod assembly for SHACMAN Delong X3000 heavy-duty truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'SHACMAN Delong X3000 Steering Tie Rod Assembly DZ97319430805',
+  },
 ] as const;

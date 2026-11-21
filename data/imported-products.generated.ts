@@ -971,4 +971,22 @@ export const importedProductCards = [
     tag: 'Steering Knuckle',
     title: 'SHACMAN / Shaanxi / KAMAZ / Ural Steering Knuckle 81.36301.0037',
   },
+  {
+    id: 'new-tie-rod-003',
+    category: 'tie-rod',
+    brand: 'howo',
+    image: '/images/products/howo-az400743710002-tie-rod.webp',
+    description: 'Steering tie rod assembly for SINOTRUK HOWO heavy-duty truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'SINOTRUK HOWO Steering Tie Rod Assembly AZ400743710002',
+  },
+  {
+    id: 'new-shaft-010',
+    category: 'shaft',
+    brand: 'howo',
+    image: '/images/products/howo-az962547390129-steering-shaft.webp',
+    description: 'Telescopic steering shaft assembly for SINOTRUK HOWO heavy-duty truck steering systems.',
+    tag: 'Steering Shaft Assembly',
+    title: 'SINOTRUK HOWO Steering Telescopic Shaft Assembly AZ962547390129',
+  },
 ] as const;

@@ -1264,4 +1264,22 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-003': {
+    productId: 'new-tie-rod-003',
+    oemNumbers: ['AZ400743710002'],
+    vehicleApplication: 'SINOTRUK HOWO heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
+  'new-shaft-010': {
+    productId: 'new-shaft-010',
+    oemNumbers: ['AZ962547390129'],
+    vehicleApplication: 'SINOTRUK HOWO heavy-duty truck steering systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

@@ -1738,5 +1738,83 @@
     ],
     "categoryLabelEn": "Steering Knuckle",
     "categoryLabelZh": "转向节"
+  },
+  {
+    "id": "new-tie-rod-003",
+    "category": "tie-rod",
+    "brand": "howo",
+    "image": "/images/products/howo-az400743710002-tie-rod.webp",
+    "title": "Tie Rod Assembly - AZ400743710002",
+    "description": "Steering tie rod assembly for SINOTRUK HOWO heavy-duty truck steering linkage applications.",
+    "tag": "Tie Rod Assembly",
+    "titleEn": "SINOTRUK HOWO Steering Tie Rod Assembly AZ400743710002",
+    "titleZh": "中国重汽豪沃重卡转向拉杆总成 AZ400743710002",
+    "descriptionEn": "Steering tie rod assembly for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ400743710002.",
+    "descriptionZh": "适用于中国重汽豪沃重卡转向传动系统的转向拉杆总成，OEM号为 AZ400743710002。",
+    "detailDescriptionEn": "Steering tie rod assembly for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ400743710002.",
+    "detailDescriptionZh": "适用于中国重汽豪沃重卡转向传动系统的转向拉杆总成，OEM号为 AZ400743710002。",
+    "specsEn": [
+      { "label": "Type", "value": "Tie rod assembly" },
+      { "label": "Application", "value": "SINOTRUK HOWO heavy-duty truck steering linkage" },
+      { "label": "OEM / OE", "value": "AZ400743710002" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "转向拉杆总成" },
+      { "label": "适用", "value": "中国重汽豪沃重卡转向传动系统" },
+      { "label": "OEM / OE号", "value": "AZ400743710002" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "SINOTRUK HOWO heavy-duty trucks",
+      "Truck steering linkage systems",
+      "OEM replacement"
+    ],
+    "applicationsZh": [
+      "中国重汽豪沃重卡",
+      "卡车转向传动系统",
+      "OEM替换"
+    ],
+    "categoryLabelEn": "Tie Rod Assembly",
+    "categoryLabelZh": "转向拉杆总成"
+  },
+  {
+    "id": "new-shaft-010",
+    "category": "shaft",
+    "brand": "howo",
+    "image": "/images/products/howo-az962547390129-steering-shaft.webp",
+    "title": "Steering Telescopic Shaft Assembly - AZ962547390129",
+    "description": "Telescopic steering shaft assembly for SINOTRUK HOWO heavy-duty truck steering systems.",
+    "tag": "Steering Shaft Assembly",
+    "titleEn": "SINOTRUK HOWO Steering Telescopic Shaft Assembly AZ962547390129",
+    "titleZh": "中国重汽豪沃卡车转向伸缩轴总成 AZ962547390129",
+    "descriptionEn": "Telescopic steering shaft assembly for SINOTRUK HOWO heavy-duty truck steering systems, OEM reference AZ962547390129.",
+    "descriptionZh": "适用于中国重汽豪沃重卡转向系统的转向伸缩轴总成，OEM号为 AZ962547390129。",
+    "detailDescriptionEn": "Telescopic steering shaft assembly for SINOTRUK HOWO heavy-duty truck steering systems, OEM reference AZ962547390129.",
+    "detailDescriptionZh": "适用于中国重汽豪沃重卡转向系统的转向伸缩轴总成，OEM号为 AZ962547390129。",
+    "specsEn": [
+      { "label": "Type", "value": "Steering telescopic shaft assembly" },
+      { "label": "Application", "value": "SINOTRUK HOWO heavy-duty truck steering system" },
+      { "label": "OEM / OE", "value": "AZ962547390129" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "转向伸缩轴总成" },
+      { "label": "适用", "value": "中国重汽豪沃重卡转向系统" },
+      { "label": "OEM / OE号", "value": "AZ962547390129" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "SINOTRUK HOWO heavy-duty trucks",
+      "Truck steering systems",
+      "OEM replacement"
+    ],
+    "applicationsZh": [
+      "中国重汽豪沃重卡",
+      "卡车转向系统",
+      "OEM替换"
+    ],
+    "categoryLabelEn": "Steering Shaft Assembly",
+    "categoryLabelZh": "转向伸缩轴总成"
   }
 ]

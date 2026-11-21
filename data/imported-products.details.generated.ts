@@ -1859,4 +1859,38 @@ export const importedProductDetails = {
       'Ural trucks',
     ],
   },
+  'new-tie-rod-003': {
+    image: '/images/products/howo-az400743710002-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SINOTRUK HOWO Steering Tie Rod Assembly AZ400743710002',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Tie rod assembly' },
+      { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering linkage' },
+      { label: 'OEM / OE', value: 'AZ400743710002' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO heavy-duty trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
+  'new-shaft-010': {
+    image: '/images/products/howo-az962547390129-steering-shaft.webp',
+    category: 'Steering Shaft Assembly',
+    title: 'SINOTRUK HOWO Steering Telescopic Shaft Assembly AZ962547390129',
+    description: 'Drive shaft for stable torque transmission and reliable operation in heavy-duty truck platforms.',
+    specs: [
+      { label: 'Type', value: 'Steering telescopic shaft assembly' },
+      { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering system' },
+      { label: 'OEM / OE', value: 'AZ962547390129' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK HOWO heavy-duty trucks',
+      'Truck steering systems',
+      'OEM replacement',
+    ],
+  },
 } as const;

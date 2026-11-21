@@ -3455,4 +3455,68 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-003': {
+    en: {
+      title: 'SINOTRUK HOWO Steering Tie Rod Assembly AZ400743710002',
+      description: 'Steering tie rod assembly for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ400743710002.',
+      specs: [
+        { label: 'Type', value: 'Tie rod assembly' },
+        { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering linkage' },
+        { label: 'OEM / OE', value: 'AZ400743710002' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO heavy-duty trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃重卡转向拉杆总成 AZ400743710002',
+      description: '适用于中国重汽豪沃重卡转向传动系统的转向拉杆总成，OEM号为 AZ400743710002。',
+      specs: [
+        { label: '类型', value: '转向拉杆总成' },
+        { label: '适用', value: '中国重汽豪沃重卡转向传动系统' },
+        { label: 'OEM / OE号', value: 'AZ400743710002' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
+  'new-shaft-010': {
+    en: {
+      title: 'SINOTRUK HOWO Steering Telescopic Shaft Assembly AZ962547390129',
+      description: 'Telescopic steering shaft assembly for SINOTRUK HOWO heavy-duty truck steering systems, OEM reference AZ962547390129.',
+      specs: [
+        { label: 'Type', value: 'Steering telescopic shaft assembly' },
+        { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering system' },
+        { label: 'OEM / OE', value: 'AZ962547390129' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK HOWO heavy-duty trucks',
+        'Truck steering systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽豪沃卡车转向伸缩轴总成 AZ962547390129',
+      description: '适用于中国重汽豪沃重卡转向系统的转向伸缩轴总成，OEM号为 AZ962547390129。',
+      specs: [
+        { label: '类型', value: '转向伸缩轴总成' },
+        { label: '适用', value: '中国重汽豪沃重卡转向系统' },
+        { label: 'OEM / OE号', value: 'AZ962547390129' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽豪沃重卡',
+        '卡车转向系统',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

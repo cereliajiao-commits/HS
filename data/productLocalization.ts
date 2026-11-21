@@ -466,6 +466,10 @@ function translateText(text: string, lang: Language) {
   return applyReplacements(applyReplacements(text, titlePhraseMap[lang] ?? []), replacements);
 }
 
+export function translateProductText(text: string, lang: Language) {
+  return translateText(text, lang);
+}
+
 export function translateCategoryLabel(category: string, lang: Language) {
   return categoryLabelMap[lang]?.[category] ?? category;
 }

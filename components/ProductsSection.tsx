@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
-import { resolveProductText } from '@/data/productLocalization';
+import { resolveProductText, translateProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
 import { withOemTitle } from '@/data/productTitles';
@@ -128,8 +128,8 @@ export default function ProductsSection() {
         <div className="products-grid">
           {filteredCards.map((card, index) => {
             const localized = resolveProductText(card.id, card.category, lang);
-            const title = withOemTitle(localized?.title ?? card.title, card.id, lang);
-            const description = localized?.description ?? card.description;
+            const title = withOemTitle(localized?.title ?? translateProductText(card.title, lang), card.id, lang);
+            const description = localized?.description ?? translateProductText(card.description, lang);
             const tag = localized?.categoryLabel ?? card.tag;
             const oem = oemReferences[card.id];
 

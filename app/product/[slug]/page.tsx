@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { allProductCards } from '@/data/products';
 import { productDetails } from '@/data/productDetails';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
-import { resolveProductText, translateCategoryLabel } from '@/data/productLocalization';
+import { resolveProductText, translateCategoryLabel, translateProductText } from '@/data/productLocalization';
 import type { Language } from '@/components/LanguageProvider';
 import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
@@ -57,8 +57,8 @@ function getLocalizedProduct(slug: string, lang: Language) {
 
   const { card, detail } = product;
   const localized = resolveProductText(slug, card.category, lang);
-  const fallbackTitle = detail?.title ?? card.title;
-  const fallbackDescription = detail?.description ?? card.description;
+  const fallbackTitle = translateProductText(detail?.title ?? card.title, lang);
+  const fallbackDescription = translateProductText(detail?.description ?? card.description, lang);
   const fallbackSpecs = detail?.specs ?? [];
   const fallbackApplications = detail?.applications ?? [];
   const oem = oemReferences[slug];

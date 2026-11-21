@@ -1255,4 +1255,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing research supplied by the user.',
   },
 
+  'new-steering-knuckle-026': {
+    productId: 'new-steering-knuckle-026',
+    oemNumbers: ['81.36301.0037'],
+    vehicleApplication: 'SHACMAN / Shaanxi, KAMAZ and Ural heavy-duty truck axle systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

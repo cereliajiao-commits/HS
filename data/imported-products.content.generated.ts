@@ -3423,4 +3423,36 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-steering-knuckle-026': {
+    en: {
+      title: 'SHACMAN / Shaanxi / KAMAZ / Ural Steering Knuckle 81.36301.0037',
+      description: 'Steering knuckle for SHACMAN / Shaanxi, KAMAZ, and Ural heavy-duty truck axle applications, OEM reference 81.36301.0037.',
+      specs: [
+        { label: 'Type', value: 'Steering knuckle' },
+        { label: 'Application', value: 'Heavy-duty truck axle and steering linkage' },
+        { label: 'OEM / OE', value: '81.36301.0037' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN / Shaanxi trucks',
+        'KAMAZ trucks',
+        'Ural trucks',
+      ],
+    },
+    zh: {
+      title: '陕汽 / 卡玛斯 / 乌拉尔重卡转向节 81.36301.0037',
+      description: '适用于陕汽、卡玛斯及乌拉尔重卡车桥系统的转向节，OEM号为 81.36301.0037。',
+      specs: [
+        { label: '类型', value: '转向节' },
+        { label: '适用', value: '重卡车桥及转向传动系统' },
+        { label: 'OEM / OE号', value: '81.36301.0037' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽重卡',
+        '卡玛斯卡车',
+        '乌拉尔卡车',
+      ],
+    },
+  },
 } as const;

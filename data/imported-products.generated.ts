@@ -962,4 +962,13 @@ export const importedProductCards = [
     tag: 'Tie Rod End',
     title: 'SHACMAN X3000 LH Tie Rod End DZ9100430003',
   },
+  {
+    id: 'new-steering-knuckle-026',
+    category: 'steering-knuckle',
+    brand: 'shaanxi',
+    image: '/images/products/kamaz-81-36301-0037-steering-knuckle.webp',
+    description: 'Steering knuckle for SHACMAN / Shaanxi, KAMAZ, and Ural heavy-duty truck axle applications.',
+    tag: 'Steering Knuckle',
+    title: 'SHACMAN / Shaanxi / KAMAZ / Ural Steering Knuckle 81.36301.0037',
+  },
 ] as const;

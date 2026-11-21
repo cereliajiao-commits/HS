@@ -1842,4 +1842,21 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-steering-knuckle-026': {
+    image: '/images/products/kamaz-81-36301-0037-steering-knuckle.webp',
+    category: 'Steering Knuckle',
+    title: 'SHACMAN / Shaanxi / KAMAZ / Ural Steering Knuckle 81.36301.0037',
+    description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
+    specs: [
+      { label: 'Type', value: 'Steering knuckle' },
+      { label: 'Application', value: 'Heavy-duty truck axle and steering linkage' },
+      { label: 'OEM / OE', value: '81.36301.0037' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN / Shaanxi trucks',
+      'KAMAZ trucks',
+      'Ural trucks',
+    ],
+  },
 } as const;

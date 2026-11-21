@@ -1034,4 +1034,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'HOWO Right-Hand Steering Tie Rod AZ9719410040',
   },
+  {
+    id: 'new-tie-rod-009',
+    category: 'tie-rod',
+    brand: 'sinotruk',
+    image: '/images/products/sinotruk-az9700430051-steering-tie-rod.webp',
+    description: 'Steering tie rod for SINOTRUK heavy-duty truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'SINOTRUK Heavy-Duty Truck Steering Tie Rod AZ9700430051',
+  },
 ] as const;

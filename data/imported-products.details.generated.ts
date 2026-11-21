@@ -1980,4 +1980,22 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-009': {
+    image: '/images/products/sinotruk-az9700430051-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SINOTRUK Heavy-Duty Truck Steering Tie Rod AZ9700430051',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering tie rod' },
+      { label: 'Application', value: 'SINOTRUK heavy-duty truck steering linkage' },
+      { label: 'Material', value: 'Steel' },
+      { label: 'OEM / OE', value: 'AZ9700430051' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SINOTRUK heavy-duty trucks',
+      'Truck steering linkage systems',
+      'OEM replacement',
+    ],
+  },
 } as const;

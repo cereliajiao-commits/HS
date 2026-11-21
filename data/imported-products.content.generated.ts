@@ -3683,4 +3683,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-009': {
+    en: {
+      title: 'SINOTRUK Heavy-Duty Truck Steering Tie Rod AZ9700430051',
+      description: 'Steering tie rod for SINOTRUK heavy-duty truck steering linkage applications, OEM reference AZ9700430051.',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod' },
+        { label: 'Application', value: 'SINOTRUK heavy-duty truck steering linkage' },
+        { label: 'Material', value: 'Steel' },
+        { label: 'OEM / OE', value: 'AZ9700430051' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SINOTRUK heavy-duty trucks',
+        'Truck steering linkage systems',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '中国重汽重卡转向拉杆 AZ9700430051',
+      description: '适用于中国重汽重卡转向传动系统的转向拉杆，OEM号为 AZ9700430051。',
+      specs: [
+        { label: '类型', value: '转向拉杆' },
+        { label: '适用', value: '中国重汽重卡转向传动系统' },
+        { label: '材质', value: '钢材' },
+        { label: 'OEM / OE号', value: 'AZ9700430051' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '中国重汽重卡',
+        '卡车转向传动系统',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

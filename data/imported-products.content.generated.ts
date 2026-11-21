@@ -3849,4 +3849,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-012': {
+    en: {
+      title: 'SHACMAN / Shaanxi Steering Transverse Rod Assembly 81.46711.6736 / 81467116736',
+      description: 'Steering transverse rod assembly with tie rod ends for SHACMAN / Shaanxi heavy-duty truck steering linkage applications, cross-referenced for MAN / Neoplan and selected heavy-duty truck applications, OEM references 81.46711.6736 and 81467116736.',
+      specs: [
+        { label: 'Type', value: 'Steering transverse rod assembly' },
+        { label: 'Application', value: 'SHACMAN / Shaanxi heavy-duty truck steering linkage' },
+        { label: 'Position', value: 'Front steering linkage' },
+        { label: 'OEM / OE', value: '81.46711.6736 / 81467116736' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN / Shaanxi heavy-duty trucks',
+        'KAMAZ and Ural truck steering linkage applications',
+        'MAN / Neoplan OE cross-reference replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽 / SHACMAN 重卡转向横拉杆总成 81.46711.6736 / 81467116736',
+      description: '适用于陕汽 / SHACMAN 重卡转向传动系统的转向横拉杆总成，带两端球头；公开 OE 交叉目录同时对应 MAN / Neoplan 部分车型，OEM号为 81.46711.6736 和 81467116736。',
+      specs: [
+        { label: '类型', value: '转向横拉杆总成' },
+        { label: '适用', value: '陕汽 / SHACMAN 重卡转向传动系统' },
+        { label: '位置', value: '前桥转向传动' },
+        { label: 'OEM / OE号', value: '81.46711.6736 / 81467116736' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽 / SHACMAN 重卡',
+        '卡玛斯及乌拉尔卡车转向传动',
+        'MAN / Neoplan OE交叉替换',
+      ],
+    },
+  },
 } as const;

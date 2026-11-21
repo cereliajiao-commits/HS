@@ -1079,4 +1079,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'SHACMAN Delong F3000 Right-Hand Thick Steering Tie Rod DZ9100430090',
   },
+  {
+    id: 'new-tie-rod-012',
+    category: 'tie-rod',
+    brand: 'shaanxi',
+    image: '/images/products/shacman-81467116736-steering-transverse-rod.webp',
+    description: 'Steering transverse rod assembly with tie rod ends for SHACMAN / Shaanxi heavy-duty truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'SHACMAN / Shaanxi Steering Transverse Rod Assembly 81.46711.6736 / 81467116736',
+  },
 ] as const;

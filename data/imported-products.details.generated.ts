@@ -2068,4 +2068,22 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-012': {
+    image: '/images/products/shacman-81467116736-steering-transverse-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SHACMAN / Shaanxi Steering Transverse Rod Assembly 81.46711.6736 / 81467116736',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering transverse rod assembly' },
+      { label: 'Application', value: 'SHACMAN / Shaanxi heavy-duty truck steering linkage' },
+      { label: 'Position', value: 'Front steering linkage' },
+      { label: 'OEM / OE', value: '81.46711.6736 / 81467116736' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN / Shaanxi heavy-duty trucks',
+      'KAMAZ and Ural truck steering linkage applications',
+      'MAN / Neoplan OE cross-reference replacement',
+    ],
+  },
 } as const;

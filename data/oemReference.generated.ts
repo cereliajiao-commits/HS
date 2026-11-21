@@ -1372,4 +1372,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-012': {
+    productId: 'new-tie-rod-012',
+    oemNumbers: ['81.46711.6736', '81467116736'],
+    vehicleApplication: 'SHACMAN / Shaanxi heavy-duty truck steering linkage; MAN / Neoplan OE cross-reference',
+    confidence: '用户提供 + OE交叉目录',
+    sourceUrl: 'https://spareto.com/oe/81467116736',
+    note: 'Product screenshot supplied by the user; public OE cross-reference used to confirm the alternate number and replacement application.',
+  },
+
 };

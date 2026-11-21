@@ -539,6 +539,99 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
   },
 };
 
+const extraProductDescriptionMap: Partial<Record<Language, Array<[string, string]>>> = {
+  ru: [
+    ['Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.', 'Вертикальный рычаг для узлов рулевого управления Dongfeng, кованый для надежного управления и длительного срока службы.'],
+    ['A50A vertical arm for commercial steering systems, supplied as an individual catalog item.', 'Усиленный вертикальный рычаг A50A для систем рулевого управления коммерческих автомобилей, поставляемый как отдельная позиция каталога.'],
+    ['K36A0 vertical arm with stable geometry and durable forged construction.', 'Вертикальный рычаг K36A0 со стабильной геометрией и прочной кованой конструкцией.'],
+    ['Vertical arm for the 80A:60W model, presented as a single catalog product.', 'Вертикальный рычаг для модели 80A:60W, представленный как отдельное изделие каталога.'],
+    ['Violet model vertical arm in single-arm and twin-arm variants.', 'Вертикальный рычаг модели Violet в вариантах с одним и двумя рычагами.'],
+    ['F13 vertical arm for steering linkage replacement and catalog presentation.', 'Вертикальный рычаг F13 для замены деталей рулевого управления и представления в каталоге.'],
+    ['F44 vertical arm with durable forged construction for steering linkage applications.', 'Вертикальный рычаг F44 с прочной кованой конструкцией для применения в рулевом управлении.'],
+    ['F58 vertical arm for heavy-duty steering linkage systems.', 'Вертикальный рычаг F58 для усиленных систем рулевого управления.'],
+    ['AAG3 vertical arm shown as an individual product entry.', 'Вертикальный рычаг AAG3, представленный как отдельная позиция каталога.'],
+    ['Single-bridge STR vertical arm for heavy-duty steering applications.', 'Вертикальный рычаг STR для усиленных систем рулевого управления на одинарном мосту.'],
+    ['1061 vertical arm for steering linkage applications, shown as an individual product.', 'Вертикальный рычаг 1061 для применения в рулевом управлении, представленный как отдельное изделие.'],
+    ['Vertical arm for tractor steering systems and agricultural machinery.', 'Вертикальный рычаг для систем рулевого управления тракторов и сельхозтехники.'],
+    ['Bull nose style vertical arm for steering linkage applications.', 'Вертикальный рычаг типа Bull Nose для применения в рулевом управлении.'],
+    ['145-type vertical arm for commercial steering linkage.', 'Вертикальный рычаг типа 145 для рулевого управления коммерческих автомобилей.'],
+    ['Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.', 'Вертикальный рычаг для платформы 175X0, обеспечивающий стабильную передачу управления и надежную установку.'],
+    ['KC100 vertical arm designed for stable steering control and long service life.', 'Вертикальный рычаг KC100, разработанный для надежного управления и длительного срока службы.'],
+  ],
+  es: [
+    ['Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.', 'Brazo vertical para conjuntos de varillaje de dirección Dongfeng, forjado para ofrecer un control de dirección fiable y una larga vida útil.'],
+    ['A50A vertical arm for commercial steering systems, supplied as an individual catalog item.', 'Brazo vertical A50A para sistemas de dirección de vehículos comerciales, suministrado como pieza independiente del catálogo.'],
+    ['K36A0 vertical arm with stable geometry and durable forged construction.', 'Brazo vertical K36A0 con geometría estable y construcción forjada duradera.'],
+    ['Vertical arm for the 80A:60W model, presented as a single catalog product.', 'Brazo vertical para el modelo 80A:60W, presentado como producto independiente del catálogo.'],
+    ['Violet model vertical arm in single-arm and twin-arm variants.', 'Brazo vertical del modelo Violet, disponible en versiones de brazo simple y doble.'],
+    ['F13 vertical arm for steering linkage replacement and catalog presentation.', 'Brazo vertical F13 para sustituir componentes del varillaje de dirección y para su presentación en catálogo.'],
+    ['F44 vertical arm with durable forged construction for steering linkage applications.', 'Brazo vertical F44 con construcción forjada duradera para aplicaciones del varillaje de dirección.'],
+    ['F58 vertical arm for heavy-duty steering linkage systems.', 'Brazo vertical F58 para sistemas de dirección de alta resistencia.'],
+    ['AAG3 vertical arm shown as an individual product entry.', 'Brazo vertical AAG3 presentado como artículo independiente del catálogo.'],
+    ['Single-bridge STR vertical arm for heavy-duty steering applications.', 'Brazo vertical STR de puente simple para aplicaciones de dirección de alta resistencia.'],
+    ['1061 vertical arm for steering linkage applications, shown as an individual product.', 'Brazo vertical 1061 para aplicaciones del varillaje de dirección, presentado como producto independiente.'],
+    ['Vertical arm for tractor steering systems and agricultural machinery.', 'Brazo vertical para sistemas de dirección de tractores y maquinaria agrícola.'],
+    ['Bull nose style vertical arm for steering linkage applications.', 'Brazo vertical tipo Bull Nose para aplicaciones del varillaje de dirección.'],
+    ['145-type vertical arm for commercial steering linkage.', 'Brazo vertical tipo 145 para sistemas de dirección de vehículos comerciales.'],
+    ['Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.', 'Brazo vertical para la plataforma 175X0, diseñado para una transferencia de dirección estable y una instalación fiable.'],
+    ['KC100 vertical arm designed for stable steering control and long service life.', 'Brazo vertical KC100 diseñado para ofrecer un control de dirección estable y una larga vida útil.'],
+  ],
+  fr: [
+    ['Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.', 'Bras vertical pour les ensembles de bielle de direction Dongfeng, forgé pour garantir un contrôle de direction fiable et une longue durée de vie.'],
+    ['A50A vertical arm for commercial steering systems, supplied as an individual catalog item.', 'Bras vertical A50A pour les systèmes de direction des véhicules utilitaires, proposé comme pièce individuelle du catalogue.'],
+    ['K36A0 vertical arm with stable geometry and durable forged construction.', 'Bras vertical K36A0 à géométrie stable et construction forgée durable.'],
+    ['Vertical arm for the 80A:60W model, presented as a single catalog product.', 'Bras vertical pour le modèle 80A:60W, présenté comme une pièce individuelle du catalogue.'],
+    ['Violet model vertical arm in single-arm and twin-arm variants.', 'Bras vertical du modèle Violet, disponible en versions à un ou deux bras.'],
+    ['F13 vertical arm for steering linkage replacement and catalog presentation.', 'Bras vertical F13 destiné au remplacement des éléments de direction et à la présentation au catalogue.'],
+    ['F44 vertical arm with durable forged construction for steering linkage applications.', 'Bras vertical F44 à construction forgée durable pour les applications de bielle de direction.'],
+    ['F58 vertical arm for heavy-duty steering linkage systems.', 'Bras vertical F58 pour les systèmes de direction à usage intensif.'],
+    ['AAG3 vertical arm shown as an individual product entry.', 'Bras vertical AAG3 présenté comme une pièce individuelle du catalogue.'],
+    ['Single-bridge STR vertical arm for heavy-duty steering applications.', 'Bras vertical STR à pont simple pour les applications de direction à usage intensif.'],
+    ['1061 vertical arm for steering linkage applications, shown as an individual product.', 'Bras vertical 1061 pour les applications de bielle de direction, présenté comme une pièce individuelle.'],
+    ['Vertical arm for tractor steering systems and agricultural machinery.', 'Bras vertical pour les systèmes de direction des tracteurs et des machines agricoles.'],
+    ['Bull nose style vertical arm for steering linkage applications.', 'Bras vertical de type Bull Nose pour les applications de bielle de direction.'],
+    ['145-type vertical arm for commercial steering linkage.', 'Bras vertical de type 145 pour les systèmes de direction des véhicules utilitaires.'],
+    ['Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.', 'Bras vertical pour la plate-forme 175X0, conçu pour une transmission de direction stable et une installation fiable.'],
+    ['KC100 vertical arm designed for stable steering control and long service life.', 'Bras vertical KC100 conçu pour garantir un contrôle de direction stable et une longue durée de vie.'],
+  ],
+  ar: [
+    ['Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.', 'ذراع رأسي لمجموعات وصلة توجيه Dongfeng، مصنوع بالطرق لضمان تحكم موثوق في التوجيه وعمر خدمة طويل.'],
+    ['A50A vertical arm for commercial steering systems, supplied as an individual catalog item.', 'ذراع رأسي A50A لأنظمة توجيه المركبات التجارية، ويُورَّد كقطعة مستقلة في الكتالوج.'],
+    ['K36A0 vertical arm with stable geometry and durable forged construction.', 'ذراع رأسي K36A0 بهندسة ثابتة وبنية متينة مصنوعة بالطرق.'],
+    ['Vertical arm for the 80A:60W model, presented as a single catalog product.', 'ذراع رأسي لطراز 80A:60W، معروض كمنتج مستقل في الكتالوج.'],
+    ['Violet model vertical arm in single-arm and twin-arm variants.', 'ذراع رأسي من طراز Violet بإصدارات بذراع واحد أو ذراعين.'],
+    ['F13 vertical arm for steering linkage replacement and catalog presentation.', 'ذراع رأسي F13 لاستبدال مكونات وصلة التوجيه وعرضه في الكتالوج.'],
+    ['F44 vertical arm with durable forged construction for steering linkage applications.', 'ذراع رأسي F44 ببنية متينة مصنوعة بالطرق لتطبيقات وصلة التوجيه.'],
+    ['F58 vertical arm for heavy-duty steering linkage systems.', 'ذراع رأسي F58 لأنظمة التوجيه المصممة للخدمة الشاقة.'],
+    ['AAG3 vertical arm shown as an individual product entry.', 'ذراع رأسي AAG3 معروض كمنتج مستقل في الكتالوج.'],
+    ['Single-bridge STR vertical arm for heavy-duty steering applications.', 'ذراع رأسي STR للجسر الفردي، مناسب لتطبيقات التوجيه للخدمة الشاقة.'],
+    ['1061 vertical arm for steering linkage applications, shown as an individual product.', 'ذراع رأسي 1061 لتطبيقات وصلة التوجيه، معروض كمنتج مستقل.'],
+    ['Vertical arm for tractor steering systems and agricultural machinery.', 'ذراع رأسي لأنظمة توجيه الجرارات والمعدات الزراعية.'],
+    ['Bull nose style vertical arm for steering linkage applications.', 'ذراع رأسي من طراز Bull Nose لتطبيقات وصلة التوجيه.'],
+    ['145-type vertical arm for commercial steering linkage.', 'ذراع رأسي من طراز 145 لأنظمة توجيه المركبات التجارية.'],
+    ['Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.', 'ذراع رأسي لمنصة 175X0، مصمم لنقل توجيه مستقر وتركيب موثوق.'],
+    ['KC100 vertical arm designed for stable steering control and long service life.', 'ذراع رأسي KC100 مصمم لتوفير تحكم ثابت في التوجيه وعمر خدمة طويل.'],
+  ],
+  pt: [
+    ['Vertical arm for Dongfeng steering linkage assemblies, forged for dependable steering control and long service life.', 'Braço vertical para conjuntos de ligação de direção Dongfeng, forjado para oferecer controle de direção confiável e longa vida útil.'],
+    ['A50A vertical arm for commercial steering systems, supplied as an individual catalog item.', 'Braço vertical A50A para sistemas de direção de veículos comerciais, fornecido como item independente do catálogo.'],
+    ['K36A0 vertical arm with stable geometry and durable forged construction.', 'Braço vertical K36A0 com geometria estável e construção forjada resistente.'],
+    ['Vertical arm for the 80A:60W model, presented as a single catalog product.', 'Braço vertical para o modelo 80A:60W, apresentado como produto independente do catálogo.'],
+    ['Violet model vertical arm in single-arm and twin-arm variants.', 'Braço vertical do modelo Violet, disponível nas versões de braço simples e duplo.'],
+    ['F13 vertical arm for steering linkage replacement and catalog presentation.', 'Braço vertical F13 para substituição de componentes da ligação de direção e apresentação no catálogo.'],
+    ['F44 vertical arm with durable forged construction for steering linkage applications.', 'Braço vertical F44 com construção forjada resistente para aplicações de ligação de direção.'],
+    ['F58 vertical arm for heavy-duty steering linkage systems.', 'Braço vertical F58 para sistemas de direção de serviço pesado.'],
+    ['AAG3 vertical arm shown as an individual product entry.', 'Braço vertical AAG3 apresentado como item independente do catálogo.'],
+    ['Single-bridge STR vertical arm for heavy-duty steering applications.', 'Braço vertical STR de ponte simples para aplicações de direção de serviço pesado.'],
+    ['1061 vertical arm for steering linkage applications, shown as an individual product.', 'Braço vertical 1061 para aplicações de ligação de direção, apresentado como produto independente.'],
+    ['Vertical arm for tractor steering systems and agricultural machinery.', 'Braço vertical para sistemas de direção de tratores e máquinas agrícolas.'],
+    ['Bull nose style vertical arm for steering linkage applications.', 'Braço vertical tipo Bull Nose para aplicações de ligação de direção.'],
+    ['145-type vertical arm for commercial steering linkage.', 'Braço vertical tipo 145 para sistemas de direção de veículos comerciais.'],
+    ['Vertical arm for the 175X0 platform, built for stable steering transfer and reliable installation.', 'Braço vertical para a plataforma 175X0, projetado para oferecer transferência de direção estável e instalação confiável.'],
+    ['KC100 vertical arm designed for stable steering control and long service life.', 'Braço vertical KC100 projetado para oferecer controle de direção estável e longa vida útil.'],
+  ],
+};
+
 function applyReplacements(text: string, replacements: Array<[string, string]>) {
   let output = text;
   for (const [source, target] of [...replacements].sort((a, b) => b[0].length - a[0].length)) {
@@ -550,7 +643,7 @@ function applyReplacements(text: string, replacements: Array<[string, string]>) 
 
 function translateText(text: string, lang: Language) {
   if (lang === 'en' || lang === 'zh') return text;
-  const replacements = genericPhraseMap[lang];
+  const replacements = [...(genericPhraseMap[lang] ?? []), ...(extraProductDescriptionMap[lang] ?? [])];
   if (!replacements) return text;
   const longPhrases = replacements.filter(([source]) => source.length > 30);
   const shortPhrases = replacements.filter(([source]) => source.length <= 30);

@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useLanguage } from './LanguageProvider';
 
 const WECHAT_ID = 'a17751097209';
 
 export default function WeChatModal() {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -57,7 +59,7 @@ export default function WeChatModal() {
   return (
     <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
       <div className="modal-content" style={{ maxWidth: '450px' }}>
-        <button className="modal-close" onClick={closeModal}>&times;</button>
+        <button className="modal-close" onClick={closeModal} aria-label={t('wechat.close')}>&times;</button>
         <div className="modal-body" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
           <div style={{ width: '80px', height: '80px', background: '#07C160', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
             <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -65,15 +67,15 @@ export default function WeChatModal() {
             </svg>
           </div>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--white)', marginBottom: '0.5rem' }}>
-            Add us on WeChat
+            {t('wechat.title')}
           </h2>
           <p style={{ color: 'var(--gray-400)', fontSize: '0.9rem', marginBottom: '2rem' }}>
-            Scan the QR code or search the WeChat ID below
+            {t('wechat.subtitle')}
           </p>
           <div style={{ width: '240px', maxWidth: '100%', background: 'var(--white)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', padding: '0.65rem' }}>
             <img
               src="/images/company/wechat-qr.jpg"
-              alt="WeChat QR code for a17751097209"
+              alt={`${t('wechat.alt')} a17751097209`}
               loading="lazy"
               decoding="async"
               width="888"
@@ -83,18 +85,18 @@ export default function WeChatModal() {
           </div>
           <div style={{ background: 'var(--gray-900)', border: '1px solid var(--gray-800)', borderRadius: '8px', padding: '1rem 1.5rem', display: 'inline-flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div>
-              <div style={{ fontSize: '0.7rem', color: 'var(--gray-400)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>WeChat ID</div>
+              <div style={{ fontSize: '0.7rem', color: 'var(--gray-400)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>{t('wechat.id')}</div>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)' }}>{WECHAT_ID}</div>
             </div>
             <button
               onClick={copyWeChatId}
               style={{ background: copied ? '#07C160' : 'var(--red)', color: 'var(--white)', border: 'none', padding: '0.5rem 1rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer' }}
             >
-              {copied ? 'Copied!' : 'Copy'}
+              {copied ? t('wechat.copied') : t('wechat.copy')}
             </button>
           </div>
           <p style={{ color: 'var(--gray-400)', fontSize: '0.8rem' }}>
-            Or contact us via <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'underline' }}>WhatsApp</a>
+            {t('wechat.orContact')} <a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'underline' }}>WhatsApp</a>
           </p>
         </div>
       </div>

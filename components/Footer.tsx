@@ -53,8 +53,8 @@ export default function Footer() {
             <ul>
               <li><a href="tel:+8613613183888">+86 136 1318 3888</a></li>
               <li><a href="mailto:chinahs@hotmail.com">chinahs@hotmail.com</a></li>
-              <li><a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></li>
-              <li><a href="#">Anping, Hebei, China</a></li>
+              <li><a href="https://wa.me/8617751097209" target="_blank" rel="noopener noreferrer">{t('contact.whatsapp')}</a></li>
+              <li><a href="#">{t('contact.addressValue')}</a></li>
             </ul>
           </div>
         </div>

@@ -2104,4 +2104,22 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-014': {
+    image: '/images/products/faw-3003050aa1q-steering-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'FAW Jiefang Steering Tie Rod Assembly 3003050AA1Q',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering tie rod assembly' },
+      { label: 'Application', value: 'FAW Jiefang heavy-duty truck steering linkage' },
+      { label: 'Position', value: 'Front steering linkage' },
+      { label: 'OEM / OE', value: '3003050AA1Q' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'FAW Jiefang heavy-duty trucks',
+      'Truck front steering linkage',
+      'OEM replacement',
+    ],
+  },
 } as const;

@@ -1097,4 +1097,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'SINOTRUK HOWO Steering Drag Link Assembly AZ962543006298',
   },
+  {
+    id: 'new-tie-rod-014',
+    category: 'tie-rod',
+    brand: 'others',
+    image: '/images/products/faw-3003050aa1q-steering-tie-rod.webp',
+    description: 'Steering tie rod assembly for FAW Jiefang heavy-duty truck steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'FAW Jiefang Steering Tie Rod Assembly 3003050AA1Q',
+  },
 ] as const;

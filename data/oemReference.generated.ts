@@ -1390,4 +1390,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-014': {
+    productId: 'new-tie-rod-014',
+    oemNumbers: ['3003050AA1Q'],
+    vehicleApplication: 'FAW Jiefang heavy-duty truck steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user.',
+  },
+
 };

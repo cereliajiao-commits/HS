@@ -3917,4 +3917,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-014': {
+    en: {
+      title: 'FAW Jiefang Steering Tie Rod Assembly 3003050AA1Q',
+      description: 'Steering tie rod assembly for FAW Jiefang heavy-duty truck steering linkage applications, OEM reference 3003050AA1Q.',
+      specs: [
+        { label: 'Type', value: 'Steering tie rod assembly' },
+        { label: 'Application', value: 'FAW Jiefang heavy-duty truck steering linkage' },
+        { label: 'Position', value: 'Front steering linkage' },
+        { label: 'OEM / OE', value: '3003050AA1Q' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'FAW Jiefang heavy-duty trucks',
+        'Truck front steering linkage',
+        'OEM replacement',
+      ],
+    },
+    zh: {
+      title: '一汽解放卡车转向拉杆总成 3003050AA1Q',
+      description: '适用于一汽解放重卡转向传动系统的转向拉杆总成，OEM号为 3003050AA1Q。',
+      specs: [
+        { label: '类型', value: '转向拉杆总成' },
+        { label: '适用', value: '一汽解放重卡转向传动系统' },
+        { label: '位置', value: '前桥转向传动' },
+        { label: 'OEM / OE号', value: '3003050AA1Q' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '一汽解放重卡',
+        '卡车前桥转向传动',
+        'OEM替换',
+      ],
+    },
+  },
 } as const;

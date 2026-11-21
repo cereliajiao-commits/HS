@@ -1910,4 +1910,22 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-005': {
+    image: '/images/products/shacman-delong-hd90009430086-front-axle-tie-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SHACMAN Delong X6000 / X3000 / M3000 Front Axle Steering Tie Rod HD90009430086',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Front axle steering tie rod' },
+      { label: 'Application', value: 'SHACMAN Delong X6000 / X3000 / M3000 steering system' },
+      { label: 'Position', value: 'Front axle' },
+      { label: 'OEM / OE', value: 'HD90009430086' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN Delong X6000 trucks',
+      'SHACMAN Delong X3000 / M3000 trucks',
+      'Front axle steering linkage replacement',
+    ],
+  },
 } as const;

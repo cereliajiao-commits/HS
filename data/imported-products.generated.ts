@@ -998,4 +998,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'SHACMAN Delong X3000 Steering Tie Rod Assembly DZ97319430805',
   },
+  {
+    id: 'new-tie-rod-005',
+    category: 'tie-rod',
+    brand: 'shaanxi',
+    image: '/images/products/shacman-delong-hd90009430086-front-axle-tie-rod.webp',
+    description: 'Front axle steering tie rod for SHACMAN Delong X6000, X3000 and M3000 heavy-duty truck steering systems.',
+    tag: 'Tie Rod Assembly',
+    title: 'SHACMAN Delong X6000 / X3000 / M3000 Front Axle Steering Tie Rod HD90009430086',
+  },
 ] as const;

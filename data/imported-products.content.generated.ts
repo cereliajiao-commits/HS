@@ -3551,4 +3551,38 @@ export const importedProductContent = {
       ],
     },
   },
+  'new-tie-rod-005': {
+    en: {
+      title: 'SHACMAN Delong X6000 / X3000 / M3000 Front Axle Steering Tie Rod HD90009430086',
+      description: 'Front axle steering tie rod for SHACMAN Delong X6000, X3000 and M3000 heavy-duty truck steering systems, OEM reference HD90009430086.',
+      specs: [
+        { label: 'Type', value: 'Front axle steering tie rod' },
+        { label: 'Application', value: 'SHACMAN Delong X6000 / X3000 / M3000 steering system' },
+        { label: 'Position', value: 'Front axle' },
+        { label: 'OEM / OE', value: 'HD90009430086' },
+        { label: 'Supply', value: 'OEM / aftermarket' },
+      ],
+      applications: [
+        'SHACMAN Delong X6000 trucks',
+        'SHACMAN Delong X3000 / M3000 trucks',
+        'Front axle steering linkage replacement',
+      ],
+    },
+    zh: {
+      title: '陕汽德龙 X6000 / X3000 / M3000 前桥转向拉杆 HD90009430086',
+      description: '适用于陕汽德龙X6000、X3000及M3000重卡转向系统的前桥转向拉杆，OEM号为 HD90009430086。',
+      specs: [
+        { label: '类型', value: '前桥转向拉杆' },
+        { label: '适用', value: '陕汽德龙X6000 / X3000 / M3000转向系统' },
+        { label: '位置', value: '前桥' },
+        { label: 'OEM / OE号', value: 'HD90009430086' },
+        { label: '供货', value: 'OEM / 售后市场' },
+      ],
+      applications: [
+        '陕汽德龙X6000重卡',
+        '陕汽德龙X3000 / M3000重卡',
+        '前桥转向传动替换',
+      ],
+    },
+  },
 } as const;

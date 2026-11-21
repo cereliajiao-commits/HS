@@ -49,6 +49,13 @@ const titlePhraseMap: Record<string, Array<[string, string]>> = {
     ['SINOTRUK SITRAK Air Spring Shock Absorber', 'Пневмопружинный амортизатор SINOTRUK SITRAK'],
     ['SHACMAN 81.46701.0315 Left Steering Arm', 'Левый рычаг рулевого управления SHACMAN 81.46701.0315'],
     ['SHACMAN Front Drive Axle Steering Knuckle', 'Поворотный кулак переднего ведущего моста SHACMAN'],
+    ['Front Axle Drive Shaft Assembly', 'Карданный вал переднего моста в сборе'],
+    ['Front Axle Yoke with Shaft', 'Вилка переднего моста с валом'],
+    ['Drive Shaft', 'Карданный вал'],
+    ['Steering Knuckle', 'Поворотный кулак'],
+    ['Agricultural Part', 'Деталь сельхозтехники'],
+    ['Model', 'Модель'],
+    ['Left', 'Левый'],
   ],
   es: [
     ['Heavy-Duty Steering Arm', 'Brazo de dirección reforzado'],
@@ -456,7 +463,7 @@ function translateText(text: string, lang: Language) {
   if (lang === 'en' || lang === 'zh') return text;
   const replacements = genericPhraseMap[lang];
   if (!replacements) return text;
-  return applyReplacements(applyReplacements(text, replacements), titlePhraseMap[lang] ?? []);
+  return applyReplacements(applyReplacements(text, titlePhraseMap[lang] ?? []), replacements);
 }
 
 export function translateCategoryLabel(category: string, lang: Language) {

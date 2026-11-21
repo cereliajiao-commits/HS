@@ -268,6 +268,15 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
     zoomHint: copy['product.zoomHint'],
     language: copy['product.language'],
   };
+  const breadcrumbLabels: Record<Language, { home: string; products: string }> = {
+    en: { home: 'Home', products: 'Products' },
+    zh: { home: '首页', products: '产品' },
+    ru: { home: 'Главная', products: 'Продукция' },
+    ar: { home: 'الرئيسية', products: 'المنتجات' },
+    es: { home: 'Inicio', products: 'Productos' },
+    pt: { home: 'Início', products: 'Produtos' },
+    fr: { home: 'Accueil', products: 'Produits' },
+  };
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
   const languageUrl = lang === 'zh' ? productUrl(params.slug, 'en') : productUrl(params.slug, 'zh');
@@ -287,9 +296,9 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">{lang === 'zh' ? '首页' : lang === 'ru' ? 'Главная' : 'Home'}</a>
+          <a href="/">{breadcrumbLabels[lang].home}</a>
           <span aria-hidden="true">/</span>
-          <a href="/#products">{lang === 'zh' ? '产品' : lang === 'ru' ? 'Продукция' : 'Products'}</a>
+          <a href="/#products">{breadcrumbLabels[lang].products}</a>
           <span aria-hidden="true">/</span>
           <span>{product.title}</span>
         </nav>

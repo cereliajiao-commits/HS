@@ -1027,12 +1027,12 @@ export const importedProductCards = [
   },
   {
     id: 'new-tie-rod-008',
-    category: 'tie-rod',
+    category: 'steering-arm',
     brand: 'howo',
     image: '/images/products/howo-az9719410040-rhs-steering-tie-rod.webp',
-    description: 'Right-hand steering tie rod for SINOTRUK HOWO heavy-duty truck steering linkage applications.',
-    tag: 'Tie Rod Assembly',
-    title: 'HOWO Right-Hand Steering Tie Rod AZ9719410040',
+    description: 'Right-hand steering arm for SINOTRUK HOWO heavy-duty truck steering linkage applications.',
+    tag: 'Steering Arm',
+    title: 'HOWO Right-Hand Steering Arm AZ9719410040',
   },
   {
     id: 'new-tie-rod-009',

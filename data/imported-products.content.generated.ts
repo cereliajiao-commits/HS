@@ -3651,10 +3651,10 @@ export const importedProductContent = {
   },
   'new-tie-rod-008': {
     en: {
-      title: 'HOWO Right-Hand Steering Tie Rod AZ9719410040',
-      description: 'Right-hand steering tie rod for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ9719410040.',
+      title: 'HOWO Right-Hand Steering Arm AZ9719410040',
+      description: 'Right-hand steering arm for SINOTRUK HOWO heavy-duty truck steering linkage applications, OEM reference AZ9719410040.',
       specs: [
-        { label: 'Type', value: 'Right-hand steering tie rod' },
+        { label: 'Type', value: 'Right-hand steering arm' },
         { label: 'Application', value: 'SINOTRUK HOWO heavy-duty truck steering linkage' },
         { label: 'Position', value: 'Right-hand side (RHS)' },
         { label: 'OEM / OE', value: 'AZ9719410040' },
@@ -3667,10 +3667,10 @@ export const importedProductContent = {
       ],
     },
     zh: {
-      title: '豪沃右侧转向横拉杆 AZ9719410040',
-      description: '适用于中国重汽豪沃重卡转向传动系统的右侧转向横拉杆，OEM号为 AZ9719410040。',
+      title: '豪沃右侧转向臂 AZ9719410040',
+      description: '适用于中国重汽豪沃重卡转向传动系统的右侧转向臂，OEM号为 AZ9719410040。',
       specs: [
-        { label: '类型', value: '右侧转向横拉杆' },
+        { label: '类型', value: '右侧转向臂' },
         { label: '适用', value: '中国重汽豪沃重卡转向传动系统' },
         { label: '位置', value: '右侧（RHS）' },
         { label: 'OEM / OE号', value: 'AZ9719410040' },

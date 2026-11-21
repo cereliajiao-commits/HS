@@ -1399,4 +1399,13 @@ export const oemReferences: Record<string, OemReference> = {
     note: 'Product image and listing screenshot supplied by the user.',
   },
 
+  'new-tie-rod-015': {
+    productId: 'new-tie-rod-015',
+    oemNumbers: ['DZ9100430011', 'DZ9118430026', 'DZ9118430021'],
+    vehicleApplication: 'SHACMAN F3000 heavy-duty truck front steering linkage systems',
+    confidence: '用户提供',
+    sourceUrl: '',
+    note: 'Product image and listing screenshot supplied by the user; DZ9100430011 is also referenced by an existing SHACMAN listing as a separate product variant.',
+  },
+
 };

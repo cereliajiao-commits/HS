@@ -2122,4 +2122,23 @@ export const importedProductDetails = {
       'OEM replacement',
     ],
   },
+  'new-tie-rod-015': {
+    image: '/images/products/shacman-f3000-dz9100430011-dz9118430026-dz9118430021-steering-transverse-rod.webp',
+    category: 'Tie Rod Assembly',
+    title: 'SHACMAN F3000 Steering Transverse Rod Assembly DZ9100430011 / DZ9118430026 / DZ9118430021',
+    description: 'Heavy-duty tie rod assembly for truck steering linkage and front-axle applications.',
+    specs: [
+      { label: 'Type', value: 'Steering transverse rod assembly' },
+      { label: 'Application', value: 'SHACMAN F3000 heavy-duty truck front steering linkage' },
+      { label: 'Position', value: 'Front steering linkage' },
+      { label: 'OEM / OE', value: 'DZ9100430011 / DZ9118430026 / DZ9118430021' },
+      { label: 'Material', value: 'Steel' },
+      { label: 'Supply', value: 'OEM / aftermarket' },
+    ],
+    applications: [
+      'SHACMAN F3000 heavy-duty trucks',
+      'Truck front steering linkage',
+      'OEM replacement',
+    ],
+  },
 } as const;

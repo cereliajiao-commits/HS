@@ -1106,4 +1106,13 @@ export const importedProductCards = [
     tag: 'Tie Rod Assembly',
     title: 'FAW Jiefang Steering Tie Rod Assembly 3003050AA1Q',
   },
+  {
+    id: 'new-tie-rod-015',
+    category: 'tie-rod',
+    brand: 'shaanxi',
+    image: '/images/products/shacman-f3000-dz9100430011-dz9118430026-dz9118430021-steering-transverse-rod.webp',
+    description: 'Steering transverse rod assembly for SHACMAN F3000 heavy-duty truck front steering linkage applications.',
+    tag: 'Tie Rod Assembly',
+    title: 'SHACMAN F3000 Steering Transverse Rod Assembly DZ9100430011 / DZ9118430026 / DZ9118430021',
+  },
 ] as const;

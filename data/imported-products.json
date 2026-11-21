@@ -2339,5 +2339,48 @@
     ],
     "categoryLabelEn": "Tie Rod Assembly",
     "categoryLabelZh": "转向拉杆总成"
+  },
+  {
+    "id": "new-tie-rod-015",
+    "category": "tie-rod",
+    "brand": "shaanxi",
+    "image": "/images/products/shacman-f3000-dz9100430011-dz9118430026-dz9118430021-steering-transverse-rod.webp",
+    "title": "SHACMAN F3000 Steering Transverse Rod Assembly - DZ9100430011 / DZ9118430026 / DZ9118430021",
+    "description": "Steering transverse rod assembly for SHACMAN F3000 heavy-duty truck front steering linkage applications.",
+    "tag": "Tie Rod Assembly",
+    "titleEn": "SHACMAN F3000 Steering Transverse Rod Assembly DZ9100430011 / DZ9118430026 / DZ9118430021",
+    "titleZh": "陕汽重卡 F3000 转向横拉杆总成 DZ9100430011 / DZ9118430026 / DZ9118430021",
+    "descriptionEn": "Steel steering transverse rod assembly for SHACMAN F3000 heavy-duty truck front steering linkage applications, OEM references DZ9100430011, DZ9118430026 and DZ9118430021.",
+    "descriptionZh": "适用于陕汽重卡 F3000 前桥转向传动系统的钢制转向横拉杆总成，OEM号为 DZ9100430011、DZ9118430026 和 DZ9118430021。",
+    "detailDescriptionEn": "Steel steering transverse rod assembly for SHACMAN F3000 heavy-duty truck front steering linkage applications, OEM references DZ9100430011, DZ9118430026 and DZ9118430021.",
+    "detailDescriptionZh": "适用于陕汽重卡 F3000 前桥转向传动系统的钢制转向横拉杆总成，OEM号为 DZ9100430011、DZ9118430026 和 DZ9118430021。",
+    "specsEn": [
+      { "label": "Type", "value": "Steering transverse rod assembly" },
+      { "label": "Application", "value": "SHACMAN F3000 heavy-duty truck front steering linkage" },
+      { "label": "Position", "value": "Front steering linkage" },
+      { "label": "OEM / OE", "value": "DZ9100430011 / DZ9118430026 / DZ9118430021" },
+      { "label": "Material", "value": "Steel" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "转向横拉杆总成" },
+      { "label": "适用", "value": "陕汽重卡 F3000 前桥转向传动系统" },
+      { "label": "位置", "value": "前桥转向传动" },
+      { "label": "OEM / OE号", "value": "DZ9100430011 / DZ9118430026 / DZ9118430021" },
+      { "label": "材质", "value": "钢" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "SHACMAN F3000 heavy-duty trucks",
+      "Truck front steering linkage",
+      "OEM replacement"
+    ],
+    "applicationsZh": [
+      "陕汽重卡 F3000",
+      "卡车前桥转向传动",
+      "OEM替换"
+    ],
+    "categoryLabelEn": "Tie Rod Assembly",
+    "categoryLabelZh": "转向拉杆总成"
   }
 ]

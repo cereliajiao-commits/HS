@@ -10,6 +10,7 @@ export function withOemTitle(title: string, productId: string, lang: Language = 
   // even when an older catalog title already contained one of the numbers.
   const baseTitle = numbers.reduce((value, number) => value.replaceAll(number, ''), title)
     .replace(/\s{2,}/g, ' ')
+    .replace(/\s+-\s+Model\b/gi, '')
     .replace(/\s*[-|｜:：]\s*$/, '')
     .trim();
 

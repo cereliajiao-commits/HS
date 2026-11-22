@@ -80,6 +80,28 @@ function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
 }
 
+type ProductFaqItem = { question: string; answer: string };
+
+function getProductFaq(product: NonNullable<ReturnType<typeof getLocalizedProduct>>, lang: Language): ProductFaqItem[] {
+  const isChinese = lang === 'zh';
+  const oemNumbers = product.oem?.oemNumbers ?? [];
+  const application = product.oem?.vehicleApplication || product.applications.join(isChinese ? '、' : ', ');
+  const oemText = oemNumbers.length ? oemNumbers.join(isChinese ? '、' : ', ') : (isChinese ? '暂无已核实的 OEM 号' : 'No verified OEM number is currently listed');
+  return isChinese
+    ? [
+      { question: '这个产品对应哪些 OEM / OE 号？', answer: `当前页面列出的参考号：${oemText}。下单前请同时核对车型、桥型、左右侧和安装尺寸。` },
+      { question: '这个产品适用于哪些车型或系统？', answer: application ? `适配信息：${application}。如果车辆配置或桥型不确定，请提交车型铭牌、旧件照片和尺寸给销售确认。` : '页面暂未列出确定的车型适配信息，请提供车型、桥型和旧件照片给销售确认。' },
+      { question: '如何确认这个配件是否匹配？', answer: '请同时核对 OEM / OE 号、车型和年份、桥型或轴型、左右位置、孔距及花键等关键尺寸；OEM 号仅作为匹配参考，不替代装车确认。' },
+      { question: '可以做 OEM / ODM 或定制包装吗？', answer: 'HONGSHENG 支持 OEM / ODM 询价、产品标识和定制包装。请在询价时提供数量、目的市场、图纸或样件信息。' },
+    ]
+    : [
+      { question: 'Which OEM / OE numbers does this product reference?', answer: `The reference numbers listed on this page are: ${oemText}. Confirm the vehicle, axle, side and mounting dimensions before ordering.` },
+      { question: 'What vehicle or steering system is it for?', answer: application ? `Listed application: ${application}. If the vehicle configuration or axle type is uncertain, send the vehicle plate, old-part photos and dimensions for fitment confirmation.` : 'The page does not list a verified vehicle application yet. Send the vehicle model, axle type and old-part photos for confirmation.' },
+      { question: 'How should I confirm fitment before ordering?', answer: 'Check the OEM / OE number together with vehicle model and year, axle or bridge type, left/right position, hole spacing and spline details. An OEM number is a reference for matching and does not replace fitment verification.' },
+      { question: 'Do you support OEM / ODM and custom packaging?', answer: 'HONGSHENG supports OEM / ODM inquiries, product marking and custom packaging. Include quantity, destination market, drawings or samples in the inquiry.' },
+    ];
+}
+
 function productUrl(slug: string, lang?: Language) {
   const url = new URL(`/product/${encodeURIComponent(slug)}`, SITE_URL);
   if (lang && lang !== 'en') url.searchParams.set('lang', lang);
@@ -197,6 +219,17 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       value: product.oem.vehicleApplication,
     }] : []),
   };
+  const faqItems = getProductFaq(product, lang);
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${url}#faq`,
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -239,6 +272,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </>
@@ -275,6 +309,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
   const languageUrl = lang === 'zh' ? productUrl(params.slug, 'en') : productUrl(params.slug, 'zh');
+  const faqItems = getProductFaq(product, lang);
 
   return (
     <main className="product-detail-page">
@@ -344,6 +379,16 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                 <p className="product-detail-oem-note">{copy['product.oemNote']}</p>
               </div>
             ) : null}
+
+            <section className="product-detail-section product-detail-faq" aria-labelledby="product-faq-title">
+              <h2 id="product-faq-title">{lang === 'zh' ? '产品与适配常见问题' : 'Product and fitment FAQ'}</h2>
+              {faqItems.map((item) => (
+                <details key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </section>
 
             <div className="product-detail-cta">
               <a href={inquiryUrl} className="btn btn-primary">{labels.requestQuote}</a>

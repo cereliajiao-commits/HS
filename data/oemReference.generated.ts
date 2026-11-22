@@ -134,11 +134,12 @@ export const oemReferences: Record<string, OemReference> = {
   },
   "vertical-arm-bullnose": {
     "productId": "vertical-arm-bullnose",
-    "oemNumbers": [],
-    "vehicleApplication": "未识别(“牛鼻子”俗称)",
-    "confidence": "未查到",
-    "sourceUrl": "",
-    "note": "检索词“牛鼻子 垂臂 转向 红岩/乘龙/柳汽 俗称”“\"牛鼻子\" 垂臂 1688”。重汽配件网《重卡配件土名与标准名称对比》载“牛鼻子”=钢板弹簧座(海南/广西/山东)，与本品归类的转向垂臂不符；其余检索仅得牛鼻穿孔针/输送带接头等无关结果。无法确定车型与图号。"
+    "oemNumbers": [
+      "50-3405042-A"
+    ],
+    "vehicleApplication": "拖拉机和农机转向系统",
+    "confidence": "中",
+    "note": "根据用户提供的产品信息修正：该产品主要用于拖拉机，名称为转向双脚架，OEM/OE 50-3405042-A。下单前请核对拖拉机型号、安装孔位和关键尺寸。"
   },
   "vertical-arm-145": {
     "productId": "vertical-arm-145",

@@ -179,16 +179,16 @@ export const productDetails: Record<string, ProductDetail> = {
   },
   'vertical-arm-bullnose': {
     image: '/images/products/牛鼻子垂臂.webp',
-    category: 'Vertical Arm Series',
-    title: 'Bull Nose Vertical Arm',
-    description: 'Bull nose style vertical arm for steering linkage applications.',
+    category: 'Agricultural Machinery Parts',
+    title: 'Tractor Steering Double-Arm Bracket',
+    description: 'Tractor steering double-arm bracket for agricultural machinery, OEM reference 50-3405042-A.',
     specs: [
-      { label: 'Type', value: 'Vertical arm' },
-      { label: 'Variant', value: 'Bull nose' },
+      { label: 'Type', value: 'Steering double-arm bracket' },
+      { label: 'OEM / OE', value: '50-3405042-A' },
+      { label: 'Application', value: 'Tractors and agricultural machinery' },
       { label: 'Material', value: 'Forged steel' },
-      { label: 'Finish', value: 'Protective coating' },
     ],
-    applications: ['Commercial vehicles', 'Steering repairs', 'Catalog reference'],
+    applications: ['Tractors', 'Agricultural machinery steering systems', 'Steering linkage replacement'],
   },
   'vertical-arm-145': {
     image: '/images/products/145垂臂.webp',

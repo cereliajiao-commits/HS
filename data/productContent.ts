@@ -327,26 +327,26 @@ export const productContent: Record<string, ProductContent> = {
   },
   'vertical-arm-bullnose': {
     en: {
-      title: 'Bull Nose Vertical Arm',
-      description: 'Bull nose style vertical arm for steering linkage applications.',
+      title: 'Tractor Steering Double-Arm Bracket',
+      description: 'Tractor steering double-arm bracket for agricultural machinery, OEM reference 50-3405042-A. Confirm the tractor model, mounting pattern and dimensions before ordering.',
       specs: [
-        { label: 'Type', value: 'Vertical arm' },
-        { label: 'Variant', value: 'Bull nose' },
+        { label: 'Type', value: 'Steering double-arm bracket' },
+        { label: 'OEM / OE', value: '50-3405042-A' },
+        { label: 'Application', value: 'Tractors and agricultural machinery' },
         { label: 'Material', value: 'Forged steel' },
-        { label: 'Finish', value: 'Protective coating' },
       ],
-      applications: ['Commercial vehicles', 'Steering repairs', 'Catalog reference'],
+      applications: ['Tractors', 'Agricultural machinery steering systems', 'Steering linkage replacement'],
     },
     zh: {
-      title: '牛鼻子垂臂',
-      description: '牛鼻子造型垂臂，适用于转向传动应用。',
+      title: '拖拉机转向双脚架',
+      description: '主要用于拖拉机和农机转向系统的转向双脚架，OEM号为 50-3405042-A。下单前请核对拖拉机型号、安装孔位和关键尺寸。',
       specs: [
-        { label: '类型', value: '垂臂' },
-        { label: '款式', value: '牛鼻子' },
+        { label: '类型', value: '转向双脚架' },
+        { label: 'OEM号', value: '50-3405042-A' },
+        { label: '适用范围', value: '拖拉机和农机' },
         { label: '材质', value: '锻造钢' },
-        { label: '表面', value: '保护涂层' },
       ],
-      applications: ['商用车辆', '转向维修', '目录参考'],
+      applications: ['拖拉机', '农机转向系统', '转向传动替换'],
     },
   },
   'vertical-arm-145': {

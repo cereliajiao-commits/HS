@@ -44,18 +44,19 @@ export default function OemReferencePage({ params }: { params: { number: string 
   const productUrl = `${SITE_URL}/product/${encodeURIComponent(product.id)}`;
   const graph = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `${productUrl}#product`,
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}/oem/${encodeURIComponent(number)}#webpage`,
     name: title,
     description: `${title}. Compatible application: ${ref.vehicleApplication}. OEM/OE reference: ${ref.oemNumbers.join(', ')}.`,
-    image: `${SITE_URL}${product.image}`,
-    sku: product.id,
-    mpn: number,
-    category: product.category,
-    brand: { '@type': 'Brand', name: 'HONGSHENG' },
-    manufacturer: { '@type': 'Organization', name: 'Hengshui Hongsheng Auto Parts Co., Ltd.', url: SITE_URL },
-    url: productUrl,
-    mainEntityOfPage: `${SITE_URL}/oem/${encodeURIComponent(number)}`,
+    primaryImageOfPage: `${SITE_URL}${product.image}`,
+    about: {
+      '@type': 'Thing',
+      name: title,
+      identifier: number,
+      category: product.category,
+    },
+    url: `${SITE_URL}/oem/${encodeURIComponent(number)}`,
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website` },
     additionalProperty: [{ '@type': 'PropertyValue', name: 'Vehicle application', value: ref.vehicleApplication }, { '@type': 'PropertyValue', name: 'OEM / OE reference numbers', value: ref.oemNumbers.join(', ') }],
   };
   const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL }, { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_URL}/#products` }, { '@type': 'ListItem', position: 3, name: `${number} OEM Replacement Part`, item: `${SITE_URL}/oem/${encodeURIComponent(number)}` }] };

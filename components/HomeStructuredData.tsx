@@ -83,12 +83,14 @@ export default function HomeStructuredData() {
             position: index + 1,
             url: `${SITE_URL}/product/${encodeURIComponent(product.id)}`,
             item: {
-              '@type': 'Product',
+              '@type': 'WebPage',
+              '@id': `${SITE_URL}/product/${encodeURIComponent(product.id)}#webpage`,
               name: withOemTitle(product.title, product.id, 'en'),
               image: `${SITE_URL}${product.image}`,
+              description: product.description,
+              about: { '@type': 'Thing', name: product.category },
               category: product.category,
-              sku: product.id,
-              ...(oem?.oemNumbers[0] ? { mpn: oem.oemNumbers[0] } : {}),
+              ...(oem?.oemNumbers[0] ? { identifier: oem.oemNumbers[0] } : { identifier: product.id }),
             },
           };
         }),

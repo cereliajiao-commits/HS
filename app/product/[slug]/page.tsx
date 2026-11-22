@@ -168,25 +168,20 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
   const images = product.images.map(absoluteUrl);
   const productSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `${url}#product`,
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name: product.title,
     description: product.description,
-    image: images,
-    sku: product.card.id,
-    ...(product.oem?.oemNumbers[0] ? { mpn: product.oem.oemNumbers[0] } : {}),
-    category: product.categoryLabel,
-    brand: {
-      '@type': 'Brand',
-      name: 'HONGSHENG',
-    },
-    manufacturer: {
-      '@type': 'Organization',
-      name: COMPANY_NAME,
-      url: SITE_URL,
-    },
+    primaryImageOfPage: images,
     url,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    about: {
+      '@type': 'Thing',
+      name: product.title,
+      image: images,
+      identifier: product.oem?.oemNumbers[0] ?? product.card.id,
+      category: product.categoryLabel,
+    },
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website` },
     inLanguage: ({ en: 'en', zh: 'zh-CN', ru: 'ru', ar: 'ar', es: 'es', pt: 'pt', fr: 'fr' } as Record<Language, string>)[lang],
     additionalProperty: product.specs.map((spec) => ({
       '@type': 'PropertyValue',

@@ -256,19 +256,19 @@ export const importedProductDetails = {
   },
   'new-steering-arm-016': {
     image: '/images/products/imported-steering-arm-016-ka005弯臂.webp',
-    category: 'Steering Arm',
-    title: 'Heavy-Duty Steering Arm - KA005',
+    category: 'Steering Knuckle Arm',
+    title: 'JAC Jianghuai 1020 Left Steering Knuckle Arm',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
     specs: [
-      { label: 'Type', value: 'Steering arm' },
-      { label: 'Application', value: 'Truck steering system' },
-      { label: 'Material', value: 'Forged steel' },
+      { label: 'Type', value: 'Steering knuckle arm' },
+      { label: 'Application', value: 'JAC (Jianghuai) 1020 truck steering linkage' },
+      { label: 'Position', value: 'Left-hand' },
       { label: 'Supply', value: 'OEM / aftermarket' },
     ],
     applications: [
-      'Truck steering linkage',
-      'OEM replacement',
-      'Aftermarket supply',
+      'JAC (Jianghuai) 1020 trucks',
+      'Truck steering linkage replacement',
+      'OEM / aftermarket supply',
     ],
   },
   'new-steering-arm-017': {

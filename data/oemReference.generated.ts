@@ -398,13 +398,11 @@ export const oemReferences: Record<string, OemReference> = {
   },
   "new-steering-arm-016": {
     "productId": "new-steering-arm-016",
-    "oemNumbers": [
-      "KA-005"
-    ],
-    "vehicleApplication": "三菱扶桑Canter(Fuso)",
+    "oemNumbers": [],
+    "vehicleApplication": "江淮 JAC-1020 卡车转向系统",
     "confidence": "中",
     "sourceUrl": "",
-    "note": "KA005弯臂，汽配目录见'Japanese Truck Parts for Fuso Canter Steering Arm/knuckle Arm KA-005'；KA005即扶桑Canter转向臂OEM代号，但无具体Fuso原厂图号"
+    "note": "根据用户提供的产品信息修正：JAC 指江淮（Jianghuai），该产品为江淮 JAC-1020 左转向节臂。当前未提供可核实的独立 OEM/OE 图号；下单前请核对车型、安装位置和关键尺寸。"
   },
   "new-steering-arm-017": {
     "productId": "new-steering-arm-017",

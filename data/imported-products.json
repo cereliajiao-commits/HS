@@ -253,15 +253,39 @@
     "category": "steering-arm",
     "brand": "others",
     "image": "/images/products/imported-steering-arm-016-ka005弯臂.webp",
-    "title": "Steering Arm - KA005弯臂",
-    "description": "High-quality steering arm for heavy-duty truck steering systems.",
-    "tag": "Steering Arm",
-    "titleEn": "Steering Arm - KA005弯臂",
-    "titleZh": "KA005弯臂",
-    "descriptionEn": "High-quality steering arm for heavy-duty truck steering systems.",
-    "descriptionZh": "高品质转向臂，适用于重型卡车转向系统。",
-    "categoryLabelEn": "Steering Arm",
-    "categoryLabelZh": "转向臂"
+    "title": "JAC Jianghuai 1020 Left Steering Knuckle Arm",
+    "description": "Left steering knuckle arm for JAC (Jianghuai) 1020 truck steering linkage applications.",
+    "tag": "Steering Knuckle Arm",
+    "titleEn": "JAC Jianghuai 1020 Left Steering Knuckle Arm",
+    "titleZh": "江淮 JAC-1020 左转向节臂",
+    "descriptionEn": "Left steering knuckle arm for JAC (Jianghuai) 1020 truck steering linkage applications. Confirm the vehicle model, mounting position and dimensions before ordering.",
+    "descriptionZh": "江淮 JAC-1020 左转向节臂，适用于卡车转向传动系统。下单前请核对车型、安装位置和关键尺寸。",
+    "detailDescriptionEn": "Left steering knuckle arm for JAC (Jianghuai) 1020 truck steering linkage applications. Confirm the vehicle model, mounting position and dimensions before ordering.",
+    "detailDescriptionZh": "江淮 JAC-1020 左转向节臂，适用于卡车转向传动系统。下单前请核对车型、安装位置和关键尺寸。",
+    "specsEn": [
+      { "label": "Type", "value": "Steering knuckle arm" },
+      { "label": "Application", "value": "JAC (Jianghuai) 1020 truck steering linkage" },
+      { "label": "Position", "value": "Left-hand" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "转向节臂" },
+      { "label": "适用", "value": "江淮 JAC-1020 卡车转向传动" },
+      { "label": "位置", "value": "左侧" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "JAC (Jianghuai) 1020 trucks",
+      "Truck steering linkage replacement",
+      "OEM / aftermarket supply"
+    ],
+    "applicationsZh": [
+      "江淮 JAC-1020 卡车",
+      "卡车转向传动替换",
+      "OEM / 售后市场供货"
+    ],
+    "categoryLabelEn": "Steering Knuckle Arm",
+    "categoryLabelZh": "转向节臂"
   },
   {
     "id": "new-steering-arm-017",

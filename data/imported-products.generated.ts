@@ -139,9 +139,9 @@ export const importedProductCards = [
     category: 'steering-arm',
     brand: 'others',
     image: '/images/products/imported-steering-arm-016-ka005弯臂.webp',
-    description: 'High-quality steering arm for heavy-duty truck steering systems.',
-    tag: 'Steering Arm',
-    title: 'Heavy-Duty Steering Arm - KA005',
+    description: 'Left steering knuckle arm for JAC (Jianghuai) 1020 truck steering linkage applications.',
+    tag: 'Steering Knuckle Arm',
+    title: 'JAC Jianghuai 1020 Left Steering Knuckle Arm',
   },
   {
     id: 'new-steering-arm-017',

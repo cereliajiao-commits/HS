@@ -25,64 +25,16 @@ export default function ProductsSection() {
     note: t('products.platformNote'),
   };
 
-  const typeTabs = [
-    { filter: 'all', label: t('products.all') },
-    { filter: 'vertical', label: t('products.verticalArms') },
-    { filter: 'steering-arm', label: t('products.steeringArms') },
-    { filter: 'tie-rod', label: t('products.tieRods') },
-    { filter: 'shock-absorber', label: t('products.shockAbsorbers') },
-    { filter: 'air-spring', label: t('products.airSprings') },
-    { filter: 'control-arm', label: t('products.controlArms') },
-    { filter: 'torque-rod', label: t('products.torqueRods') },
-    { filter: 'differential', label: t('products.differentials') },
-    { filter: 'steering-knuckle', label: t('products.steeringKnuckles') },
-    { filter: 'agricultural', label: t('products.agricultural') },
-    { filter: 'john-deere', label: t('products.johnDeere') },
-    { filter: 'shaft', label: t('products.driveShafts') },
-    { filter: 'long-shaft', label: t('products.longShaft') },
-  ];
-
-  const brandTabs = [
-    { filter: 'all', label: t('products.all') },
-    { filter: 'sinotruk', label: 'SINOTRUK' },
-    { filter: 'dongfeng', label: 'Dongfeng' },
-    { filter: 'auman', label: 'Auman' },
-    { filter: 'howo', label: 'HOWO' },
-    { filter: 'shaanxi', label: 'SHACMAN' },
-    { filter: 'john-deere', label: 'John Deere' },
-    { filter: 'others', label: t('products.others') },
-  ];
-  const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');
-  const [currentFilter, setCurrentFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-
-  const handleModeSwitch = (mode: 'type' | 'brand') => {
-    setFilterMode(mode);
-    setCurrentFilter('all');
-    setCurrentPage(1);
-  };
-
-  const handleFilter = (filter: string) => {
-    setCurrentFilter(filter);
-    setCurrentPage(1);
-  };
-
-  const filteredCards = allProductCards.filter((card) => {
-    if (currentFilter === 'all') return true;
-    if (filterMode === 'type') return card.category === currentFilter;
-    return card.brand === currentFilter;
-  });
-
-  const totalPages = Math.max(1, Math.ceil(filteredCards.length / PRODUCTS_PER_PAGE));
+  const totalPages = Math.max(1, Math.ceil(allProductCards.length / PRODUCTS_PER_PAGE));
   const visiblePage = Math.min(currentPage, totalPages);
-  const paginatedCards = filteredCards.slice((visiblePage - 1) * PRODUCTS_PER_PAGE, visiblePage * PRODUCTS_PER_PAGE);
+  const paginatedCards = allProductCards.slice((visiblePage - 1) * PRODUCTS_PER_PAGE, visiblePage * PRODUCTS_PER_PAGE);
 
   const changePage = (page: number) => {
     setCurrentPage(page);
     document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const tabs = filterMode === 'type' ? typeTabs : brandTabs;
   const categoryCopy = lang === 'zh'
     ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部系列', view: '查看系列', count: '个产品' }
     : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all categories', view: 'View category', count: 'products' };
@@ -150,33 +102,6 @@ export default function ProductsSection() {
             })}
           </div>
         </section>
-        <div className="product-tabs fade-up stagger-3">
-          <div className="filter-mode-toggle">
-            <button
-              className={`mode-btn ${filterMode === 'brand' ? 'active' : ''}`}
-              onClick={() => handleModeSwitch('brand')}
-            >
-              {t('products.byBrand')}
-            </button>
-            <button
-              className={`mode-btn ${filterMode === 'type' ? 'active' : ''}`}
-              onClick={() => handleModeSwitch('type')}
-            >
-              {t('products.byType')}
-            </button>
-          </div>
-          <div className="filter-tabs">
-            {tabs.map((tab) => (
-              <button
-                key={tab.filter}
-                className={`product-tab ${currentFilter === tab.filter ? 'active' : ''}`}
-                onClick={() => handleFilter(tab.filter)}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
         <div className="products-grid">
           {paginatedCards.map((card, index) => {
             const localized = resolveProductText(card.id, card.category, lang);

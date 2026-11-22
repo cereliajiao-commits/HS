@@ -12,6 +12,18 @@ const fitmentAnswer = 'Confirm the OEM/OE number, vehicle brand and model, axle 
 
 export const categoryPages: CategoryPage[] = [
   {
+    slug: 'vertical',
+    name: 'Vertical Arms',
+    title: 'Truck Vertical Arms | HONGSHENG OEM Supplier',
+    description: 'Truck steering vertical arms and pitman arms for Dongfeng, SINOTRUK, FAW and other commercial vehicle applications.',
+    intro: 'Browse forged and machined vertical arms by truck platform, OEM/OE reference and steering linkage application. Confirm arm geometry and mounting details before ordering.',
+    faq: [
+      { question: 'What is a truck vertical arm?', answer: 'A vertical arm, also called a pitman or steering arm in some applications, transfers steering motion through the steering linkage. The correct part depends on the steering gear, axle geometry, side and OEM reference.' },
+      { question: 'Which details should be checked before ordering?', answer: 'Confirm the truck model, bridge or axle type, arm shape, spline or mounting pattern, left/right position and OEM/OE number.' },
+      { question: fitmentQuestion, answer: fitmentAnswer },
+    ],
+  },
+  {
     slug: 'steering-arm',
     name: 'Steering Arms',
     title: 'Truck Steering Arms Manufacturer | HONGSHENG',

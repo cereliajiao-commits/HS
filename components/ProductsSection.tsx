@@ -7,6 +7,8 @@ import { resolveProductText, translateProductText } from '@/data/productLocaliza
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
 import { withOemTitle } from '@/data/productTitles';
+import { categoryPages } from '@/data/categoryPages';
+import { translateCategoryLabel } from '@/data/productLocalization';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -81,6 +83,9 @@ export default function ProductsSection() {
   };
 
   const tabs = filterMode === 'type' ? typeTabs : brandTabs;
+  const categoryCopy = lang === 'zh'
+    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部系列', view: '查看系列', count: '个产品' }
+    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all categories', view: 'View category', count: 'products' };
 
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -111,6 +116,40 @@ export default function ProductsSection() {
           </div>
           <small>{platformCopy.note}</small>
         </div>
+        <section className="product-category-showcase fade-up" aria-labelledby="product-category-title">
+          <div className="product-category-showcase-heading">
+            <div>
+              <p className="section-label">{categoryCopy.label}</p>
+              <h3 id="product-category-title">{categoryCopy.title}</h3>
+              <p>{categoryCopy.intro}</p>
+            </div>
+            <a className="product-category-view-all" href="/category">{categoryCopy.viewAll}<span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="product-category-grid">
+            {categoryPages.map((page) => {
+              const representative = allProductCards.find((product) => product.category === page.slug);
+              const productCount = allProductCards.filter((product) => product.category === page.slug).length;
+              if (!representative) return null;
+              const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : page.name;
+              const description = lang === 'zh'
+                ? `${productCount}${categoryCopy.count}，含车型与 OEM/OE 参考信息。`
+                : `${productCount} ${categoryCopy.count} with vehicle and OEM/OE reference information.`;
+              return (
+                <a className="product-category-card" href={`/category/${page.slug}`} key={page.slug}>
+                  <div className="product-category-card-media">
+                    <img src={`${representative.image}?v=20261106-media`} alt="" loading="lazy" width="900" height="700" />
+                  </div>
+                  <div className="product-category-card-content">
+                    <span className="product-category-card-number">{String(productCount).padStart(2, '0')}</span>
+                    <h4>{label}</h4>
+                    <p>{description}</p>
+                    <span className="product-category-card-link">{categoryCopy.view}<span aria-hidden="true">→</span></span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
         <div className="product-tabs fade-up stagger-3">
           <div className="filter-mode-toggle">
             <button

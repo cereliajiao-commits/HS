@@ -32,7 +32,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>{t('footer.products')}</h4>
             <ul>
+              <li><a href="/category">All product categories</a></li>
+              <li><a href="/category/tie-rod">Truck tie rods</a></li>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringArms')}</a></li>
+              <li><a href="/category/steering-knuckle">Steering knuckles</a></li>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringKnuckles')}</a></li>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.verticalArms')}</a></li>
               <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.driveShafts')}</a></li>

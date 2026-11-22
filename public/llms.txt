@@ -19,6 +19,21 @@
 - Agricultural machinery components
 - Heavy-duty truck and construction equipment parts
 
+## Category landing pages
+
+- [Truck and Agricultural Parts Categories](https://www.hsaxle.com/category): Index of HONGSHENG product categories.
+- [Truck Steering Arms](https://www.hsaxle.com/category/steering-arm): Steering arms and steering lever arms for heavy-duty truck linkage systems.
+- [Truck Tie Rods and Drag Links](https://www.hsaxle.com/category/tie-rod): Tie rods, drag links and transverse steering rod assemblies with OEM/OE references.
+- [Truck Steering Knuckles](https://www.hsaxle.com/category/steering-knuckle): Forged steering knuckles and front axle knuckle assemblies.
+- [Truck Drive Shafts](https://www.hsaxle.com/category/shaft): Drive shaft assemblies for commercial truck drivetrain applications.
+- [Truck Torque Rods and Thrust Rods](https://www.hsaxle.com/category/torque-rod): Suspension torque rods and thrust rod assemblies.
+- [Truck Control Arms](https://www.hsaxle.com/category/control-arm): Heavy-duty truck suspension control arms.
+- [Truck Shock Absorbers](https://www.hsaxle.com/category/shock-absorber): Front axle, rear axle, cab and suspension shock absorber assemblies.
+- [Truck Air Spring Shock Absorbers](https://www.hsaxle.com/category/air-spring): Air spring and shock absorber assemblies for truck suspension and cab support.
+- [Truck Differential Assemblies](https://www.hsaxle.com/category/differential): Differential and axle drivetrain assemblies.
+- [Agricultural Machinery Parts](https://www.hsaxle.com/category/agricultural): Tractor and agricultural machinery steering, axle and linkage components.
+- [John Deere Tractor Parts](https://www.hsaxle.com/category/john-deere): Selected John Deere tractor axle, shaft and suspension parts.
+
 ## OEM / OE product references
 
 - [HOWO Differential Assembly | OEM AZ9231320271](https://www.hsaxle.com/product/new-differential-assembly-001): OEM/OE AZ9231320271; compatible application: SINOTRUK HOWO T7H, SITRAK C7H/C9H, TX, G7S heavy-duty trucks.

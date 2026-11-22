@@ -19,8 +19,8 @@ export default function ProductsSection() {
   };
 
   const categoryCopy = lang === 'zh'
-    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部系列', view: '查看系列', count: '个产品' }
-    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all categories', view: 'View category', count: 'products' };
+    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部产品', view: '查看系列', count: '个产品' }
+    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all products', view: 'View category', count: 'products' };
 
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -58,7 +58,7 @@ export default function ProductsSection() {
               <h3 id="product-category-title">{categoryCopy.title}</h3>
               <p>{categoryCopy.intro}</p>
             </div>
-            <a className="product-category-view-all" href="/category">{categoryCopy.viewAll}<span aria-hidden="true">↗</span></a>
+            <a className="product-category-view-all" href="/products">{categoryCopy.viewAll}<span aria-hidden="true">↗</span></a>
           </div>
           <div className="product-category-grid">
             {categoryPages.map((page) => {

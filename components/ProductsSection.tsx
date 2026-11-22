@@ -10,6 +10,7 @@ import { withOemTitle } from '@/data/productTitles';
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
+  const PRODUCTS_PER_PAGE = 20;
   const platformBrands = [
     'SINOTRUK HOWO', 'FAW Jiefang', 'Dongfeng', 'Dongfeng Liuzhou', 'SHACMAN', 'Foton Auman', 'CAMC',
     'Freightliner', 'Peterbilt', 'Kenworth', 'International', 'Ford',
@@ -51,14 +52,17 @@ export default function ProductsSection() {
   ];
   const [filterMode, setFilterMode] = useState<'type' | 'brand'>('type');
   const [currentFilter, setCurrentFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleModeSwitch = (mode: 'type' | 'brand') => {
     setFilterMode(mode);
     setCurrentFilter('all');
+    setCurrentPage(1);
   };
 
   const handleFilter = (filter: string) => {
     setCurrentFilter(filter);
+    setCurrentPage(1);
   };
 
   const filteredCards = allProductCards.filter((card) => {
@@ -66,6 +70,15 @@ export default function ProductsSection() {
     if (filterMode === 'type') return card.category === currentFilter;
     return card.brand === currentFilter;
   });
+
+  const totalPages = Math.max(1, Math.ceil(filteredCards.length / PRODUCTS_PER_PAGE));
+  const visiblePage = Math.min(currentPage, totalPages);
+  const paginatedCards = filteredCards.slice((visiblePage - 1) * PRODUCTS_PER_PAGE, visiblePage * PRODUCTS_PER_PAGE);
+
+  const changePage = (page: number) => {
+    setCurrentPage(page);
+    document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const tabs = filterMode === 'type' ? typeTabs : brandTabs;
 
@@ -126,7 +139,7 @@ export default function ProductsSection() {
           </div>
         </div>
         <div className="products-grid">
-          {filteredCards.map((card, index) => {
+          {paginatedCards.map((card, index) => {
             const localized = resolveProductText(card.id, card.category, lang);
             const title = withOemTitle(localized?.title ?? translateProductText(card.title, lang), card.id, lang);
             const description = localized?.description ?? translateProductText(card.description, lang);
@@ -166,6 +179,41 @@ export default function ProductsSection() {
             );
           })}
         </div>
+        {totalPages > 1 && (
+          <nav className="products-pagination" aria-label={lang === 'zh' ? '产品目录分页' : 'Product catalog pagination'}>
+            <button
+              type="button"
+              className="products-pagination-arrow"
+              onClick={() => changePage(Math.max(1, visiblePage - 1))}
+              disabled={visiblePage === 1}
+              aria-label={lang === 'zh' ? '上一页' : 'Previous page'}
+            >
+              ‹
+            </button>
+            <div className="products-pagination-pages">
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  type="button"
+                  key={page}
+                  className={`products-pagination-page${page === visiblePage ? ' active' : ''}`}
+                  onClick={() => changePage(page)}
+                  aria-current={page === visiblePage ? 'page' : undefined}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              className="products-pagination-arrow"
+              onClick={() => changePage(Math.min(totalPages, visiblePage + 1))}
+              disabled={visiblePage === totalPages}
+              aria-label={lang === 'zh' ? '下一页' : 'Next page'}
+            >
+              ›
+            </button>
+          </nav>
+        )}
         <div className="view-all-btn fade-up">
           <a href="#contact" className="btn btn-outline" onClick={handleScrollToContact}>
             {t('products.requestCatalog')}

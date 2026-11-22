@@ -14,8 +14,9 @@ import ChatWidget from './ChatWidget';
 import FloatingButtons from './FloatingButtons';
 import ProductModal from './ProductModal';
 import WeChatModal from './WeChatModal';
+import type { Language } from './LanguageProvider';
 
-export default function HomePage() {
+export default function HomePage({ initialLanguage }: { initialLanguage?: Language }) {
   useEffect(() => {
     const root = document.documentElement;
     root.classList.add('has-scroll-reveal');
@@ -57,7 +58,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage={initialLanguage}>
       <Navigation />
       <HeroSection />
       <BenefitsStrip />

@@ -1,10 +1,17 @@
 import { allProductCards } from '@/data/products';
 import { oemReferences } from '@/data/oemReference.generated';
 import { withOemTitle } from '@/data/productTitles';
+import { resolveProductText } from '@/data/productLocalization';
+import { translations } from '@/data/translations';
+import type { Language } from '@/components/LanguageProvider';
+import { languageUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
-export default function HomeStructuredData() {
+export default function HomeStructuredData({ lang = 'en' }: { lang?: Language }) {
+  const pageUrl = languageUrl(SITE_URL, '/', lang);
+  const schemaLanguage = lang === 'zh' ? 'zh-CN' : lang;
+  const copy = translations[lang];
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -60,9 +67,9 @@ export default function HomeStructuredData() {
         '@type': 'WebSite',
         '@id': `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: 'HONGSHENG Auto Parts',
-        description: 'Hengshui Hongsheng Auto Parts Co., Ltd. (衡水宏盛汽车配件有限公司) — heavy-duty truck steering, suspension and driveline parts manufacturer.',
-        inLanguage: 'en',
+        name: lang === 'zh' ? 'HONGSHENG 宏盛汽车配件' : 'HONGSHENG Auto Parts',
+        description: copy['hero.subtitle'],
+        inLanguage: schemaLanguage,
         publisher: { '@id': `${SITE_URL}/#organization` },
         potentialAction: {
           '@type': 'SearchAction',
@@ -73,23 +80,23 @@ export default function HomeStructuredData() {
       {
         '@type': 'ItemList',
         '@id': `${SITE_URL}/#product-catalog`,
-        name: 'HONGSHENG Heavy-Duty Truck and Machinery Parts Catalog',
-        description: 'Searchable catalog of truck steering, suspension, driveline, axle, and agricultural machinery parts with OEM/OE reference numbers.',
+        name: lang === 'zh' ? 'HONGSHENG 重型卡车与机械零部件目录' : 'HONGSHENG Heavy-Duty Truck and Machinery Parts Catalog',
+        description: copy['products.subtitle'],
         numberOfItems: allProductCards.length,
         itemListElement: allProductCards.map((product, index) => {
           const oem = oemReferences[product.id];
           return {
             '@type': 'ListItem',
             position: index + 1,
-            url: `${SITE_URL}/product/${encodeURIComponent(product.id)}`,
+            url: languageUrl(SITE_URL, `/product/${encodeURIComponent(product.id)}`, lang),
             item: {
               '@type': 'WebPage',
-              '@id': `${SITE_URL}/product/${encodeURIComponent(product.id)}#webpage`,
-              name: withOemTitle(product.title, product.id, 'en'),
+              '@id': `${languageUrl(SITE_URL, `/product/${encodeURIComponent(product.id)}`, lang)}#webpage`,
+              name: withOemTitle(resolveProductText(product.id, product.category, lang)?.title ?? product.title, product.id, lang),
               image: `${SITE_URL}${product.image}`,
-              description: product.description,
-              about: { '@type': 'Thing', name: product.category },
-              category: product.category,
+              description: resolveProductText(product.id, product.category, lang)?.description ?? product.description,
+              about: { '@type': 'Thing', name: resolveProductText(product.id, product.category, lang)?.categoryLabel ?? product.category },
+              category: resolveProductText(product.id, product.category, lang)?.categoryLabel ?? product.category,
               ...(oem?.oemNumbers[0] ? { identifier: oem.oemNumbers[0] } : { identifier: product.id }),
             },
           };
@@ -97,10 +104,10 @@ export default function HomeStructuredData() {
       },
       {
         '@type': 'WebPage',
-        '@id': `${SITE_URL}/#webpage`,
-        url: SITE_URL,
-        name: 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG',
-        description: 'ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks.',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: lang === 'zh' ? '重型商用车零部件可靠制造｜稳定供应｜HONGSHENG' : 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG',
+        description: lang === 'zh' ? '宏盛专业制造重型卡车转向、悬挂、传动和定制零部件，支持 OEM/ODM 与全球批量采购。' : 'ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks.',
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: { '@id': `${SITE_URL}/#organization` },
         primaryImageOfPage: {
@@ -109,17 +116,17 @@ export default function HomeStructuredData() {
           width: 1200,
           height: 630,
         },
-        inLanguage: 'en',
+        inLanguage: schemaLanguage,
       },
       {
         '@type': 'FAQPage',
         '@id': `${SITE_URL}/#faq`,
         mainEntity: [
-          ['Are you a trading company or a factory?', 'We are a manufacturer with our own production lines, machining capability, and quality-control process in Hebei, China.'],
-          ['What is your minimum order quantity?', 'Our standard minimum order quantity is 100 pieces per model. We can discuss special requirements for new projects.'],
-          ['Can you create my own brand?', 'Yes. We support OEM packaging, product marking, and custom manufacturing based on your drawings or samples.'],
-          ['What quality certifications do you have?', 'We operate an ISO 9001 quality system and use inspection equipment including magnetic flaw detection and tensile testing.'],
-          ['How long is the delivery time?', 'Typical production lead time is around 40–45 days, depending on the model, quantity, and order schedule.'],
+          [copy['faq.company'], copy['faq.companyAnswer']],
+          [copy['faq.moq'], copy['faq.moqAnswer']],
+          [copy['faq.brand'], copy['faq.brandAnswer']],
+          [copy['faq.quality'], copy['faq.qualityAnswer']],
+          [copy['faq.delivery'], copy['faq.deliveryAnswer']],
         ].map(([name, text]) => ({
           '@type': 'Question',
           name,

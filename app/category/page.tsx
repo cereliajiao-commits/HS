@@ -4,46 +4,41 @@ import { categoryPages } from '@/data/categoryPages';
 import type { Language } from '@/components/LanguageProvider';
 import { translateCategoryLabel } from '@/data/productLocalization';
 import { categoryUiCopy } from '@/data/categoryLocalization';
+import { getLanguage, languageAlternates, languageUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
-export const metadata: Metadata = {
-  title: { absolute: 'Truck and Agricultural Parts Categories | HONGSHENG' },
-  description: 'Browse HONGSHENG Auto Parts categories for truck steering, suspension, axle, driveline and agricultural machinery replacement parts.',
-  alternates: { canonical: `${SITE_URL}/category` },
-  openGraph: {
-    type: 'website',
-    title: 'Truck and Agricultural Parts Categories | HONGSHENG',
-    description: 'Browse HONGSHENG heavy-duty truck, axle, steering and agricultural machinery parts by category.',
-    url: `${SITE_URL}/category`,
-  },
-};
-
-function getLanguage(value?: string): Language {
-  const normalized = value?.toLowerCase();
-  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
-    ? normalized as Language
-    : 'en';
+export async function generateMetadata({ searchParams }: { searchParams?: { lang?: string } }): Promise<Metadata> {
+  const lang = getLanguage(searchParams?.lang);
+  const copy = categoryUiCopy[lang];
+  const canonical = languageUrl(SITE_URL, '/category', lang);
+  return {
+    title: { absolute: lang === 'en' ? 'Truck and Agricultural Parts Categories | HONGSHENG' : `${copy.categories} | HONGSHENG Auto Parts` },
+    description: copy.directoryIntro,
+    alternates: { canonical, languages: languageAlternates(SITE_URL, '/category') },
+    openGraph: { type: 'website', title: copy.categories, description: copy.directoryIntro, url: canonical },
+  };
 }
 
 export default function CategoryIndexPage({ searchParams }: { searchParams?: { lang?: string } }) {
   const lang = getLanguage(searchParams?.lang);
   const copy = categoryUiCopy[lang];
+  const categoryUrl = languageUrl(SITE_URL, '/category', lang);
   const graph = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': `${SITE_URL}/category#collection`,
-    name: 'Truck and Agricultural Parts Categories',
-    description: 'HONGSHENG Auto Parts product categories.',
-    url: `${SITE_URL}/category`,
+    '@id': `${categoryUrl}#collection`,
+    name: copy.categories,
+    description: copy.directoryIntro,
+    url: categoryUrl,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: categoryPages.map((page, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        name: page.name,
-        url: `${SITE_URL}/category/${page.slug}`,
+        name: lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang),
+        url: languageUrl(SITE_URL, `/category/${page.slug}`, lang),
       })),
     },
   };

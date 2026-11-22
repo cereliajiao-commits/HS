@@ -39,11 +39,15 @@ export function useLanguage() {
 // Import translations
 import { translations } from '@/data/translations';
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>('en');
+export function LanguageProvider({ children, initialLanguage }: { children: ReactNode; initialLanguage?: Language }) {
+  const [lang, setLang] = useState<Language>(initialLanguage ?? 'en');
 
   useEffect(() => {
     let cancelled = false;
+    if (initialLanguage) {
+      setLang(initialLanguage);
+      return () => { cancelled = true; };
+    }
     const saved = window.localStorage.getItem('hs-language') as Language | null;
     if (saved && languages.some((language) => language.code === saved)) {
       setLang(saved);
@@ -62,7 +66,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       });
 
     return () => { cancelled = true; };
-  }, []);
+  }, [initialLanguage]);
 
   useEffect(() => {
     document.documentElement.lang = lang;

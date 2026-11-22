@@ -2,26 +2,20 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AllProductsCatalog from '@/components/AllProductsCatalog';
 import type { Language } from '@/components/LanguageProvider';
+import { getLanguage, languageAlternates, languageUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
-export const metadata: Metadata = {
-  title: { absolute: 'All Truck and Agricultural Parts | HONGSHENG' },
-  description: 'Browse all HONGSHENG truck steering, suspension, axle, driveline and agricultural machinery replacement parts with OEM/OE reference information.',
-  alternates: { canonical: `${SITE_URL}/products` },
-  openGraph: {
-    type: 'website',
-    title: 'All Truck and Agricultural Parts | HONGSHENG',
-    description: 'Browse the complete HONGSHENG Auto Parts product catalog.',
-    url: `${SITE_URL}/products`,
-  },
-};
-
-function getLanguage(value?: string): Language {
-  const normalized = value?.toLowerCase();
-  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
-    ? normalized as Language
-    : 'en';
+export async function generateMetadata({ searchParams }: { searchParams?: { lang?: string } }): Promise<Metadata> {
+  const lang = getLanguage(searchParams?.lang);
+  const copy = catalogCopy[lang];
+  const canonical = languageUrl(SITE_URL, '/products', lang);
+  return {
+    title: { absolute: lang === 'en' ? 'All Truck and Agricultural Parts | HONGSHENG' : `${copy.title} | HONGSHENG Auto Parts` },
+    description: copy.intro,
+    alternates: { canonical, languages: languageAlternates(SITE_URL, '/products') },
+    openGraph: { type: 'website', title: copy.title, description: copy.intro, url: canonical },
+  };
 }
 
 const catalogCopy: Record<Language, {
@@ -44,13 +38,14 @@ const catalogCopy: Record<Language, {
 export default function AllProductsPage({ searchParams }: { searchParams?: { lang?: string } }) {
   const lang = getLanguage(searchParams?.lang);
   const copy = catalogCopy[lang];
+  const catalogUrl = languageUrl(SITE_URL, '/products', lang);
   const graph = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': `${SITE_URL}/products#collection`,
-    name: 'All HONGSHENG Auto Parts Products',
-    description: 'Complete HONGSHENG truck and agricultural machinery parts catalog.',
-    url: `${SITE_URL}/products`,
+    '@id': `${catalogUrl}#collection`,
+    name: copy.title,
+    description: copy.intro,
+    url: catalogUrl,
     isPartOf: { '@id': `${SITE_URL}/#website` },
   };
 

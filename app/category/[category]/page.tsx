@@ -8,7 +8,7 @@ import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 import { resolveProductText } from '@/data/productLocalization';
 import { translateCategoryLabel } from '@/data/productLocalization';
 import { categoryUiCopy, localizedCategoryFaq } from '@/data/categoryLocalization';
-import type { Language } from '@/components/LanguageProvider';
+import { getLanguage, languageAlternates, languageUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
@@ -20,24 +20,22 @@ function getPage(category: string) {
   return categoryPageMap[decodeURIComponent(category)];
 }
 
-export async function generateMetadata({ params }: { params: { category: string } }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: { params: { category: string }; searchParams?: { lang?: string } }): Promise<Metadata> {
   const page = getPage(params.category);
   if (!page) return { title: 'Category not found', robots: { index: false, follow: false } };
+  const lang = getLanguage(searchParams?.lang);
+  const displayName = lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang);
+  const copy = categoryUiCopy[lang];
+  const path = `/category/${page.slug}`;
+  const canonical = languageUrl(SITE_URL, path, lang);
   return {
-    title: { absolute: page.title },
-    description: page.description,
-    keywords: [page.name, 'truck parts manufacturer', 'OEM replacement parts', 'HONGSHENG Auto Parts'],
-    alternates: { canonical: `${SITE_URL}/category/${page.slug}` },
-    openGraph: { type: 'website', title: page.title, description: page.description, url: `${SITE_URL}/category/${page.slug}` },
+    title: { absolute: lang === 'en' ? page.title : `${displayName} | HONGSHENG Auto Parts` },
+    description: copy.intro(displayName),
+    keywords: [displayName, 'truck parts manufacturer', 'OEM replacement parts', 'HONGSHENG Auto Parts'],
+    alternates: { canonical, languages: languageAlternates(SITE_URL, path) },
+    openGraph: { type: 'website', title: displayName, description: copy.intro(displayName), url: canonical },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   };
-}
-
-function getLanguage(value?: string): Language {
-  const normalized = value?.toLowerCase();
-  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
-    ? normalized as Language
-    : 'en';
 }
 
 export default function CategoryPage({ params, searchParams }: { params: { category: string }; searchParams?: { lang?: string } }) {
@@ -48,13 +46,15 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
   const displayName = lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang);
   const localizedFaq = localizedCategoryFaq(displayName, lang, page.faq);
   const products = allProductCards.filter((product) => product.category === page.slug);
+  const categoryPath = `/category/${page.slug}`;
+  const categoryUrl = languageUrl(SITE_URL, categoryPath, lang);
   const graph = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': `${SITE_URL}/category/${page.slug}#collection`,
-    name: page.name,
-    description: page.description,
-    url: `${SITE_URL}/category/${page.slug}`,
+    '@id': `${categoryUrl}#collection`,
+    name: displayName,
+    description: copy.intro(displayName),
+    url: categoryUrl,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     mainEntity: {
       '@type': 'ItemList',
@@ -62,8 +62,8 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
       itemListElement: products.map((product, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        url: `${SITE_URL}/product/${encodeURIComponent(product.id)}`,
-        name: withOemTitle(product.title, product.id, 'en'),
+        url: languageUrl(SITE_URL, `/product/${encodeURIComponent(product.id)}`, lang),
+        name: withOemTitle(resolveProductText(product.id, product.category, lang)?.title ?? product.title, product.id, lang),
       })),
     },
   };
@@ -71,14 +71,15 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Product categories', item: `${SITE_URL}/category` },
-      { '@type': 'ListItem', position: 3, name: page.name, item: `${SITE_URL}/category/${page.slug}` },
+      { '@type': 'ListItem', position: 1, name: copy.home, item: languageUrl(SITE_URL, '/', lang) },
+      { '@type': 'ListItem', position: 2, name: copy.categories, item: languageUrl(SITE_URL, '/category', lang) },
+      { '@type': 'ListItem', position: 3, name: displayName, item: categoryUrl },
     ],
   };
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    '@id': `${categoryUrl}#faq`,
     mainEntity: localizedFaq.map((item) => ({
       '@type': 'Question',
       name: item.question,

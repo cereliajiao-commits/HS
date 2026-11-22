@@ -9,6 +9,7 @@ import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 import { translations } from '@/data/translations';
+import { getLanguage, languageAlternates, languageUrl } from '@/lib/seo';
 
 type ProductDetailRecord = {
   image: string;
@@ -32,13 +33,6 @@ const CONTACT_EMAIL = 'chinahs@hotmail.com';
 
 const importedDetails = importedProductDetails as unknown as Record<string, ProductDetailRecord>;
 const baseDetails = productDetails as Record<string, ProductDetailRecord>;
-
-function getLanguage(value?: string): Language {
-  const normalized = value?.toLowerCase();
-  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
-    ? normalized as Language
-    : 'en';
-}
 
 function getProduct(slug: string) {
   const card = allProductCards.find((item) => item.id === slug);
@@ -109,9 +103,7 @@ function getProductFaq(product: NonNullable<ReturnType<typeof getLocalizedProduc
 }
 
 function productUrl(slug: string, lang?: Language) {
-  const url = new URL(`/product/${encodeURIComponent(slug)}`, SITE_URL);
-  if (lang && lang !== 'en') url.searchParams.set('lang', lang);
-  return url.toString();
+  return languageUrl(SITE_URL, `/product/${encodeURIComponent(slug)}`, lang ?? 'en');
 }
 
 function compactMetaText(text: string, maxLength: number) {
@@ -153,8 +145,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     155
   );
   const url = productUrl(params.slug, lang);
-  const englishUrl = productUrl(params.slug, 'en');
-  const chineseUrl = productUrl(params.slug, 'zh');
+  const path = `/product/${encodeURIComponent(params.slug)}`;
   const images = product.images.map(absoluteUrl);
 
   return {
@@ -163,11 +154,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     keywords: [product.title, product.categoryLabel, ...product.displayOemNumbers, product.displayVehicleApplication, `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'].filter(Boolean),
     alternates: {
       canonical: url,
-      languages: {
-        en: englishUrl,
-        'zh-CN': chineseUrl,
-        'x-default': englishUrl,
-      },
+      languages: languageAlternates(SITE_URL, path),
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
@@ -315,26 +302,28 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
   const languageUrl = lang === 'zh' ? productUrl(params.slug, 'en') : productUrl(params.slug, 'zh');
+  const homeUrl = lang === 'en' ? '/' : `/?lang=${lang}`;
+  const productsUrl = lang === 'en' ? '/#products' : `/?lang=${lang}#products`;
   const faqItems = getProductFaq(product, lang);
 
   return (
     <main className="product-detail-page">
       <StructuredData product={product} slug={params.slug} lang={lang} />
       <header className="product-detail-nav">
-          <a href="/" className="nav-logo" aria-label="HONGSHENG Auto Parts">
+          <a href={homeUrl} className="nav-logo" aria-label="HONGSHENG Auto Parts">
           HONG<span>SHENG</span>
         </a>
         <div className="product-detail-nav-actions">
           <a href={languageUrl} className="product-detail-language">{labels.language}</a>
-          <a href="/#products" className="product-detail-back">{labels.back}</a>
+          <a href={productsUrl} className="product-detail-back">{labels.back}</a>
         </div>
       </header>
 
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">{breadcrumbLabels[lang].home}</a>
+          <a href={homeUrl}>{breadcrumbLabels[lang].home}</a>
           <span aria-hidden="true">/</span>
-          <a href="/#products">{breadcrumbLabels[lang].products}</a>
+          <a href={productsUrl}>{breadcrumbLabels[lang].products}</a>
           <span aria-hidden="true">/</span>
           <span>{product.title}</span>
         </nav>
@@ -377,7 +366,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                 <ul className="product-detail-oem-list">
                   {product.displayOemNumbers.map((number, index) => (
                     <li key={number}>
-                      <a href={`/oem/${encodeURIComponent(product.oem?.oemNumbers[index] ?? number)}`}>{number}</a>
+                      <a href={`/oem/${encodeURIComponent(product.oem?.oemNumbers[index] ?? number)}${lang === 'en' ? '' : `?lang=${lang}`}`}>{number}</a>
                     </li>
                   ))}
                 </ul>

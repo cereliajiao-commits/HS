@@ -447,7 +447,7 @@ export const importedProductCards = [
     image: '/images/products/imported-steering-knuckle-004-1061-abs.webp',
     description: 'Durable steering knuckle for truck steering linkage applications.',
     tag: 'Steering Knuckle',
-    title: 'Steering Knuckle - 1061（ABS）',
+    title: 'Steering Knuckle - 1061 (ABS)',
   },
   {
     id: 'new-steering-knuckle-005',

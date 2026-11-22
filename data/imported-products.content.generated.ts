@@ -1569,7 +1569,7 @@ export const importedProductContent = {
   },
   'new-steering-knuckle-004': {
     en: {
-      title: 'Steering Knuckle - 1061（ABS）',
+      title: 'Steering Knuckle - 1061 (ABS)',
       description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
       specs: [
         { label: 'Type', value: 'Steering knuckle' },

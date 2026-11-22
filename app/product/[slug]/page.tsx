@@ -63,6 +63,9 @@ function getLocalizedProduct(slug: string, lang: Language) {
   const fallbackApplications = detail?.applications ?? [];
   const oem = oemReferences[slug];
   const displayOemNumbers = getDisplayOemNumbers(slug, lang);
+  const displayVehicleApplication = lang === 'zh' || !/[\u3400-\u9fff]/.test(oem?.vehicleApplication ?? '')
+    ? oem?.vehicleApplication ?? ''
+    : '';
 
   return {
     ...product,
@@ -72,6 +75,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
     applications: localized?.applications ?? fallbackApplications,
     oem,
     displayOemNumbers,
+    displayVehicleApplication,
     categoryLabel: localized?.categoryLabel ?? translateCategoryLabel(card.category, lang),
     image: detail?.image ?? card.image,
     images: detail?.images?.length ? detail.images : [detail?.image ?? card.image],
@@ -87,10 +91,7 @@ type ProductFaqItem = { question: string; answer: string };
 function getProductFaq(product: NonNullable<ReturnType<typeof getLocalizedProduct>>, lang: Language): ProductFaqItem[] {
   const isChinese = lang === 'zh';
   const oemNumbers = product.displayOemNumbers;
-  const rawApplication = product.oem?.vehicleApplication ?? '';
-  const application = isChinese || !/[\u3400-\u9fff]/.test(rawApplication)
-    ? rawApplication
-    : product.applications.join(', ');
+  const application = product.displayVehicleApplication || product.applications.join(isChinese ? '、' : ', ');
   const oemText = oemNumbers.length ? oemNumbers.join(isChinese ? '、' : ', ') : (isChinese ? '暂无已核实的 OEM 号' : 'No verified OEM number is currently listed');
   return isChinese
     ? [
@@ -159,7 +160,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
   return {
     title: { absolute: title },
     description,
-    keywords: [product.title, product.categoryLabel, ...(product.oem?.oemNumbers ?? []), product.oem?.vehicleApplication ?? '', `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'].filter(Boolean),
+    keywords: [product.title, product.categoryLabel, ...product.displayOemNumbers, product.displayVehicleApplication, `${product.categoryLabel} manufacturer`, 'HONGSHENG Auto Parts', 'OEM truck parts'].filter(Boolean),
     alternates: {
       canonical: url,
       languages: {
@@ -205,7 +206,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       '@type': 'Thing',
       name: product.title,
       image: images,
-      identifier: product.oem?.oemNumbers[0] ?? product.card.id,
+      identifier: product.displayOemNumbers[0] ?? product.card.id,
       category: product.categoryLabel,
     },
     isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website` },
@@ -214,14 +215,14 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       '@type': 'PropertyValue',
       name: spec.label,
       value: spec.value,
-    })).concat(product.oem?.oemNumbers.length ? [{
+    })).concat(product.displayOemNumbers.length ? [{
       '@type': 'PropertyValue',
       name: 'OEM / OE reference numbers',
-      value: product.oem.oemNumbers.join(', '),
-    }] : []).concat(product.oem?.vehicleApplication ? [{
+      value: product.displayOemNumbers.join(', '),
+    }] : []).concat(product.displayVehicleApplication ? [{
       '@type': 'PropertyValue',
       name: 'Vehicle application',
-      value: product.oem.vehicleApplication,
+      value: product.displayVehicleApplication,
     }] : []),
   };
   const faqItems = getProductFaq(product, lang);
@@ -380,7 +381,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
                     </li>
                   ))}
                 </ul>
-                {product.oem.vehicleApplication && (lang === 'zh' || !/[\u3400-\u9fff]/.test(product.oem.vehicleApplication)) && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
+                {product.displayVehicleApplication && <p className="product-detail-oem-application">{product.displayVehicleApplication}</p>}
                 <p className="product-detail-oem-note">{copy['product.oemNote']}</p>
               </div>
             ) : null}

@@ -5,10 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
+import type { Language } from './LanguageProvider';
 
 const PRODUCTS_PER_PAGE = 20;
 
-export default function AllProductsCatalog() {
+export default function AllProductsCatalog({ lang = 'en' }: { lang?: Language }) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(allProductCards.length / PRODUCTS_PER_PAGE));
   const visiblePage = Math.min(currentPage, totalPages);
@@ -27,7 +28,7 @@ export default function AllProductsCatalog() {
           const title = withOemTitle(product.title, product.id, 'en');
           const oemNumbers = getDisplayOemNumbers(product.id, 'en');
           return (
-            <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
+            <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}${lang === 'en' ? '' : `?lang=${lang}`}`} key={product.id}>
               <div className="product-card-img">
                 <Image
                   src={product.image}

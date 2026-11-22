@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { categoryPageMap, categoryPages } from '@/data/categoryPages';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
+import type { Language } from '@/components/LanguageProvider';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
@@ -29,9 +30,17 @@ export async function generateMetadata({ params }: { params: { category: string 
   };
 }
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
+function getLanguage(value?: string): Language {
+  const normalized = value?.toLowerCase();
+  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
+    ? normalized as Language
+    : 'en';
+}
+
+export default function CategoryPage({ params, searchParams }: { params: { category: string }; searchParams?: { lang?: string } }) {
   const page = getPage(params.category);
   if (!page) notFound();
+  const lang = getLanguage(searchParams?.lang);
   const products = allProductCards.filter((product) => product.category === page.slug);
   const graph = {
     '@context': 'https://schema.org',
@@ -89,7 +98,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
             const title = withOemTitle(product.title, product.id, 'en');
             const oemNumbers = getDisplayOemNumbers(product.id, 'en');
             return (
-              <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
+              <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}${lang === 'en' ? '' : `?lang=${lang}`}`} key={product.id}>
                 <div className="product-card-img">
                   <Image
                     src={product.image}

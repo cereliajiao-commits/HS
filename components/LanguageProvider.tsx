@@ -67,6 +67,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
     window.localStorage.setItem('hs-language', lang);
+    document.cookie = `hs-language=${lang}; path=/; max-age=31536000; samesite=lax`;
   }, [lang]);
 
   const t = (key: string): string => {

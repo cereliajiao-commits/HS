@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AllProductsCatalog from '@/components/AllProductsCatalog';
+import type { Language } from '@/components/LanguageProvider';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
@@ -16,7 +17,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AllProductsPage() {
+function getLanguage(value?: string): Language {
+  const normalized = value?.toLowerCase();
+  return normalized && ['en', 'zh', 'ru', 'ar', 'es', 'pt', 'fr'].includes(normalized)
+    ? normalized as Language
+    : 'en';
+}
+
+export default function AllProductsPage({ searchParams }: { searchParams?: { lang?: string } }) {
+  const lang = getLanguage(searchParams?.lang);
   const graph = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -37,7 +46,7 @@ export default function AllProductsPage() {
         <p className="section-label">ALL PRODUCTS</p>
         <h1>All Truck and Agricultural Parts</h1>
         <p className="category-page-intro">Browse the complete HONGSHENG product catalog. Open any product to view OEM/OE references, vehicle applications and quotation details.</p>
-        <AllProductsCatalog />
+        <AllProductsCatalog lang={lang} />
       </div>
     </main>
   );

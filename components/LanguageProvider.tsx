@@ -43,8 +43,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Language>('en');
 
   useEffect(() => {
+    let cancelled = false;
     const saved = window.localStorage.getItem('hs-language') as Language | null;
-    if (saved && languages.some((language) => language.code === saved)) setLang(saved);
+    if (saved && languages.some((language) => language.code === saved)) {
+      setLang(saved);
+      return () => { cancelled = true; };
+    }
+
+    fetch('/api/geo', { headers: { Accept: 'application/json' } })
+      .then((response) => response.ok ? response.json() : null)
+      .then((data: { language?: Language } | null) => {
+        if (!cancelled && data?.language && languages.some((language) => language.code === data.language)) {
+          setLang(data.language);
+        }
+      })
+      .catch(() => {
+        // Keep English as the safe default when geo detection is unavailable.
+      });
+
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {

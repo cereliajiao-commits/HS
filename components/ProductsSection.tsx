@@ -19,8 +19,8 @@ export default function ProductsSection() {
   };
 
   const categoryCopy = lang === 'zh'
-    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部产品', view: '查看系列', count: '个产品' }
-    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all products', view: 'View category', count: 'products' };
+    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部产品', view: '查看系列' }
+    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all products', view: 'View category' };
 
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -63,19 +63,17 @@ export default function ProductsSection() {
           <div className="product-category-grid">
             {categoryPages.map((page) => {
               const representative = allProductCards.find((product) => product.category === page.slug);
-              const productCount = allProductCards.filter((product) => product.category === page.slug).length;
               if (!representative) return null;
               const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : page.name;
               const description = lang === 'zh'
-                ? `${productCount}${categoryCopy.count}，含车型与 OEM/OE 参考信息。`
-                : `${productCount} ${categoryCopy.count} with vehicle and OEM/OE reference information.`;
+                ? '含车型与 OEM/OE 参考信息。'
+                : 'Vehicle applications and OEM/OE reference information.';
               return (
                 <a className="product-category-card" href={`/category/${page.slug}`} key={page.slug}>
                   <div className="product-category-card-media">
                     <img src={`${representative.image}?v=20261106-media`} alt="" loading="lazy" width="900" height="700" />
                   </div>
                   <div className="product-category-card-content">
-                    <span className="product-category-card-number">{String(productCount).padStart(2, '0')}</span>
                     <h4>{label}</h4>
                     <p>{description}</p>
                     <span className="product-category-card-link">{categoryCopy.view}<span aria-hidden="true">→</span></span>

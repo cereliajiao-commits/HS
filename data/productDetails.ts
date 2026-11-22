@@ -24,15 +24,15 @@ export const productDetails: Record<string, ProductDetail> = {
   'vertical-arm-str-double': {
     image: '/images/products/STR双桥垂臂（四种）.webp',
     category: 'Vertical Arm Series',
-    title: 'STR Double Bridge Vertical Arm',
-    description: 'Heavy-duty vertical arm for STR and Steyr double-bridge applications, built for stable steering transfer.',
+    title: 'SHACMAN X3000 Pitman Arm',
+    description: 'Pitman arm for SHACMAN X3000 heavy-duty truck steering linkage, OEM reference DZ93319470001.',
     specs: [
-      { label: 'Type', value: 'Vertical arm' },
-      { label: 'Platform', value: 'STR / Steyr' },
-      { label: 'Structure', value: 'Double bridge' },
-      { label: 'Strength', value: 'Heavy-duty rated' },
+      { label: 'Type', value: 'Pitman arm' },
+      { label: 'OEM / OE', value: 'DZ93319470001' },
+      { label: 'Application', value: 'SHACMAN X3000' },
+      { label: 'Material', value: 'Forged steel' },
     ],
-    applications: ['STR chassis', 'Steyr-based trucks', 'Heavy-duty steering linkage'],
+    applications: ['SHACMAN X3000', 'Heavy-duty truck steering linkage', 'Pitman arm replacement'],
   },
   'vertical-arm-a50a': {
     image: '/images/products/A50A垂臂.webp',

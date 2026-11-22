@@ -21,13 +21,11 @@ export const oemReferences: Record<string, OemReference> = {
   "vertical-arm-str-double": {
     "productId": "vertical-arm-str-double",
     "oemNumbers": [
-      "WG9123478029",
-      "WG9100470235"
+      "DZ93319470001"
     ],
-    "vehicleApplication": "重汽斯太尔(STR)双桥",
+    "vehicleApplication": "陕汽德龙 SHACMAN X3000",
     "confidence": "中",
-    "sourceUrl": "https://m.1688.com/kq/-B7BDCFF2BBFAB4B9B1DB.html",
-    "note": "检索词“斯太尔 双桥 转向垂臂 WG97/WG9123478029”。1688见“重汽WG9123478029/2转向臂 斯太尔方向机垂臂”；Wai Kar官方STR转向目录(PDF)列转向摇臂(8098)=WG9100470235(4×2/6×2/6×4通用)。双桥/单桥在方向机垂臂本体上差异小，“四种”为长度/弧度变体，无法仅凭公开目录把某一号精确锁到双桥，故置信度中。"
+    "note": "根据用户提供的产品截图修正：截图显示 OEM/OE DZ93319470001，产品标题为适用于沙克曼/陕汽德龙 X3000 的皮特曼臂。下单前仍需核对桥型、安装孔位、尺寸和左右配置。"
   },
   "vertical-arm-a50a": {
     "productId": "vertical-arm-a50a",

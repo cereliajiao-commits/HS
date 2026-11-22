@@ -10,7 +10,7 @@ export interface ProductCard {
 
 export const productCards: ProductCard[] = [
   { id: 'vertical-arm-153', category: 'vertical', brand: 'dongfeng', image: '/images/products/153垂臂.webp', title: '153 Vertical Arm', description: 'Vertical arm for Dongfeng steering linkage assemblies.', tag: 'Vertical Arm' },
-  { id: 'vertical-arm-str-double', category: 'vertical', brand: 'sinotruk', image: '/images/products/STR双桥垂臂（四种）.webp', title: 'STR Double Bridge Vertical Arm', description: 'Heavy-duty vertical arm for STR and Steyr double-bridge applications.', tag: 'Vertical Arm' },
+  { id: 'vertical-arm-str-double', category: 'vertical', brand: 'shaanxi', image: '/images/products/STR双桥垂臂（四种）.webp', title: 'SHACMAN X3000 Pitman Arm', description: 'Pitman arm for SHACMAN X3000 heavy-duty truck steering linkage, OEM reference DZ93319470001.', tag: 'Pitman Arm' },
   { id: 'vertical-arm-a50a', category: 'vertical', brand: 'auman', image: '/images/products/A50A垂臂.webp', title: 'A50A Vertical Arm', description: 'A50A vertical arm for commercial steering systems.', tag: 'Vertical Arm' },
   { id: 'vertical-arm-k36a0', category: 'vertical', brand: 'others', image: '/images/products/K36A0垂臂.webp', title: 'K36A0 Vertical Arm', description: 'K36A0 vertical arm with stable geometry and durable forged construction.', tag: 'Vertical Arm' },
   { id: 'vertical-arm-80a-60w', category: 'vertical', brand: 'others', image: '/images/products/80A-60W垂臂.webp', title: '80A:60W Vertical Arm', description: 'Vertical arm for the 80A:60W model.', tag: 'Vertical Arm' },

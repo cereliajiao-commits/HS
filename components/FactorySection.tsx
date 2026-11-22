@@ -183,7 +183,7 @@ export default function FactorySection() {
   return (
     <section id="factory" className="factory-section">
       <div className="container">
-        <div className="factory-header fade-up">
+        <div className="factory-header">
           <div className="factory-header-title">
             <div className="section-label">{copy.label}</div>
             <h2 className="section-title">{copy.title}</h2>
@@ -191,11 +191,11 @@ export default function FactorySection() {
           <p>{copy.intro}</p>
         </div>
 
-        <div className="factory-gate fade-up stagger-1">
-          <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} loading="lazy" decoding="async" />
+        <div className="factory-gate">
+          <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} loading="eager" fetchPriority="high" decoding="async" />
         </div>
 
-        <div className="factory-stats fade-up stagger-2">
+        <div className="factory-stats">
           {copy.stats.map(([value, label]) => (
             <div className="factory-stat" key={label}>
               <strong>{value}</strong>
@@ -221,7 +221,7 @@ export default function FactorySection() {
           ))}
         </div>
 
-        <div className="factory-buyer-bar fade-up">
+        <div className="factory-buyer-bar">
           <strong>{copy.buyerTitle}</strong>
           <div>
             {copy.buyerPoints.map((point) => <span key={point}>{point}</span>)}

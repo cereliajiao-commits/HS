@@ -6,6 +6,8 @@ import { allProductCards } from '@/data/products';
 import { categoryPageMap, categoryPages } from '@/data/categoryPages';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 import { resolveProductText } from '@/data/productLocalization';
+import { translateCategoryLabel } from '@/data/productLocalization';
+import { categoryUiCopy, localizedCategoryFaq } from '@/data/categoryLocalization';
 import type { Language } from '@/components/LanguageProvider';
 
 const SITE_URL = 'https://www.hsaxle.com';
@@ -42,6 +44,9 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
   const page = getPage(params.category);
   if (!page) notFound();
   const lang = getLanguage(searchParams?.lang);
+  const copy = categoryUiCopy[lang];
+  const displayName = lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang);
+  const localizedFaq = localizedCategoryFaq(displayName, lang, page.faq);
   const products = allProductCards.filter((product) => product.category === page.slug);
   const graph = {
     '@context': 'https://schema.org',
@@ -71,10 +76,10 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
       { '@type': 'ListItem', position: 3, name: page.name, item: `${SITE_URL}/category/${page.slug}` },
     ],
   };
-  const faq = {
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: page.faq.map((item) => ({
+    mainEntity: localizedFaq.map((item) => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -85,16 +90,16 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
     <main className="category-page oem-reference-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <Link href="/">Home</Link><span>/</span><Link href="/category">Product categories</Link><span>/</span><span>{page.name}</span>
+          <Link href="/">{copy.home}</Link><span>/</span><Link href={`/category${lang === 'en' ? '' : `?lang=${lang}`}`}>{copy.categories}</Link><span>/</span><span>{displayName}</span>
         </nav>
-        <p className="section-label">{page.name.toUpperCase()}</p>
-        <h1>{page.name}</h1>
-        <p className="category-page-intro">{page.intro}</p>
-        <p className="category-page-count">{products.length} cataloged products with OEM/OE reference information</p>
-        <section className="products-grid category-product-grid" aria-label={page.name}>
+        <p className="section-label">{copy.browseLabel}</p>
+        <h1>{displayName}</h1>
+        <p className="category-page-intro">{copy.intro(displayName)}</p>
+        <p className="category-page-count">{copy.count(products.length)}</p>
+        <section className="products-grid category-product-grid" aria-label={displayName}>
           {products.map((product, index) => {
             const localized = resolveProductText(product.id, product.category, lang);
             const title = withOemTitle(localized?.title ?? product.title, product.id, lang);
@@ -116,23 +121,23 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
                   <h2>{title}</h2>
                   <p>{description}</p>
                   {oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oemNumbers.join(' · ')}</div> : null}
-                  <span className="product-tag">{localized?.categoryLabel ?? page.name}</span>
+                  <span className="product-tag">{localized?.categoryLabel ?? displayName}</span>
                 </div>
               </Link>
             );
           })}
         </section>
         <section className="category-faq" aria-labelledby="category-faq-title">
-          <p className="section-label">FITMENT FAQ</p>
-          <h2 id="category-faq-title">Questions about {page.name.toLowerCase()}</h2>
-          {page.faq.map((item) => (
+          <p className="section-label">{copy.faqLabel}</p>
+          <h2 id="category-faq-title">{copy.faqTitle(displayName)}</h2>
+          {localizedFaq.map((item) => (
             <details key={item.question}>
               <summary>{item.question}</summary>
               <p>{item.answer}</p>
             </details>
           ))}
         </section>
-        <div className="category-page-cta"><Link className="btn btn-primary" href="/#contact">Request a catalog or quotation</Link></div>
+        <div className="category-page-cta"><Link className="btn btn-primary" href="/#contact">{copy.quote}</Link></div>
       </div>
     </main>
   );

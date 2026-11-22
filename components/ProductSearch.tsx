@@ -8,7 +8,7 @@ import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
-const searchCopy: Record<Language, { label: string; title: string; placeholder: string; hint: string; noResults: string; results: string }> = {
+const searchCopy: Partial<Record<Language, { label: string; title: string; placeholder: string; hint: string; noResults: string; results: string }>> = {
   en: { label: 'Search products', title: 'Search Products', placeholder: 'Model, product, category or brand', hint: 'Search all product models by keyword.', noResults: 'No matching products found.', results: 'matching products' },
   zh: { label: '搜索产品', title: '搜索产品', placeholder: '输入型号、产品、类别或品牌', hint: '可通过关键词搜索全部产品型号。', noResults: '没有找到匹配的产品。', results: '个匹配产品' },
   ru: { label: 'Поиск товаров', title: 'Поиск товаров', placeholder: 'Модель, товар, категория или бренд', hint: 'Поиск по всем моделям продукции.', noResults: 'Совпадений не найдено.', results: 'результатов' },
@@ -16,6 +16,9 @@ const searchCopy: Record<Language, { label: string; title: string; placeholder: 
   es: { label: 'Buscar productos', title: 'Buscar productos', placeholder: 'Modelo, producto, categoría o marca', hint: 'Busca todos los modelos por palabra clave.', noResults: 'No se encontraron productos.', results: 'productos encontrados' },
   pt: { label: 'Buscar produtos', title: 'Buscar produtos', placeholder: 'Modelo, produto, categoria ou marca', hint: 'Pesquise todos os modelos por palavra-chave.', noResults: 'Nenhum produto encontrado.', results: 'produtos encontrados' },
   fr: { label: 'Rechercher des produits', title: 'Rechercher des produits', placeholder: 'Modèle, produit, catégorie ou marque', hint: 'Recherchez tous les modèles par mot-clé.', noResults: 'Aucun produit correspondant.', results: 'produits trouvés' },
+  ja: { label: '製品を検索', title: '製品検索', placeholder: '型式、製品、カテゴリー、ブランド', hint: 'キーワードで全製品を検索できます。', noResults: '一致する製品が見つかりません。', results: '件の製品' },
+  ko: { label: '제품 검색', title: '제품 검색', placeholder: '모델, 제품, 카테고리 또는 브랜드', hint: '키워드로 모든 제품 모델을 검색하세요.', noResults: '일치하는 제품이 없습니다.', results: '개 제품' },
+  de: { label: 'Produkte suchen', title: 'Produktsuche', placeholder: 'Modell, Produkt, Kategorie oder Marke', hint: 'Suchen Sie alle Produktmodelle nach Stichwort.', noResults: 'Keine passenden Produkte gefunden.', results: 'passende Produkte' },
 };
 
 export default function ProductSearch() {
@@ -23,7 +26,7 @@ export default function ProductSearch() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
-  const copy = searchCopy[lang];
+  const copy = searchCopy[lang] ?? searchCopy.en!;
 
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();

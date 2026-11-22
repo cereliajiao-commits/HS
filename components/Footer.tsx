@@ -1,15 +1,16 @@
 'use client';
 
-import { useLanguage } from './LanguageProvider';
+import { useLanguage, type Language } from './LanguageProvider';
 import { translateCategoryLabel } from '@/data/productLocalization';
 
 export default function Footer() {
   const { lang, t } = useLanguage();
   const languageQuery = lang === 'en' ? '' : `?lang=${lang}`;
-  const allCategoriesLabel = {
+  const allCategoriesLabel = ({
     en: 'All product categories', zh: '全部产品分类', ru: 'Все категории продукции', ar: 'جميع فئات المنتجات',
     es: 'Todas las categorías', pt: 'Todas as categorias', fr: 'Toutes les catégories',
-  }[lang];
+    ja: 'すべての製品カテゴリー', ko: '전체 제품 카테고리', de: 'Alle Produktkategorien', it: 'Tutte le categorie', nl: 'Alle productcategorieën', tr: 'Tüm ürün kategorileri', pl: 'Wszystkie kategorie produktów', id: 'Semua kategori produk',
+  } as Partial<Record<Language, string>>)[lang] ?? 'All product categories';
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const target = document.querySelector(href);

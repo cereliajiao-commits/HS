@@ -2,7 +2,9 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
-export type Language = 'en' | 'zh' | 'ru' | 'ar' | 'es' | 'pt' | 'fr';
+export type Language =
+  | 'en' | 'zh' | 'ru' | 'ar' | 'es' | 'pt' | 'fr'
+  | 'ja' | 'ko' | 'de' | 'it' | 'nl' | 'tr' | 'pl' | 'id';
 
 export interface LanguageOption {
   code: Language;
@@ -18,6 +20,14 @@ export const languages: LanguageOption[] = [
   { code: 'es', label: 'Español', flag: '🇪🇸' },
   { code: 'pt', label: 'Português', flag: '🇧🇷' },
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'ja', label: '日本語', flag: '🇯🇵' },
+  { code: 'ko', label: '한국어', flag: '🇰🇷' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+  { code: 'nl', label: 'Nederlands', flag: '🇳🇱' },
+  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
+  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
+  { code: 'id', label: 'Bahasa Indonesia', flag: '🇮🇩' },
 ];
 
 interface LanguageContextType {

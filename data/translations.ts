@@ -949,12 +949,23 @@ export const translations: Record<Language, TranslationMap> = {
     'wechat.copied': 'Copi\u00e9 !',
     'wechat.orContact': 'Ou contactez-nous via',
   },
+  // New locales start from the complete English dictionary and receive
+  // localized UI overrides below. This keeps every page usable while the
+  // product catalog is progressively translated.
+  ja: {},
+  ko: {},
+  de: {},
+  it: {},
+  nl: {},
+  tr: {},
+  pl: {},
+  id: {},
 };
 
 // Supplemental UI copy used by newer sections and product detail views.
 // Keeping these entries in one place prevents non-English locales from
 // silently falling back to English when a component adds a new label.
-const supplementalTranslations: Record<Language, TranslationMap> = {
+const supplementalTranslations: Partial<Record<Language, TranslationMap>> = {
   en: {
     'nav.factory': 'Factory',
     'nav.toggle': 'Toggle navigation',
@@ -1164,8 +1175,41 @@ const supplementalTranslations: Record<Language, TranslationMap> = {
     'contact.submitError': 'Échec de l’envoi. Réessayez plus tard ou contactez-nous via WhatsApp.', 'chat.error': 'Le système est temporairement occupé. Réessayez plus tard ou contactez-nous via WhatsApp.', 'search.close': 'Fermer', 'footer.steeringArms': 'Bras de direction', 'footer.steeringKnuckles': 'Fusées de direction', 'footer.verticalArms': 'Bras verticaux', 'footer.driveShafts': 'Arbres de transmission', 'footer.agriculturalParts': 'Pièces agricoles',
     'contact.companyPlaceholder': 'Nom de votre entreprise', 'contact.emailPlaceholder': 'Votre e-mail *', 'contact.phonePlaceholder': 'Votre numéro WhatsApp', 'faq.ariaLabel': 'Questions fréquentes', 'faq.company': 'Êtes-vous une société commerciale ou une usine ?', 'faq.companyAnswer': 'Nous sommes un fabricant basé au Hebei, en Chine, avec nos propres lignes de production, capacités d’usinage et contrôles qualité.', 'faq.moq': 'Quelle est votre quantité minimale de commande ?', 'faq.moqAnswer': 'La quantité minimale habituelle est de 100 pièces par modèle. Les besoins spécifiques des nouveaux projets peuvent être étudiés.', 'faq.brand': 'Pouvez-vous fabriquer sous ma propre marque ?', 'faq.brandAnswer': 'Oui. Nous proposons l’emballage OEM, le marquage des produits et la fabrication selon vos plans ou échantillons.', 'faq.quality': 'Quelles certifications qualité possédez-vous ?', 'faq.qualityAnswer': 'Nous appliquons un système qualité ISO 9001 et utilisons des équipements de contrôle, de magnétoscopie et d’essai de traction.', 'faq.delivery': 'Quel est le délai de livraison ?', 'faq.deliveryAnswer': 'Le délai habituel est de 40 à 45 jours selon le modèle, la quantité et le planning de la commande.', 'faq.payment': 'Quelles sont vos conditions de paiement ?', 'faq.paymentAnswer': 'Les conditions sont définies selon le projet, le volume de la commande et les besoins du client.', 'floating.whatsapp': 'Contacter par WhatsApp', 'floating.wechat': 'Ajouter sur WeChat', 'floating.phone': 'Nous appeler', 'floating.top': 'Retour en haut', 'wechat.close': 'Fermer', 'wechat.alt': 'Code QR WeChat', 'wechat.id': 'ID WeChat', 'wechat.copy': 'Copier', 'wechat.copied': 'Copié !', 'wechat.title': 'Ajoutez-nous sur WeChat', 'wechat.subtitle': 'Scannez le QR code ou recherchez l’ID WeChat', 'wechat.orContact': 'Ou contactez-nous via', 'gallery.images': 'Images du produit', 'gallery.view': 'Voir l’image du produit',
   },
+  ja: {
+    'nav.about': '会社概要', 'nav.products': '製品', 'nav.whyUs': '私たちの強み', 'nav.contact': 'お問い合わせ', 'nav.getQuote': '見積もりを依頼', 'nav.factory': '工場',
+    'hero.badge': 'ISO 9001認証メーカー', 'hero.title1': '大型車両', 'hero.titleHighlight': '部品', 'hero.title2': '確かな品質で製造', 'hero.exploreProducts': '製品を見る', 'hero.requestQuote': '見積もりを依頼',
+    'products.label': '製品', 'products.title': '幅広い製品ラインアップ', 'products.byType': '種類別', 'products.byBrand': 'ブランド別', 'products.all': 'すべて', 'products.requestCatalog': '総合カタログを請求',
+    'adv.label': '選ばれる理由', 'adv.title': '品質を基盤に、技術で支える', 'contact.label': 'お問い合わせ', 'contact.title': 'ご要望をお聞かせください', 'contact.submit': '問い合わせを送信',
+    'product.requestQuote': '見積もりを依頼', 'product.back': '製品カタログに戻る', 'product.specifications': '製品仕様', 'product.applications': '適合車両 / 用途', 'product.oem': 'OEM / OE 参照番号', 'product.language': 'English',
+    'footer.products': '製品', 'footer.company': '会社情報', 'footer.contact': 'お問い合わせ', 'floating.whatsapp': 'WhatsAppで相談', 'floating.top': 'トップへ戻る',
+  },
+  ko: {
+    'nav.about': '회사 소개', 'nav.products': '제품', 'nav.whyUs': '강점', 'nav.contact': '문의하기', 'nav.getQuote': '견적 요청', 'nav.factory': '공장',
+    'hero.badge': 'ISO 9001 인증 제조업체', 'hero.title1': '대형 상용차', 'hero.titleHighlight': '부품', 'hero.title2': '신뢰할 수 있는 제조', 'hero.exploreProducts': '제품 보기', 'hero.requestQuote': '견적 요청',
+    'products.label': '제품', 'products.title': '종합 제품 라인업', 'products.byType': '유형별', 'products.byBrand': '브랜드별', 'products.all': '전체', 'products.requestCatalog': '전체 카탈로그 요청',
+    'adv.label': '우리의 강점', 'adv.title': '품질을 바탕으로 한 혁신', 'contact.label': '문의하기', 'contact.title': '필요한 사항을 상담해 주세요', 'contact.submit': '문의 보내기',
+    'product.requestQuote': '견적 요청', 'product.back': '제품 카탈로그로 돌아가기', 'product.specifications': '제품 사양', 'product.applications': '적용 차량 / 용도', 'product.oem': 'OEM / OE 참조 번호', 'product.language': 'English',
+    'footer.products': '제품', 'footer.company': '회사 소개', 'footer.contact': '문의하기', 'floating.whatsapp': 'WhatsApp 상담', 'floating.top': '맨 위로',
+  },
+  de: {
+    'nav.about': 'Über uns', 'nav.products': 'Produkte', 'nav.whyUs': 'Unsere Vorteile', 'nav.contact': 'Kontakt', 'nav.getQuote': 'Angebot anfordern', 'nav.factory': 'Werk',
+    'hero.badge': 'ISO-9001-zertifizierter Hersteller', 'hero.title1': 'Schwere', 'hero.titleHighlight': 'Fahrzeugteile', 'hero.title2': 'Zuverlässig gefertigt', 'hero.exploreProducts': 'Produkte ansehen', 'hero.requestQuote': 'Angebot anfordern',
+    'products.label': 'Unsere Produkte', 'products.title': 'Umfassendes Produktsortiment', 'products.byType': 'Nach Typ', 'products.byBrand': 'Nach Marke', 'products.all': 'Alle', 'products.requestCatalog': 'Gesamtkatalog anfordern',
+    'adv.label': 'Warum wir', 'adv.title': 'Qualität als Basis, Innovation als Antrieb', 'contact.label': 'Kontakt', 'contact.title': 'Besprechen wir Ihren Bedarf', 'contact.submit': 'Anfrage senden',
+    'product.requestQuote': 'Angebot anfordern', 'product.back': 'Zum Produktkatalog', 'product.specifications': 'Produktspezifikationen', 'product.applications': 'Geeignete Fahrzeuge / Anwendungen', 'product.oem': 'OEM / OE-Referenznummern', 'product.language': 'English',
+    'footer.products': 'Produkte', 'footer.company': 'Unternehmen', 'footer.contact': 'Kontakt', 'floating.whatsapp': 'Über WhatsApp kontaktieren', 'floating.top': 'Nach oben',
+  },
+  it: { 'nav.about': 'Chi siamo', 'nav.products': 'Prodotti', 'nav.whyUs': 'I nostri vantaggi', 'nav.contact': 'Contatti', 'nav.getQuote': 'Richiedi un preventivo', 'nav.factory': 'Fabbrica', 'products.label': 'I nostri prodotti', 'products.title': 'Gamma completa di prodotti', 'products.all': 'Tutti', 'products.requestCatalog': 'Richiedi il catalogo', 'product.requestQuote': 'Richiedi un preventivo', 'product.back': 'Torna al catalogo', 'contact.submit': 'Invia richiesta' },
+  nl: { 'nav.about': 'Over ons', 'nav.products': 'Producten', 'nav.whyUs': 'Waarom wij', 'nav.contact': 'Contact', 'nav.getQuote': 'Offerte aanvragen', 'nav.factory': 'Fabriek', 'products.label': 'Onze producten', 'products.title': 'Compleet productassortiment', 'products.all': 'Alle', 'products.requestCatalog': 'Catalogus aanvragen', 'product.requestQuote': 'Offerte aanvragen', 'product.back': 'Terug naar catalogus', 'contact.submit': 'Aanvraag verzenden' },
+  tr: { 'nav.about': 'Hakkımızda', 'nav.products': 'Ürünler', 'nav.whyUs': 'Avantajlarımız', 'nav.contact': 'İletişim', 'nav.getQuote': 'Teklif alın', 'nav.factory': 'Fabrika', 'products.label': 'Ürünlerimiz', 'products.title': 'Kapsamlı ürün yelpazesi', 'products.all': 'Tümü', 'products.requestCatalog': 'Katalog isteyin', 'product.requestQuote': 'Teklif isteyin', 'product.back': 'Ürün kataloğuna dön', 'contact.submit': 'Talep gönder' },
+  pl: { 'nav.about': 'O nas', 'nav.products': 'Produkty', 'nav.whyUs': 'Nasze atuty', 'nav.contact': 'Kontakt', 'nav.getQuote': 'Poproś o wycenę', 'nav.factory': 'Fabryka', 'products.label': 'Nasze produkty', 'products.title': 'Kompleksowa oferta produktów', 'products.all': 'Wszystkie', 'products.requestCatalog': 'Poproś o katalog', 'product.requestQuote': 'Poproś o wycenę', 'product.back': 'Wróć do katalogu', 'contact.submit': 'Wyślij zapytanie' },
+  id: { 'nav.about': 'Tentang kami', 'nav.products': 'Produk', 'nav.whyUs': 'Keunggulan kami', 'nav.contact': 'Kontak', 'nav.getQuote': 'Minta penawaran', 'nav.factory': 'Pabrik', 'products.label': 'Produk kami', 'products.title': 'Rangkaian produk lengkap', 'products.all': 'Semua', 'products.requestCatalog': 'Minta katalog lengkap', 'product.requestQuote': 'Minta penawaran', 'product.back': 'Kembali ke katalog', 'contact.submit': 'Kirim pertanyaan' },
 };
 
+for (const language of ['ja', 'ko', 'de', 'it', 'nl', 'tr', 'pl', 'id'] as Language[]) {
+  Object.assign(translations[language], translations.en);
+}
+
 for (const language of Object.keys(supplementalTranslations) as Language[]) {
-  Object.assign(translations[language], supplementalTranslations[language]);
+  Object.assign(translations[language], supplementalTranslations[language] ?? {});
 }

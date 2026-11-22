@@ -8,13 +8,13 @@ import { resolveProductText, translateCategoryLabel } from '@/data/productLocali
 import { withOemTitle } from '@/data/productTitles';
 import { categoryUiCopy } from '@/data/categoryLocalization';
 
-const categoryShowcaseCopy: Record<Language, {
+const categoryShowcaseCopy: Partial<Record<Language, {
   label: string;
   title: string;
   intro: string;
   viewAll: string;
   view: string;
-}> = {
+}>> = {
   en: {
     label: 'Browse by product category',
     title: 'Start with the right part family',
@@ -64,6 +64,9 @@ const categoryShowcaseCopy: Record<Language, {
     viewAll: 'Voir tous les produits',
     view: 'Voir la catégorie',
   },
+  ja: { label: '製品カテゴリーから探す', title: '適切な部品シリーズから始める', intro: '部品シリーズから適合車種、OEM番号、製品詳細を確認できます。', viewAll: 'すべての製品を見る', view: 'カテゴリーを見る' },
+  ko: { label: '제품 카테고리별 보기', title: '적합한 부품군부터 선택하세요', intro: '부품군별로 적용 차량, OEM 번호 및 제품 상세 정보를 확인하세요.', viewAll: '전체 제품 보기', view: '카테고리 보기' },
+  de: { label: 'Nach Produktkategorie durchsuchen', title: 'Mit der richtigen Teilefamilie beginnen', intro: 'Vergleichen Sie Anwendungen, OEM-Referenzen und Produktdetails nach Teilefamilie.', viewAll: 'Alle Produkte ansehen', view: 'Kategorie ansehen' },
 };
 
 export default function ProductsSection() {
@@ -80,7 +83,7 @@ export default function ProductsSection() {
     note: t('products.platformNote'),
   };
 
-  const categoryCopy = categoryShowcaseCopy[lang];
+  const categoryCopy = categoryShowcaseCopy[lang] ?? categoryShowcaseCopy.en!;
   const languageQuery = lang === 'en' ? '' : `?lang=${lang}`;
 
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -127,7 +130,7 @@ export default function ProductsSection() {
               if (!representative) return null;
               const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : translateCategoryLabel(page.slug, lang);
               const localizedRepresentative = resolveProductText(representative.id, representative.category, lang);
-              const description = categoryUiCopy[lang].directoryDescription(label);
+              const description = (categoryUiCopy[lang] ?? categoryUiCopy.en!).directoryDescription(label);
               const imageAlt = localizedRepresentative
                 ? withOemTitle(localizedRepresentative.title, representative.id, lang)
                 : `${label} product example`;

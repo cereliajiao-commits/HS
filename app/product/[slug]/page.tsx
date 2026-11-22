@@ -163,8 +163,8 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
       title,
       description,
       siteName: 'HONGSHENG Auto Parts',
-      locale: ({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR' } as Record<Language, string>)[lang],
-      alternateLocale: Object.entries({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR' } as Record<Language, string>)
+      locale: ({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR', ja: 'ja_JP', ko: 'ko_KR', de: 'de_DE', it: 'it_IT', nl: 'nl_NL', tr: 'tr_TR', pl: 'pl_PL', id: 'id_ID' } as Record<Language, string>)[lang],
+      alternateLocale: Object.entries({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR', ja: 'ja_JP', ko: 'ko_KR', de: 'de_DE', it: 'it_IT', nl: 'nl_NL', tr: 'tr_TR', pl: 'pl_PL', id: 'id_ID' } as Record<Language, string>)
         .filter(([code]) => code !== lang)
         .map(([, locale]) => locale),
       images: images.map((url) => ({ url, alt: product.title })),
@@ -210,7 +210,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       category: product.categoryLabel,
     },
     isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website` },
-    inLanguage: ({ en: 'en', zh: 'zh-CN', ru: 'ru', ar: 'ar', es: 'es', pt: 'pt', fr: 'fr' } as Record<Language, string>)[lang],
+    inLanguage: ({ en: 'en', zh: 'zh-CN', ru: 'ru', ar: 'ar', es: 'es', pt: 'pt', fr: 'fr', ja: 'ja', ko: 'ko', de: 'de', it: 'it', nl: 'nl', tr: 'tr', pl: 'pl', id: 'id' } as Record<Language, string>)[lang],
     additionalProperty: product.specs.map((spec) => ({
       '@type': 'PropertyValue',
       name: spec.label,
@@ -311,6 +311,14 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
     es: { home: 'Inicio', products: 'Productos' },
     pt: { home: 'Início', products: 'Produtos' },
     fr: { home: 'Accueil', products: 'Produits' },
+    ja: { home: 'ホーム', products: '製品' },
+    ko: { home: '홈', products: '제품' },
+    de: { home: 'Startseite', products: 'Produkte' },
+    it: { home: 'Home', products: 'Prodotti' },
+    nl: { home: 'Home', products: 'Producten' },
+    tr: { home: 'Ana sayfa', products: 'Ürünler' },
+    pl: { home: 'Strona główna', products: 'Produkty' },
+    id: { home: 'Beranda', products: 'Produk' },
   };
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
@@ -334,9 +342,9 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
 
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <a href={homeUrl}>{breadcrumbLabels[lang].home}</a>
+          <a href={homeUrl}>{(breadcrumbLabels[lang] ?? breadcrumbLabels.en).home}</a>
           <span aria-hidden="true">/</span>
-          <a href={productsUrl}>{breadcrumbLabels[lang].products}</a>
+          <a href={productsUrl}>{(breadcrumbLabels[lang] ?? breadcrumbLabels.en).products}</a>
           <span aria-hidden="true">/</span>
           <span>{product.title}</span>
         </nav>

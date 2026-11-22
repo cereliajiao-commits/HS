@@ -21,7 +21,7 @@ export async function generateMetadata({ searchParams }: { searchParams?: { lang
     title: { absolute: title },
     description,
     alternates: { canonical, languages: languageAlternates(SITE_URL, '/') },
-    openGraph: { type: 'website', url: canonical, title, description, siteName: 'HONGSHENG Auto Parts', locale: ({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR' } as Record<Language, string>)[lang] },
+    openGraph: { type: 'website', url: canonical, title, description, siteName: 'HONGSHENG Auto Parts', locale: ({ en: 'en_US', zh: 'zh_CN', ru: 'ru_RU', ar: 'ar_SA', es: 'es_ES', pt: 'pt_BR', fr: 'fr_FR', ja: 'ja_JP', ko: 'ko_KR', de: 'de_DE', it: 'it_IT', nl: 'nl_NL', tr: 'tr_TR', pl: 'pl_PL', id: 'id_ID' } as Record<Language, string>)[lang] },
   };
 }
 

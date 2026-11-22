@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-type Language = 'en' | 'zh' | 'ru' | 'ar' | 'es' | 'pt' | 'fr';
+type Language = 'en' | 'zh' | 'ru' | 'ar' | 'es' | 'pt' | 'fr' | 'ja' | 'ko' | 'de' | 'it' | 'nl' | 'tr' | 'pl' | 'id';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,6 +13,14 @@ const countryLanguage: Record<string, Language> = {
   VE: 'es', EC: 'es', UY: 'es', BO: 'es', PY: 'es', CR: 'es',
   BR: 'pt', PT: 'pt',
   FR: 'fr', BE: 'fr', MC: 'fr', LU: 'fr',
+  JP: 'ja',
+  KR: 'ko',
+  DE: 'de', AT: 'de', CH: 'de',
+  IT: 'it', SM: 'it', VA: 'it',
+  NL: 'nl',
+  TR: 'tr',
+  PL: 'pl',
+  ID: 'id',
 };
 
 function languageFromAcceptLanguage(value: string | null): Language {
@@ -28,6 +36,14 @@ function languageFromAcceptLanguage(value: string | null): Language {
     if (language.startsWith('es')) return 'es';
     if (language.startsWith('pt')) return 'pt';
     if (language.startsWith('fr')) return 'fr';
+    if (language.startsWith('ja')) return 'ja';
+    if (language.startsWith('ko')) return 'ko';
+    if (language.startsWith('de')) return 'de';
+    if (language.startsWith('it')) return 'it';
+    if (language.startsWith('nl')) return 'nl';
+    if (language.startsWith('tr')) return 'tr';
+    if (language.startsWith('pl')) return 'pl';
+    if (language.startsWith('id')) return 'id';
   }
 
   return 'en';

@@ -25,7 +25,7 @@ export async function generateMetadata({ params, searchParams }: { params: { cat
   if (!page) return { title: 'Category not found', robots: { index: false, follow: false } };
   const lang = getLanguage(searchParams?.lang);
   const displayName = lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang);
-  const copy = categoryUiCopy[lang];
+  const copy = categoryUiCopy[lang] ?? categoryUiCopy.en!;
   const path = `/category/${page.slug}`;
   const canonical = languageUrl(SITE_URL, path, lang);
   return {
@@ -42,7 +42,7 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
   const page = getPage(params.category);
   if (!page) notFound();
   const lang = getLanguage(searchParams?.lang);
-  const copy = categoryUiCopy[lang];
+  const copy = categoryUiCopy[lang] ?? categoryUiCopy.en!;
   const displayName = lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang);
   const localizedFaq = localizedCategoryFaq(displayName, lang, page.faq);
   const products = allProductCards.filter((product) => product.category === page.slug);

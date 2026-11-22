@@ -14,7 +14,7 @@ interface Message {
 }
 
 function getCurrentTime(lang: string) {
-  const locale = ({ zh: 'zh-CN', es: 'es-ES', fr: 'fr-FR', ar: 'ar-SA', ru: 'ru-RU', pt: 'pt-BR' } as Record<string, string>)[lang] ?? 'en-US';
+  const locale = ({ zh: 'zh-CN', es: 'es-ES', fr: 'fr-FR', ar: 'ar-SA', ru: 'ru-RU', pt: 'pt-BR', ja: 'ja-JP', ko: 'ko-KR', de: 'de-DE', it: 'it-IT', nl: 'nl-NL', tr: 'tr-TR', pl: 'pl-PL', id: 'id-ID' } as Record<string, string>)[lang] ?? 'en-US';
   return new Date().toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
 }
 
@@ -62,6 +62,9 @@ function quickText(lang: string, type: 'quote' | 'products' | 'support' | 'moq')
       support: 'Preciso de suporte técnico',
       moq: 'Qual é o MOQ?',
     },
+    ja: { quote: 'ステアリングアームの見積もりが必要です', products: 'どのような製品がありますか？', support: '技術サポートが必要です', moq: '最小注文数量はいくつですか？' },
+    ko: { quote: '스티어링 암 견적이 필요합니다', products: '어떤 제품을 제공하나요?', support: '기술 지원이 필요합니다', moq: '최소 주문 수량은 얼마인가요?' },
+    de: { quote: 'Ich benötige ein Angebot für Lenkhebel', products: 'Welche Produkte bieten Sie an?', support: 'Ich benötige technische Unterstützung', moq: 'Wie hoch ist Ihre Mindestbestellmenge?' },
   };
   return map[lang]?.[type] ?? map.en[type];
 }
@@ -79,6 +82,9 @@ function whatsappLabel(lang: string) {
     ar: 'المتابعة عبر واتساب',
     ru: 'Продолжить в WhatsApp',
     pt: 'Continuar no WhatsApp',
+    ja: 'WhatsAppで続ける',
+    ko: 'WhatsApp에서 계속하기',
+    de: 'Auf WhatsApp fortfahren',
   };
   return labels[lang] ?? labels.en;
 }

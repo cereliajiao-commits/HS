@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from './LanguageProvider';
+import { useLanguage, type Language } from './LanguageProvider';
 
 const advantageIcons = [
   '&#9881;',
@@ -86,7 +86,8 @@ const buyerPromiseCopy = {
 
 export default function AdvantagesSection() {
   const { lang, t } = useLanguage();
-  const buyerCopy = buyerPromiseCopy[lang];
+  const localizedBuyerPromiseCopy = buyerPromiseCopy as unknown as Partial<Record<Language, (typeof buyerPromiseCopy.en)>>;
+  const buyerCopy = localizedBuyerPromiseCopy[lang] ?? buyerPromiseCopy.en;
 
   const advantages = [
     { icon: advantageIcons[0], title: t('adv.t1'), desc: t('adv.d1') },

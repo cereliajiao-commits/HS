@@ -537,6 +537,15 @@ const categoryLabelMap: Record<string, Record<string, string>> = {
     shaft: 'Eixo cardã',
     'long-shaft': 'Eixo longo',
   },
+  ja: {
+    vertical: '垂直アーム', 'steering-arm': 'ステアリングアーム', 'tie-rod': 'タイロッドASSY', 'shock-absorber': 'ショックアブソーバーASSY', 'air-spring': 'エアスプリングショックアブソーバー', 'control-arm': 'コントロールアーム', 'torque-rod': 'トルクロッド', differential: 'デファレンシャルASSY', 'steering-knuckle': 'ステアリングナックル', agricultural: '農業機械部品', 'john-deere': 'John Deere ASSY', shaft: 'ドライブシャフト', 'long-shaft': 'ロングシャフトASSY',
+  },
+  ko: {
+    vertical: '버티컬 암', 'steering-arm': '스티어링 암', 'tie-rod': '타이로드 어셈블리', 'shock-absorber': '쇼크 업소버 어셈블리', 'air-spring': '에어 스프링 쇼크 업소버', 'control-arm': '컨트롤 암', 'torque-rod': '토크 로드', differential: '디퍼렌셜 어셈블리', 'steering-knuckle': '스티어링 너클', agricultural: '농기계 부품', 'john-deere': 'John Deere 어셈블리', shaft: '드라이브 샤프트', 'long-shaft': '롱 샤프트 어셈블리',
+  },
+  de: {
+    vertical: 'Vertikalhebel', 'steering-arm': 'Lenkhebel', 'tie-rod': 'Spurstangen-Baugruppe', 'shock-absorber': 'Stoßdämpfer-Baugruppe', 'air-spring': 'Luftfeder-Stoßdämpfer', 'control-arm': 'Querlenker', 'torque-rod': 'Drehmomentstrebe', differential: 'Differenzial-Baugruppe', 'steering-knuckle': 'Achsschenkel', agricultural: 'Landmaschinenbauteil', 'john-deere': 'John-Deere-Baugruppe', shaft: 'Antriebswelle', 'long-shaft': 'Langwellen-Baugruppe',
+  },
 };
 
 const extraProductDescriptionMap: Partial<Record<Language, Array<[string, string]>>> = {
@@ -657,7 +666,7 @@ export function translateProductText(text: string, lang: Language) {
 }
 
 export function translateCategoryLabel(category: string, lang: Language) {
-  return categoryLabelMap[lang]?.[category] ?? category;
+  return categoryLabelMap[lang]?.[category] ?? categoryLabelMap.en?.[category] ?? category;
 }
 
 export function resolveProductText(productId: string, category: string, lang: Language): TranslatedProductText | null {

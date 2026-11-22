@@ -10,7 +10,7 @@ const SITE_URL = 'https://www.hsaxle.com';
 
 export async function generateMetadata({ searchParams }: { searchParams?: { lang?: string } }): Promise<Metadata> {
   const lang = getLanguage(searchParams?.lang);
-  const copy = categoryUiCopy[lang];
+  const copy = categoryUiCopy[lang] ?? categoryUiCopy.en!;
   const canonical = languageUrl(SITE_URL, '/category', lang);
   return {
     title: { absolute: lang === 'en' ? 'Truck and Agricultural Parts Categories | HONGSHENG' : `${copy.categories} | HONGSHENG Auto Parts` },
@@ -22,7 +22,7 @@ export async function generateMetadata({ searchParams }: { searchParams?: { lang
 
 export default function CategoryIndexPage({ searchParams }: { searchParams?: { lang?: string } }) {
   const lang = getLanguage(searchParams?.lang);
-  const copy = categoryUiCopy[lang];
+  const copy = categoryUiCopy[lang] ?? categoryUiCopy.en!;
   const categoryUrl = languageUrl(SITE_URL, '/category', lang);
   const graph = {
     '@context': 'https://schema.org',

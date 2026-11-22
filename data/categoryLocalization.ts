@@ -13,7 +13,7 @@ type CategoryUiCopy = {
   directoryDescription: (name: string) => string;
 };
 
-export const categoryUiCopy: Record<Language, CategoryUiCopy> = {
+export const categoryUiCopy: Partial<Record<Language, CategoryUiCopy>> = {
   en: {
     home: 'Home',
     categories: 'Product categories',
@@ -98,13 +98,22 @@ export const categoryUiCopy: Record<Language, CategoryUiCopy> = {
     directoryIntro: 'Parcourez les catégories HONGSHENG par direction, suspension, ponts, transmission et machines agricoles. Chaque catégorie mène aux produits, références OEM et demande de devis.',
     directoryDescription: (name) => `Découvrez ${name.toLowerCase()} avec applications, références OEM/OE et détails produit.`,
   },
+  ja: {
+    home: 'ホーム', categories: '製品カテゴリー', browseLabel: '製品カテゴリー', count: (count) => `OEM/OE参照情報付き ${count} 製品`, faqLabel: '適合性FAQ', faqTitle: (name) => `${name}についてのよくある質問`, quote: 'カタログまたは見積もりを依頼', intro: (name) => `${name}をトラックプラットフォーム、OEM/OE番号、用途から検索できます。ご注文前に寸法と取付仕様をご確認ください。`, directoryIntro: 'ステアリング、サスペンション、アクスル、駆動系、農業機械向けにHONGSHENGの製品カテゴリーをご覧いただけます。', directoryDescription: (name) => `${name}の車両適合、OEM/OE番号、製品詳細を確認できます。`,
+  },
+  ko: {
+    home: '홈', categories: '제품 카테고리', browseLabel: '제품 카테고리', count: (count) => `OEM/OE 참조 정보가 있는 ${count}개 제품`, faqLabel: '호환성 FAQ', faqTitle: (name) => `${name}에 대한 자주 묻는 질문`, quote: '카탈로그 또는 견적 요청', intro: (name) => `${name} 제품을 트럭 플랫폼, OEM/OE 번호 및 용도별로 확인하세요. 주문 전에 주요 치수와 장착 정보를 확인하십시오.`, directoryIntro: '스티어링, 서스펜션, 차축, 구동계 및 농기계 용도별 HONGSHENG 제품 카테고리를 살펴보세요.', directoryDescription: (name) => `${name}의 차량 적용, OEM/OE 번호 및 제품 상세 정보입니다.`,
+  },
+  de: {
+    home: 'Startseite', categories: 'Produktkategorien', browseLabel: 'PRODUKTKATEGORIE', count: (count) => `${count} Produkte mit OEM/OE-Referenzen`, faqLabel: 'KOMPATIBILITÄTS-FAQ', faqTitle: (name) => `Fragen zu ${name}`, quote: 'Katalog oder Angebot anfordern', intro: (name) => `${name} nach Lkw-Plattform, OEM/OE-Referenz und Anwendung durchsuchen. Prüfen Sie vor der Bestellung Maße und Befestigung.`, directoryIntro: 'Entdecken Sie HONGSHENG-Kategorien für Lenkung, Fahrwerk, Achsen, Antrieb und Landmaschinen.', directoryDescription: (name) => `${name} mit Fahrzeuganwendungen, OEM/OE-Referenzen und Produktdetails durchsuchen.`,
+  },
 };
 
 type FaqItem = { question: string; answer: string };
 
 export function localizedCategoryFaq(name: string, lang: Language, englishFaq: FaqItem[]): FaqItem[] {
   if (lang === 'en') return englishFaq;
-  const faq: Record<Exclude<Language, 'en'>, FaqItem[]> = {
+  const faq: Partial<Record<Exclude<Language, 'en'>, FaqItem[]>> = {
     zh: [
       { question: `${name}主要用于什么？`, answer: `${name}用于重型车辆及相关机械的转向、悬挂、车桥或传动系统。具体用途请结合车型、桥型和产品详情确认。` },
       { question: '下单前需要核对哪些信息？', answer: '请核对 OEM/OE 参考号、车型与年份、桥型或轴型、左右位置、关键尺寸和安装孔位。' },
@@ -136,5 +145,5 @@ export function localizedCategoryFaq(name: string, lang: Language, englishFaq: F
       { question: 'Comment confirmer la compatibilité ?', answer: 'Si l’application est incertaine, envoyez des photos de la pièce, la plaque du véhicule, la référence OEM/OE et les dimensions clés.' },
     ],
   };
-  return faq[lang as Exclude<Language, 'en'>];
+  return faq[lang as Exclude<Language, 'en'>] ?? englishFaq;
 }

@@ -77,7 +77,7 @@ const content = {
 
 export default function BuyerStorySection() {
   const { lang } = useLanguage();
-  const copy = content[lang];
+  const copy = (content as unknown as Partial<Record<typeof lang, (typeof content.en)>>)[lang] ?? content.en;
 
   return (
     <section className="buyer-story">

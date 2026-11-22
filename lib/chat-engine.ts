@@ -3,7 +3,7 @@ import { productCards } from '@/data/products';
 import { productContent } from '@/data/productContent';
 import type { ProductLocale } from '@/data/productContent';
 
-export type ChatLanguage = 'en' | 'zh' | 'es' | 'fr' | 'ar' | 'ru' | 'pt';
+export type ChatLanguage = 'en' | 'zh' | 'es' | 'fr' | 'ar' | 'ru' | 'pt' | 'ja' | 'ko' | 'de';
 export type ChatIntent =
   | 'greeting'
   | 'product'
@@ -42,6 +42,9 @@ const languageHints: Array<{ lang: ChatLanguage; markers: string[] }> = [
   { lang: 'ar', markers: ['مرحبا', 'سعر', 'عينة', 'موعد', 'مصنع', 'عرض'] },
   { lang: 'ru', markers: ['цена', 'образец', 'завод', 'срок', 'могу', 'здравствуйте'] },
   { lang: 'pt', markers: ['preço', 'amostra', 'fábrica', 'prazo', 'cotação', 'olá'] },
+  { lang: 'ja', markers: ['価格', '見積もり', 'サンプル', '工場', '納期', 'こんにちは'] },
+  { lang: 'ko', markers: ['가격', '견적', '샘플', '공장', '납기', '안녕하세요'] },
+  { lang: 'de', markers: ['preis', 'angebot', 'muster', 'fabrik', 'lieferzeit', 'hallo'] },
 ];
 
 const intentRules: Array<{ intent: ChatIntent; patterns: RegExp[] }> = [
@@ -125,6 +128,9 @@ function buildFallbackReply(lang: ChatLanguage, hasProducts: boolean, productMat
     if (lang === 'ar') return `وجدت منتجات ذات صلة: ${productMatches.map((item) => item.title).join('، ')}. إذا كنت تحتاج عرض سعر، يرجى إرسال الموديل والكمية وبلد الوصول.`;
     if (lang === 'ru') return `Я нашёл подходящие товары: ${productMatches.map((item) => item.title).join(', ')}. Если нужен расчёт, отправьте модель, количество и страну назначения.`;
     if (lang === 'pt') return `Encontrei produtos relacionados: ${productMatches.map((item) => item.title).join(', ')}. Se precisar de cotação, envie modelo, quantidade e país de destino.`;
+    if (lang === 'ja') return `関連製品が見つかりました：${productMatches.map((item) => item.title).join('、')}。見積もりには型式、数量、仕向け国をお知らせください。`;
+    if (lang === 'ko') return `관련 제품을 찾았습니다: ${productMatches.map((item) => item.title).join(', ')}. 견적을 위해 모델, 수량 및 도착 국가를 알려주세요.`;
+    if (lang === 'de') return `Passende Produkte gefunden: ${productMatches.map((item) => item.title).join(', ')}. Für ein Angebot senden Sie bitte Modell, Menge und Zielland.`;
     return `I found related products: ${productMatches.map((item) => item.title).join(', ')}. If you need a quote, please send the model, quantity, and destination country.`;
   }
   if (lang === 'zh') {
@@ -135,6 +141,9 @@ function buildFallbackReply(lang: ChatLanguage, hasProducts: boolean, productMat
   if (lang === 'ar') return 'شكرًا لاستفسارك. يرجى إرسال الموديل أو الكمية أو صورة، وسنؤكد لك التفاصيل قريبًا.';
   if (lang === 'ru') return 'Спасибо за ваш запрос. Пожалуйста, отправьте модель, количество или фото, и мы быстро подтвердим детали.';
   if (lang === 'pt') return 'Obrigado pela sua mensagem. Envie o modelo, a quantidade ou uma foto, e confirmaremos em breve.';
+  if (lang === 'ja') return 'お問い合わせありがとうございます。型式、数量、または写真をお送りいただければ、詳細を確認します。';
+  if (lang === 'ko') return '문의해 주셔서 감사합니다. 모델, 수량 또는 사진을 보내주시면 곧 확인해 드리겠습니다.';
+  if (lang === 'de') return 'Vielen Dank für Ihre Nachricht. Senden Sie uns Modell, Menge oder ein Foto, und wir bestätigen die Details schnell.';
   return 'Thanks for your message. Please send the model, quantity, or a photo, and we will confirm the details soon.';
 }
 
@@ -145,6 +154,9 @@ function buildHandoffReply(lang: ChatLanguage) {
   if (lang === 'ar') return 'شكراً، هذا الموضوع يحتاج إلى مراجعة من فريقنا. سيتواصل معك قسم المبيعات قريباً.';
   if (lang === 'ru') return 'Спасибо, этот вопрос требует проверки менеджером. Наш отдел продаж свяжется с вами в ближайшее время.';
   if (lang === 'pt') return 'Obrigado, este assunto precisa de revisão humana. Nossa equipe comercial entrará em contato em breve.';
+  if (lang === 'ja') return 'この件は担当者による確認が必要です。営業担当がまもなくご連絡します。';
+  if (lang === 'ko') return '이 문의는 담당자의 확인이 필요합니다. 영업팀이 곧 연락드리겠습니다.';
+  if (lang === 'de') return 'Dieses Anliegen muss von einem Mitarbeiter geprüft werden. Unser Vertrieb meldet sich bald bei Ihnen.';
   return 'Thanks, this needs a human review. Our sales team will follow up shortly.';
 }
 

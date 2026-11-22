@@ -339,7 +339,11 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
               <div className="product-detail-section product-detail-oem">
                 <h2>{labels.oem}</h2>
                 <ul className="product-detail-oem-list">
-                  {product.oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}
+                  {product.oem.oemNumbers.map((number) => (
+                    <li key={number}>
+                      <a href={`/oem/${encodeURIComponent(number)}`}>{number}</a>
+                    </li>
+                  ))}
                 </ul>
                 {product.oem.vehicleApplication && (lang === 'zh' || !/[\u3400-\u9fff]/.test(product.oem.vehicleApplication)) && <p className="product-detail-oem-application">{product.oem.vehicleApplication}</p>}
                 <p className="product-detail-oem-note">{copy['product.oemNote']}</p>

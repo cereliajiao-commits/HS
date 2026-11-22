@@ -29,6 +29,16 @@ export default function ProductSearch() {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
 
+  // Keep the structured-data SearchAction functional: /?q=OEM opens the
+  // searchable catalog instead of sending crawlers and buyers to an inert URL.
+  useEffect(() => {
+    const initialQuery = new URLSearchParams(window.location.search).get('q')?.trim();
+    if (initialQuery) {
+      setQuery(initialQuery);
+      setIsOpen(true);
+    }
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setIsOpen(false);

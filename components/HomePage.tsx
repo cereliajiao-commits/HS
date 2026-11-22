@@ -36,15 +36,23 @@ export default function HomePage() {
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
 
+    root.classList.add('scroll-reveal-ready');
     revealItems.forEach((item) => observer.observe(item));
-    const revealFallback = window.setTimeout(() => {
-      revealItems.forEach((item) => item.classList.add('visible'));
-    }, 2400);
+    const revealVisibleFallback = () => {
+      const viewportBottom = window.innerHeight * 0.92;
+      revealItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < viewportBottom && rect.bottom > 0) item.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealVisibleFallback, { passive: true });
+    revealVisibleFallback();
 
     return () => {
       observer.disconnect();
-      window.clearTimeout(revealFallback);
+      window.removeEventListener('scroll', revealVisibleFallback);
       root.classList.remove('has-scroll-reveal');
+      root.classList.remove('scroll-reveal-ready');
     };
   }, []);
 

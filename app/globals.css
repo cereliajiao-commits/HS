@@ -212,7 +212,7 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
 
 /* === ANIMATIONS === */
 .fade-up{opacity:1;transform:none}
-.has-scroll-reveal .fade-up{opacity:0;transform:translate3d(0,32px,0);transition:opacity .72s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.22,1,.36,1)}
+.has-scroll-reveal .fade-up{opacity:1;transform:translate3d(0,32px,0);transition:opacity .72s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.22,1,.36,1)}
 .has-scroll-reveal .fade-up.visible{opacity:1;transform:translate3d(0,0,0)}
 .has-scroll-reveal .hero-badge.fade-up{transform:translate3d(-18px,20px,0)}
 .has-scroll-reveal .hero-badge.fade-up.visible{transform:translate3d(0,0,0)}

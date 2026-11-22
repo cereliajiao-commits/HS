@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { categoryPages } from '@/data/categoryPages';
@@ -76,7 +77,13 @@ export default function ProductsSection() {
                   style={{ transitionDelay: `${Math.min(index, 5) * 70}ms` }}
                 >
                   <div className="product-category-card-media">
-                    <img src={`${representative.image}?v=20261106-media`} alt="" loading="lazy" width="900" height="700" />
+                    <Image
+                      src={`${representative.image}?v=20261106-media`}
+                      alt=""
+                      fill
+                      sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      priority={index < 3}
+                    />
                   </div>
                   <div className="product-category-card-content">
                     <h4>{label}</h4>

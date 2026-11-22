@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { categoryPageMap, categoryPages } from '@/data/categoryPages';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
@@ -84,12 +85,21 @@ export default function CategoryPage({ params }: { params: { category: string } 
         <p className="category-page-intro">{page.intro}</p>
         <p className="category-page-count">{products.length} cataloged products with OEM/OE reference information</p>
         <section className="products-grid category-product-grid" aria-label={page.name}>
-          {products.map((product) => {
+          {products.map((product, index) => {
             const title = withOemTitle(product.title, product.id, 'en');
             const oemNumbers = getDisplayOemNumbers(product.id, 'en');
             return (
               <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
-                <div className="product-card-img"><img src={product.image} alt={title} width="1200" height="1200" loading="lazy" /></div>
+                <div className="product-card-img">
+                  <Image
+                    src={product.image}
+                    alt={title}
+                    width={1200}
+                    height={1200}
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 3}
+                  />
+                </div>
                 <div className="product-card-body">
                   <h2>{title}</h2>
                   <p>{product.description}</p>

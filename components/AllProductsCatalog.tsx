@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
@@ -22,12 +23,21 @@ export default function AllProductsCatalog() {
     <>
       <p className="category-page-count">{allProductCards.length} products with OEM/OE reference information</p>
       <section className="products-grid category-product-grid" aria-label="All products">
-        {products.map((product) => {
+        {products.map((product, index) => {
           const title = withOemTitle(product.title, product.id, 'en');
           const oemNumbers = getDisplayOemNumbers(product.id, 'en');
           return (
             <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
-              <div className="product-card-img"><img src={product.image} alt={title} width="1200" height="1200" loading="lazy" /></div>
+              <div className="product-card-img">
+                <Image
+                  src={product.image}
+                  alt={title}
+                  width={1200}
+                  height={1200}
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  priority={index < 3}
+                />
+              </div>
               <div className="product-card-body">
                 <h2>{title}</h2>
                 <p>{product.description}</p>

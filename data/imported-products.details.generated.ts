@@ -2,18 +2,18 @@ export const importedProductDetails = {
   'new-steering-arm-001': {
     image: '/images/products/imported-steering-arm-001-1045弯臂.webp',
     category: 'Steering Arm',
-    title: 'Heavy-Duty Steering Arm - 1045',
+    title: 'Isuzu NPR 4HK1 Steering Knuckle Arm 8972107712',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',
     specs: [
-      { label: 'Type', value: 'Steering arm' },
-      { label: 'Application', value: 'Truck steering system' },
-      { label: 'Material', value: 'Forged steel' },
+      { label: 'Type', value: 'Steering knuckle arm' },
+      { label: 'Application', value: 'Isuzu NPR 4HK1 truck steering linkage' },
+      { label: 'OEM / OE', value: '8972107712' },
       { label: 'Supply', value: 'OEM / aftermarket' },
     ],
     applications: [
-      'Truck steering linkage',
-      'OEM replacement',
-      'Aftermarket supply',
+      'Isuzu NPR 4HK1 trucks',
+      'Truck steering linkage replacement',
+      'OEM / aftermarket supply',
     ],
   },
   'new-steering-arm-002': {
@@ -835,7 +835,7 @@ export const importedProductDetails = {
   'new-steering-knuckle-004': {
     image: '/images/products/imported-steering-knuckle-004-1061-abs.webp',
     category: 'Steering Knuckle',
-    title: 'Steering Knuckle - 1061（ABS）',
+    title: 'Steering Knuckle - 1061 (ABS)',
     description: 'Durable steering knuckle engineered for stable steering transfer and long service life in heavy-duty vehicles.',
     specs: [
       { label: 'Type', value: 'Steering knuckle' },

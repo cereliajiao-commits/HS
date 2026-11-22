@@ -4,13 +4,37 @@
     "category": "steering-arm",
     "brand": "others",
     "image": "/images/products/imported-steering-arm-001-1045弯臂.webp",
-    "title": "Steering Arm - 1045弯臂",
-    "description": "High-quality steering arm for heavy-duty truck steering systems.",
+    "title": "Isuzu NPR 4HK1 Steering Knuckle Arm 8972107712",
+    "description": "Isuzu NPR 4HK1 steering knuckle arm for truck steering linkage applications, OEM reference 8972107712.",
     "tag": "Steering Arm",
-    "titleEn": "Steering Arm - 1045弯臂",
-    "titleZh": "1045弯臂",
-    "descriptionEn": "High-quality steering arm for heavy-duty truck steering systems.",
-    "descriptionZh": "高品质转向臂，适用于重型卡车转向系统。",
+    "titleEn": "Isuzu NPR 4HK1 Steering Knuckle Arm 8972107712",
+    "titleZh": "五十铃底盘零件 8972107712 NPR 4HK1 转向节臂",
+    "descriptionEn": "Isuzu NPR 4HK1 steering knuckle arm for truck steering linkage applications, OEM reference 8972107712.",
+    "descriptionZh": "五十铃 NPR 4HK1 底盘转向节臂，OEM号为 8972107712，适用于卡车转向传动系统。",
+    "detailDescriptionEn": "Isuzu NPR 4HK1 steering knuckle arm for truck steering linkage applications, OEM reference 8972107712. Confirm the vehicle model, mounting position and dimensions before ordering.",
+    "detailDescriptionZh": "五十铃 NPR 4HK1 底盘转向节臂，OEM号为 8972107712，适用于卡车转向传动系统。下单前请核对车型、安装位置和关键尺寸。",
+    "specsEn": [
+      { "label": "Type", "value": "Steering knuckle arm" },
+      { "label": "Application", "value": "Isuzu NPR 4HK1 truck steering linkage" },
+      { "label": "OEM / OE", "value": "8972107712" },
+      { "label": "Supply", "value": "OEM / aftermarket" }
+    ],
+    "specsZh": [
+      { "label": "类型", "value": "转向节臂" },
+      { "label": "适用", "value": "五十铃 NPR 4HK1 卡车转向传动" },
+      { "label": "OEM号", "value": "8972107712" },
+      { "label": "供货", "value": "OEM / 售后市场" }
+    ],
+    "applicationsEn": [
+      "Isuzu NPR 4HK1 trucks",
+      "Truck steering linkage replacement",
+      "OEM / aftermarket supply"
+    ],
+    "applicationsZh": [
+      "五十铃 NPR 4HK1",
+      "卡车转向传动替换",
+      "OEM / 售后市场供货"
+    ],
     "categoryLabelEn": "Steering Arm",
     "categoryLabelZh": "转向臂"
   },

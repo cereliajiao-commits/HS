@@ -266,11 +266,13 @@ export const oemReferences: Record<string, OemReference> = {
   },
   "new-steering-arm-001": {
     "productId": "new-steering-arm-001",
-    "oemNumbers": [],
-    "vehicleApplication": "东风EQ1045系列轻卡",
-    "confidence": "未查到",
+    "oemNumbers": [
+      "8972107712"
+    ],
+    "vehicleApplication": "五十铃 NPR 4HK1",
+    "confidence": "中",
     "sourceUrl": "",
-    "note": "1045弯臂，检索'东风1045 转向节臂 零件号'未找到对应图号；东风轻卡转向节臂常见30D/30N系列，1045为老款轻卡底盘代号"
+    "note": "根据用户提供的产品信息修正：该产品为五十铃 NPR 4HK1 底盘转向节臂，OEM/OE 8972107712。下单前请核对车型、安装位置和关键尺寸。"
   },
   "new-steering-arm-002": {
     "productId": "new-steering-arm-002",

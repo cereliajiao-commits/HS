@@ -1792,7 +1792,7 @@ export const importedProductDetails = {
     ],
   },
   'new-steering-arm-047': {
-    image: '/images/products/shacman-81467010315-left-steering-arm-v2.webp',
+    image: '/images/products/shacman-81467010315-left-steering-arm-white-bg.webp',
     category: 'Steering Arm',
     title: 'SHACMAN 81.46701.0315 Left Steering Arm',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',

@@ -37,8 +37,13 @@ export default function HomePage() {
     }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
 
     revealItems.forEach((item) => observer.observe(item));
+    const revealFallback = window.setTimeout(() => {
+      revealItems.forEach((item) => item.classList.add('visible'));
+    }, 2400);
+
     return () => {
       observer.disconnect();
+      window.clearTimeout(revealFallback);
       root.classList.remove('has-scroll-reveal');
     };
   }, []);

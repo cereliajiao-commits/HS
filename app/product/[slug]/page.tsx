@@ -181,18 +181,31 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
 function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnType<typeof getLocalizedProduct>>; slug: string; lang: Language }) {
   const url = productUrl(slug, lang);
   const images = product.images.map(absoluteUrl);
+  const imageObjects = images.map((image, index) => ({
+    '@type': 'ImageObject',
+    '@id': `${image}#image`,
+    url: image,
+    contentUrl: image,
+    name: product.title,
+    caption: product.title,
+    representativeOfPage: index === 0,
+    encodingFormat: 'image/webp',
+    width: 1200,
+    height: 1200,
+  }));
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': `${url}#webpage`,
     name: product.title,
     description: product.description,
-    primaryImageOfPage: images,
+    primaryImageOfPage: imageObjects[0],
+    image: imageObjects,
     url,
     about: {
       '@type': 'Thing',
       name: product.title,
-      image: images,
+      image: imageObjects,
       identifier: product.displayOemNumbers[0] ?? product.card.id,
       category: product.categoryLabel,
     },

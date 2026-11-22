@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const languages = languageAlternates(siteUrl, path);
     return supportedLanguages.map((lang) => ({
       url: languageUrl(siteUrl, path, lang),
+      images: [new URL(product.image, siteUrl).toString()],
       changeFrequency: 'monthly' as const,
       priority: lang === 'en' ? 0.8 : 0.7,
       alternates: { languages },

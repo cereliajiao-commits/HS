@@ -1,6 +1,6 @@
 export const importedProductDetails = {
   'new-steering-arm-001': {
-    image: '/images/products/imported-steering-arm-001-1045弯臂.webp',
+    image: '/images/products/isuzu-npr-4hk1-steering-knuckle-arm-8972107712.webp',
     category: 'Steering Arm',
     title: 'Isuzu NPR 4HK1 Steering Knuckle Arm 8972107712',
     description: 'Precision-built heavy-duty steering arm for truck steering linkage applications, suitable for replacement and OEM supply.',

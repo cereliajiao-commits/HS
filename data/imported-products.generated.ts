@@ -3,7 +3,7 @@ export const importedProductCards = [
     id: 'new-steering-arm-001',
     category: 'steering-arm',
     brand: 'others',
-    image: '/images/products/imported-steering-arm-001-1045弯臂.webp',
+    image: '/images/products/isuzu-npr-4hk1-steering-knuckle-arm-8972107712.webp',
     description: 'Isuzu NPR 4HK1 steering knuckle arm for truck steering linkage applications, OEM reference 8972107712.',
     tag: 'Steering Arm',
     title: 'Isuzu NPR 4HK1 Steering Knuckle Arm 8972107712',

@@ -31,7 +31,7 @@ export default function ProductGallery({ images, alt, hint }: ProductGalleryProp
               aria-label={`${t('gallery.view')} ${index + 1}`}
               aria-pressed={selected === index}
             >
-              <img src={`${image}?v=20261107-differential-ai1`} alt="" loading="lazy" />
+              <img src={`${image}?v=20261107-differential-ai1`} alt={`${alt} view ${index + 1}`} loading="lazy" />
             </button>
           ))}
         </div>

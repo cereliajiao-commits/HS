@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { categoryPageMap, categoryPages } from '@/data/categoryPages';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
+import { resolveProductText } from '@/data/productLocalization';
 import type { Language } from '@/components/LanguageProvider';
 
 const SITE_URL = 'https://www.hsaxle.com';
@@ -95,8 +96,10 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
         <p className="category-page-count">{products.length} cataloged products with OEM/OE reference information</p>
         <section className="products-grid category-product-grid" aria-label={page.name}>
           {products.map((product, index) => {
-            const title = withOemTitle(product.title, product.id, 'en');
-            const oemNumbers = getDisplayOemNumbers(product.id, 'en');
+            const localized = resolveProductText(product.id, product.category, lang);
+            const title = withOemTitle(localized?.title ?? product.title, product.id, lang);
+            const description = localized?.description ?? product.description;
+            const oemNumbers = getDisplayOemNumbers(product.id, lang);
             return (
               <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}${lang === 'en' ? '' : `?lang=${lang}`}`} key={product.id}>
                 <div className="product-card-img">
@@ -111,9 +114,9 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
                 </div>
                 <div className="product-card-body">
                   <h2>{title}</h2>
-                  <p>{product.description}</p>
+                  <p>{description}</p>
                   {oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oemNumbers.join(' · ')}</div> : null}
-                  <span className="product-tag">{page.name}</span>
+                  <span className="product-tag">{localized?.categoryLabel ?? page.name}</span>
                 </div>
               </Link>
             );

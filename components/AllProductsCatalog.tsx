@@ -6,10 +6,11 @@ import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 import type { Language } from './LanguageProvider';
+import { resolveProductText } from '@/data/productLocalization';
 
 const PRODUCTS_PER_PAGE = 20;
 
-export default function AllProductsCatalog({ lang = 'en' }: { lang?: Language }) {
+export default function AllProductsCatalog({ lang = 'en', countSuffix = 'products with OEM/OE reference information' }: { lang?: Language; countSuffix?: string }) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(allProductCards.length / PRODUCTS_PER_PAGE));
   const visiblePage = Math.min(currentPage, totalPages);
@@ -22,11 +23,13 @@ export default function AllProductsCatalog({ lang = 'en' }: { lang?: Language })
 
   return (
     <>
-      <p className="category-page-count">{allProductCards.length} products with OEM/OE reference information</p>
+      <p className="category-page-count">{allProductCards.length} {countSuffix}</p>
       <section className="products-grid category-product-grid" aria-label="All products">
         {products.map((product, index) => {
-          const title = withOemTitle(product.title, product.id, 'en');
-          const oemNumbers = getDisplayOemNumbers(product.id, 'en');
+          const localized = resolveProductText(product.id, product.category, lang);
+          const title = withOemTitle(localized?.title ?? product.title, product.id, lang);
+          const description = localized?.description ?? product.description;
+          const oemNumbers = getDisplayOemNumbers(product.id, lang);
           return (
             <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}${lang === 'en' ? '' : `?lang=${lang}`}`} key={product.id}>
               <div className="product-card-img">
@@ -41,9 +44,9 @@ export default function AllProductsCatalog({ lang = 'en' }: { lang?: Language })
               </div>
               <div className="product-card-body">
                 <h2>{title}</h2>
-                <p>{product.description}</p>
+                <p>{description}</p>
                 {oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oemNumbers.join(' · ')}</div> : null}
-                <span className="product-tag">{product.tag}</span>
+                <span className="product-tag">{localized?.categoryLabel ?? product.tag}</span>
               </div>
             </Link>
           );

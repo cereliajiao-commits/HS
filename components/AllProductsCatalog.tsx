@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { allProductCards } from '@/data/products';
-import { oemReferences } from '@/data/oemReference.generated';
-import { withOemTitle } from '@/data/productTitles';
+import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
 const PRODUCTS_PER_PAGE = 20;
 
@@ -25,14 +24,14 @@ export default function AllProductsCatalog() {
       <section className="products-grid category-product-grid" aria-label="All products">
         {products.map((product) => {
           const title = withOemTitle(product.title, product.id, 'en');
-          const oem = oemReferences[product.id];
+          const oemNumbers = getDisplayOemNumbers(product.id, 'en');
           return (
             <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
               <div className="product-card-img"><img src={product.image} alt={title} width="1200" height="1200" loading="lazy" /></div>
               <div className="product-card-body">
                 <h2>{title}</h2>
                 <p>{product.description}</p>
-                {oem?.oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oem.oemNumbers.join(' · ')}</div> : null}
+                {oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oemNumbers.join(' · ')}</div> : null}
                 <span className="product-tag">{product.tag}</span>
               </div>
             </Link>

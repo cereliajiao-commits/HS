@@ -7,7 +7,7 @@ import { resolveProductText, translateCategoryLabel, translateProductText } from
 import type { Language } from '@/components/LanguageProvider';
 import ProductGallery from '@/components/ProductGallery';
 import { oemReferences } from '@/data/oemReference.generated';
-import { withOemTitle } from '@/data/productTitles';
+import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 import { translations } from '@/data/translations';
 
 type ProductDetailRecord = {
@@ -62,6 +62,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
   const fallbackSpecs = detail?.specs ?? [];
   const fallbackApplications = detail?.applications ?? [];
   const oem = oemReferences[slug];
+  const displayOemNumbers = getDisplayOemNumbers(slug, lang);
 
   return {
     ...product,
@@ -70,6 +71,7 @@ function getLocalizedProduct(slug: string, lang: Language) {
     specs: localized?.specs ?? fallbackSpecs,
     applications: localized?.applications ?? fallbackApplications,
     oem,
+    displayOemNumbers,
     categoryLabel: localized?.categoryLabel ?? translateCategoryLabel(card.category, lang),
     image: detail?.image ?? card.image,
     images: detail?.images?.length ? detail.images : [detail?.image ?? card.image],
@@ -84,8 +86,11 @@ type ProductFaqItem = { question: string; answer: string };
 
 function getProductFaq(product: NonNullable<ReturnType<typeof getLocalizedProduct>>, lang: Language): ProductFaqItem[] {
   const isChinese = lang === 'zh';
-  const oemNumbers = product.oem?.oemNumbers ?? [];
-  const application = product.oem?.vehicleApplication || product.applications.join(isChinese ? '、' : ', ');
+  const oemNumbers = product.displayOemNumbers;
+  const rawApplication = product.oem?.vehicleApplication ?? '';
+  const application = isChinese || !/[\u3400-\u9fff]/.test(rawApplication)
+    ? rawApplication
+    : product.applications.join(', ');
   const oemText = oemNumbers.length ? oemNumbers.join(isChinese ? '、' : ', ') : (isChinese ? '暂无已核实的 OEM 号' : 'No verified OEM number is currently listed');
   return isChinese
     ? [
@@ -143,7 +148,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     : `${product.title}: specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
   const copy = translations[lang];
   const description = compactMetaText(
-    `${rawDescription} ${product.oem?.oemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.oem.oemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : copy['product.requestQuote']}`,
+    `${rawDescription} ${product.displayOemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.displayOemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : copy['product.requestQuote']}`,
     155
   );
   const url = productUrl(params.slug, lang);
@@ -365,13 +370,13 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
               </div>
             )}
 
-            {product.oem?.oemNumbers.length ? (
+            {product.displayOemNumbers.length ? (
               <div className="product-detail-section product-detail-oem">
                 <h2>{labels.oem}</h2>
                 <ul className="product-detail-oem-list">
-                  {product.oem.oemNumbers.map((number) => (
+                  {product.displayOemNumbers.map((number, index) => (
                     <li key={number}>
-                      <a href={`/oem/${encodeURIComponent(number)}`}>{number}</a>
+                      <a href={`/oem/${encodeURIComponent(product.oem?.oemNumbers[index] ?? number)}`}>{number}</a>
                     </li>
                   ))}
                 </ul>

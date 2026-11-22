@@ -6,7 +6,7 @@ import { resolveProductText, translateProductText } from '@/data/productLocaliza
 import { useLanguage, type Language } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 import { oemReferences } from '@/data/oemReference.generated';
-import { withOemTitle } from '@/data/productTitles';
+import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
 const searchCopy: Record<Language, { label: string; title: string; placeholder: string; hint: string; noResults: string; results: string }> = {
   en: { label: 'Search products', title: 'Search Products', placeholder: 'Model, product, category or brand', hint: 'Search all product models by keyword.', noResults: 'No matching products found.', results: 'matching products' },
@@ -128,6 +128,7 @@ export default function ProductSearch() {
                 const localized = resolveProductText(card.id, card.category, lang);
                 const title = withOemTitle(localized?.title ?? card.title, card.id, lang);
                 const category = localized?.categoryLabel ?? card.tag;
+                const oemNumbers = getDisplayOemNumbers(card.id, lang);
                 return (
                   <a
                     className="product-search-result"
@@ -142,7 +143,7 @@ export default function ProductSearch() {
                     <span className="product-search-result-copy">
                       <strong>{title}</strong>
                       <small>{category}</small>
-                      {oemReferences[card.id]?.oemNumbers.length ? <small className="product-search-result-oem">OEM: {oemReferences[card.id].oemNumbers.join(' · ')}</small> : null}
+                      {oemNumbers.length ? <small className="product-search-result-oem">OEM: {oemNumbers.join(' · ')}</small> : null}
                     </span>
                     <span className="product-search-result-arrow" aria-hidden="true">→</span>
                   </a>

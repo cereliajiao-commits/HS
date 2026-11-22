@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { allProductCards } from '@/data/products';
 import { categoryPageMap, categoryPages } from '@/data/categoryPages';
-import { oemReferences } from '@/data/oemReference.generated';
-import { withOemTitle } from '@/data/productTitles';
+import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
 const SITE_URL = 'https://www.hsaxle.com';
 
@@ -87,14 +86,14 @@ export default function CategoryPage({ params }: { params: { category: string } 
         <section className="products-grid category-product-grid" aria-label={page.name}>
           {products.map((product) => {
             const title = withOemTitle(product.title, product.id, 'en');
-            const oem = oemReferences[product.id];
+            const oemNumbers = getDisplayOemNumbers(product.id, 'en');
             return (
               <Link className="product-card" href={`/product/${encodeURIComponent(product.id)}`} key={product.id}>
                 <div className="product-card-img"><img src={product.image} alt={title} width="1200" height="1200" loading="lazy" /></div>
                 <div className="product-card-body">
                   <h2>{title}</h2>
                   <p>{product.description}</p>
-                  {oem?.oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oem.oemNumbers.join(' · ')}</div> : null}
+                  {oemNumbers.length ? <div className="product-card-oem"><span>OEM</span> {oemNumbers.join(' · ')}</div> : null}
                   <span className="product-tag">{page.name}</span>
                 </div>
               </Link>

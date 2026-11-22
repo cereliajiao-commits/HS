@@ -6,8 +6,7 @@ import { useLanguage } from './LanguageProvider';
 import { importedProductDetails } from '@/data/imported-products.details.generated';
 import { resolveProductText, translateProductText } from '@/data/productLocalization';
 import { trackEvent } from '@/lib/analytics';
-import { oemReferences } from '@/data/oemReference.generated';
-import { withOemTitle } from '@/data/productTitles';
+import { getDisplayOemNumbers, withOemTitle } from '@/data/productTitles';
 
 type ImportedDetail = {
   image: string;
@@ -118,7 +117,7 @@ export default function ProductModal() {
   const description = localized?.description ?? translateProductText(product?.description ?? '', lang);
   const specs = localized?.specs ?? product?.specs ?? [];
   const applications = localized?.applications ?? product?.applications ?? [];
-  const oem = oemReferences[productId];
+  const oemNumbers = getDisplayOemNumbers(productId, lang);
   const compatibleLabel = t('product.applications');
   const requestQuoteLabel = t('product.requestQuote');
   const whatsappLabel = t('product.whatsapp');
@@ -180,10 +179,10 @@ export default function ProductModal() {
               ))}
             </ul>
           </div>
-          {oem?.oemNumbers.length ? (
+          {oemNumbers.length ? (
             <div className="modal-applications modal-oem">
               <h4>{t('product.oem')}</h4>
-              <ul>{oem.oemNumbers.map((number) => <li key={number}>{number}</li>)}</ul>
+              <ul>{oemNumbers.map((number) => <li key={number}>{number}</li>)}</ul>
             </div>
           ) : null}
           <div className="modal-cta">

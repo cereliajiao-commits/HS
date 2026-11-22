@@ -183,7 +183,7 @@ export default function FactorySection() {
   return (
     <section id="factory" className="factory-section">
       <div className="container">
-        <div className="factory-header">
+        <div className="factory-header fade-up">
           <div className="factory-header-title">
             <div className="section-label">{copy.label}</div>
             <h2 className="section-title">{copy.title}</h2>
@@ -191,11 +191,11 @@ export default function FactorySection() {
           <p>{copy.intro}</p>
         </div>
 
-        <div className="factory-gate">
+        <div className="factory-gate fade-up stagger-1">
           <img src="/images/company/factory-entrance.jpg" alt={copy.gateAlt} loading="lazy" decoding="async" />
         </div>
 
-        <div className="factory-stats">
+        <div className="factory-stats fade-up stagger-2">
           {copy.stats.map(([value, label]) => (
             <div className="factory-stat" key={label}>
               <strong>{value}</strong>
@@ -206,7 +206,11 @@ export default function FactorySection() {
 
         <div className="factory-process-grid">
           {copy.cards.map((card, index) => (
-            <article className={`factory-process-card ${index === 0 ? 'factory-process-card--wide' : ''}`} key={card.title}>
+            <article
+              className={`factory-process-card fade-up ${index === 0 ? 'factory-process-card--wide' : ''}`}
+              style={{ transitionDelay: `${Math.min(index, 4) * 80}ms` }}
+              key={card.title}
+            >
               <div className={`factory-process-image factory-process-image--${index + 1}`}><img src={card.image} alt={card.title} loading="lazy" decoding="async" /></div>
               <div className="factory-process-copy">
                 <span>{String(index + 1).padStart(2, '0')}</span>
@@ -217,7 +221,7 @@ export default function FactorySection() {
           ))}
         </div>
 
-        <div className="factory-buyer-bar">
+        <div className="factory-buyer-bar fade-up">
           <strong>{copy.buyerTitle}</strong>
           <div>
             {copy.buyerPoints.map((point) => <span key={point}>{point}</span>)}

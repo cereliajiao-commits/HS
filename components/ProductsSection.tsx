@@ -61,7 +61,7 @@ export default function ProductsSection() {
             <a className="product-category-view-all" href="/products">{categoryCopy.viewAll}<span aria-hidden="true">↗</span></a>
           </div>
           <div className="product-category-grid">
-            {categoryPages.map((page) => {
+            {categoryPages.map((page, index) => {
               const representative = allProductCards.find((product) => product.category === page.slug);
               if (!representative) return null;
               const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : page.name;
@@ -69,7 +69,12 @@ export default function ProductsSection() {
                 ? '含车型与 OEM/OE 参考信息。'
                 : 'Vehicle applications and OEM/OE reference information.';
               return (
-                <a className="product-category-card" href={`/category/${page.slug}`} key={page.slug}>
+                <a
+                  className="product-category-card fade-up"
+                  href={`/category/${page.slug}`}
+                  key={page.slug}
+                  style={{ transitionDelay: `${Math.min(index, 5) * 70}ms` }}
+                >
                   <div className="product-category-card-media">
                     <img src={`${representative.image}?v=20261106-media`} alt="" loading="lazy" width="900" height="700" />
                   </div>

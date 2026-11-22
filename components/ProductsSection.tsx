@@ -3,7 +3,68 @@ import Image from 'next/image';
 import { allProductCards } from '@/data/products';
 import { useLanguage } from './LanguageProvider';
 import { categoryPages } from '@/data/categoryPages';
-import { translateCategoryLabel } from '@/data/productLocalization';
+import type { Language } from './LanguageProvider';
+import { resolveProductText, translateCategoryLabel } from '@/data/productLocalization';
+import { withOemTitle } from '@/data/productTitles';
+import { categoryUiCopy } from '@/data/categoryLocalization';
+
+const categoryShowcaseCopy: Record<Language, {
+  label: string;
+  title: string;
+  intro: string;
+  viewAll: string;
+  view: string;
+}> = {
+  en: {
+    label: 'Browse by product category',
+    title: 'Start with the right part family',
+    intro: 'Enter a part family to compare applications, OEM references and product details.',
+    viewAll: 'View all products',
+    view: 'View category',
+  },
+  zh: {
+    label: '按产品系列浏览',
+    title: '先找到产品系列，再选择具体型号',
+    intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。',
+    viewAll: '查看全部产品',
+    view: '查看系列',
+  },
+  ru: {
+    label: 'Просмотр по категориям продукции',
+    title: 'Сначала выберите семейство деталей',
+    intro: 'Сравните применение, OEM номера и сведения о продукции по категориям деталей.',
+    viewAll: 'Все продукты',
+    view: 'Открыть категорию',
+  },
+  ar: {
+    label: 'تصفح حسب فئة المنتج',
+    title: 'ابدأ بفئة القطعة المناسبة',
+    intro: 'قارن الاستخدامات ومراجع OEM وتفاصيل المنتجات حسب فئة القطعة.',
+    viewAll: 'عرض جميع المنتجات',
+    view: 'عرض الفئة',
+  },
+  es: {
+    label: 'Explorar por categoría',
+    title: 'Empiece por la familia de piezas adecuada',
+    intro: 'Compare aplicaciones, referencias OEM y detalles de producto por categoría.',
+    viewAll: 'Ver todos los productos',
+    view: 'Ver categoría',
+  },
+  pt: {
+    label: 'Navegar por categoria',
+    title: 'Comece pela família de peças certa',
+    intro: 'Compare aplicações, referências OEM e detalhes dos produtos por categoria.',
+    viewAll: 'Ver todos os produtos',
+    view: 'Ver categoria',
+  },
+  fr: {
+    label: 'Parcourir par catégorie',
+    title: 'Commencez par la bonne famille de pièces',
+    intro: 'Comparez les applications, références OEM et détails produits par catégorie.',
+    viewAll: 'Voir tous les produits',
+    view: 'Voir la catégorie',
+  },
+};
 
 export default function ProductsSection() {
   const { t, lang } = useLanguage();
@@ -19,9 +80,7 @@ export default function ProductsSection() {
     note: t('products.platformNote'),
   };
 
-  const categoryCopy = lang === 'zh'
-    ? { label: '按产品系列浏览', title: '先找到产品系列，再选择具体型号', intro: '按配件类型进入系列页面，查看适配车型、OEM号和产品详情。', viewAll: '查看全部产品', view: '查看系列' }
-    : { label: 'Browse by product category', title: 'Start with the right part family', intro: 'Enter a part family to compare applications, OEM references and product details.', viewAll: 'View all products', view: 'View category' };
+  const categoryCopy = categoryShowcaseCopy[lang];
   const languageQuery = lang === 'en' ? '' : `?lang=${lang}`;
 
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -66,10 +125,12 @@ export default function ProductsSection() {
             {categoryPages.map((page, index) => {
               const representative = allProductCards.find((product) => product.category === page.slug);
               if (!representative) return null;
-              const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : page.name;
-              const description = lang === 'zh'
-                ? '含车型与 OEM/OE 参考信息。'
-                : 'Vehicle applications and OEM/OE reference information.';
+              const label = lang === 'zh' ? `${translateCategoryLabel(page.slug, lang)}系列` : translateCategoryLabel(page.slug, lang);
+              const localizedRepresentative = resolveProductText(representative.id, representative.category, lang);
+              const description = categoryUiCopy[lang].directoryDescription(label);
+              const imageAlt = localizedRepresentative
+                ? withOemTitle(localizedRepresentative.title, representative.id, lang)
+                : `${label} product example`;
               return (
                 <a
                   className="product-category-card fade-up"
@@ -80,7 +141,7 @@ export default function ProductsSection() {
                   <div className="product-category-card-media">
                     <Image
                       src={`${representative.image}?v=20261106-media`}
-                      alt=""
+                      alt={imageAlt}
                       fill
                       sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
                       priority={index < 3}

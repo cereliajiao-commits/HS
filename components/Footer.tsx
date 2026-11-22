@@ -1,10 +1,15 @@
 'use client';
 
 import { useLanguage } from './LanguageProvider';
+import { translateCategoryLabel } from '@/data/productLocalization';
 
 export default function Footer() {
   const { lang, t } = useLanguage();
   const languageQuery = lang === 'en' ? '' : `?lang=${lang}`;
+  const allCategoriesLabel = {
+    en: 'All product categories', zh: '全部产品分类', ru: 'Все категории продукции', ar: 'جميع فئات المنتجات',
+    es: 'Todas las categorías', pt: 'Todas as categorias', fr: 'Toutes les catégories',
+  }[lang];
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const target = document.querySelector(href);
@@ -33,14 +38,13 @@ export default function Footer() {
           <div className="footer-col">
             <h4>{t('footer.products')}</h4>
             <ul>
-              <li><a href={`/category${languageQuery}`}>All product categories</a></li>
-              <li><a href={`/category/tie-rod${languageQuery}`}>Truck tie rods</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringArms')}</a></li>
-              <li><a href={`/category/steering-knuckle${languageQuery}`}>Steering knuckles</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.steeringKnuckles')}</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.verticalArms')}</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.driveShafts')}</a></li>
-              <li><a href="#products" onClick={(e) => handleClick(e, '#products')}>{t('footer.agriculturalParts')}</a></li>
+              <li><a href={`/category${languageQuery}`}>{allCategoriesLabel}</a></li>
+              <li><a href={`/category/tie-rod${languageQuery}`}>{translateCategoryLabel('tie-rod', lang)}</a></li>
+              <li><a href={`/category/steering-arm${languageQuery}`}>{t('footer.steeringArms')}</a></li>
+              <li><a href={`/category/steering-knuckle${languageQuery}`}>{t('footer.steeringKnuckles')}</a></li>
+              <li><a href={`/category/vertical${languageQuery}`}>{t('footer.verticalArms')}</a></li>
+              <li><a href={`/category/shaft${languageQuery}`}>{t('footer.driveShafts')}</a></li>
+              <li><a href={`/category/agricultural${languageQuery}`}>{t('footer.agriculturalParts')}</a></li>
             </ul>
           </div>
           <div className="footer-col">

@@ -440,6 +440,55 @@ titlePhraseMap.tr = [['Heavy-Duty Steering Arm', 'Ağır hizmet tipi direksiyon 
 titlePhraseMap.pl = [['Heavy-Duty Steering Arm', 'Wzmocnione ramię kierownicze'], ['Truck Steering Knuckle', 'Zwrotnica do ciężarówki'], ['Steering Knuckle Arm', 'Ramię zwrotnicy'], ['Steering Arm', 'Ramię kierownicze'], ['Vertical Arm', 'Ramię pionowe'], ['Tie Rod Assembly', 'Zespół drążka kierowniczego'], ['Drive Shaft', 'Wał napędowy'], ['Shock Absorber Assembly', 'Zespół amortyzatora'], ['Left Steering Arm', 'Lewe ramię kierownicze'], ['Model', 'Model'], ['Left', 'Lewy']];
 titlePhraseMap.id = [['Heavy-Duty Steering Arm', 'Lengan kemudi tugas berat'], ['Truck Steering Knuckle', 'Steering knuckle truk'], ['Steering Knuckle Arm', 'Lengan steering knuckle'], ['Steering Arm', 'Lengan kemudi'], ['Vertical Arm', 'Lengan vertikal'], ['Tie Rod Assembly', 'Rakitan tie rod'], ['Drive Shaft', 'Poros penggerak'], ['Shock Absorber Assembly', 'Rakitan peredam kejut'], ['Left Steering Arm', 'Lengan kemudi kiri'], ['Model', 'Model'], ['Left', 'Kiri']];
 
+// Product records are maintained in English as the source of truth. These
+// common phrases cover the remaining product-detail terminology so a
+// localized page does not fall back to English in the middle of a sentence.
+titlePhraseMap.it.push(
+  ['Pitman arm replacement', 'Sostituzione del braccio di rinvio dello sterzo'],
+  ['Pitman Arm', 'Braccio di rinvio dello sterzo'], ['Pitman arm', 'Braccio di rinvio dello sterzo'],
+  ['Steering Knuckle Arm', 'Braccio del fuso a snodo'], ['Front Axle Drive Shaft Assembly', 'Gruppo albero di trasmissione dell’assale anteriore'],
+  ['Front Axle Yoke with Shaft', 'Forcella dell’assale anteriore con albero'], ['Drive Shaft Assembly', 'Gruppo albero di trasmissione'],
+  ['Steering Knuckle', 'Fuso a snodo'], ['Front Axle', 'Assale anteriore'], ['Rear Axle', 'Assale posteriore'],
+);
+titlePhraseMap.de.push(
+  ['Pitman Arm', 'Lenkstockhebel'], ['Pitman arm', 'Lenkstockhebel'], ['Steering Knuckle Arm', 'Achsschenkelhebel'],
+  ['Front Axle Drive Shaft Assembly', 'Antriebswellenbaugruppe der Vorderachse'], ['Front Axle Yoke with Shaft', 'Vorderachsgabel mit Welle'],
+  ['Drive Shaft Assembly', 'Antriebswellenbaugruppe'], ['Steering Knuckle', 'Achsschenkel'], ['Front Axle', 'Vorderachse'], ['Rear Axle', 'Hinterachse'],
+);
+titlePhraseMap.nl.push(
+  ['Pitman Arm', 'Pitmanarm'], ['Pitman arm', 'pitmanarm'], ['Steering Knuckle Arm', 'stuurknokkelarm'],
+  ['Front Axle Drive Shaft Assembly', 'aandrijfasassemblage van de vooras'], ['Front Axle Yoke with Shaft', 'voorasvork met as'],
+  ['Drive Shaft Assembly', 'aandrijfasassemblage'], ['Steering Knuckle', 'stuurknokkel'], ['Front Axle', 'vooras'], ['Rear Axle', 'achteras'],
+);
+titlePhraseMap.tr.push(
+  ['Pitman Arm', 'Pitman kolu'], ['Pitman arm', 'Pitman kolu'], ['Steering Knuckle Arm', 'direksiyon mafsal kolu'],
+  ['Front Axle Drive Shaft Assembly', 'ön aks tahrik mili grubu'], ['Front Axle Yoke with Shaft', 'şaftlı ön aks çatalı'],
+  ['Drive Shaft Assembly', 'tahrik mili grubu'], ['Steering Knuckle', 'direksiyon mafsalı'], ['Front Axle', 'ön aks'], ['Rear Axle', 'arka aks'],
+);
+titlePhraseMap.pl.push(
+  ['Pitman Arm', 'Ramię przekładni kierowniczej'], ['Pitman arm', 'ramię przekładni kierowniczej'], ['Steering Knuckle Arm', 'ramię zwrotnicy'],
+  ['Front Axle Drive Shaft Assembly', 'zespół wału napędowego przedniej osi'], ['Front Axle Yoke with Shaft', 'widełki przedniej osi z wałem'],
+  ['Drive Shaft Assembly', 'zespół wału napędowego'], ['Steering Knuckle', 'zwrotnica'], ['Front Axle', 'przednia oś'], ['Rear Axle', 'tylna oś'],
+);
+titlePhraseMap.id.push(
+  ['Pitman Arm', 'Lengan pitman'], ['Pitman arm', 'lengan pitman'], ['Steering Knuckle Arm', 'lengan steering knuckle'],
+  ['Front Axle Drive Shaft Assembly', 'rakitan poros penggerak gandar depan'], ['Front Axle Yoke with Shaft', 'garpu gandar depan dengan poros'],
+  ['Drive Shaft Assembly', 'rakitan poros penggerak'], ['Steering Knuckle', 'steering knuckle'], ['Front Axle', 'gandar depan'], ['Rear Axle', 'gandar belakang'],
+);
+
+for (const [language, replacements] of Object.entries({
+  ja: [['Pitman arm replacement', 'ピットマンアーム交換用'], ['Pitman Arm', 'ピットマンアーム'], ['Pitman arm', 'ピットマンアーム']],
+  ko: [['Pitman arm replacement', '피트먼 암 교체용'], ['Pitman Arm', '피트먼 암'], ['Pitman arm', '피트먼 암']],
+  de: [['Pitman arm replacement', 'Ersatz-Lenkstockhebel'], ['Pitman Arm', 'Lenkstockhebel'], ['Pitman arm', 'Lenkstockhebel']],
+  it: [['Pitman arm replacement', 'Sostituzione del braccio di rinvio dello sterzo'], ['Pitman Arm', 'Braccio di rinvio dello sterzo'], ['Pitman arm', 'Braccio di rinvio dello sterzo']],
+  nl: [['Pitman arm replacement', 'pitmanarm als vervanging'], ['Pitman Arm', 'Pitmanarm'], ['Pitman arm', 'pitmanarm']],
+  tr: [['Pitman arm replacement', 'Pitman kolu değişimi'], ['Pitman Arm', 'Pitman kolu'], ['Pitman arm', 'Pitman kolu']],
+  pl: [['Pitman arm replacement', 'zamienne ramię przekładni kierowniczej'], ['Pitman Arm', 'Ramię przekładni kierowniczej'], ['Pitman arm', 'ramię przekładni kierowniczej']],
+  id: [['Pitman arm replacement', 'pengganti lengan pitman'], ['Pitman Arm', 'Lengan pitman'], ['Pitman arm', 'lengan pitman']],
+} as Record<string, Array<[string, string]>>)) {
+  titlePhraseMap[language].push(...replacements);
+}
+
 // Additional-language terminology keeps product cards and specifications
 // readable instead of leaving the whole detail page in English.
 genericPhraseMap.ja = [
@@ -451,11 +500,37 @@ genericPhraseMap.ko = [
 genericPhraseMap.de = [
   ['truck steering linkage', 'Lenkungsgestänge für Lkw'], ['steering linkage', 'Lenkungsgestänge'], ['steering system', 'Lenksystem'], ['heavy-duty', 'für schwere Fahrzeuge'], ['forged steel', 'Schmiedestahl'], ['forged alloy steel', 'geschmiedeter Legierungsstahl'], ['OEM / aftermarket', 'OEM / Ersatzteilmarkt'], ['OEM / custom', 'OEM / kundenspezifisch'], ['OEM replacement', 'OEM-Ersatz'], ['Aftermarket supply', 'Ersatzteilmarktversorgung'], ['Product catalog', 'Produktkatalog'], ['Commercial vehicles', 'Nutzfahrzeuge'], ['Heavy-duty trucks', 'Schwere Lkw'], ['Truck drivetrain', 'Lkw-Antriebsstrang'], ['Truck platforms', 'Lkw-Plattformen'], ['Field machinery', 'Landmaschinen'], ['stable steering control', 'stabiles Lenkverhalten'], ['reliable fit and performance', 'zuverlässige Passform und Leistung'], ['stable steering transfer', 'stabile Lenkübertragung'], ['long service life', 'lange Lebensdauer'], ['replacement parts', 'Ersatzteile'], ['Precision-built', 'präzisionsgefertigt'], ['Durable', 'langlebig'], ['High-quality', 'hochwertig'], ['Type', 'Typ'], ['Application', 'Anwendung'], ['Material', 'Material'], ['Supply', 'Lieferung'], ['Platform', 'Plattform'], ['Position', 'Position'], ['Product Series', 'Produktserie'], ['Truck suspension system', 'Lkw-Fahrwerkssystem'], ['Truck steering system', 'Lkw-Lenksystem'], ['Steering linkage replacement', 'Ersatz für Lenkungsgestänge'], ['vertical arm', 'Vertikalhebel'], ['double-bridge applications', 'Anwendungen mit Doppelachse'], ['single-bridge applications', 'Anwendungen mit Einzelachse'], ['for STR and Steyr', 'für STR und Steyr'], ['Structure', 'Struktur'], ['Strength', 'Festigkeit'], ['Double bridge', 'Doppelachse'], ['Single bridge', 'Einzelachse'], ['Catalog display', 'Katalogdarstellung'], ['built for stable steering transfer', 'für stabile Lenkübertragung ausgelegt'], ['for dependable steering control and long service life', 'für zuverlässige Lenkung und lange Lebensdauer ausgelegt'],
 ];
-genericPhraseMap.it = [['truck steering linkage', 'collegamento dello sterzo del camion'], ['steering linkage', 'collegamento dello sterzo'], ['steering system', 'sistema sterzante'], ['heavy-duty', 'per impieghi gravosi'], ['forged steel', 'acciaio forgiato'], ['OEM / aftermarket', 'OEM / aftermarket'], ['OEM replacement', 'sostituzione OEM'], ['Aftermarket supply', 'fornitura aftermarket'], ['Product catalog', 'catalogo prodotti'], ['Commercial vehicles', 'veicoli commerciali'], ['Heavy-duty trucks', 'camion pesanti'], ['Field machinery', 'macchine agricole'], ['stable steering control', 'controllo dello sterzo stabile'], ['reliable fit and performance', 'accoppiamento e prestazioni affidabili'], ['long service life', 'lunga durata'], ['replacement parts', 'ricambi'], ['Precision-built', 'costruito con precisione'], ['Durable', 'resistente'], ['High-quality', 'alta qualità'], ['Type', 'Tipo'], ['Application', 'Applicazione'], ['Material', 'Materiale'], ['Supply', 'Fornitura'], ['Position', 'Posizione'], ['Product Series', 'Serie prodotto'], ['Steering linkage replacement', 'sostituzione del collegamento dello sterzo'], ['vertical arm', 'braccio verticale'], ['Catalog display', 'presentazione a catalogo']];
+genericPhraseMap.it = [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Confermare assale, schema di montaggio e dimensioni principali prima dell’ordine.'], ['truck steering linkage applications', 'applicazioni sul collegamento dello sterzo dei camion'], ['for truck steering linkage applications', 'per applicazioni sul collegamento dello sterzo dei camion'], ['Pitman arm replacement', 'sostituzione del braccio di rinvio dello sterzo'], ['Pitman arm', 'braccio di rinvio dello sterzo'], ['steering knuckle arm', 'braccio del fuso a snodo'], ['steering knuckle', 'fuso a snodo'], ['front axle', 'assale anteriore'], ['rear axle', 'assale posteriore'], ['drive shaft assembly', 'gruppo albero di trasmissione'], ['with shaft', 'con albero'], ['truck steering linkage', 'collegamento dello sterzo del camion'], ['steering linkage', 'collegamento dello sterzo'], ['steering system', 'sistema sterzante'], ['heavy-duty', 'per impieghi gravosi'], ['forged steel', 'acciaio forgiato'], ['OEM / aftermarket', 'OEM / aftermarket'], ['OEM replacement', 'sostituzione OEM'], ['Aftermarket supply', 'fornitura aftermarket'], ['Product catalog', 'catalogo prodotti'], ['Commercial vehicles', 'veicoli commerciali'], ['Heavy-duty trucks', 'camion pesanti'], ['Field machinery', 'macchine agricole'], ['stable steering control', 'controllo dello sterzo stabile'], ['reliable fit and performance', 'accoppiamento e prestazioni affidabili'], ['long service life', 'lunga durata'], ['replacement parts', 'ricambi'], ['Precision-built', 'costruito con precisione'], ['Durable', 'resistente'], ['High-quality', 'alta qualità'], ['Type', 'Tipo'], ['Application', 'Applicazione'], ['Material', 'Materiale'], ['Supply', 'Fornitura'], ['Position', 'Posizione'], ['Product Series', 'Serie prodotto'], ['Steering linkage replacement', 'sostituzione del collegamento dello sterzo'], ['vertical arm', 'braccio verticale'], ['Catalog display', 'presentazione a catalogo']];
 genericPhraseMap.nl = [['truck steering linkage', 'stuurinrichting van vrachtwagens'], ['steering linkage', 'stuurinrichting'], ['steering system', 'stuursysteem'], ['heavy-duty', 'voor zware toepassingen'], ['forged steel', 'gesmeed staal'], ['OEM / aftermarket', 'OEM / aftermarket'], ['OEM replacement', 'OEM-vervanging'], ['Aftermarket supply', 'aftermarketlevering'], ['Product catalog', 'productcatalogus'], ['Commercial vehicles', 'bedrijfsvoertuigen'], ['Heavy-duty trucks', 'zware vrachtwagens'], ['Field machinery', 'landbouwmachines'], ['stable steering control', 'stabiele stuurcontrole'], ['reliable fit and performance', 'betrouwbare pasvorm en prestaties'], ['long service life', 'lange levensduur'], ['replacement parts', 'vervangingsonderdelen'], ['Precision-built', 'precisie vervaardigd'], ['Durable', 'duurzaam'], ['High-quality', 'hoge kwaliteit'], ['Type', 'Type'], ['Application', 'Toepassing'], ['Material', 'Materiaal'], ['Supply', 'Levering'], ['Position', 'Positie'], ['Product Series', 'Productserie'], ['Steering linkage replacement', 'vervanging van stuurinrichting'], ['vertical arm', 'verticale arm'], ['Catalog display', 'catalogusweergave']];
 genericPhraseMap.tr = [['truck steering linkage', 'kamyon direksiyon bağlantısı'], ['steering linkage', 'direksiyon bağlantısı'], ['steering system', 'direksiyon sistemi'], ['heavy-duty', 'ağır hizmet tipi'], ['forged steel', 'dövme çelik'], ['OEM / aftermarket', 'OEM / satış sonrası'], ['OEM replacement', 'OEM değişimi'], ['Aftermarket supply', 'satış sonrası tedarik'], ['Product catalog', 'ürün kataloğu'], ['Commercial vehicles', 'ticari araçlar'], ['Heavy-duty trucks', 'ağır hizmet kamyonları'], ['Field machinery', 'tarım makineleri'], ['stable steering control', 'stabil direksiyon kontrolü'], ['reliable fit and performance', 'güvenilir uyum ve performans'], ['long service life', 'uzun kullanım ömrü'], ['replacement parts', 'yedek parçalar'], ['Precision-built', 'hassas üretilmiş'], ['Durable', 'dayanıklı'], ['High-quality', 'yüksek kalite'], ['Type', 'Tip'], ['Application', 'Uygulama'], ['Material', 'Malzeme'], ['Supply', 'Tedarik'], ['Position', 'Konum'], ['Product Series', 'Ürün serisi'], ['Steering linkage replacement', 'direksiyon bağlantısı değişimi'], ['vertical arm', 'dikey kol'], ['Catalog display', 'katalog gösterimi']];
 genericPhraseMap.pl = [['truck steering linkage', 'układ kierowniczy ciężarówki'], ['steering linkage', 'układ kierowniczy'], ['steering system', 'układ kierowniczy'], ['heavy-duty', 'do ciężkich zastosowań'], ['forged steel', 'stal kuta'], ['OEM / aftermarket', 'OEM / rynek wtórny'], ['OEM replacement', 'zamiennik OEM'], ['Aftermarket supply', 'dostawa na rynek wtórny'], ['Product catalog', 'katalog produktów'], ['Commercial vehicles', 'pojazdy użytkowe'], ['Heavy-duty trucks', 'ciężkie ciężarówki'], ['Field machinery', 'maszyny rolnicze'], ['stable steering control', 'stabilne sterowanie'], ['reliable fit and performance', 'pewne dopasowanie i działanie'], ['long service life', 'długi okres eksploatacji'], ['replacement parts', 'części zamienne'], ['Precision-built', 'precyzyjnie wykonane'], ['Durable', 'trwałe'], ['High-quality', 'wysoka jakość'], ['Type', 'Typ'], ['Application', 'Zastosowanie'], ['Material', 'Materiał'], ['Supply', 'Dostawa'], ['Position', 'Pozycja'], ['Product Series', 'Seria produktów'], ['Steering linkage replacement', 'wymiana układu kierowniczego'], ['vertical arm', 'ramię pionowe'], ['Catalog display', 'prezentacja w katalogu']];
 genericPhraseMap.id = [['truck steering linkage', 'sistem kemudi truk'], ['steering linkage', 'sistem kemudi'], ['steering system', 'sistem kemudi'], ['heavy-duty', 'tugas berat'], ['forged steel', 'baja tempa'], ['OEM / aftermarket', 'OEM / aftermarket'], ['OEM replacement', 'pengganti OEM'], ['Aftermarket supply', 'pasokan aftermarket'], ['Product catalog', 'katalog produk'], ['Commercial vehicles', 'kendaraan komersial'], ['Heavy-duty trucks', 'truk tugas berat'], ['Field machinery', 'mesin pertanian'], ['stable steering control', 'kendali kemudi yang stabil'], ['reliable fit and performance', 'pemasangan dan kinerja yang andal'], ['long service life', 'masa pakai panjang'], ['replacement parts', 'suku cadang pengganti'], ['Precision-built', 'dibuat dengan presisi'], ['Durable', 'tahan lama'], ['High-quality', 'berkualitas tinggi'], ['Type', 'Tipe'], ['Application', 'Aplikasi'], ['Material', 'Material'], ['Supply', 'Pasokan'], ['Position', 'Posisi'], ['Product Series', 'Seri produk'], ['Steering linkage replacement', 'penggantian sistem kemudi'], ['vertical arm', 'lengan vertikal'], ['Catalog display', 'tampilan katalog']];
+
+for (const [language, replacements] of Object.entries({
+  ja: [['OEM reference', 'OEM参照'], ['replacement', '交換用']],
+  ko: [['OEM reference', 'OEM 참조'], ['replacement', '교체용']],
+  de: [['OEM reference', 'OEM-Referenz'], ['replacement', 'Ersatz']],
+  it: [['OEM reference', 'riferimento OEM'], ['replacement', 'sostituzione']],
+  nl: [['OEM reference', 'OEM-referentie'], ['replacement', 'vervanging']],
+  tr: [['OEM reference', 'OEM referansı'], ['replacement', 'değişim']],
+  pl: [['OEM reference', 'referencja OEM'], ['replacement', 'zamiennik']],
+  id: [['OEM reference', 'referensi OEM'], ['replacement', 'pengganti']],
+} as Record<string, Array<[string, string]>>)) {
+  genericPhraseMap[language].push(...replacements);
+}
+
+for (const [language, replacements] of Object.entries({
+  ja: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'ご注文前にアクスル、取付パターン、主要寸法をご確認ください。'], ['mounting pattern', '取付パターン'], ['key dimensions', '主要寸法']],
+  ko: [['Confirm the axle, mounting pattern and key dimensions before ordering.', '주문 전에 차축, 장착 패턴 및 주요 치수를 확인하십시오.'], ['mounting pattern', '장착 패턴'], ['key dimensions', '주요 치수']],
+  de: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Prüfen Sie vor der Bestellung Achse, Befestigungsbild und Hauptmaße.'], ['mounting pattern', 'Befestigungsbild'], ['key dimensions', 'Hauptmaße']],
+  it: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Confermare assale, schema di montaggio e dimensioni principali prima dell’ordine.'], ['mounting pattern', 'schema di montaggio'], ['key dimensions', 'dimensioni principali']],
+  nl: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Controleer vóór bestelling de as, het gatenpatroon en de belangrijkste maten.'], ['mounting pattern', 'gatenpatroon'], ['key dimensions', 'belangrijkste maten']],
+  tr: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Siparişten önce aksı, montaj düzenini ve temel ölçüleri doğrulayın.'], ['mounting pattern', 'montaj düzeni'], ['key dimensions', 'temel ölçüler']],
+  pl: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Przed zamówieniem potwierdź oś, rozstaw mocowania i główne wymiary.'], ['mounting pattern', 'rozstaw mocowania'], ['key dimensions', 'główne wymiary']],
+  id: [['Confirm the axle, mounting pattern and key dimensions before ordering.', 'Periksa gandar, pola pemasangan, dan ukuran utama sebelum memesan.'], ['mounting pattern', 'pola pemasangan'], ['key dimensions', 'ukuran utama']],
+} as Record<string, Array<[string, string]>>)) {
+  genericPhraseMap[language].push(...replacements);
+}
 
 for (const [language, replacements] of Object.entries({
   ja: [['Confirm the vehicle model, mounting position and dimensions before ordering.', 'ご注文前に車両モデル、取付位置、寸法をご確認ください。'], ['applications.', '用途。'], ['Application', '用途'], ['Position', '位置'], ['Left-hand', '左側'], ['No verified OEM number is currently listed', '確認済みのOEM番号はまだ掲載されていません'], ['Product and fitment FAQ', '製品と適合に関するFAQ'], ['Compatible Vehicles / Applications', '適合車両 / 用途'], ['Truck', 'トラック'], ['trucks', 'トラック'], ['for ', '向け '], ['model', 'モデル'], ['mounting', '取付'], ['dimensions', '寸法'], ['OEM / aftermarket supply', 'OEM / アフターマーケット供給'], ['aftermarket supply', 'アフターマーケット供給']],

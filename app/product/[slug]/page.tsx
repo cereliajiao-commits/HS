@@ -338,7 +338,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       {
         '@type': 'ListItem',
         position: 1,
-        name: ({ en: 'Home', zh: '首页', ru: 'Главная', ar: 'الرئيسية', es: 'Inicio', pt: 'Início', fr: 'Accueil', ja: 'ホーム', ko: '홈', de: 'Startseite', it: 'Home', nl: 'Home', tr: 'Ana sayfa', pl: 'Strona główna', id: 'Beranda' } as Record<Language, string>)[lang],
+        name: ({ en: 'Home', zh: '首页', ru: 'Главная', ar: 'الرئيسية', es: 'Inicio', pt: 'Início', fr: 'Accueil', ja: 'ホーム', ko: '홈', de: 'Startseite', it: 'Pagina iniziale', nl: 'Startpagina', tr: 'Ana sayfa', pl: 'Strona główna', id: 'Beranda' } as Record<Language, string>)[lang],
         item: SITE_URL,
       },
       {
@@ -395,8 +395,8 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
     ja: { home: 'ホーム', products: '製品' },
     ko: { home: '홈', products: '제품' },
     de: { home: 'Startseite', products: 'Produkte' },
-    it: { home: 'Home', products: 'Prodotti' },
-    nl: { home: 'Home', products: 'Producten' },
+    it: { home: 'Pagina iniziale', products: 'Prodotti' },
+    nl: { home: 'Startpagina', products: 'Producten' },
     tr: { home: 'Ana sayfa', products: 'Ürünler' },
     pl: { home: 'Strona główna', products: 'Produkty' },
     id: { home: 'Beranda', products: 'Produk' },

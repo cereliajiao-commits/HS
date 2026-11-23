@@ -4,11 +4,25 @@ import { useState, useRef, useEffect } from 'react';
 import { useLanguage, languages } from './LanguageProvider';
 
 export default function LanguageSwitcher() {
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const currentLang = languages.find((l) => l.code === lang) || languages[0];
+
+  const switchLanguage = (code: string) => {
+    // Use a full navigation so the server renders the entire page from one
+    // locale. Client-only state switching can leave old language fragments in
+    // sections that have already been rendered or cached.
+    const url = new URL(window.location.href);
+    if (code === 'en') {
+      url.searchParams.delete('lang');
+    } else {
+      url.searchParams.set('lang', code);
+    }
+    setIsOpen(false);
+    window.location.assign(`${url.pathname}${url.search}${url.hash}`);
+  };
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -35,10 +49,7 @@ export default function LanguageSwitcher() {
             <button
               key={l.code}
               className={`lang-option ${l.code === lang ? 'active' : ''}`}
-              onClick={() => {
-                setLang(l.code);
-                setIsOpen(false);
-              }}
+              onClick={() => switchLanguage(l.code)}
             >
               <span className="lang-flag">{l.flag}</span>
               <span className="lang-label">{l.label}</span>

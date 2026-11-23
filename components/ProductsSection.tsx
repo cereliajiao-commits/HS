@@ -67,6 +67,11 @@ const categoryShowcaseCopy: Partial<Record<Language, {
   ja: { label: '製品カテゴリーから探す', title: '適切な部品シリーズから始める', intro: '部品シリーズから適合車種、OEM番号、製品詳細を確認できます。', viewAll: 'すべての製品を見る', view: 'カテゴリーを見る' },
   ko: { label: '제품 카테고리별 보기', title: '적합한 부품군부터 선택하세요', intro: '부품군별로 적용 차량, OEM 번호 및 제품 상세 정보를 확인하세요.', viewAll: '전체 제품 보기', view: '카테고리 보기' },
   de: { label: 'Nach Produktkategorie durchsuchen', title: 'Mit der richtigen Teilefamilie beginnen', intro: 'Vergleichen Sie Anwendungen, OEM-Referenzen und Produktdetails nach Teilefamilie.', viewAll: 'Alle Produkte ansehen', view: 'Kategorie ansehen' },
+  it: { label: 'Sfoglia per categoria', title: 'Inizia dalla famiglia di ricambi giusta', intro: 'Confronta applicazioni, riferimenti OEM e dettagli dei prodotti per categoria.', viewAll: 'Vedi tutti i prodotti', view: 'Vedi categoria' },
+  nl: { label: 'Bladeren per productcategorie', title: 'Begin met de juiste onderdelenfamilie', intro: 'Vergelijk toepassingen, OEM-referenties en productdetails per categorie.', viewAll: 'Alle producten bekijken', view: 'Categorie bekijken' },
+  tr: { label: 'Ürün kategorisine göre incele', title: 'Doğru parça ailesiyle başlayın', intro: 'Uygulamaları, OEM referanslarını ve ürün ayrıntılarını kategoriye göre karşılaştırın.', viewAll: 'Tüm ürünleri görüntüle', view: 'Kategoriyi görüntüle' },
+  pl: { label: 'Przeglądaj według kategorii', title: 'Zacznij od właściwej rodziny części', intro: 'Porównuj zastosowania, numery OEM i szczegóły produktów według kategorii.', viewAll: 'Zobacz wszystkie produkty', view: 'Zobacz kategorię' },
+  id: { label: 'Jelajah berdasarkan kategori', title: 'Mulai dari keluarga suku cadang yang tepat', intro: 'Bandingkan aplikasi, referensi OEM, dan detail produk berdasarkan kategori.', viewAll: 'Lihat semua produk', view: 'Lihat kategori' },
 };
 
 export default function ProductsSection() {

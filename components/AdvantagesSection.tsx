@@ -84,9 +84,20 @@ const buyerPromiseCopy = {
   },
 } as const;
 
+const additionalBuyerPromiseCopy: Partial<Record<Language, { label: string; title: string; intro: string; points: Array<[string, string]> }>> = {
+  ja: { label: '海外バイヤーへの約束', title: '安定したリピート注文のために', intro: 'OEM向けの生産・品質管理で、海外のお客様の継続調達を支えます。', points: [['確かな適合', '管理された加工と検査で寸法と取付を安定させます。'], ['安定供給', '整理された生産と豊富なモデルで継続注文に対応します。'], ['市場対応', 'OEM/ODM、輸出梱包、直接コミュニケーションを提供します。']] },
+  ko: { label: '해외 구매자 약속', title: '안정적인 반복 주문을 위해', intro: 'OEM 프로젝트와 동일한 생산·품질 관리로 해외 구매자의 지속 조달을 지원합니다.', points: [['정확한 장착', '관리된 가공과 검사로 치수와 장착을 안정적으로 유지합니다.'], ['안정 공급', '체계적인 생산과 다양한 모델로 반복 주문을 지원합니다.'], ['시장 대응', 'OEM/ODM, 수출 포장 및 직접 소통을 제공합니다.']] },
+  de: { label: 'Versprechen an internationale Käufer', title: 'Für zuverlässige Folgeaufträge', intro: 'Dieselben Produktions- und Qualitätskontrollen wie bei OEM-Projekten geben internationalen Käufern Sicherheit.', points: [['Zuverlässige Passform', 'Kontrollierte Bearbeitung und Prüfung halten Maße und Montage konstant.'], ['Stabile Versorgung', 'Organisierte Fertigung und viele Modelle unterstützen Folgeaufträge.'], ['Für Ihren Markt bereit', 'OEM/ODM, Exportverpackung und direkte Kommunikation vereinfachen Bestellungen.']] },
+  it: { label: 'Impegno per gli acquirenti internazionali', title: 'Per ordini ricorrenti affidabili', intro: 'Gli stessi controlli dei progetti OEM aiutano gli acquirenti internazionali a rifornirsi con fiducia.', points: [['Compatibilità affidabile', 'Lavorazione e controllo mantengono dimensioni e montaggio costanti.'], ['Fornitura stabile', 'Produzione organizzata e molti modelli supportano ordini ricorrenti.'], ['Pronti per il mercato', 'OEM/ODM, imballaggio export e comunicazione diretta semplificano gli ordini.']] },
+  nl: { label: 'Belofte aan internationale kopers', title: 'Voor betrouwbare herhaalorders', intro: 'De controles voor OEM-projecten helpen internationale kopers met vertrouwen in te kopen.', points: [['Betrouwbare pasvorm', 'Gecontroleerde bewerking en inspectie houden maten en montage constant.'], ['Stabiele levering', 'Georganiseerde productie en veel modellen ondersteunen herhaalorders.'], ['Klaar voor uw markt', 'OEM/ODM, exportverpakking en directe communicatie vereenvoudigen orders.']] },
+  tr: { label: 'Uluslararası alıcı taahhüdü', title: 'Güvenilir tekrarlı siparişler için', intro: 'OEM projelerindeki üretim ve kalite kontrolleri uluslararası alıcıların güvenle tedarik yapmasını sağlar.', points: [['Güvenilir uyum', 'Kontrollü işleme ve kontrol ölçü ile montajı korur.'], ['İstikrarlı tedarik', 'Düzenli üretim ve geniş model yelpazesi tekrarlı siparişleri destekler.'], ['Pazarınıza hazır', 'OEM/ODM, ihracat ambalajı ve doğrudan iletişim siparişleri kolaylaştırır.']] },
+  pl: { label: 'Dla nabywców międzynarodowych', title: 'Dla niezawodnych zamówień powtarzalnych', intro: 'Kontrole stosowane w projektach OEM pomagają międzynarodowym klientom kupować z pewnością.', points: [['Pewne dopasowanie', 'Kontrolowana obróbka i inspekcja utrzymują wymiary oraz montaż.'], ['Stabilne dostawy', 'Zorganizowana produkcja i szeroka gama modeli wspierają stałe zamówienia.'], ['Gotowi na rynek', 'OEM/ODM, opakowanie eksportowe i bezpośrednia komunikacja ułatwiają zakup.']] },
+  id: { label: 'Komitmen untuk pembeli internasional', title: 'Untuk pesanan berulang yang andal', intro: 'Kontrol produksi dan kualitas untuk proyek OEM membantu pembeli internasional membeli dengan percaya diri.', points: [['Kecocokan andal', 'Pemesinan dan pemeriksaan terkontrol menjaga ukuran serta pemasangan.'], ['Pasokan stabil', 'Produksi teratur dan banyak model mendukung pesanan berulang.'], ['Siap untuk pasar Anda', 'OEM/ODM, kemasan ekspor, dan komunikasi langsung memudahkan pesanan.']] },
+};
+
 export default function AdvantagesSection() {
   const { lang, t } = useLanguage();
-  const localizedBuyerPromiseCopy = buyerPromiseCopy as unknown as Partial<Record<Language, (typeof buyerPromiseCopy.en)>>;
+  const localizedBuyerPromiseCopy = { ...buyerPromiseCopy, ...additionalBuyerPromiseCopy } as unknown as Partial<Record<Language, (typeof buyerPromiseCopy.en)>>;
   const buyerCopy = localizedBuyerPromiseCopy[lang] ?? buyerPromiseCopy.en;
 
   const advantages = [

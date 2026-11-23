@@ -38,7 +38,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
           contactType: 'sales',
           telephone: '+86 177 5109 7209',
           email: 'chinahs@hotmail.com',
-          availableLanguage: ['English', 'Chinese'],
+          availableLanguage: ['English', 'Chinese', 'Russian', 'Arabic', 'Spanish', 'Portuguese', 'French', 'Japanese', 'Korean', 'German', 'Italian', 'Dutch', 'Turkish', 'Polish', 'Indonesian'],
           areaServed: 'Worldwide',
         },
         knowsAbout: [
@@ -67,7 +67,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         '@type': 'WebSite',
         '@id': `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: lang === 'zh' ? 'HONGSHENG 宏盛汽车配件' : 'HONGSHENG Auto Parts',
+        name: lang === 'zh' ? 'HONGSHENG 宏盛汽车配件' : lang === 'en' ? 'HONGSHENG Auto Parts' : `HONGSHENG ${copy['hero.title1']} ${copy['hero.titleHighlight']}`,
         description: copy['hero.subtitle'],
         inLanguage: schemaLanguage,
         publisher: { '@id': `${SITE_URL}/#organization` },
@@ -80,7 +80,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
       {
         '@type': 'ItemList',
         '@id': `${SITE_URL}/#product-catalog`,
-        name: lang === 'zh' ? 'HONGSHENG 重型卡车与机械零部件目录' : 'HONGSHENG Heavy-Duty Truck and Machinery Parts Catalog',
+        name: lang === 'zh' ? 'HONGSHENG 重型卡车与机械零部件目录' : lang === 'en' ? 'HONGSHENG Heavy-Duty Truck and Machinery Parts Catalog' : `HONGSHENG ${copy['products.title']}`,
         description: copy['products.subtitle'],
         numberOfItems: allProductCards.length,
         itemListElement: allProductCards.map((product, index) => {
@@ -106,8 +106,8 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
         url: pageUrl,
-        name: lang === 'zh' ? '重型商用车零部件可靠制造｜稳定供应｜HONGSHENG' : 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG',
-        description: lang === 'zh' ? '宏盛专业制造重型卡车转向、悬挂、传动和定制零部件，支持 OEM/ODM 与全球批量采购。' : 'ISO 9001 manufacturer of steering knuckles, steering arms, drive shafts and forged parts for heavy-duty trucks.',
+        name: lang === 'zh' ? '重型商用车零部件可靠制造｜稳定供应｜HONGSHENG' : lang === 'en' ? 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG' : `HONGSHENG ${copy['hero.title1']} ${copy['hero.titleHighlight']}`,
+        description: copy['hero.subtitle'],
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: { '@id': `${SITE_URL}/#organization` },
         primaryImageOfPage: {

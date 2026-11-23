@@ -107,6 +107,11 @@ export const categoryUiCopy: Partial<Record<Language, CategoryUiCopy>> = {
   de: {
     home: 'Startseite', categories: 'Produktkategorien', browseLabel: 'PRODUKTKATEGORIE', count: (count) => `${count} Produkte mit OEM/OE-Referenzen`, faqLabel: 'KOMPATIBILITÄTS-FAQ', faqTitle: (name) => `Fragen zu ${name}`, quote: 'Katalog oder Angebot anfordern', intro: (name) => `${name} nach Lkw-Plattform, OEM/OE-Referenz und Anwendung durchsuchen. Prüfen Sie vor der Bestellung Maße und Befestigung.`, directoryIntro: 'Entdecken Sie HONGSHENG-Kategorien für Lenkung, Fahrwerk, Achsen, Antrieb und Landmaschinen.', directoryDescription: (name) => `${name} mit Fahrzeuganwendungen, OEM/OE-Referenzen und Produktdetails durchsuchen.`,
   },
+  it: { home: 'Home', categories: 'Categorie prodotti', browseLabel: 'CATEGORIA PRODOTTO', count: (count) => `${count} prodotti con riferimenti OEM/OE`, faqLabel: 'FAQ COMPATIBILITÀ', faqTitle: (name) => `Domande su ${name}`, quote: 'Richiedi catalogo o preventivo', intro: (name) => `Consulta ${name} per piattaforma del camion, riferimento OEM/OE e applicazione. Verifica dimensioni e fissaggio prima dell’ordine.`, directoryIntro: 'Esplora le categorie HONGSHENG per sterzo, sospensioni, assali, trasmissione e macchine agricole.', directoryDescription: (name) => `Consulta ${name} con applicazioni, riferimenti OEM/OE e dettagli del prodotto.` },
+  nl: { home: 'Home', categories: 'Productcategorieën', browseLabel: 'PRODUCTCATEGORIE', count: (count) => `${count} producten met OEM/OE-referenties`, faqLabel: 'COMPATIBILITEITS-FAQ', faqTitle: (name) => `Vragen over ${name}`, quote: 'Catalogus of offerte aanvragen', intro: (name) => `Bekijk ${name} op vrachtwagenplatform, OEM/OE-referentie en toepassing. Controleer maten en montage vóór bestelling.`, directoryIntro: 'Bekijk HONGSHENG-categorieën voor besturing, ophanging, assen, aandrijving en landbouwmachines.', directoryDescription: (name) => `Bekijk ${name} met voertuigtoepassingen, OEM/OE-referenties en productdetails.` },
+  tr: { home: 'Ana sayfa', categories: 'Ürün kategorileri', browseLabel: 'ÜRÜN KATEGORİSİ', count: (count) => `OEM/OE referans bilgili ${count} ürün`, faqLabel: 'UYUMLULUK SSS', faqTitle: (name) => `${name} hakkında sorular`, quote: 'Katalog veya teklif isteyin', intro: (name) => `${name} ürünlerini kamyon platformu, OEM/OE referansı ve uygulamaya göre inceleyin. Siparişten önce ölçü ve bağlantıyı kontrol edin.`, directoryIntro: 'HONGSHENG kategorilerini direksiyon, süspansiyon, aks, aktarma ve tarım makinelerine göre inceleyin.', directoryDescription: (name) => `${name} için araç uygulamalarını, OEM/OE referanslarını ve ürün ayrıntılarını görün.` },
+  pl: { home: 'Strona główna', categories: 'Kategorie produktów', browseLabel: 'KATEGORIA PRODUKTU', count: (count) => `${count} produktów z referencjami OEM/OE`, faqLabel: 'FAQ DOPASOWANIA', faqTitle: (name) => `Pytania dotyczące ${name}`, quote: 'Poproś o katalog lub wycenę', intro: (name) => `Przeglądaj ${name} według platformy ciężarówki, numeru OEM/OE i zastosowania. Przed zamówieniem sprawdź wymiary i mocowanie.`, directoryIntro: 'Przeglądaj kategorie HONGSHENG dla układów kierowniczych, zawieszenia, osi, napędu i maszyn rolniczych.', directoryDescription: (name) => `Zobacz ${name} z zastosowaniami, numerami OEM/OE i szczegółami produktu.` },
+  id: { home: 'Beranda', categories: 'Kategori produk', browseLabel: 'KATEGORI PRODUK', count: (count) => `${count} produk dengan referensi OEM/OE`, faqLabel: 'FAQ KESESUAIAN', faqTitle: (name) => `Pertanyaan tentang ${name}`, quote: 'Minta katalog atau penawaran', intro: (name) => `Jelajahi ${name} berdasarkan platform truk, referensi OEM/OE, dan aplikasi. Periksa ukuran serta pemasangan sebelum memesan.`, directoryIntro: 'Jelajahi kategori HONGSHENG untuk kemudi, suspensi, gandar, drivetrain, dan mesin pertanian.', directoryDescription: (name) => `Lihat ${name} dengan aplikasi kendaraan, referensi OEM/OE, dan detail produk.` },
 };
 
 type FaqItem = { question: string; answer: string };
@@ -143,6 +148,46 @@ export function localizedCategoryFaq(name: string, lang: Language, englishFaq: F
       { question: `À quoi servent les produits ${name.toLowerCase()} ?`, answer: `Ces pièces sont utilisées dans les systèmes de direction, de suspension, de pont ou de transmission des camions et machines. Vérifiez l’application par modèle et référence.` },
       { question: 'Que faut-il vérifier avant la commande ?', answer: 'Vérifiez la référence OEM/OE, le modèle et l’année, le type de pont, la position, les dimensions et le montage.' },
       { question: 'Comment confirmer la compatibilité ?', answer: 'Si l’application est incertaine, envoyez des photos de la pièce, la plaque du véhicule, la référence OEM/OE et les dimensions clés.' },
+    ],
+    ja: [
+      { question: `${name}製品は何に使用されますか？`, answer: `${name}製品はトラックや関連機械のステアリング、サスペンション、アクスル、駆動系に使用されます。車種と部品番号で用途をご確認ください。` },
+      { question: '注文前に何を確認すべきですか？', answer: 'OEM/OE番号、車種・年式、アクスル、左右、主要寸法、取付穴を確認してください。' },
+      { question: '適合を確認するには？', answer: '用途が不明な場合は、旧品写真、車両プレート、OEM/OE番号、主要寸法をお送りください。' },
+    ],
+    ko: [
+      { question: `${name} 제품은 어디에 사용되나요?`, answer: `${name} 제품은 트럭 및 관련 장비의 스티어링, 서스펜션, 차축 또는 구동계에 사용됩니다. 차량과 부품 번호로 적용 정보를 확인하십시오.` },
+      { question: '주문 전에 무엇을 확인해야 하나요?', answer: 'OEM/OE 번호, 차량 모델과 연식, 차축, 좌우 방향, 주요 치수 및 장착 홀을 확인하십시오.' },
+      { question: '호환성을 어떻게 확인하나요?', answer: '적용 정보가 불확실하면 기존 부품 사진, 차량 명판, OEM/OE 번호와 주요 치수를 보내 주세요.' },
+    ],
+    de: [
+      { question: `Wofür werden ${name}-Produkte verwendet?`, answer: `${name}-Produkte werden in Lenkungs-, Fahrwerks-, Achs- oder Antriebssystemen von Lkw und Maschinen eingesetzt. Prüfen Sie Anwendung und Teilenummer.` },
+      { question: 'Was sollte ich vor der Bestellung prüfen?', answer: 'Prüfen Sie OEM/OE-Nummer, Fahrzeugmodell und Baujahr, Achse, Seite, Maße und Befestigungsbild.' },
+      { question: 'Wie bestätige ich die Kompatibilität?', answer: 'Bei Unsicherheit senden Sie Fotos des Altteils, Fahrzeugdaten, OEM/OE-Nummer und wichtige Maße.' },
+    ],
+    it: [
+      { question: `A cosa servono i prodotti ${name}?`, answer: `I prodotti ${name} sono utilizzati nei sistemi di sterzo, sospensione, assale o trasmissione di camion e macchine. Verificare applicazione e riferimento.` },
+      { question: 'Cosa controllare prima dell’ordine?', answer: 'Controllare riferimento OEM/OE, modello e anno, assale, lato, dimensioni e fissaggio.' },
+      { question: 'Come confermare la compatibilità?', answer: 'In caso di dubbio, inviare foto del pezzo, dati del veicolo, riferimento OEM/OE e misure principali.' },
+    ],
+    nl: [
+      { question: `Waarvoor worden ${name}-producten gebruikt?`, answer: `${name}-producten worden gebruikt in stuur-, ophangings-, as- of aandrijfsystemen van vrachtwagens en machines. Controleer toepassing en referentie.` },
+      { question: 'Wat moet ik vóór bestelling controleren?', answer: 'Controleer OEM/OE-nummer, voertuigmodel en bouwjaar, as, zijde, maten en montage.' },
+      { question: 'Hoe bevestig ik de compatibiliteit?', answer: 'Stuur bij twijfel foto’s van het oude onderdeel, voertuiggegevens, OEM/OE-nummer en belangrijke maten.' },
+    ],
+    tr: [
+      { question: `${name} ürünleri ne için kullanılır?`, answer: `${name} ürünleri kamyon ve makinelerin direksiyon, süspansiyon, aks veya aktarma sistemlerinde kullanılır. Uygulamayı parça numarasıyla doğrulayın.` },
+      { question: 'Siparişten önce ne kontrol edilmeli?', answer: 'OEM/OE numarasını, araç model ve yılını, aksı, tarafı, ölçüleri ve bağlantıyı kontrol edin.' },
+      { question: 'Uyumluluk nasıl doğrulanır?', answer: 'Emin değilseniz eski parçanın fotoğrafını, araç bilgilerini, OEM/OE numarasını ve temel ölçüleri gönderin.' },
+    ],
+    pl: [
+      { question: `Do czego służą produkty ${name}?`, answer: `Produkty ${name} stosuje się w układach kierowniczych, zawieszenia, osi lub napędu ciężarówek i maszyn. Sprawdź zastosowanie i numer części.` },
+      { question: 'Co sprawdzić przed zamówieniem?', answer: 'Sprawdź numer OEM/OE, model i rok pojazdu, oś, stronę, wymiary i sposób mocowania.' },
+      { question: 'Jak potwierdzić dopasowanie?', answer: 'W razie wątpliwości prześlij zdjęcia starej części, dane pojazdu, numer OEM/OE i najważniejsze wymiary.' },
+    ],
+    id: [
+      { question: `Untuk apa produk ${name} digunakan?`, answer: `Produk ${name} digunakan pada sistem kemudi, suspensi, gandar, atau drivetrain truk dan mesin. Periksa aplikasi berdasarkan nomor komponen.` },
+      { question: 'Apa yang perlu diperiksa sebelum memesan?', answer: 'Periksa nomor OEM/OE, model dan tahun kendaraan, gandar, sisi pemasangan, ukuran, dan pola pemasangan.' },
+      { question: 'Bagaimana memastikan kecocokan?', answer: 'Jika ragu, kirim foto komponen lama, data kendaraan, nomor OEM/OE, dan ukuran penting.' },
     ],
   };
   return faq[lang as Exclude<Language, 'en'>] ?? englishFaq;

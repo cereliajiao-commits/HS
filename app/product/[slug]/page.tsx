@@ -82,11 +82,88 @@ function absoluteUrl(path: string) {
 
 type ProductFaqItem = { question: string; answer: string };
 
+const localizedProductFaq: Partial<Record<Language, {
+  oemQuestion: string;
+  applicationQuestion: string;
+  fitmentQuestion: string;
+  customQuestion: string;
+  oemAnswer: (oem: string) => string;
+  applicationAnswer: (application: string) => string;
+  noApplication: string;
+  fitmentAnswer: string;
+  customAnswer: string;
+}>> = {
+  ja: {
+    oemQuestion: 'この製品に対応するOEM / OE番号は？', applicationQuestion: 'どの車両またはステアリングシステムに使用できますか？', fitmentQuestion: '注文前に適合を確認するには？', customQuestion: 'OEM / ODMやカスタム包装に対応していますか？',
+    oemAnswer: (oem) => `このページに掲載している参照番号：${oem}。ご注文前に車種、アクスル、左右、取付寸法をご確認ください。`, applicationAnswer: (application) => `適合情報：${application}。車両仕様やアクスルが不明な場合は、車両プレート、旧品写真、寸法をお送りください。`, noApplication: '確認済みの車両適合情報はまだ掲載されていません。車種、アクスル、旧品写真をお知らせください。', fitmentAnswer: 'OEM / OE番号、車種と年式、アクスル、左右、穴間隔、スプラインなどを確認してください。OEM番号は照合用の参考情報です。', customAnswer: 'HONGSHENGはOEM / ODM、製品マーキング、カスタム包装に対応しています。数量、仕向け市場、図面またはサンプルをお知らせください。',
+  },
+  ko: {
+    oemQuestion: '이 제품의 OEM / OE 번호는 무엇인가요?', applicationQuestion: '어떤 차량 또는 스티어링 시스템에 사용되나요?', fitmentQuestion: '주문 전에 호환성을 어떻게 확인하나요?', customQuestion: 'OEM / ODM 및 맞춤 포장을 지원하나요?',
+    oemAnswer: (oem) => `이 페이지에 기재된 참조 번호: ${oem}. 주문 전에 차량, 차축, 좌우 방향 및 장착 치수를 확인하십시오.`, applicationAnswer: (application) => `적용 정보: ${application}. 차량 사양이나 차축이 불확실하면 차량 명판, 기존 부품 사진 및 치수를 보내 주세요.`, noApplication: '확인된 차량 적용 정보가 아직 없습니다. 차량 모델, 차축 종류 및 기존 부품 사진을 보내 주세요.', fitmentAnswer: 'OEM / OE 번호, 차량 모델과 연식, 차축 종류, 좌우 방향, 홀 간격 및 스플라인을 확인하십시오. OEM 번호는 참고용입니다.', customAnswer: 'HONGSHENG은 OEM / ODM 문의, 제품 표시 및 맞춤 포장을 지원합니다. 수량, 대상 시장, 도면 또는 샘플을 보내 주세요.',
+  },
+  de: {
+    oemQuestion: 'Auf welche OEM- / OE-Nummern bezieht sich dieses Produkt?', applicationQuestion: 'Für welches Fahrzeug oder Lenksystem ist es geeignet?', fitmentQuestion: 'Wie prüfe ich die Passform vor der Bestellung?', customQuestion: 'Unterstützen Sie OEM / ODM und kundenspezifische Verpackung?',
+    oemAnswer: (oem) => `Auf dieser Seite aufgeführte Referenznummern: ${oem}. Prüfen Sie vor der Bestellung Fahrzeug, Achse, Seite und Befestigungsmaße.`, applicationAnswer: (application) => `Anwendung: ${application}. Wenn Fahrzeugkonfiguration oder Achstyp unklar sind, senden Sie Fahrzeugdaten, Fotos des Altteils und Maße.`, noApplication: 'Es ist noch keine bestätigte Fahrzeuganwendung angegeben. Senden Sie Fahrzeugmodell, Achstyp und Fotos des Altteils zur Prüfung.', fitmentAnswer: 'Prüfen Sie OEM- / OE-Nummer, Fahrzeugmodell und Baujahr, Achstyp, Einbauseite, Lochabstände und Verzahnung. Die OEM-Nummer dient nur als Referenz.', customAnswer: 'HONGSHENG unterstützt OEM / ODM-Anfragen, Produktkennzeichnung und kundenspezifische Verpackung. Bitte Menge, Zielmarkt, Zeichnungen oder Muster angeben.',
+  },
+  ru: {
+    oemQuestion: 'Какие номера OEM / OE относятся к этой детали?', applicationQuestion: 'Для какого автомобиля или рулевой системы предназначена деталь?', fitmentQuestion: 'Как проверить совместимость перед заказом?', customQuestion: 'Поддерживаете ли вы OEM / ODM и индивидуальную упаковку?',
+    oemAnswer: (oem) => `Указанные на странице номера: ${oem}. Перед заказом проверьте автомобиль, мост, сторону установки и размеры крепления.`, applicationAnswer: (application) => `Применение: ${application}. Если конфигурация автомобиля или тип моста неизвестны, отправьте данные автомобиля, фото старой детали и размеры.`, noApplication: 'Подтверждённое применение автомобиля пока не указано. Отправьте модель автомобиля, тип моста и фото старой детали.', fitmentAnswer: 'Проверьте номер OEM / OE, модель и год автомобиля, тип моста, сторону установки, межосевые расстояния отверстий и шлицы. OEM-номер является справочным.', customAnswer: 'HONGSHENG принимает запросы OEM / ODM, выполняет маркировку изделий и индивидуальную упаковку. Укажите количество, рынок, чертежи или образцы.',
+  },
+  ar: {
+    oemQuestion: 'ما أرقام OEM / OE المرتبطة بهذا المنتج؟', applicationQuestion: 'لأي مركبة أو نظام توجيه يُستخدم هذا المنتج؟', fitmentQuestion: 'كيف أتحقق من التوافق قبل الطلب؟', customQuestion: 'هل تدعمون OEM / ODM والتغليف المخصص؟',
+    oemAnswer: (oem) => `أرقام المرجع المذكورة في الصفحة: ${oem}. تحقق من المركبة والمحور والجهة وأبعاد التثبيت قبل الطلب.`, applicationAnswer: (application) => `الاستخدام: ${application}. إذا كانت مواصفات المركبة أو نوع المحور غير واضحة، أرسل بيانات المركبة وصور القطعة القديمة والأبعاد.`, noApplication: 'لا توجد حالياً معلومات مؤكدة عن المركبة. أرسل الطراز ونوع المحور وصور القطعة القديمة للتأكد.', fitmentAnswer: 'تحقق من رقم OEM / OE وطراز المركبة وسنتها ونوع المحور والجهة والمسافات بين الثقوب والتخديدات. الرقم مرجع للمطابقة فقط.', customAnswer: 'تدعم HONGSHENG طلبات OEM / ODM ووضع العلامات والتغليف المخصص. أرسل الكمية والسوق المستهدف والرسومات أو العينات.',
+  },
+  es: {
+    oemQuestion: '¿Qué referencias OEM / OE corresponden a este producto?', applicationQuestion: '¿Para qué vehículo o sistema de dirección sirve?', fitmentQuestion: '¿Cómo confirmo la compatibilidad antes de pedir?', customQuestion: '¿Admiten OEM / ODM y embalaje personalizado?',
+    oemAnswer: (oem) => `Referencias indicadas en esta página: ${oem}. Confirme el vehículo, el eje, el lado y las dimensiones de montaje antes de pedir.`, applicationAnswer: (application) => `Aplicación: ${application}. Si no está clara la configuración del vehículo o el eje, envíe los datos del vehículo, fotos de la pieza antigua y medidas.`, noApplication: 'Todavía no hay una aplicación de vehículo confirmada. Envíe el modelo, el tipo de eje y fotos de la pieza antigua.', fitmentAnswer: 'Compruebe la referencia OEM / OE, modelo y año, tipo de eje, lado de montaje, distancia entre agujeros y estrías. La referencia OEM es solo una guía.', customAnswer: 'HONGSHENG admite consultas OEM / ODM, marcado de productos y embalaje personalizado. Incluya cantidad, mercado, planos o muestras.',
+  },
+  pt: {
+    oemQuestion: 'Quais números OEM / OE correspondem a este produto?', applicationQuestion: 'Para qual veículo ou sistema de direção ele serve?', fitmentQuestion: 'Como confirmar a compatibilidade antes do pedido?', customQuestion: 'Vocês oferecem OEM / ODM e embalagem personalizada?',
+    oemAnswer: (oem) => `Referências indicadas nesta página: ${oem}. Confirme o veículo, eixo, lado e dimensões de montagem antes do pedido.`, applicationAnswer: (application) => `Aplicação: ${application}. Se a configuração do veículo ou eixo não estiver clara, envie os dados do veículo, fotos da peça antiga e medidas.`, noApplication: 'Ainda não há uma aplicação de veículo confirmada. Envie modelo, tipo de eixo e fotos da peça antiga.', fitmentAnswer: 'Verifique a referência OEM / OE, modelo e ano, tipo de eixo, lado de montagem, distância entre furos e estrias. A referência OEM é apenas para conferência.', customAnswer: 'A HONGSHENG atende consultas OEM / ODM, marcação de produtos e embalagem personalizada. Informe quantidade, mercado, desenhos ou amostras.',
+  },
+  fr: {
+    oemQuestion: 'Quelles références OEM / OE correspondent à ce produit ?', applicationQuestion: 'Pour quel véhicule ou système de direction est-il prévu ?', fitmentQuestion: 'Comment confirmer la compatibilité avant la commande ?', customQuestion: 'Proposez-vous l’OEM / ODM et un emballage personnalisé ?',
+    oemAnswer: (oem) => `Références indiquées sur cette page : ${oem}. Vérifiez le véhicule, le pont, le côté et les dimensions de montage avant la commande.`, applicationAnswer: (application) => `Application : ${application}. Si la configuration du véhicule ou du pont est incertaine, envoyez les données du véhicule, des photos de l’ancienne pièce et les dimensions.`, noApplication: 'Aucune application véhicule confirmée n’est encore indiquée. Envoyez le modèle, le type de pont et des photos de l’ancienne pièce.', fitmentAnswer: 'Vérifiez la référence OEM / OE, le modèle et l’année, le type de pont, le côté, l’entraxe des trous et les cannelures. La référence OEM reste indicative.', customAnswer: 'HONGSHENG traite les demandes OEM / ODM, le marquage des produits et l’emballage personnalisé. Indiquez la quantité, le marché, les plans ou les échantillons.',
+  },
+  it: {
+    oemQuestion: 'Quali riferimenti OEM / OE corrispondono a questo prodotto?', applicationQuestion: 'Per quale veicolo o sistema di sterzo è adatto?', fitmentQuestion: 'Come verificare la compatibilità prima dell’ordine?', customQuestion: 'Sono disponibili OEM / ODM e imballaggi personalizzati?',
+    oemAnswer: (oem) => `Riferimenti indicati nella pagina: ${oem}. Verificare veicolo, assale, lato e dimensioni di montaggio prima dell’ordine.`, applicationAnswer: (application) => `Applicazione: ${application}. Se la configurazione non è chiara, inviare dati del veicolo, foto del vecchio pezzo e misure.`, noApplication: 'Non è ancora indicata un’applicazione veicolo verificata. Inviare modello, tipo di assale e foto del vecchio pezzo.', fitmentAnswer: 'Controllare riferimento OEM / OE, modello e anno, assale, lato, interassi dei fori e scanalature. Il codice OEM è solo un riferimento.', customAnswer: 'HONGSHENG supporta richieste OEM / ODM, marcatura e imballaggio personalizzato. Indicare quantità, mercato, disegni o campioni.',
+  },
+  nl: {
+    oemQuestion: 'Welke OEM / OE-nummers horen bij dit product?', applicationQuestion: 'Voor welk voertuig of stuursysteem is dit geschikt?', fitmentQuestion: 'Hoe controleer ik de pasvorm vóór bestelling?', customQuestion: 'Bieden jullie OEM / ODM en maatwerkverpakking?',
+    oemAnswer: (oem) => `Referenties op deze pagina: ${oem}. Controleer voertuig, as, zijde en montageafmetingen vóór bestelling.`, applicationAnswer: (application) => `Toepassing: ${application}. Stuur voertuiggegevens, foto’s van het oude onderdeel en maten als de configuratie onduidelijk is.`, noApplication: 'Er is nog geen bevestigde voertuigtoepassing vermeld. Stuur model, astype en foto’s van het oude onderdeel.', fitmentAnswer: 'Controleer OEM / OE-nummer, model en bouwjaar, astype, montagezijde, gatafstand en vertanding. Het OEM-nummer is alleen een referentie.', customAnswer: 'HONGSHENG ondersteunt OEM / ODM, productmarkering en maatwerkverpakking. Vermeld hoeveelheid, markt, tekeningen of monsters.',
+  },
+  tr: {
+    oemQuestion: 'Bu ürün hangi OEM / OE numaralarıyla eşleşir?', applicationQuestion: 'Hangi araç veya direksiyon sistemi için uygundur?', fitmentQuestion: 'Siparişten önce uyumluluk nasıl doğrulanır?', customQuestion: 'OEM / ODM ve özel ambalaj destekliyor musunuz?',
+    oemAnswer: (oem) => `Sayfada belirtilen referanslar: ${oem}. Siparişten önce araç, aks, taraf ve montaj ölçülerini kontrol edin.`, applicationAnswer: (application) => `Uygulama: ${application}. Araç veya aks konfigürasyonu net değilse araç bilgilerini, eski parçanın fotoğraflarını ve ölçüleri gönderin.`, noApplication: 'Henüz doğrulanmış bir araç uygulaması belirtilmemiştir. Modeli, aks tipini ve eski parça fotoğraflarını gönderin.', fitmentAnswer: 'OEM / OE numarasını, araç model ve yılını, aks tipini, montaj tarafını, delik aralığını ve kamaları kontrol edin. OEM numarası yalnızca referanstır.', customAnswer: 'HONGSHENG OEM / ODM taleplerini, ürün işaretlemesini ve özel ambalajı destekler. Miktar, hedef pazar, çizim veya numune gönderin.',
+  },
+  pl: {
+    oemQuestion: 'Jakie numery OEM / OE dotyczą tego produktu?', applicationQuestion: 'Do jakiego pojazdu lub układu kierowniczego jest przeznaczony?', fitmentQuestion: 'Jak potwierdzić dopasowanie przed zamówieniem?', customQuestion: 'Czy oferujecie OEM / ODM i opakowania niestandardowe?',
+    oemAnswer: (oem) => `Numery referencyjne podane na stronie: ${oem}. Przed zamówieniem sprawdź pojazd, oś, stronę i wymiary mocowania.`, applicationAnswer: (application) => `Zastosowanie: ${application}. Jeśli konfiguracja pojazdu lub osi jest niepewna, prześlij dane pojazdu, zdjęcia starej części i wymiary.`, noApplication: 'Nie podano jeszcze potwierdzonego zastosowania. Prześlij model, typ osi i zdjęcia starej części.', fitmentAnswer: 'Sprawdź numer OEM / OE, model i rok, typ osi, stronę montażu, rozstaw otworów i wielowypust. Numer OEM jest tylko wskazówką.', customAnswer: 'HONGSHENG obsługuje zapytania OEM / ODM, oznakowanie produktów i opakowania niestandardowe. Podaj ilość, rynek, rysunki lub próbki.',
+  },
+  id: {
+    oemQuestion: 'Nomor OEM / OE apa yang sesuai dengan produk ini?', applicationQuestion: 'Untuk kendaraan atau sistem kemudi apa produk ini digunakan?', fitmentQuestion: 'Bagaimana cara memastikan kecocokan sebelum memesan?', customQuestion: 'Apakah mendukung OEM / ODM dan kemasan khusus?',
+    oemAnswer: (oem) => `Referensi yang tercantum di halaman ini: ${oem}. Periksa kendaraan, gandar, sisi pemasangan, dan ukuran pemasangan sebelum memesan.`, applicationAnswer: (application) => `Aplikasi: ${application}. Jika konfigurasi kendaraan atau gandar belum jelas, kirim data kendaraan, foto komponen lama, dan ukurannya.`, noApplication: 'Aplikasi kendaraan yang terverifikasi belum tercantum. Kirim model kendaraan, jenis gandar, dan foto komponen lama.', fitmentAnswer: 'Periksa nomor OEM / OE, model dan tahun kendaraan, jenis gandar, sisi pemasangan, jarak lubang, dan spline. Nomor OEM hanya merupakan referensi.', customAnswer: 'HONGSHENG mendukung permintaan OEM / ODM, penandaan produk, dan kemasan khusus. Sertakan jumlah, pasar tujuan, gambar, atau sampel.',
+  },
+};
+
 function getProductFaq(product: NonNullable<ReturnType<typeof getLocalizedProduct>>, lang: Language): ProductFaqItem[] {
   const isChinese = lang === 'zh';
   const oemNumbers = product.displayOemNumbers;
-  const application = product.displayVehicleApplication || product.applications.join(isChinese ? '、' : ', ');
-  const oemText = oemNumbers.length ? oemNumbers.join(isChinese ? '、' : ', ') : (isChinese ? '暂无已核实的 OEM 号' : 'No verified OEM number is currently listed');
+  const application = product.displayVehicleApplication || product.applications.join(isChinese || lang === 'ja' ? '、' : ', ');
+  const noVerifiedOem: Record<Language, string> = {
+    en: 'No verified OEM number is currently listed', zh: '暂无已核实的 OEM 号', ru: 'Проверенный номер OEM пока не указан', ar: 'لا يوجد حالياً رقم OEM مؤكد', es: 'Todavía no hay un número OEM verificado', pt: 'Ainda não há um número OEM verificado', fr: 'Aucun numéro OEM vérifié n’est encore indiqué', ja: '確認済みのOEM番号はまだ掲載されていません', ko: '확인된 OEM 번호가 아직 기재되지 않았습니다', de: 'Es ist noch keine bestätigte OEM-Nummer angegeben', it: 'Non è ancora indicato un riferimento OEM verificato', nl: 'Er is nog geen bevestigd OEM-nummer vermeld', tr: 'Henüz doğrulanmış bir OEM numarası belirtilmemiştir', pl: 'Nie podano jeszcze potwierdzonego numeru OEM', id: 'Nomor OEM yang terverifikasi belum tercantum',
+  };
+  const oemText = oemNumbers.length ? oemNumbers.join(isChinese ? '、' : ', ') : noVerifiedOem[lang];
+  const localized = localizedProductFaq[lang];
+  if (localized) {
+    return [
+      { question: localized.oemQuestion, answer: localized.oemAnswer(oemText) },
+      { question: localized.applicationQuestion, answer: application ? localized.applicationAnswer(application) : localized.noApplication },
+      { question: localized.fitmentQuestion, answer: localized.fitmentAnswer },
+      { question: localized.customQuestion, answer: localized.customAnswer },
+    ];
+  }
   return isChinese
     ? [
       { question: '这个产品对应哪些 OEM / OE 号？', answer: `当前页面列出的参考号：${oemText}。下单前请同时核对车型、桥型、左右侧和安装尺寸。` },
@@ -120,6 +197,10 @@ function seoTitle(title: string, lang: Language) {
   return `${compactMetaText(title, 78 - suffix.length)}${suffix}`;
 }
 
+const oemMetaLabels: Partial<Record<Language, string>> = {
+  zh: 'OEM号', ja: 'OEM番号', ko: 'OEM 번호', de: 'OEM-Nummern', it: 'Numeri OEM', nl: 'OEM-nummers', tr: 'OEM numaraları', pl: 'Numery OEM', id: 'Nomor OEM',
+};
+
 export function generateStaticParams() {
   return allProductCards.map((product) => ({ slug: product.id }));
 }
@@ -141,7 +222,7 @@ export async function generateMetadata({ params, searchParams }: ProductPageProp
     : `${product.title}: specifications, applications, and inquiry support from HONGSHENG Auto Parts.`);
   const copy = translations[lang];
   const description = compactMetaText(
-    `${rawDescription} ${product.displayOemNumbers.length ? `${lang === 'zh' ? 'OEM号' : 'OEM numbers'}: ${product.displayOemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : copy['product.requestQuote']}`,
+    `${rawDescription} ${product.displayOemNumbers.length ? `${oemMetaLabels[lang] ?? 'OEM numbers'}: ${product.displayOemNumbers.join(', ')}.` : ''} ${lang === 'zh' ? '支持OEM/ODM定制，欢迎获取规格与报价。' : copy['product.requestQuote']}`,
     155
   );
   const url = productUrl(params.slug, lang);
@@ -247,7 +328,7 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       '@type': 'ContactPoint',
       telephone: '+86 177 5109 7209',
       contactType: 'sales',
-        availableLanguage: ['English', 'Chinese'],
+        availableLanguage: ['English', 'Chinese', 'Russian', 'Arabic', 'Spanish', 'Portuguese', 'French', 'Japanese', 'Korean', 'German', 'Italian', 'Dutch', 'Turkish', 'Polish', 'Indonesian'],
     },
   };
   const breadcrumbSchema = {
@@ -257,13 +338,13 @@ function StructuredData({ product, slug, lang }: { product: NonNullable<ReturnTy
       {
         '@type': 'ListItem',
         position: 1,
-        name: lang === 'zh' ? '首页' : 'Home',
+        name: ({ en: 'Home', zh: '首页', ru: 'Главная', ar: 'الرئيسية', es: 'Inicio', pt: 'Início', fr: 'Accueil', ja: 'ホーム', ko: '홈', de: 'Startseite', it: 'Home', nl: 'Home', tr: 'Ana sayfa', pl: 'Strona główna', id: 'Beranda' } as Record<Language, string>)[lang],
         item: SITE_URL,
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: lang === 'zh' ? '产品' : 'Products',
+        name: ({ en: 'Products', zh: '产品', ru: 'Продукция', ar: 'المنتجات', es: 'Productos', pt: 'Produtos', fr: 'Produits', ja: '製品', ko: '제품', de: 'Produkte', it: 'Prodotti', nl: 'Producten', tr: 'Ürünler', pl: 'Produkty', id: 'Produk' } as Record<Language, string>)[lang],
         item: `${SITE_URL}/#products`,
       },
       {
@@ -322,7 +403,11 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
   };
 
   const inquiryUrl = `/?product=${encodeURIComponent(product.title)}#contact`;
-  const languageUrl = lang === 'zh' ? productUrl(params.slug, 'en') : productUrl(params.slug, 'zh');
+  const languageUrl = lang === 'zh'
+    ? productUrl(params.slug, 'en')
+    : ['ja', 'ko', 'de', 'it', 'nl', 'tr', 'pl', 'id'].includes(lang)
+      ? productUrl(params.slug, 'en')
+      : productUrl(params.slug, 'zh');
   const homeUrl = lang === 'en' ? '/' : `/?lang=${lang}`;
   const productsUrl = lang === 'en' ? '/#products' : `/?lang=${lang}#products`;
   const faqItems = getProductFaq(product, lang);
@@ -397,7 +482,7 @@ export default function ProductPage({ params, searchParams }: ProductPageProps) 
             ) : null}
 
             <section className="product-detail-section product-detail-faq" aria-labelledby="product-faq-title">
-              <h2 id="product-faq-title">{lang === 'zh' ? '产品与适配常见问题' : 'Product and fitment FAQ'}</h2>
+              <h2 id="product-faq-title">{({ en: 'Product and fitment FAQ', zh: '产品与适配常见问题', ru: 'Вопросы о продукции и совместимости', ar: 'أسئلة المنتج والتوافق', es: 'Preguntas sobre producto y compatibilidad', pt: 'Perguntas sobre produto e compatibilidade', fr: 'FAQ produit et compatibilité', ja: '製品と適合に関するFAQ', ko: '제품 및 호환성 FAQ', de: 'FAQ zu Produkt und Kompatibilität', it: 'FAQ su prodotto e compatibilità', nl: 'FAQ over product en compatibiliteit', tr: 'Ürün ve uyumluluk SSS', pl: 'FAQ produktu i dopasowania', id: 'FAQ produk dan kecocokan' } as Record<Language, string>)[lang]}</h2>
               {faqItems.map((item) => (
                 <details key={item.question}>
                   <summary>{item.question}</summary>

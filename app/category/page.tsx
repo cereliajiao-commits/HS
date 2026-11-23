@@ -48,7 +48,7 @@ export default function CategoryIndexPage({ searchParams }: { searchParams?: { l
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <Link href="/">{copy.home}</Link><span>/</span><span>{copy.categories}</span>
+          <Link href={lang === 'en' ? '/' : `/?lang=${lang}`}>{copy.home}</Link><span>/</span><span>{copy.categories}</span>
         </nav>
         <p className="section-label">{copy.browseLabel}</p>
         <h1>{copy.categories}</h1>
@@ -58,7 +58,7 @@ export default function CategoryIndexPage({ searchParams }: { searchParams?: { l
             <Link className="category-directory-card" href={`/category/${page.slug}${lang === 'en' ? '' : `?lang=${lang}`}`} key={page.slug}>
               <h2>{lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang)}</h2>
               <p>{copy.directoryDescription(lang === 'en' ? page.name : translateCategoryLabel(page.slug, lang))}</p>
-              <span>View category →</span>
+              <span>{copy.browseLabel} →</span>
             </Link>
           ))}
         </div>

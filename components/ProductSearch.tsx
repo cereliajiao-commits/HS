@@ -19,6 +19,11 @@ const searchCopy: Partial<Record<Language, { label: string; title: string; place
   ja: { label: '製品を検索', title: '製品検索', placeholder: '型式、製品、カテゴリー、ブランド', hint: 'キーワードで全製品を検索できます。', noResults: '一致する製品が見つかりません。', results: '件の製品' },
   ko: { label: '제품 검색', title: '제품 검색', placeholder: '모델, 제품, 카테고리 또는 브랜드', hint: '키워드로 모든 제품 모델을 검색하세요.', noResults: '일치하는 제품이 없습니다.', results: '개 제품' },
   de: { label: 'Produkte suchen', title: 'Produktsuche', placeholder: 'Modell, Produkt, Kategorie oder Marke', hint: 'Suchen Sie alle Produktmodelle nach Stichwort.', noResults: 'Keine passenden Produkte gefunden.', results: 'passende Produkte' },
+  it: { label: 'Cerca prodotti', title: 'Ricerca prodotti', placeholder: 'Modello, prodotto, categoria o marchio', hint: 'Cerca tutti i modelli per parola chiave.', noResults: 'Nessun prodotto trovato.', results: 'prodotti trovati' },
+  nl: { label: 'Producten zoeken', title: 'Product zoeken', placeholder: 'Model, product, categorie of merk', hint: 'Zoek alle productmodellen op trefwoord.', noResults: 'Geen passende producten gevonden.', results: 'producten gevonden' },
+  tr: { label: 'Ürün ara', title: 'Ürün arama', placeholder: 'Model, ürün, kategori veya marka', hint: 'Tüm ürün modellerini anahtar kelimeyle arayın.', noResults: 'Eşleşen ürün bulunamadı.', results: 'eşleşen ürün' },
+  pl: { label: 'Szukaj produktów', title: 'Wyszukiwanie produktów', placeholder: 'Model, produkt, kategoria lub marka', hint: 'Szukaj wszystkich modeli po słowie kluczowym.', noResults: 'Nie znaleziono pasujących produktów.', results: 'pasujących produktów' },
+  id: { label: 'Cari produk', title: 'Pencarian produk', placeholder: 'Model, produk, kategori, atau merek', hint: 'Cari semua model produk berdasarkan kata kunci.', noResults: 'Produk yang cocok tidak ditemukan.', results: 'produk cocok' },
 };
 
 export default function ProductSearch() {

@@ -94,7 +94,7 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="container">
         <nav className="product-breadcrumbs" aria-label="Breadcrumb">
-          <Link href="/">{copy.home}</Link><span>/</span><Link href={`/category${lang === 'en' ? '' : `?lang=${lang}`}`}>{copy.categories}</Link><span>/</span><span>{displayName}</span>
+          <Link href={lang === 'en' ? '/' : `/?lang=${lang}`}>{copy.home}</Link><span>/</span><Link href={`/category${lang === 'en' ? '' : `?lang=${lang}`}`}>{copy.categories}</Link><span>/</span><span>{displayName}</span>
         </nav>
         <p className="section-label">{copy.browseLabel}</p>
         <h1>{displayName}</h1>
@@ -138,7 +138,7 @@ export default function CategoryPage({ params, searchParams }: { params: { categ
             </details>
           ))}
         </section>
-        <div className="category-page-cta"><Link className="btn btn-primary" href="/#contact">{copy.quote}</Link></div>
+        <div className="category-page-cta"><Link className="btn btn-primary" href={lang === 'en' ? '/#contact' : `/?lang=${lang}#contact`}>{copy.quote}</Link></div>
       </div>
     </main>
   );

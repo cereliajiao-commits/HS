@@ -11,9 +11,9 @@ export async function generateMetadata({ searchParams }: { searchParams?: { lang
   const lang = getLanguage(searchParams?.lang);
   const copy = translations[lang];
   const title = lang === 'zh'
-    ? '重型商用车零部件可靠制造｜稳定供应｜HONGSHENG'
+    ? '衡水宏盛汽车配件有限公司｜HONGSHENG重卡零部件制造商'
     : lang === 'en'
-      ? 'Truck Steering & Driveline Parts Manufacturer | HONGSHENG'
+      ? 'Hengshui Hongsheng Auto Parts Co., Ltd. | HONGSHENG Truck Parts Manufacturer'
       : `${copy['hero.title1']} ${copy['hero.titleHighlight']} | HONGSHENG Auto Parts`;
   const description = copy['hero.subtitle'];
   const canonical = languageUrl(SITE_URL, '/', lang);

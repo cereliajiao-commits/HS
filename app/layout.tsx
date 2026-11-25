@@ -6,7 +6,7 @@ import LanguageHtmlSync from '@/components/LanguageHtmlSync';
 
 const siteUrl = 'https://www.hsaxle.com';
 const siteName = 'HONGSHENG Auto Parts';
-const siteTitle = 'Hengshui Hongsheng Auto Parts Co., Ltd. | HONGSHENG Truck Parts Manufacturer';
+const siteTitle = 'Hengshui Hongsheng Auto Parts | HONGSHENG Truck Parts Manufacturer';
 const siteDescription =
   'Hengshui Hongsheng Auto Parts Co., Ltd. (衡水宏盛汽车配件有限公司) is an ISO 9001 manufacturer of truck steering arms, steering knuckles, torque rods, differentials, drive shafts and forged parts. Search products by OEM/OE number and request a quote.';
 const socialImage = '/images/company/og-hongsheng-auto-parts.jpg';

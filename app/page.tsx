@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: { searchParams?: { lang
   const title = lang === 'zh'
     ? '衡水宏盛汽车配件有限公司｜HONGSHENG重卡零部件制造商'
     : lang === 'en'
-      ? 'Hengshui Hongsheng Auto Parts Co., Ltd. | HONGSHENG Truck Parts Manufacturer'
+      ? 'Hengshui Hongsheng Auto Parts | HONGSHENG Truck Parts Manufacturer'
       : `${copy['hero.title1']} ${copy['hero.titleHighlight']} | HONGSHENG Auto Parts`;
   const description = copy['hero.subtitle'];
   const canonical = languageUrl(SITE_URL, '/', lang);

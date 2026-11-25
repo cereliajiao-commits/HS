@@ -5,9 +5,11 @@
 - Chinese name: 衡水宏盛汽车配件有限公司
 - English name: Hengshui Hongsheng Auto Parts Co., Ltd.
 - Brand: HONGSHENG Auto Parts
+- Common search name: Hengshui Hongsheng Auto Parts
 - Location: Anping County, Hebei, China
 - Established: 1996
 - Website: https://www.hsaxle.com/
+- Company profile: https://www.hsaxle.com/company
 - Capabilities: OEM/ODM manufacturing, forging, extrusion, CNC machining, heat treatment, quality inspection
 
 ## Product categories

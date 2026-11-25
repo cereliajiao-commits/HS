@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: { languages: languageAlternates(siteUrl, '/') },
     },
+    {
+      url: `${siteUrl}/company`,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     ...productUrls,
     ...oemUrls,
     ...categoryUrls,

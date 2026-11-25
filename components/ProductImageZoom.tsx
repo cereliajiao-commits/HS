@@ -80,7 +80,17 @@ export default function ProductImageZoom({ src, alt, hint }: ProductImageZoomPro
         onMouseMove={updateZoom}
         onMouseLeave={() => setZoom(null)}
       >
-        <img ref={imageRef} src={src} alt={alt} draggable={false} decoding="async" fetchPriority="high" />
+        <img
+          ref={imageRef}
+          src={src}
+          alt={alt}
+          width={1200}
+          height={1200}
+          loading="eager"
+          draggable={false}
+          decoding="async"
+          fetchPriority="high"
+        />
         <span className="product-image-zoom-hint">⌕ {hint}</span>
         {zoom && (
           <span

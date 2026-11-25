@@ -1,4 +1,5 @@
 import { allProductCards } from '@/data/products';
+import { oemReferences } from '@/data/oemReference.generated';
 
 const siteUrl = 'https://www.hsaxle.com';
 
@@ -15,10 +16,32 @@ export function GET() {
   const entries = allProductCards.map((product) => {
     const pageUrl = `${siteUrl}/product/${encodeURIComponent(product.id)}`;
     const imageUrl = new URL(product.image, siteUrl).toString();
-    return `  <url>\n    <loc>${escapeXml(pageUrl)}</loc>\n    <image:image>\n      <image:loc>${escapeXml(imageUrl)}</image:loc>\n      <image:title>${escapeXml(product.title)}</image:title>\n      <image:caption>${escapeXml(product.description)}</image:caption>\n    </image:image>\n  </url>`;
+    const oem = oemReferences[product.id]?.oemNumbers ?? [];
+    const application = oemReferences[product.id]?.vehicleApplication;
+    const caption = [
+      product.description,
+      oem.length ? `OEM/OE reference: ${oem.join(', ')}` : '',
+      application ? `Vehicle application: ${application}.` : '',
+    ].filter(Boolean).join(' ');
+
+    return [
+      '  <url>',
+      `    <loc>${escapeXml(pageUrl)}</loc>`,
+      '    <image:image>',
+      `      <image:loc>${escapeXml(imageUrl)}</image:loc>`,
+      `      <image:title>${escapeXml(product.title)}</image:title>`,
+      `      <image:caption>${escapeXml(caption)}</image:caption>`,
+      '    </image:image>',
+      '  </url>',
+    ].join('\n');
   }).join('\n');
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${entries}\n</urlset>`;
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    entries,
+    '</urlset>',
+  ].join('\n');
 
   return new Response(xml, {
     headers: {

@@ -44,7 +44,7 @@ export default function Navigation() {
           <a href={pageUrl('/products')}>{t('nav.products')}</a>
           <a href={pageUrl('/advantages')}>{t('nav.whyUs')}</a>
           <a href={pageUrl('/contact')}>{t('nav.contact')}</a>
-          <a href="#contact" className="nav-cta" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.getQuote')}</a>
+          <a href={pageUrl('/contact')} className="nav-cta">{t('nav.getQuote')}</a>
         </div>
         <div className="nav-tools">
           <ProductSearch />

@@ -55,7 +55,7 @@ export default function Footer() {
                 <li><a href="/company">Company Profile</a></li>
                 <li><a href="/factory">Factory Capabilities</a></li>
                 <li><a href="/oem-odm">OEM / ODM</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/contact">Contact Us</a></li>
               </>}
               <li><a href="#about" onClick={(e) => handleClick(e, '#about')}>{t('footer.aboutUs')}</a></li>
               <li><a href="#advantages" onClick={(e) => handleClick(e, '#advantages')}>{t('footer.whyChooseUs')}</a></li>

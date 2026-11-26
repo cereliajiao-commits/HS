@@ -30,8 +30,8 @@ export default function ContactPage() {
     <main className="category-page oem-reference-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, '\\u003c') }} />
       <div className="container">
-        <nav className="product-breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Contact</span></nav>
-        <p className="section-label">CONTACT HONGSHENG</p>
+        <nav className="product-breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Contact Us</span></nav>
+        <p className="section-label">CONTACT US</p>
         <h1>Talk to a Truck Parts Manufacturer</h1>
         <p className="category-page-intro">{description} Tell us the OEM/OE number, vehicle application, quantity and destination market so we can route your inquiry to the right product or manufacturing team.</p>
         <div className="category-directory-grid">

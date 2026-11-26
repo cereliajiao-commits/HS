@@ -124,7 +124,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         ['Factory Capabilities', `${SITE_URL}/factory`],
         ['OEM / ODM', `${SITE_URL}/oem-odm`],
         ['Products', `${SITE_URL}/products`],
-        ['Contact', `${SITE_URL}/contact`],
+        ['Contact Us', `${SITE_URL}/contact`],
       ].map(([name, url]) => ({ '@type': 'SiteNavigationElement', name, url })),
       {
         '@type': 'FAQPage',

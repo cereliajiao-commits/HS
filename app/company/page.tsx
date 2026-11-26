@@ -4,6 +4,7 @@ import Link from 'next/link';
 const SITE_URL = 'https://www.hsaxle.com';
 const COMPANY_NAME = 'Hengshui Hongsheng Auto Parts Co., Ltd.';
 const SEARCH_NAME = 'Hengshui Hongsheng Auto Parts';
+const ALTERNATE_COMPANY_NAME = 'Hengshui Hongsheng Automobile & Agricultural Parts Co., Ltd.';
 const DESCRIPTION =
   'Hengshui Hongsheng Auto Parts is a China-based manufacturer of heavy-duty truck steering, suspension and driveline parts, agricultural machinery components and OEM/ODM forged parts.';
 
@@ -34,7 +35,11 @@ const graph = {
       '@id': `${SITE_URL}/#organization`,
       name: COMPANY_NAME,
       legalName: COMPANY_NAME,
-      alternateName: ['HONGSHENG Auto Parts', '衡水宏盛汽车配件有限公司'],
+      alternateName: [SEARCH_NAME, ALTERNATE_COMPANY_NAME, 'HONGSHENG Auto Parts', '衡水宏盛汽车配件有限公司'],
+      sameAs: [
+        'https://www.facebook.com/61594699907767/',
+        'https://www.aliexpress.com/store/1102826464',
+      ],
       url: SITE_URL,
       logo: `${SITE_URL}/images/company/og-hongsheng-auto-parts.jpg`,
       image: `${SITE_URL}/images/company/factory-entrance.jpg`,
@@ -88,7 +93,7 @@ export default function CompanyPage() {
         <p className="section-label">HONGSHENG AUTO PARTS</p>
         <h1>{SEARCH_NAME}</h1>
         <p className="category-page-intro">
-          HONGSHENG Auto Parts is the international brand of {COMPANY_NAME}, a China-based manufacturer serving heavy-duty truck, agricultural machinery and construction equipment markets since 1996.
+          HONGSHENG Auto Parts is the international brand of {COMPANY_NAME}, also described online as {ALTERNATE_COMPANY_NAME}. We are a China-based manufacturer serving heavy-duty truck, agricultural machinery and construction equipment markets since 1996.
         </p>
 
         <div className="category-directory-grid">
@@ -111,7 +116,7 @@ export default function CompanyPage() {
           <h2 id="company-faq-title">About Hengshui Hongsheng Auto Parts</h2>
           <details open>
             <summary>What is the official English company name?</summary>
-            <p>The official English company name is Hengshui Hongsheng Auto Parts Co., Ltd. HONGSHENG Auto Parts is the company brand used for international product and manufacturing inquiries.</p>
+            <p>The official English company name is {COMPANY_NAME}. Some supplier and social profiles use the equivalent name {ALTERNATE_COMPANY_NAME}. HONGSHENG Auto Parts is the company brand used for international product and manufacturing inquiries.</p>
           </details>
           <details>
             <summary>What products does HONGSHENG manufacture?</summary>
@@ -121,6 +126,15 @@ export default function CompanyPage() {
             <summary>How can buyers verify a product?</summary>
             <p>Use the OEM/OE reference, vehicle brand and model, axle or bridge type, mounting dimensions and product photos. OEM numbers are reference information and fitment should be confirmed before ordering.</p>
           </details>
+        </section>
+
+        <section className="category-directory-grid" aria-labelledby="official-profiles-title">
+          <section className="category-directory-card">
+            <h2 id="official-profiles-title">Official HONGSHENG Auto Parts Profiles</h2>
+            <p>These profiles refer to the same Hengshui Hongsheng Auto Parts manufacturer and support product, OEM and export inquiries.</p>
+            <p><a href="https://www.facebook.com/61594699907767/" target="_blank" rel="noopener noreferrer">Facebook: Hengshui Hongsheng Auto Parts</a></p>
+            <p><a href="https://www.aliexpress.com/store/1102826464" target="_blank" rel="noopener noreferrer">AliExpress: Hongsheng Auto Parts Store</a></p>
+          </section>
         </section>
 
         <div className="category-directory-grid">

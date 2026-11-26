@@ -7,6 +7,16 @@ import type { Language } from '@/components/LanguageProvider';
 import { languageUrl } from '@/lib/seo';
 
 const SITE_URL = 'https://www.hsaxle.com';
+const OFFICIAL_ALIASES = [
+  'Hengshui Hongsheng Auto Parts',
+  'Hengshui Hongsheng Automobile & Agricultural Parts Co., Ltd.',
+  'HONGSHENG Auto Parts',
+  '衡水宏盛汽车配件有限公司',
+];
+const OFFICIAL_PROFILES = [
+  'https://www.facebook.com/61594699907767/',
+  'https://www.aliexpress.com/store/1102826464',
+];
 
 export default function HomeStructuredData({ lang = 'en' }: { lang?: Language }) {
   const pageUrl = languageUrl(SITE_URL, '/', lang);
@@ -20,7 +30,8 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         '@id': `${SITE_URL}/#organization`,
         name: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
         legalName: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
-        alternateName: ['Hengshui Hongsheng Auto Parts', 'HONGSHENG Auto Parts', '衡水宏盛汽车配件有限公司'],
+        alternateName: OFFICIAL_ALIASES,
+        sameAs: OFFICIAL_PROFILES,
         brand: { '@type': 'Brand', name: 'HONGSHENG Auto Parts' },
         url: SITE_URL,
         foundingDate: '1996',

@@ -1,7 +1,32 @@
 'use client';
 
-import { useLanguage } from './LanguageProvider';
+import { useLanguage, type Language } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
+
+const companyIdentity: Record<Language, string> = {
+  en: 'Hengshui Hongsheng Auto Parts',
+  zh: '衡水宏盛汽车配件有限公司',
+  ru: 'Hengshui Hongsheng Auto Parts',
+  ar: 'Hengshui Hongsheng Auto Parts',
+  es: 'Hengshui Hongsheng Auto Parts',
+  pt: 'Hengshui Hongsheng Auto Parts',
+  fr: 'Hengshui Hongsheng Auto Parts',
+  ja: 'Hengshui Hongsheng Auto Parts',
+  ko: 'Hengshui Hongsheng Auto Parts',
+  de: 'Hengshui Hongsheng Auto Parts',
+  it: 'Hengshui Hongsheng Auto Parts',
+  nl: 'Hengshui Hongsheng Auto Parts',
+  tr: 'Hengshui Hongsheng Auto Parts',
+  pl: 'Hengshui Hongsheng Auto Parts',
+  id: 'Hengshui Hongsheng Auto Parts',
+};
+
+const companyProfileLabel: Record<Language, string> = {
+  en: 'Company Profile', zh: '公司介绍', ru: 'Профиль компании', ar: 'ملف الشركة',
+  es: 'Perfil de la empresa', pt: 'Perfil da empresa', fr: 'Profil de l’entreprise',
+  ja: '会社概要', ko: '회사 소개', de: 'Unternehmensprofil', it: 'Profilo aziendale',
+  nl: 'Bedrijfsprofiel', tr: 'Şirket profili', pl: 'Profil firmy', id: 'Profil perusahaan',
+};
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
@@ -23,7 +48,10 @@ export default function HeroSection() {
       <div className="hero-accent"></div>
       <div className="hero-content">
         <div className="hero-badge fade-up">{t('hero.badge')}</div>
-        {lang === 'en' && <p className="hero-company-name fade-up">Hengshui Hongsheng Auto Parts</p>}
+        <div className="hero-entity fade-up">
+          <span>{companyIdentity[lang]}</span>
+          <a href="/company">{companyProfileLabel[lang]} →</a>
+        </div>
         <h1 className="hero-title fade-up stagger-1">
           {t('hero.title1')} <span className="highlight">{t('hero.titleHighlight')}</span><br />{t('hero.title2')}
         </h1>

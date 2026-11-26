@@ -15,7 +15,9 @@ export async function generateMetadata({ searchParams }: { searchParams?: { lang
     : lang === 'en'
       ? 'Hengshui Hongsheng Auto Parts | HONGSHENG Truck Parts Manufacturer'
       : `${copy['hero.title1']} ${copy['hero.titleHighlight']} | HONGSHENG Auto Parts`;
-  const description = copy['hero.subtitle'];
+  const description = lang === 'en'
+    ? 'Hengshui Hongsheng Auto Parts is the official HONGSHENG truck parts manufacturer in China, supplying steering, suspension, driveline and forged components for heavy-duty vehicles and machinery.'
+    : copy['hero.subtitle'];
   const canonical = languageUrl(SITE_URL, '/', lang);
   return {
     title: { absolute: title },

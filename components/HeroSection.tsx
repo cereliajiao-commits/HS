@@ -4,7 +4,7 @@ import { useLanguage } from './LanguageProvider';
 import { trackEvent } from '@/lib/analytics';
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     trackEvent(href === '#products' ? 'view_products' : 'begin_inquiry', { location: 'hero' });
     e.preventDefault();
@@ -23,6 +23,7 @@ export default function HeroSection() {
       <div className="hero-accent"></div>
       <div className="hero-content">
         <div className="hero-badge fade-up">{t('hero.badge')}</div>
+        {lang === 'en' && <p className="hero-company-name fade-up">Hengshui Hongsheng Auto Parts</p>}
         <h1 className="hero-title fade-up stagger-1">
           {t('hero.title1')} <span className="highlight">{t('hero.titleHighlight')}</span><br />{t('hero.title2')}
         </h1>

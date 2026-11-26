@@ -80,6 +80,7 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.3);padding:0.5rem 1.2rem;border-radius:2px;font-family:var(--font-display);font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--red-light);margin-bottom:2rem}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero-company-name{margin:-.8rem 0 1.35rem;color:#f1f3f4;font-family:var(--font-display);font-size:.9rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}
 .hero-title{font-family:var(--font-display);font-size:clamp(3rem,5vw,4.5rem);font-weight:900;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-1px;max-width:760px;text-shadow:0 3px 24px rgba(0,0,0,.38)}
 .hero-title .highlight{color:var(--red);position:relative;display:inline-block}
 .hero-subtitle{font-size:1.15rem;color:#c3c8cb;max-width:610px;line-height:1.8;margin-bottom:2.5rem;font-weight:300;text-shadow:0 2px 12px rgba(0,0,0,.45)}

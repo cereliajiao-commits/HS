@@ -10,6 +10,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t, lang } = useLanguage();
   const factoryLabel = t('nav.factory');
+  const pageUrl = (path: string) => lang === 'en' ? path : `${path}?lang=${lang}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,15 +34,16 @@ export default function Navigation() {
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <div className="nav-inner">
-        <a href="#hero" className="nav-logo" onClick={(e) => handleLinkClick(e, '#hero')}>
-          HONG<span>SHENG</span>
+        <a href={pageUrl('/')} className="nav-logo" aria-label="Hengshui Hongsheng Auto Parts home">
+          <span className="nav-logo-wordmark">HONG<span>SHENG</span></span>
+          <small>Hengshui Hongsheng Auto Parts</small>
         </a>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`} id="navLinks">
-          <a href="#about" onClick={(e) => handleLinkClick(e, '#about')}>{t('nav.about')}</a>
-          <a href="#factory" onClick={(e) => handleLinkClick(e, '#factory')}>{factoryLabel}</a>
-          <a href="#products" onClick={(e) => handleLinkClick(e, '#products')}>{t('nav.products')}</a>
-          <a href="#advantages" onClick={(e) => handleLinkClick(e, '#advantages')}>{t('nav.whyUs')}</a>
-          <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.contact')}</a>
+          <a href={pageUrl('/company')}>{t('nav.about')}</a>
+          <a href={pageUrl('/factory')}>{factoryLabel}</a>
+          <a href={pageUrl('/products')}>{t('nav.products')}</a>
+          <a href={pageUrl('/advantages')}>{t('nav.whyUs')}</a>
+          <a href={pageUrl('/contact')}>{t('nav.contact')}</a>
           <a href="#contact" className="nav-cta" onClick={(e) => handleLinkClick(e, '#contact')}>{t('nav.getQuote')}</a>
         </div>
         <div className="nav-tools">

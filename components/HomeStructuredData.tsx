@@ -15,7 +15,9 @@ const OFFICIAL_ALIASES = [
 ];
 const OFFICIAL_PROFILES = [
   'https://www.facebook.com/61594699907767/',
+  'https://cn.linkedin.com/in/zoey-deng-4763b4381',
   'https://www.aliexpress.com/store/1102826464',
+  'https://www.tiktok.com/@apple.user4449820',
 ];
 
 export default function HomeStructuredData({ lang = 'en' }: { lang?: Language }) {

@@ -133,7 +133,9 @@ export default function CompanyPage() {
             <h2 id="official-profiles-title">Official HONGSHENG Auto Parts Profiles</h2>
             <p>These profiles refer to the same Hengshui Hongsheng Auto Parts manufacturer and support product, OEM and export inquiries.</p>
             <p><a href="https://www.facebook.com/61594699907767/" target="_blank" rel="noopener noreferrer">Facebook: Hengshui Hongsheng Auto Parts</a></p>
+            <p><a href="https://cn.linkedin.com/in/zoey-deng-4763b4381" target="_blank" rel="noopener noreferrer">LinkedIn: Zoey Deng</a></p>
             <p><a href="https://www.aliexpress.com/store/1102826464" target="_blank" rel="noopener noreferrer">AliExpress: Hongsheng Auto Parts Store</a></p>
+            <p><a href="https://www.tiktok.com/@apple.user4449820" target="_blank" rel="noopener noreferrer">TikTok: HS AUTO PARTS</a></p>
           </section>
         </section>
 

@@ -42,6 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    ...['/factory', '/oem-odm', '/contact'].map((path) => ({
+      url: `${siteUrl}${path}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })),
     ...productUrls,
     ...oemUrls,
     ...categoryUrls,

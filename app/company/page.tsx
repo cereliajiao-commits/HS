@@ -123,6 +123,12 @@ export default function CompanyPage() {
           </details>
         </section>
 
+        <div className="category-directory-grid">
+          <Link className="category-directory-card" href="/factory"><h2>Factory Capabilities</h2><p>Review forging, CNC machining, inspection, warehouse and export packaging capabilities.</p><span>View factory page →</span></Link>
+          <Link className="category-directory-card" href="/oem-odm"><h2>OEM / ODM Manufacturing</h2><p>Learn how to send OEM/OE numbers, drawings, samples and packaging requirements.</p><span>View OEM / ODM page →</span></Link>
+          <Link className="category-directory-card" href="/contact"><h2>Contact HONGSHENG</h2><p>Send product references, vehicle applications, quantities and destination requirements.</p><span>Contact sales →</span></Link>
+        </div>
+
         <div className="category-page-cta">
           <Link className="btn btn-primary" href="/products">Browse Truck Parts Catalog</Link>
           <Link className="btn btn-outline" href="/#contact">Request a Quote</Link>

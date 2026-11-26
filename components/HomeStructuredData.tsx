@@ -119,6 +119,13 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         },
         inLanguage: schemaLanguage,
       },
+      ...[
+        ['Company Profile', `${SITE_URL}/company`],
+        ['Factory Capabilities', `${SITE_URL}/factory`],
+        ['OEM / ODM', `${SITE_URL}/oem-odm`],
+        ['Products', `${SITE_URL}/products`],
+        ['Contact', `${SITE_URL}/contact`],
+      ].map(([name, url]) => ({ '@type': 'SiteNavigationElement', name, url })),
       {
         '@type': 'FAQPage',
         '@id': `${SITE_URL}/#faq`,

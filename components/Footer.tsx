@@ -51,7 +51,12 @@ export default function Footer() {
           <div className="footer-col">
             <h4>{t('footer.company')}</h4>
             <ul>
-              <li><a href="/company">Company Profile</a></li>
+              {lang === 'en' && <>
+                <li><a href="/company">Company Profile</a></li>
+                <li><a href="/factory">Factory Capabilities</a></li>
+                <li><a href="/oem-odm">OEM / ODM</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </>}
               <li><a href="#about" onClick={(e) => handleClick(e, '#about')}>{t('footer.aboutUs')}</a></li>
               <li><a href="#advantages" onClick={(e) => handleClick(e, '#advantages')}>{t('footer.whyChooseUs')}</a></li>
               <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>{t('footer.contact')}</a></li>

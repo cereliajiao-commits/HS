@@ -29,7 +29,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
       {
         '@type': 'Organization',
         '@id': `${SITE_URL}/#organization`,
-        name: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
+        name: 'Hengshui Hongsheng Auto Parts',
         legalName: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
         alternateName: OFFICIAL_ALIASES,
         sameAs: OFFICIAL_PROFILES,

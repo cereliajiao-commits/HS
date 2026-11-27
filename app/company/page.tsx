@@ -33,7 +33,7 @@ const graph = {
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
-      name: COMPANY_NAME,
+      name: SEARCH_NAME,
       legalName: COMPANY_NAME,
       alternateName: [SEARCH_NAME, ALTERNATE_COMPANY_NAME, 'HONGSHENG Auto Parts', '衡水宏盛汽车配件有限公司'],
       sameAs: [

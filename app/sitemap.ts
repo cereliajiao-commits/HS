@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages },
     }));
   });
-  const oemNumbers = Array.from(new Set(Object.values(oemReferences).flatMap((ref) => ref.oemNumbers)));
+  const oemNumbers = Array.from(new Set(Object.values(oemReferences).filter((ref) => ref.oemNumbers.length && (ref.confidence === '高' || ref.confidence === '中')).flatMap((ref) => ref.oemNumbers)));
   const oemUrls = oemNumbers.map((number) => ({ url: `${siteUrl}/oem/${encodeURIComponent(number)}`, changeFrequency: 'monthly' as const, priority: 0.75 }));
   const catalogPaths = ['/products', '/category', ...categoryPages.map((page) => `/category/${page.slug}`)];
   const categoryUrls = catalogPaths.flatMap((path) => {

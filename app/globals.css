@@ -83,7 +83,7 @@ nav.scrolled{background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:0
 .hero-entity span{color:#f1f3f4}
 .hero-entity a{color:var(--red-light);font-size:.72rem;letter-spacing:1.2px;text-decoration:underline;text-underline-offset:3px}
 .hero-entity a:hover{color:var(--white)}
-.hero-title{font-family:var(--font-display);font-size:clamp(3rem,5vw,4.5rem);font-weight:900;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-1px;max-width:760px;text-shadow:0 3px 24px rgba(0,0,0,.38)}
+.hero-title{font-family:var(--font-display);font-size:clamp(3rem,5vw,4.5rem);font-weight:900;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-1px;max-width:760px;text-shadow:0 3px 24px rgba(0,0,0,.38)}.hero-title-brand{display:block;font-size:.25em;line-height:1.25;letter-spacing:.04em;font-weight:700;color:var(--gray-300);margin-bottom:.65rem}
 .hero-title .highlight{color:var(--red);position:relative;display:inline-block}
 .hero-subtitle{font-size:1.15rem;color:#c3c8cb;max-width:610px;line-height:1.8;margin-bottom:2.5rem;font-weight:300;text-shadow:0 2px 12px rgba(0,0,0,.45)}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}

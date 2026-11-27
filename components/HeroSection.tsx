@@ -28,6 +28,24 @@ const companyProfileLabel: Record<Language, string> = {
   nl: 'Bedrijfsprofiel', tr: 'Şirket profili', pl: 'Profil firmy', id: 'Profil perusahaan',
 };
 
+const heroBrandTitle: Record<Language, string> = {
+  en: 'Hengshui Hongsheng Auto Parts',
+  zh: '衡水宏盛汽车配件有限公司',
+  ru: 'Hengshui Hongsheng Auto Parts',
+  ar: 'Hengshui Hongsheng Auto Parts',
+  es: 'Hengshui Hongsheng Auto Parts',
+  pt: 'Hengshui Hongsheng Auto Parts',
+  fr: 'Hengshui Hongsheng Auto Parts',
+  ja: 'Hengshui Hongsheng Auto Parts',
+  ko: 'Hengshui Hongsheng Auto Parts',
+  de: 'Hengshui Hongsheng Auto Parts',
+  it: 'Hengshui Hongsheng Auto Parts',
+  nl: 'Hengshui Hongsheng Auto Parts',
+  tr: 'Hengshui Hongsheng Auto Parts',
+  pl: 'Hengshui Hongsheng Auto Parts',
+  id: 'Hengshui Hongsheng Auto Parts',
+};
+
 export default function HeroSection() {
   const { t, lang } = useLanguage();
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -53,6 +71,7 @@ export default function HeroSection() {
           <a href="/company">{companyProfileLabel[lang]} →</a>
         </div>
         <h1 className="hero-title fade-up stagger-1">
+          <span className="hero-title-brand">{heroBrandTitle[lang]}</span>
           {t('hero.title1')} <span className="highlight">{t('hero.titleHighlight')}</span><br />{t('hero.title2')}
         </h1>
         <p className="hero-subtitle fade-up stagger-2">

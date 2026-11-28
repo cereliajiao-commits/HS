@@ -39,7 +39,14 @@ const graph = {
       sameAs: [
         'https://www.facebook.com/61594699907767/',
         'https://www.aliexpress.com/store/1102826464',
+        'https://www.tiktok.com/@apple.user4449820',
       ],
+      founder: {
+        '@type': 'Person',
+        name: 'Zoey Deng',
+        url: 'https://cn.linkedin.com/in/zoey-deng-4763b4381',
+        worksFor: { '@id': `${SITE_URL}/#organization` },
+      },
       url: SITE_URL,
       logo: `${SITE_URL}/images/company/og-hongsheng-auto-parts.jpg`,
       image: `${SITE_URL}/images/company/factory-entrance.jpg`,

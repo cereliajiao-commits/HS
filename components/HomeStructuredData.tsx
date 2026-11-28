@@ -18,6 +18,7 @@ const OFFICIAL_PROFILES = [
   'https://www.aliexpress.com/store/1102826464',
   'https://www.tiktok.com/@apple.user4449820',
 ];
+const FOUNDER_PROFILE = 'https://cn.linkedin.com/in/zoey-deng-4763b4381';
 
 export default function HomeStructuredData({ lang = 'en' }: { lang?: Language }) {
   const pageUrl = languageUrl(SITE_URL, '/', lang);
@@ -33,6 +34,13 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         legalName: 'Hengshui Hongsheng Auto Parts Co., Ltd.',
         alternateName: OFFICIAL_ALIASES,
         sameAs: OFFICIAL_PROFILES,
+        logo: `${SITE_URL}/images/company/og-hongsheng-auto-parts.jpg`,
+        founder: {
+          '@type': 'Person',
+          name: 'Zoey Deng',
+          url: FOUNDER_PROFILE,
+          worksFor: { '@id': `${SITE_URL}/#organization` },
+        },
         brand: { '@type': 'Brand', name: 'HONGSHENG Auto Parts' },
         url: SITE_URL,
         foundingDate: '1996',
@@ -124,6 +132,7 @@ export default function HomeStructuredData({ lang = 'en' }: { lang?: Language })
         description: copy['hero.subtitle'],
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: { '@id': `${SITE_URL}/#organization` },
+        mainEntity: { '@id': `${SITE_URL}/#organization` },
         primaryImageOfPage: {
           '@type': 'ImageObject',
           url: `${SITE_URL}/images/company/og-hongsheng-auto-parts.jpg`,
